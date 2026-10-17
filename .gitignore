@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 本地临时
+.tmp/
+*.log
+
+# 注意：figs/ 故意不忽略——图像是论文引用的产物，需随版本归档
