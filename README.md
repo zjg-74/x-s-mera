@@ -20,6 +20,7 @@ external engineering defects. The LE (Life–Environment) prototype extends the 
 | LE 耦合仿真 `experiments/sim_le_coupling.py` | ✅ 已实现，出图见 `figs/` |
 | LE 单元测试 `tests/test_le_kernel.py` | ✅ `pytest tests/ -v` 全过 |
 | 认知架构仿真（流形投影 + 非对称势阱，T1–T6 自证伪测试） | ❌ **尚不在本仓库**（README 此前声称的 reference code 指它，落地待补） |
+| LE 公理体系 Lean4 形式化工程 `formal/` | ⚠️ 代码完成 + 静态自查通过；**`lake build` 类型检查未执行**（见 formal/README.md） |
 | LICENSE / release | ❌ 待补（徽章当前指向不存在的对象） |
 
 ## Repository structure
@@ -41,6 +42,10 @@ x-s-mera/
 ├── docs/
 │   ├── experiment_manual.md      # 实验手册（§5 LE 耦合实验）
 │   └── summary_theory.md         # （计划中）理论摘要
+├── formal/                       # G1-a：LE 公理体系 Lean4 形式化（L1 对象层 Horn 骨架编码）
+│   ├── Formal/                   # Basic（谓词骨架）/ Axioms / Corollaries / AttackSurface
+│   ├── GAPS.md                   # 编码暴露的公理缺口 B1/B2/B3/C4-full 与候选桥接
+│   └── README.md                 # 构建命令与状态声明（类型检查待执行）
 ├── figs/
 │   └── le_coupling_timeseries.png
 ├── requirements.txt

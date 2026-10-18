@@ -2,6 +2,25 @@
 
 本仓库采用语义化版本。理论条款编号（A1–A12、C1/C2、F1/F2、I1）与《X-S-MERA 修订登记》保持同步。
 
+## v1.5.0 — 2026-10-18
+### G1-a：LE 公理体系的 Lean4 形式化工程（formal/）
+- feat: `formal/Formal/Basic.lean` — 类型/谓词骨架（Sys/Scale/Tau、leTau 预序、约 40 个谓词签名）
+- feat: `formal/Formal/Axioms.lean` — LE 公理 L1 层编码：SameScale 等价关系性、耦合充要条件
+  `coupling_iff : Coupled l e ↔ SameScale l e`、不匹配仅单向扰动、M1/M2、F1–F16、E1–E7、H_LE/H_EL
+- feat: `formal/Formal/Corollaries.lean` — 可证推论 9 条（tactic 证明，禁 sorry 纪律），含
+  mismatch_forbids_coupling（iff 逆否）、aging_mechanism_exists、life_produces_waste_heat、
+  coevolution_bidir、life_writes_back 等
+- feat: `formal/Formal/AttackSurface.lean` — N1 否定式攻击面分析 + 一致性守卫
+- docs: `formal/GAPS.md` — 编码暴露的公理缺口 B1（衰老缺"阈值必破"桥接）/B2（演化桥接，
+  须带资格条件字段 C_q，与 R5 逐语境结论的兼容性待裁决）/B3（吸引子分类超出一阶骨架）/
+  C4-full（耗散结构完整版缺合系统孤立性）；候选桥接公理+相对一致性注记
+- findings（不依赖编译结果）：归档版第 7 节"推论全量可演绎导出"声明**被证伪**——
+  6 条声明推论中 3 条依赖归档版未登记的隐含前提
+- ⚠️ 状态声明：全部代码完成并通过静态自查（括号平衡、跨文件标识符一致、无 sorry/admit），
+  **`lake build` 类型检查尚未在本机执行**（工具链安装被沙箱阻断）。用户自助：
+  运行 elan 安装器（`elan-init.exe -y --default-toolchain leanprover/lean4:v4.14.0`）后
+  `cd formal && lake build`。在类型检查通过前，本工程不得作为一致性证据引用。
+
 ## v1.1.0 — 2026-10-17
 
 中继链（命题 2′ 中继部分）落地；两项理论修正由仿真裁决。
