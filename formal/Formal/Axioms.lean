@@ -1,10 +1,12 @@
-/-!
+import Formal.Basic
+
+/-
 # Axioms：Γ_LE 公理编码（M1–M2 / F1–F16 / E1–E7 / 耦合定理）
 
 每条公理注明归档版原文位置。凡"推论可直接由公理重述"处，
 在 Corollaries.lean 显式登记为重述，不在此重复断言。
 -/
-import Formal.Basic
+
 
 namespace XSMERA
 

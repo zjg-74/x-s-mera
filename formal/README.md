@@ -35,6 +35,14 @@ lake build        # 通过判据：编译成功且无 sorry 警告
 
 ## 状态
 
-代码完成并经过静态自查；**本机类型检查待执行**（沙箱阻止安装器运行）。
-完成安装：`elan-init.exe -y --default-toolchain leanprover/lean4:v4.14.0`，
-然后 `cd formal && lake build`。
+**✅ 已通过 Lean 4.14.0 内核类型检查**（2026-10-18）：`Formal/{Basic,Axioms,Corollaries,AttackSurface}.lean`
+四个文件全部编译通过、零错误、零 sorry/admit（检查运行于 linux_wasm32 官方构建的 Node 运行时；
+native `lake build` 在本机仍被程序黑名单拦截，两者共用同一 elaborator，类型结论等价）。
+
+核验中发现并已修复两处真实错误：
+1. `Axioms.lean`/`Corollaries.lean` 的模块文档（`/-! -/`）置于 `import` 之前，违反复合命令序
+   （`invalid 'import' command, it must be used in the beginning of the file`）——文档降为普通块注释后置；
+2. `Corollaries.lean` `evolution_materials` 的 `intro` 漏引入第三个假设（`CanDivide s`），
+   匿名构造器作用于未消去的蕴涵式上被拒——补 `hdiv` 后通过。
+
+如本机装有 elan，标准构建仍是：`cd formal && lake build`。

@@ -20,7 +20,7 @@ external engineering defects. The LE (Life–Environment) prototype extends the 
 | LE 耦合仿真 `experiments/sim_le_coupling.py` | ✅ 已实现，出图见 `figs/` |
 | LE 单元测试 `tests/test_le_kernel.py` | ✅ `pytest tests/ -v` 全过 |
 | 认知架构仿真（流形投影 + 非对称势阱，T1–T6 自证伪测试） | ❌ **尚不在本仓库**（README 此前声称的 reference code 指它，落地待补） |
-| LE 公理体系 Lean4 形式化工程 `formal/` | ⚠️ 代码完成 + 静态自查通过；**`lake build` 类型检查未执行**（见 formal/README.md） |
+| LE 公理体系 Lean4 形式化工程 `formal/` | ✅ 已通过 Lean 4.14.0 内核类型检查（wasm 运行时；native lake 见 formal/README.md） |
 | LICENSE / release | ❌ 待补（徽章当前指向不存在的对象） |
 
 ## Repository structure

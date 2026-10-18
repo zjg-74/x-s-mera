@@ -1,4 +1,6 @@
-/-!
+import Formal.Basic
+
+/-
 # Corollaries：归档版第 7 节六条推论的演绎审计
 
 归档版声称"推论全量可演绎导出，非公理"。本文件把该声明变成可核验命题：
@@ -6,7 +8,7 @@
 
 **本文件纪律：禁止使用 sorry/admit。** 证不出的推论以注释登记，不用占位符伪造。
 -/
-import Formal.Basic
+
 import Formal.Axioms
 
 namespace XSMERA
@@ -50,8 +52,8 @@ theorem lineage_extinction :
 theorem evolution_materials :
     ∀ s : Sys, LifeS s → MatEnergyOK s → CanDivide s →
       (UndirectedHeritableVariation s ∧ Competition s) := by
-  intro s hs hm
-  exact ⟨F14 s hs (F1 s hs hm).1, (F13 s hs).2⟩
+  intro s hs hm hdiv
+  exact ⟨F14 s hs hdiv, (F13 s hs).2⟩
 
 -- ========== 推论 4（耗散结构）——骨架可证，完整版缺口 ==========
 
