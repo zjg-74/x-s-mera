@@ -2,6 +2,63 @@
 
 本仓库采用语义化版本。理论条款编号（A1–A12、C1/C2、F1/F2、I1）与《X-S-MERA 修订登记》保持同步。
 
+## v1.6.0 — 2026-10-18
+### 五项遗留动态事项一次清账（T1-d / 方案甲 / R3-v2 / R4-LE / ΔT 操作化）
+全部经「预注册判据 → 模块 → 实验脚本 → 单元测试 → 图」流水线完成；全套回归 120 项通过。
+
+#### T1-d 表征分化仿真（第八节 R8 遗留）
+- feat: `src/t1d_representational_diff.py` — 双阱势 + 多单元群模型（300 单元、涨落驱动
+  η_eff=σ√(1+J)、旁观维度弱噪声）；五判据边界诊断（BC/sep/abs_sep/straddles/symmetry）
+- feat: `experiments/sim_t1d_representational.py`；图 `figs/r8_t1d_representational.png`
+- test: `tests/test_t1d_representational.py`（12 项）
+- findings: 三子命题全成立——翻越率=0.0110+0.0086·J（R²=0.970，时点归流）；
+  a=0 阴性对照任意 J 不生成边界（存在归势）；f₊∈[0.49,0.51]（方向归流）。
+  **新发现**：BC 随 J 从 0.739 降至 0.522——通量过大边界不可维持（A11b 非单调性证据）。
+- 建模教训（已入模块文档串）：v1 乘性可分化性谱只改方差不改均值结构；
+  v2 单轨迹不锁阱；v3 多单元群 + 涨落驱动才成立。
+
+#### 方案甲（A0 回归收敛）仿真（R7 遗留）
+- feat: `src/a0_bootstrap_convergence.py` — 层级回归链 ε_k=g·ε_{k−1}+e_k、
+  C-1/C-2/C-3 三档判据、不动点迭代器、R7 四类人工系统算子模型
+- feat: `experiments/sim_a0_bootstrap.py`；图 `figs/r7_plan_a_convergence.png`
+- test: `tests/test_a0_bootstrap.py`（9 项；含半正态口径修正——tail_mean 对照
+  E|ε|=σ·√(2/π)/√(1−g²)，二阶矩对照方差）
+- findings: 不动点迭代观测收敛比精确等于 g；四类系统定位——类1 保距（C-2）、
+  类2 弱收缩到常驻偏置、类3 扩张（C-3，方案甲被证伪）、类4 强收缩但不动点是
+  适应峰≠A0（收敛≠回归 A0，支持 R7「丙为主乙为辅」）。
+
+#### R3-v2：C1+C2 充分性补案（R3 遗留）
+- feat: `src/r3_sufficiency_probe.py` — 预注册判据 + 五类构造
+  （S1 累积损伤 / S2 竞争置换 / S3 时序错配 / S4 中介污染 / S5 势耗竭）
+- feat: `experiments/sim_r3_sufficiency.py`；图 `figs/r3_sufficiency_probe.png`
+- test: `tests/test_r3_sufficiency.py`（11 项，含参数敏感性与不合法构造识别）
+- findings: **充分性被证伪**——五类「单次全合规、序列全失败」构造全部判强反例。
+  C1+C2 作用域须限定为**单次交互的准入判据**；序列成败须追加序列条件。
+  **条款修正**：S3 逼出 C2 必须按**瞬时读法**（|vL−vE| 对照绝对基准）判定——
+  增量读法下漂移可在全程合规中越界。
+
+#### R4 分量归类的 LE 内核验证（R4 遗留）
+- feat: `src/r4_component_attribution.py` — F2 守恒残差采集（多初值集成破共线性 +
+  C1 失败步屏蔽）、分解回归（α=−(ratio−1), β=−base）、K1 状态相关性 / K2 修复检验 /
+  K3 滤波检验（δ 翻号符号不变性）、三域归类
+- feat: `experiments/sim_r4_attribution.py`；图 `figs/r4_component_attribution.png`
+- test: `tests/test_r4_attribution.py`（12 项，含纯失配/纯底噪对照与反向判别力）
+- findings: 复合残差无歧义分解，α、β **精确**恢复解析真值（R²=1.000）；
+  失配分量 |ρ|≈0.95–0.98 → 接口域（修复后消除率 100%）；底噪分量符号不变 →
+  载体域（滤波消除）。**可辨识性前提**：分解要求 δ 充分变号且屏蔽 F1 步——
+  这是判据的适用条件，须写入条款。
+
+#### ΔT（时间势差）/ TP 谓词操作化（V3.3.1 §G4 登记的缺口）
+- feat: `src/tp_temporal_potential.py` — ΔT=|ω_L−ω_E|/(ω_L+ω_E)；耦合相位振子
+  （Adler 方程）；观测量 = 相对相位漂移率；P1–P5 预注册判据
+- feat: `experiments/sim_tp_temporal_potential.py`；图 `figs/g4_tp_temporal_potential.png`
+- test: `tests/test_tp_temporal_potential.py`（10 项）
+- findings: ΔT→0 通道通过——解锁区漂移率与 Adler 精确解 √(Δω²−4K²) 一致
+  （误差 < 3%）；|Δω|≤2K 锁定（势差被接口吸收）；K=0 阴性对照漂移恒=Δω
+  （锁定是耦合诱导的）；ΔT 与 d 独立可变（P4，TP 非冗余谓词）。
+  框架语义：锁定 = 时间势差在接口内被消化；漂移 = 势差外显为不可逆时序流
+  （A11a/b 势-流分离的时间版）。
+
 ## v1.5.0 — 2026-10-18
 ### G1-a：LE 公理体系的 Lean4 形式化工程（formal/）
 - feat: `formal/Formal/Basic.lean` — 类型/谓词骨架（Sys/Scale/Tau、leTau 预序、约 40 个谓词签名）

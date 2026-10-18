@@ -18,7 +18,8 @@ external engineering defects. The LE (Life–Environment) prototype extends the 
 | --- | --- |
 | LE 生命–环境耦合内核 `src/le_coupling_kernel.py` | ✅ 已实现，19 项单元测试全过 |
 | LE 耦合仿真 `experiments/sim_le_coupling.py` | ✅ 已实现，出图见 `figs/` |
-| LE 单元测试 `tests/test_le_kernel.py` | ✅ `pytest tests/ -v` 全过 |
+| 中继链 / R2 / R6 / R5 审计模块 | ✅ 已实现（v1.1.0–v1.4.0） |
+| 五项遗留动态事项（T1-d / 方案甲 / R3-v2 / R4-LE / ΔT 操作化） | ✅ 已实现（v1.6.0），全套回归 120 项通过 |
 | 认知架构仿真（流形投影 + 非对称势阱，T1–T6 自证伪测试） | ❌ **尚不在本仓库**（README 此前声称的 reference code 指它，落地待补） |
 | LE 公理体系 Lean4 形式化工程 `formal/` | ✅ 已通过 Lean 4.14.0 内核类型检查（wasm 运行时；native lake 见 formal/README.md） |
 | LICENSE / release | ❌ 待补（徽章当前指向不存在的对象） |
@@ -27,27 +28,28 @@ external engineering defects. The LE (Life–Environment) prototype extends the 
 
 ```
 x-s-mera/
-├── src/
+├── src/                          # 唯一真值源（experiments/ 与 tests/ 只依赖此处公开接口）
 │   ├── le_coupling_kernel.py     # LE 生命-环境耦合动力学内核（d/D、C1+C2、F1/F2、势-流分离）
+│   ├── relay_chain.py            # 中继链（命题 2′ 中继部分；调和/短板律）
+│   ├── d_form_audit.py           # R2：跨域 D 形态审计
+│   ├── a10_observables.py        # R6：A10 可观测现象清单（三联排除）
+│   ├── a9_qualification.py       # R5：A9 资格条件审计（Wright–Fisher 核）
+│   ├── t1d_representational_diff.py  # T1-d：表征分化（双阱势+多单元群）
+│   ├── a0_bootstrap_convergence.py   # 方案甲：A0 回归收敛（C-1/2/3 判据）
+│   ├── r3_sufficiency_probe.py       # R3-v2：C1+C2 充分性反例全谱
+│   ├── r4_component_attribution.py   # R4：A8/D17 分量归类（K1→K2→K3）
+│   ├── tp_temporal_potential.py      # ΔT：时间势差 TP 谓词操作化（Adler 锚定）
 │   └── kernel.py                 # （计划中）认知架构内核：快慢耦合非对称势阱
-├── experiments/
-│   ├── sim_le_coupling.py        # LE 耦合时序仿真：三区 / F1F2 可视化
-│   ├── sim_dynamics.py           # （计划中）基础动力学
-│   ├── sim_pseudo_convergence.py # （计划中）礁石伪收敛
-│   ├── sim_asym_bifurcation.py   # （计划中）非对称分岔，σc 理论 -0.385 / 仿真 -0.3784
-│   └── sim_scale_collapse.py     # （计划中）尺度坍塌
-├── tests/
-│   ├── test_le_kernel.py         # LE 内核单元测试（19 项，全过）
-│   └── test_kernel.py            # （计划中）认知架构内核测试
+├── experiments/                  # 每个 src 模块对应的出图脚本（sim_*/r*_*.py）
+├── tests/                        # 120 项单元测试，全过
 ├── docs/
-│   ├── experiment_manual.md      # 实验手册（§5 LE 耦合实验）
+│   ├── experiment_manual.md      # 实验手册（§5 LE 耦合实验、§6 中继链实验）
 │   └── summary_theory.md         # （计划中）理论摘要
 ├── formal/                       # G1-a：LE 公理体系 Lean4 形式化（L1 对象层 Horn 骨架编码）
 │   ├── Formal/                   # Basic（谓词骨架）/ Axioms / Corollaries / AttackSurface
 │   ├── GAPS.md                   # 编码暴露的公理缺口 B1/B2/B3/C4-full 与候选桥接
-│   └── README.md                 # 构建命令与状态声明（类型检查待执行）
+│   └── README.md                 # 构建命令与状态声明（✅ 类型检查已通过）
 ├── figs/
-│   └── le_coupling_timeseries.png
 ├── requirements.txt
 ├── CHANGELOG.md
 └── README.md
@@ -61,7 +63,7 @@ python -m venv .venv
 # source .venv/bin/activate && pip install -r requirements.txt   # Linux/macOS
 
 python experiments/sim_le_coupling.py     # 出图 + 分段统计摘要
-python -m pytest tests/ -v                # 19 tests
+python -m pytest tests/ -v                # 120 tests
 ```
 
 ## 理论 → 代码对照
