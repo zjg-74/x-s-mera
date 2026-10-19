@@ -5,7 +5,7 @@ Manifold Projection and Asymmetric Potential Well: Cognitive Dynamics Framework
 > This repository contains the reference simulation code for the X‑S‑MERA theoretical framework.
 > Author: [zjg]
 >
-> Current version: **v1.6.2**（2026-10-19） · Tests: **141 passed** · License: **MIT**
+> Current version: **v1.6.3**（2026-10-19） · Tests: **155 passed** · License: **MIT**
 
 ## Abstract
 
@@ -27,8 +27,11 @@ external engineering defects. The LE (Life–Environment) prototype extends the 
 | LE 公理体系 Lean4 形式化工程 `formal/` | ✅ 已通过 Lean 4.14.0 内核类型检查（wasm 运行时；native lake 见 formal/README.md） |
 | LICENSE | ✅ MIT（见 `LICENSE`）；release 待发布 |
 | CITATION | ✅ `CITATION.cff` 已补 |
-| **XS 框架理论文档集** `docs/xs-framework/`（v3.1 认知框架主线 + v3.0 统一版 + 8 月稿与审计） | ✅ 已入库（v1.6.2），**15 篇**；索引见该目录 `README.md` |
+| **XS 框架理论文档集** `docs/xs-framework/`（v3.1 认知框架主线 + v3.0 统一版 + 8 月稿与审计） | ✅ 已入库（v1.6.3），**16 篇**；索引见该目录 `README.md` |
 | **R18 双约束失效可分离性实验** `experiments/r18_dual_constraint/` | ✅ 已实现（v1.6.2），7 项测试；报告见该目录 `report.md` |
+| **R19 U/Psi 桥一致性检验** `experiments/r19_bridge/` | ✅ 已实现（v1.6.3），7 项测试 |
+| **R21 内约束强度 = O_adm 剪枝量** `experiments/r21_constraint_specificity/` | ✅ 已实现（v1.6.3），7 项测试 |
+| **R18 的 Lean 命题规格** `formal/candidates/DualConstraint.lean` | ⚠️ **候选，未编译验证**（本机无 Lean 工具链），置于非编译目录；见 `formal/GAPS.md` 条目 C1 |
 
 ## Repository structure
 
@@ -48,11 +51,13 @@ x-s-mera/
 │   ├── tp_temporal_potential.py      # ΔT：时间势差 TP 谓词操作化（Adler 锚定）
 │   └── kernel.py                 # ⏳ 计划中：认知架构内核（快慢耦合非对称势阱），当前不在仓库
 ├── experiments/                  # 每个 src 模块对应的出图脚本（sim_*/r*_*.py）
-│   └── r18_dual_constraint/      # R18：双约束失效可分离性（5 脚本 + 5 json + report.md）
-├── tests/                        # 141 项单元测试，全过（12 个测试文件）
+│   ├── r18_dual_constraint/      # R18：双约束失效可分离性（5 脚本 + 5 json + report.md）
+│   ├── r19_bridge/               # R19：U/Psi 桥的双速率分解一致性检验（1 脚本 + json + report.md）
+│   └── r21_constraint_specificity/  # R21：内约束强度 = O_adm 剪枝量（3 脚本 + 3 json + report.md）
+├── tests/                        # 155 项单元测试，全过（14 个测试文件）
 ├── docs/
 │   ├── experiment_manual.md      # 实验手册（§5 LE 耦合实验、§6 中继链实验）
-│   ├── xs-framework/             # XS 框架理论文档集（15 篇，含 v3.1 认知框架主线）
+│   ├── xs-framework/             # XS 框架理论文档集（16 篇，含 v3.1 认知框架主线）
 │   │   └── README.md             # 索引：版本线、U1 取代纪律、缺口表、与代码层对应
 │   └── summary_theory.md         # ⏳ 计划中：理论摘要，当前不在仓库
 ├── formal/                       # G1-a：LE 公理体系 Lean4 形式化（L1 对象层 Horn 骨架编码）
@@ -76,8 +81,10 @@ python -m venv .venv
 # source .venv/bin/activate && pip install -r requirements.txt   # Linux/macOS
 
 python experiments/sim_le_coupling.py     # 出图 + 分段统计摘要
-python -m pytest tests/ -v                # 141 tests
+python -m pytest tests/ -v                # 155 tests
 python experiments/r18_dual_constraint/r18_dual_constraint.py   # R18 主实验（仅标准库）
+python experiments/r19_bridge/r19_bridge.py                     # R19（仅标准库）
+python experiments/r21_constraint_specificity/r21_constraint_specificity.py  # R21（仅标准库）
 ```
 
 复现须知：
@@ -87,7 +94,7 @@ python experiments/r18_dual_constraint/r18_dual_constraint.py   # R18 主实验�
   只做快速自检可先跑 `python -m pytest tests/ -v -x --ignore=tests/test_r3_case_upgrade.py`。
 - 全套 141 项的分文件分布：le_kernel 19 / a10 16 / a9 13 / r3_case_upgrade 14 / r4 12 /
   t1d 12 / r3_sufficiency 11 / relay_chain 10 / tp 10 / a0_bootstrap 9 / d_form_audit 8 /
-  **r18_dual_constraint 7**（v1.6.2 新增）。
+  **r18_dual_constraint 7**（v1.6.2）/ **r19_bridge 7** + **r21_constraint_specificity 7**（v1.6.3）。
 - `experiments/r18_dual_constraint/` 下的脚本**只依赖标准库**，不需要 numpy；
   运行时把 json 写进当前工作目录，故请在该目录内执行（见 `report.md` §7）。
 
@@ -118,11 +125,19 @@ python experiments/r18_dual_constraint/r18_dual_constraint.py   # R18 主实验�
    已实现并锁进回归测试的是**二值失效的可分离性**，不是强度-反应关系。
 8. `docs/xs-framework/` 的 **XS 版本号（v3.0 / v3.1）与仓库版本号（v1.6.x）是两条独立的线**：
    前者随理论主张递增，后者随代码 API / 实验 / 测试递增。文档入库**不**触发仓库主版本升级。
+9. **`formal/candidates/DualConstraint.lean` 未经 Lean 编译验证**（本机无 `lean` / `lake`）。
+   它故意放在 `candidates/`（不在 `lakefile.toml` 的 `Formal` 目标下，不会被编译），
+   以免破坏构建。验证后移入 `Formal/` 并 import 即完成接入，步骤见 `formal/GAPS.md` 条目 C1。
+10. **R19 / R21 是人造参数下的机制检验，不是经验验证。** R19 的四个系数
+    （`e_pm` / `u_pm`）无任何经验来源；R21 的宏库是原型加扰动，不是自然语言。
+    尤其：**R21 测到的全部效应都是 $O_{adm}$ 的**数量**效应**——按语义簇剪枝与
+    随机剪同等数量**无差异**（原型缺乏语义结构），故该操作化应称为「$O_{adm}$ 剪枝量」，
+    **不应**称为「措辞特异性」。
 
 ## Citation
 
 机器可读引用见 [`CITATION.cff`](./CITATION.cff)。理论文档：《X-S-MERA 修订登记：猜想 1/2 对 A1–A10 的影响分析》v0 及后续版本；
-XS 框架理论文本另见 [`docs/xs-framework/`](./docs/xs-framework/README.md)（含 v3.1 认知框架主线五篇）。
+XS 框架理论文本另见 [`docs/xs-framework/`](./docs/xs-framework/README.md)（含 v3.1 认知框架主线六篇）。
 
 ## License
 
