@@ -1,0 +1,567 @@
+{
+  "experiment": "R27",
+  "claim": "X monotone increasing / M unimodal (peak then converge)",
+  "params": {
+    "K": 241,
+    "DT": 0.01,
+    "R_HI": 9.0,
+    "R_LO": 0.1111111111111111,
+    "E_START": 5.0,
+    "U_START": 5.0,
+    "N_REP": 400,
+    "OBS_SD_GRID": [
+      0.0,
+      0.05,
+      0.15,
+      0.4,
+      0.8
+    ],
+    "SMOOTH_W": 21,
+    "WINDOWS": [
+      1,
+      5,
+      11,
+      21,
+      41
+    ]
+  },
+  "note": "mechanism self-consistency check on a synthetic A_D prototype; NOT empirical validation. Peak indices 60/120/180 follow from the log-ramp choice and are not universal constants. Smoothing window is a declared analysis choice, not a fitted one.",
+  "configs": [
+    {
+      "config": "A_resolution_efficient",
+      "derived": {
+        "theta_E": 1.0,
+        "theta_U": 3.0,
+        "rho_exp": 1.0,
+        "rho_res": 3.0,
+        "rho_res_gt_rho_exp": true,
+        "pred_kstar_E": 119.99999999999999,
+        "pred_kstar_U": 59.99999999999999
+      },
+      "peak_locus_noiseless": {
+        "config": "A_resolution_efficient",
+        "obs_sd": 0.0,
+        "smooth_w": 1,
+        "pred_kstar_E": 119.99999999999999,
+        "pred_kstar_U": 59.99999999999999,
+        "peak_mean_E": 119,
+        "peak_sd_E": 0.0,
+        "unimodal_rate_E": 1.0,
+        "plateau_E": [
+          119,
+          120
+        ],
+        "pred_in_plateau_E": true,
+        "abs_err_E": 1.0,
+        "peak_mean_U": 59,
+        "peak_sd_U": 0.0,
+        "unimodal_rate_U": 1.0,
+        "plateau_U": [
+          59,
+          60
+        ],
+        "pred_in_plateau_U": true,
+        "abs_err_U": 1.0
+      },
+      "peak_locus_noisy": {
+        "config": "A_resolution_efficient",
+        "obs_sd": 0.15,
+        "smooth_w": 21,
+        "pred_kstar_E": 119.99999999999999,
+        "pred_kstar_U": 59.99999999999999,
+        "peak_mean_E": 121.06,
+        "peak_sd_E": 10.8,
+        "unimodal_rate_E": 1.0,
+        "abs_err_E": 1.06,
+        "peak_mean_U": 59.99,
+        "peak_sd_U": 5.67,
+        "unimodal_rate_U": 1.0,
+        "abs_err_U": 0.01
+      },
+      "peak_order": {
+        "config": "A_resolution_efficient",
+        "obs_sd": 0.15,
+        "smooth_w": 21,
+        "theta_E": 1.0,
+        "theta_U": 3.0,
+        "rho_exp": 1.0,
+        "rho_res": 3.0,
+        "rho_res_gt_rho_exp": true,
+        "pred_order": "U_first",
+        "obs_order_acc": 1.0,
+        "n_compared": 400
+      },
+      "phase_sequence": [
+        {
+          "combo": "(+,+)",
+          "k_from": 0,
+          "k_to": 59
+        },
+        {
+          "combo": "(+,0)",
+          "k_from": 60,
+          "k_to": 60
+        },
+        {
+          "combo": "(+,-)",
+          "k_from": 61,
+          "k_to": 119
+        },
+        {
+          "combo": "(0,-)",
+          "k_from": 120,
+          "k_to": 120
+        },
+        {
+          "combo": "(-,-)",
+          "k_from": 121,
+          "k_to": 240
+        }
+      ],
+      "control_arms_noiseless": {
+        "config": "A_resolution_efficient",
+        "obs_sd": 0.0,
+        "smooth_w": 21,
+        "primary_statistic": "U_mean_slope (tolerance-free); stepwise rates are secondary and degrade under noise",
+        "arms": {
+          "no_resolution_r=R_HI": {
+            "U_monotone_inc_rate": 1.0,
+            "U_monotone_dec_rate": 0.0,
+            "U_unimodal_rate": 0.0,
+            "U_mean_slope": 0.0575,
+            "U_mean_slope_sd": 0.0,
+            "U_slope_positive_rate": 1.0
+          },
+          "no_expansion_r=R_LO": {
+            "U_monotone_inc_rate": 0.0,
+            "U_monotone_dec_rate": 1.0,
+            "U_unimodal_rate": 0.0,
+            "U_mean_slope": -0.020111,
+            "U_mean_slope_sd": 0.0,
+            "U_slope_positive_rate": 0.0
+          }
+        }
+      },
+      "control_arms_noisy": {
+        "config": "A_resolution_efficient",
+        "obs_sd": 0.15,
+        "smooth_w": 21,
+        "primary_statistic": "U_mean_slope (tolerance-free); stepwise rates are secondary and degrade under noise",
+        "arms": {
+          "no_resolution_r=R_HI": {
+            "U_monotone_inc_rate": 1.0,
+            "U_monotone_dec_rate": 0.973,
+            "U_unimodal_rate": 0.015,
+            "U_mean_slope": 0.057484,
+            "U_mean_slope_sd": 0.000262,
+            "U_slope_positive_rate": 1.0
+          },
+          "no_expansion_r=R_LO": {
+            "U_monotone_inc_rate": 1.0,
+            "U_monotone_dec_rate": 1.0,
+            "U_unimodal_rate": 0.16,
+            "U_mean_slope": -0.020127,
+            "U_mean_slope_sd": 0.000262,
+            "U_slope_positive_rate": 0.0
+          }
+        }
+      },
+      "smoothing_recovery": {
+        "config": "A_resolution_efficient",
+        "obs_sd": 0.15,
+        "pred_kstar_U": 59.99999999999999,
+        "rows": [
+          {
+            "window": 1,
+            "unimodal_rate": 0.035,
+            "peak_mean": 59.77,
+            "peak_sd": 11.08
+          },
+          {
+            "window": 5,
+            "unimodal_rate": 1.0,
+            "peak_mean": 59.72,
+            "peak_sd": 7.86
+          },
+          {
+            "window": 11,
+            "unimodal_rate": 1.0,
+            "peak_mean": 60.5,
+            "peak_sd": 7.05
+          },
+          {
+            "window": 21,
+            "unimodal_rate": 1.0,
+            "peak_mean": 60.3,
+            "peak_sd": 5.63
+          },
+          {
+            "window": 41,
+            "unimodal_rate": 1.0,
+            "peak_mean": 60.95,
+            "peak_sd": 3.56
+          }
+        ]
+      },
+      "noise_robustness": {
+        "config": "A_resolution_efficient",
+        "smooth_w": 21,
+        "rows": [
+          {
+            "config": "A_resolution_efficient",
+            "obs_sd": 0.0,
+            "smooth_w": 21,
+            "pred_kstar_E": 119.99999999999999,
+            "pred_kstar_U": 59.99999999999999,
+            "peak_mean_E": 120,
+            "peak_sd_E": 0.0,
+            "unimodal_rate_E": 1.0,
+            "plateau_E": [
+              119,
+              120
+            ],
+            "pred_in_plateau_E": true,
+            "abs_err_E": 0.0,
+            "peak_mean_U": 60,
+            "peak_sd_U": 0.0,
+            "unimodal_rate_U": 1.0,
+            "plateau_U": [
+              59,
+              60
+            ],
+            "pred_in_plateau_U": true,
+            "abs_err_U": 0.0
+          },
+          {
+            "config": "A_resolution_efficient",
+            "obs_sd": 0.05,
+            "smooth_w": 21,
+            "pred_kstar_E": 119.99999999999999,
+            "pred_kstar_U": 59.99999999999999,
+            "peak_mean_E": 120.31,
+            "peak_sd_E": 5.55,
+            "unimodal_rate_E": 1.0,
+            "abs_err_E": 0.31,
+            "peak_mean_U": 59.84,
+            "peak_sd_U": 2.62,
+            "unimodal_rate_U": 1.0,
+            "abs_err_U": 0.16
+          },
+          {
+            "config": "A_resolution_efficient",
+            "obs_sd": 0.15,
+            "smooth_w": 21,
+            "pred_kstar_E": 119.99999999999999,
+            "pred_kstar_U": 59.99999999999999,
+            "peak_mean_E": 121.06,
+            "peak_sd_E": 10.8,
+            "unimodal_rate_E": 1.0,
+            "abs_err_E": 1.06,
+            "peak_mean_U": 59.99,
+            "peak_sd_U": 5.67,
+            "unimodal_rate_U": 1.0,
+            "abs_err_U": 0.01
+          },
+          {
+            "config": "A_resolution_efficient",
+            "obs_sd": 0.4,
+            "smooth_w": 21,
+            "pred_kstar_E": 119.99999999999999,
+            "pred_kstar_U": 59.99999999999999,
+            "peak_mean_E": 121.27,
+            "peak_sd_E": 17.65,
+            "unimodal_rate_E": 1.0,
+            "abs_err_E": 1.27,
+            "peak_mean_U": 60.89,
+            "peak_sd_U": 9.38,
+            "unimodal_rate_U": 1.0,
+            "abs_err_U": 0.89
+          },
+          {
+            "config": "A_resolution_efficient",
+            "obs_sd": 0.8,
+            "smooth_w": 21,
+            "pred_kstar_E": 119.99999999999999,
+            "pred_kstar_U": 59.99999999999999,
+            "peak_mean_E": 124.7,
+            "peak_sd_E": 23.58,
+            "unimodal_rate_E": 1.0,
+            "abs_err_E": 4.7,
+            "peak_mean_U": 61.45,
+            "peak_sd_U": 14.68,
+            "unimodal_rate_U": 1.0,
+            "abs_err_U": 1.45
+          }
+        ]
+      }
+    },
+    {
+      "config": "B_expansion_efficient",
+      "derived": {
+        "theta_E": 3.0,
+        "theta_U": 0.3333333333333333,
+        "rho_exp": 1.0,
+        "rho_res": 0.1111111111111111,
+        "rho_res_gt_rho_exp": false,
+        "pred_kstar_E": 59.99999999999999,
+        "pred_kstar_U": 180.0
+      },
+      "peak_locus_noiseless": {
+        "config": "B_expansion_efficient",
+        "obs_sd": 0.0,
+        "smooth_w": 1,
+        "pred_kstar_E": 59.99999999999999,
+        "pred_kstar_U": 180.0,
+        "peak_mean_E": 59,
+        "peak_sd_E": 0.0,
+        "unimodal_rate_E": 1.0,
+        "plateau_E": [
+          59,
+          60
+        ],
+        "pred_in_plateau_E": true,
+        "abs_err_E": 1.0,
+        "peak_mean_U": 179,
+        "peak_sd_U": 0.0,
+        "unimodal_rate_U": 1.0,
+        "plateau_U": [
+          179,
+          180
+        ],
+        "pred_in_plateau_U": true,
+        "abs_err_U": 1.0
+      },
+      "peak_locus_noisy": {
+        "config": "B_expansion_efficient",
+        "obs_sd": 0.15,
+        "smooth_w": 21,
+        "pred_kstar_E": 59.99999999999999,
+        "pred_kstar_U": 180.0,
+        "peak_mean_E": 59.59,
+        "peak_sd_E": 6.1,
+        "unimodal_rate_E": 1.0,
+        "abs_err_E": 0.4,
+        "peak_mean_U": 183.31,
+        "peak_sd_U": 19.81,
+        "unimodal_rate_U": 0.995,
+        "abs_err_U": 3.31
+      },
+      "peak_order": {
+        "config": "B_expansion_efficient",
+        "obs_sd": 0.15,
+        "smooth_w": 21,
+        "theta_E": 3.0,
+        "theta_U": 0.3333333333333333,
+        "rho_exp": 1.0,
+        "rho_res": 0.1111111111111111,
+        "rho_res_gt_rho_exp": false,
+        "pred_order": "E_first",
+        "obs_order_acc": 1.0,
+        "n_compared": 400
+      },
+      "phase_sequence": [
+        {
+          "combo": "(+,+)",
+          "k_from": 0,
+          "k_to": 59
+        },
+        {
+          "combo": "(0,+)",
+          "k_from": 60,
+          "k_to": 60
+        },
+        {
+          "combo": "(-,+)",
+          "k_from": 61,
+          "k_to": 179
+        },
+        {
+          "combo": "(-,0)",
+          "k_from": 180,
+          "k_to": 180
+        },
+        {
+          "combo": "(-,-)",
+          "k_from": 181,
+          "k_to": 240
+        }
+      ],
+      "control_arms_noiseless": {
+        "config": "B_expansion_efficient",
+        "obs_sd": 0.0,
+        "smooth_w": 21,
+        "primary_statistic": "U_mean_slope (tolerance-free); stepwise rates are secondary and degrade under noise",
+        "arms": {
+          "no_resolution_r=R_HI": {
+            "U_monotone_inc_rate": 1.0,
+            "U_monotone_dec_rate": 0.0,
+            "U_unimodal_rate": 0.0,
+            "U_mean_slope": 0.083056,
+            "U_mean_slope_sd": 0.0,
+            "U_slope_positive_rate": 1.0
+          },
+          "no_expansion_r=R_LO": {
+            "U_monotone_inc_rate": 0.0,
+            "U_monotone_dec_rate": 1.0,
+            "U_unimodal_rate": 0.0,
+            "U_mean_slope": -0.00213,
+            "U_mean_slope_sd": 0.0,
+            "U_slope_positive_rate": 0.0
+          }
+        }
+      },
+      "control_arms_noisy": {
+        "config": "B_expansion_efficient",
+        "obs_sd": 0.15,
+        "smooth_w": 21,
+        "primary_statistic": "U_mean_slope (tolerance-free); stepwise rates are secondary and degrade under noise",
+        "arms": {
+          "no_resolution_r=R_HI": {
+            "U_monotone_inc_rate": 1.0,
+            "U_monotone_dec_rate": 0.0,
+            "U_unimodal_rate": 0.005,
+            "U_mean_slope": 0.08304,
+            "U_mean_slope_sd": 0.000262,
+            "U_slope_positive_rate": 1.0
+          },
+          "no_expansion_r=R_LO": {
+            "U_monotone_inc_rate": 1.0,
+            "U_monotone_dec_rate": 1.0,
+            "U_unimodal_rate": 0.745,
+            "U_mean_slope": -0.002146,
+            "U_mean_slope_sd": 0.000262,
+            "U_slope_positive_rate": 0.0
+          }
+        }
+      },
+      "smoothing_recovery": {
+        "config": "B_expansion_efficient",
+        "obs_sd": 0.15,
+        "pred_kstar_U": 180.0,
+        "rows": [
+          {
+            "window": 1,
+            "unimodal_rate": 0.03,
+            "peak_mean": 184.34,
+            "peak_sd": 27.78
+          },
+          {
+            "window": 5,
+            "unimodal_rate": 0.985,
+            "peak_mean": 183.02,
+            "peak_sd": 22.38
+          },
+          {
+            "window": 11,
+            "unimodal_rate": 1.0,
+            "peak_mean": 184.29,
+            "peak_sd": 20.64
+          },
+          {
+            "window": 21,
+            "unimodal_rate": 0.99,
+            "peak_mean": 182.47,
+            "peak_sd": 18.18
+          },
+          {
+            "window": 41,
+            "unimodal_rate": 0.985,
+            "peak_mean": 183.26,
+            "peak_sd": 16.38
+          }
+        ]
+      },
+      "noise_robustness": {
+        "config": "B_expansion_efficient",
+        "smooth_w": 21,
+        "rows": [
+          {
+            "config": "B_expansion_efficient",
+            "obs_sd": 0.0,
+            "smooth_w": 21,
+            "pred_kstar_E": 59.99999999999999,
+            "pred_kstar_U": 180.0,
+            "peak_mean_E": 60,
+            "peak_sd_E": 0.0,
+            "unimodal_rate_E": 1.0,
+            "plateau_E": [
+              59,
+              60
+            ],
+            "pred_in_plateau_E": true,
+            "abs_err_E": 0.0,
+            "peak_mean_U": 180,
+            "peak_sd_U": 0.0,
+            "unimodal_rate_U": 1.0,
+            "plateau_U": [
+              179,
+              180
+            ],
+            "pred_in_plateau_U": true,
+            "abs_err_U": 0.0
+          },
+          {
+            "config": "B_expansion_efficient",
+            "obs_sd": 0.05,
+            "smooth_w": 21,
+            "pred_kstar_E": 59.99999999999999,
+            "pred_kstar_U": 180.0,
+            "peak_mean_E": 59.9,
+            "peak_sd_E": 2.61,
+            "unimodal_rate_E": 1.0,
+            "abs_err_E": 0.1,
+            "peak_mean_U": 181.21,
+            "peak_sd_U": 10.81,
+            "unimodal_rate_U": 1.0,
+            "abs_err_U": 1.21
+          },
+          {
+            "config": "B_expansion_efficient",
+            "obs_sd": 0.15,
+            "smooth_w": 21,
+            "pred_kstar_E": 59.99999999999999,
+            "pred_kstar_U": 180.0,
+            "peak_mean_E": 59.59,
+            "peak_sd_E": 6.1,
+            "unimodal_rate_E": 1.0,
+            "abs_err_E": 0.4,
+            "peak_mean_U": 183.31,
+            "peak_sd_U": 19.81,
+            "unimodal_rate_U": 0.995,
+            "abs_err_U": 3.31
+          },
+          {
+            "config": "B_expansion_efficient",
+            "obs_sd": 0.4,
+            "smooth_w": 21,
+            "pred_kstar_E": 59.99999999999999,
+            "pred_kstar_U": 180.0,
+            "peak_mean_E": 61.2,
+            "peak_sd_E": 9.69,
+            "unimodal_rate_E": 1.0,
+            "abs_err_E": 1.2,
+            "peak_mean_U": 184.56,
+            "peak_sd_U": 29.07,
+            "unimodal_rate_U": 0.965,
+            "abs_err_U": 4.56
+          },
+          {
+            "config": "B_expansion_efficient",
+            "obs_sd": 0.8,
+            "smooth_w": 21,
+            "pred_kstar_E": 59.99999999999999,
+            "pred_kstar_U": 180.0,
+            "peak_mean_E": 60.3,
+            "peak_sd_E": 13.81,
+            "unimodal_rate_E": 1.0,
+            "abs_err_E": 0.3,
+            "peak_mean_U": 184.54,
+            "peak_sd_U": 33.4,
+            "unimodal_rate_U": 0.965,
+            "abs_err_U": 4.54
+          }
+        ]
+      }
+    }
+  ]
+}
