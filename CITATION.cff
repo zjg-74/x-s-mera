@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: X-S-MERA — Manifold Projection and Asymmetric Potential Well: Cognitive Dynamics Framework
+message: >-
+  If you use this software, please cite it using the metadata from this file.
+type: software
+authors:
+  - given-names: zjg
+    alias: zjg-74
+repository-code: https://github.com/zjg-74/x-s-mera
+url: https://github.com/zjg-74/x-s-mera
+abstract: >-
+  Reference simulation code for the X-S-MERA theoretical framework. The framework interprets
+  AI hallucination, reasoning oscillation and cognitive stagnation as endogenous information
+  residuals caused by manifold dimensionality-reduction projection. The LE (Life-Environment)
+  prototype extends the same formal machinery (boundary overlap d, D encapsulation, C1/C2
+  conditions, F1/F2 failure modes) to coupled subsystem dynamics, and ships a Lean 4
+  formalization of the LE axiom system L1 layer.
+keywords:
+  - manifold projection
+  - asymmetric potential well
+  - cognitive dynamics
+  - hallucination
+  - multiscale coupling
+  - Lean 4 formalization
+license: MIT
+version: 1.6.2
+date-released: '2026-10-19'
