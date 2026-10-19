@@ -5,7 +5,7 @@ Manifold Projection and Asymmetric Potential Well: Cognitive Dynamics Framework
 > This repository contains the reference simulation code for the X‑S‑MERA theoretical framework.
 > Author: [zjg]
 >
-> Current version: **v1.6.4**（2026-10-19） · Tests: **169 passed** · License: **MIT**
+> Current version: **v1.6.5**（2026-10-19） · Tests: **184 passed** · License: **MIT**
 
 ## Abstract
 
@@ -27,11 +27,12 @@ external engineering defects. The LE (Life–Environment) prototype extends the 
 | LE 公理体系 Lean4 形式化工程 `formal/` | ✅ 已通过 Lean 4.14.0 内核类型检查（wasm 运行时；native lake 见 formal/README.md） |
 | LICENSE | ✅ MIT（见 `LICENSE`）；release 待发布 |
 | CITATION | ✅ `CITATION.cff` 已补 |
-| **XS 框架理论文档集** `docs/xs-framework/`（v3.1 认知框架主线 + v3.0 统一版 + 8 月稿与审计） | ✅ 已入库（v1.6.4），**17 篇**；索引见该目录 `README.md` |
+| **XS 框架理论文档集** `docs/xs-framework/`（v3.1 认知框架主线 + v3.0 统一版 + 8 月稿与审计） | ✅ 已入库（v1.6.5），**18 篇**；索引见该目录 `README.md` |
 | **R18 双约束失效可分离性实验** `experiments/r18_dual_constraint/` | ✅ 已实现（v1.6.2），7 项测试；报告见该目录 `report.md` |
 | **R19 U/Psi 桥一致性检验** `experiments/r19_bridge/` | ✅ 已实现（v1.6.3），7 项测试 |
 | **R21 内约束强度 = O_adm 剪枝量** `experiments/r21_constraint_specificity/` | ✅ 已实现（v1.6.3），7 项测试 |
 | **R27 双相形状：X 单调 / M 单峰** `experiments/r27_biphasic/` | ✅ 已实现（v1.6.4），14 项测试。峰位命中解析预测、**峰序吻合率 1.000**；**单峰性须粗粒化后检验** |
+| **R28 微观回落 / 多峰 / 局部-全局收敛** `experiments/r28_micro_reversal/` | ✅ 已实现（v1.6.5），15 项测试。回落率解析律命中；**路径层单峰率 0.000（本体性，非测量误差）**；局部收敛 100% vs 全局收敛 13–34% |
 | **R18 的 Lean 命题规格** `formal/candidates/DualConstraint.lean` | ⚠️ **候选，未编译验证**（本机无 Lean 工具链），置于非编译目录；见 `formal/GAPS.md` 条目 C1 |
 
 ## Repository structure
@@ -55,8 +56,9 @@ x-s-mera/
 │   ├── r18_dual_constraint/      # R18：双约束失效可分离性（5 脚本 + 5 json + report.md）
 │   ├── r19_bridge/               # R19：U/Psi 桥的双速率分解一致性检验（1 脚本 + json + report.md）
 │   ├── r21_constraint_specificity/  # R21：内约束强度 = O_adm 剪枝量（3 脚本 + 3 json + report.md）
-│   └── r27_biphasic/             # R27：双相形状 X 单调 / M 单峰（1 脚本 + json + report.md）
-├── tests/                        # 169 项单元测试，全过（15 个测试文件）
+│   ├── r27_biphasic/             # R27：双相形状 X 单调 / M 单峰（1 脚本 + json + report.md）
+│   └── r28_micro_reversal/       # R28：微观回落 / 多峰 / 局部-全局收敛（1 脚本 + json + report.md）
+├── tests/                        # 184 项单元测试，全过（16 个测试文件）
 ├── docs/
 │   ├── experiment_manual.md      # 实验手册（§5 LE 耦合实验、§6 中继链实验）
 │   ├── xs-framework/             # XS 框架理论文档集（16 篇，含 v3.1 认知框架主线）
@@ -83,11 +85,12 @@ python -m venv .venv
 # source .venv/bin/activate && pip install -r requirements.txt   # Linux/macOS
 
 python experiments/sim_le_coupling.py     # 出图 + 分段统计摘要
-python -m pytest tests/ -v                # 169 tests
+python -m pytest tests/ -v                # 184 tests
 python experiments/r18_dual_constraint/r18_dual_constraint.py   # R18 主实验（仅标准库）
 python experiments/r19_bridge/r19_bridge.py                     # R19（仅标准库）
 python experiments/r21_constraint_specificity/r21_constraint_specificity.py  # R21（仅标准库）
 python experiments/r27_biphasic/r27_biphasic.py                              # R27（仅标准库）
+python experiments/r28_micro_reversal/r28_micro_reversal.py                    # R28（仅标准库）
 ```
 
 复现须知：
@@ -98,7 +101,7 @@ python experiments/r27_biphasic/r27_biphasic.py                              # R
 - 全套 141 项的分文件分布：le_kernel 19 / a10 16 / a9 13 / r3_case_upgrade 14 / r4 12 /
   t1d 12 / r3_sufficiency 11 / relay_chain 10 / tp 10 / a0_bootstrap 9 / d_form_audit 8 /
   **r18_dual_constraint 7**（v1.6.2）/ **r19_bridge 7** + **r21_constraint_specificity 7**（v1.6.3）/
-  **r27_biphasic 14**（v1.6.4）。
+  **r27_biphasic 14**（v1.6.4）/ **r28_micro_reversal 15**（v1.6.5）。
 - `experiments/r18_dual_constraint/` 下的脚本**只依赖标准库**，不需要 numpy；
   运行时把 json 写进当前工作目录，故请在该目录内执行（见 `report.md` §7）。
 
@@ -143,7 +146,12 @@ python experiments/r27_biphasic/r27_biphasic.py                              # R
     B 组的 184.5 只能读作"峰位 $\ge180$"。
 12. **R27 的峰位 60 / 120 / 180 是对数斜坡调度的产物，不是普适常数**；
     可迁移的是峰序关系与峰距公式的**形式**。全部结论条件于 **A_D**（B-B22 未闭合）。
-
+13. **"单峰"在路径层是假命题。** R28 把涨落移进过程层后，路径层（$w=1,h=0$）单峰率
+    为 0.000；它只在**统计层（E 层）**为真。任何对"单峰"的检验都必须在声明的
+    $(w,h)$ 尺度上进行，且**优先用显著度 $h$ 而非平滑窗口 $w$**（平滑会移动峰位）。
+14. **R28 的局部收敛 / 全局收敛数字（100% vs 13–34%）来自一个刻意不加停止规则的
+    生灭模型**，真实过程有停止规则、会截断重开，故这些数字**不可直接迁移**；
+    可迁移的是分离性本身与 $\au_c$ 的单调性。
 ## Citation
 
 机器可读引用见 [`CITATION.cff`](./CITATION.cff)。理论文档：《X-S-MERA 修订登记：猜想 1/2 对 A1–A10 的影响分析》v0 及后续版本；
