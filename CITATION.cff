@@ -23,5 +23,5 @@ keywords:
   - multiscale coupling
   - Lean 4 formalization
 license: MIT
-version: 1.6.7
-date-released: '2026-10-20'
+version: 1.6.8
+date-released: '2026-10-22'
