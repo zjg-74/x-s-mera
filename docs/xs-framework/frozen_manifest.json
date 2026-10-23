@@ -1,0 +1,64 @@
+{
+  "version": "1.0",
+  "framework": "XS v3.4",
+  "purpose": "C1.8 冻结窗：被冻结文本**只带标注、不被改写**（元规则 U4）。逐条登记 sha256，由 src/xs_trace_gate.py 机检。",
+  "note": "新增冻结条目须说明 reason。刷新哈希：python src/xs_trace_gate.py --init-frozen",
+  "created": "2026-10-23",
+  "frozen": [
+    {
+      "path": "docs/xs-framework/01-v3.1-main-dichotomy-macro-loading-trichotomy.md",
+      "reason": "v3.1 主文。U1：后出文本不删前文，只加标注互指。",
+      "sha256": "e20e4b1cc5ad697b4cc8a925c91a354a717981ed0f97a8b8e7c943f5c3b68cc6"
+    },
+    {
+      "path": "docs/xs-framework/02-v3.1-supp1-chaos-boundary-negation-closure.md",
+      "reason": "v3.1 补篇一。U1 保护的历史文本。",
+      "sha256": "7a18dfa0256ea622d0f90afd58a5043fe7bbd837e4b7ada9fdb800f1e1e6096c"
+    },
+    {
+      "path": "docs/xs-framework/03-v3.1-supp2-potential-drift-diffusion.md",
+      "reason": "v3.1 补篇二。U1 保护的历史文本。",
+      "sha256": "dc2b4e045448d3313125f0c3fc69da50af2b2aba6da938fb7bab5f9685f2b352"
+    },
+    {
+      "path": "docs/xs-framework/04-v3.1-supp3-dual-constraint-PQ.md",
+      "reason": "v3.1 补篇三。U1 保护的历史文本（含 v3.4 加入的取代标注）。",
+      "sha256": "ada0dfbd915110d2d41ef6349fb94ec2e57cf4bd8d435765d461e7db2d8d3bf6"
+    },
+    {
+      "path": "docs/xs-framework/05-v3.1-supp4-calibration-commensurability.md",
+      "reason": "v3.1 补篇四。Ψ/U 拆分与可通约性的原始登记处。",
+      "sha256": "324175026cea141efaa66b8d6f9acebbda35bf70bfb6e0a8caff2030bf8bfc95"
+    },
+    {
+      "path": "docs/xs-framework/06-v3.1-supp5-bridge-constraint-strength.md",
+      "reason": "v3.1 补篇五。A_D 与桥的原始登记处（含 v3.4 加入的交叉引用标注）。",
+      "sha256": "ebcf869020adb3f73576ca6284276fa5e0313b36b695ced6aa68b9585d527f9e"
+    },
+    {
+      "path": "docs/xs-framework/07-v3.1-supp6-biphasic-shape.md",
+      "reason": "v3.1 补篇六。双相形状与峰序定理的原始登记处。",
+      "sha256": "d2ffd9995f5e70178b5de9356c5fb70d02ef33358e06cb02a53fced52b6edc9c"
+    },
+    {
+      "path": "docs/xs-framework/08-v3.1-supp7-micro-reversal-locality.md",
+      "reason": "v3.1 补篇七。微观反转与局部性的原始登记处。",
+      "sha256": "19129bf7a2ed94dfc04fbcfff7f3eaff2e5bf1599aa07c6a6ee26c6119e4fea7"
+    },
+    {
+      "path": "docs/xs-framework/09-v3.1-supp8-peak-distance-calibration.md",
+      "reason": "v3.1 补篇八。峰距守恒定理的原始登记处。",
+      "sha256": "c607f230ee294337a62ad5dcc39a3b44fabe130146f69161d278cd68e2ccfa37"
+    },
+    {
+      "path": "docs/xs-framework/09-v3.1-supp9-ad-refutation-signature.md",
+      "reason": "v3.1 补篇九。A_D 证否签名与规范自由度的原始登记处。",
+      "sha256": "0bd14d80aaeb581c2c4339346ee5f6a22d4bc77d942ec67b7e53c02d37a4fb66"
+    },
+    {
+      "path": "docs/xs-framework/14-v3.2-source-refactor-audit.md",
+      "reason": "v3.2 归因审计。八病根与 21 项未闭合项的原始登记处，v3.4 引用频繁，必须防静默篡改。",
+      "sha256": "4aaab34fd16519da4cf0f3654e674eb27548124b9f2a8db305884300db1dce37"
+    }
+  ]
+}

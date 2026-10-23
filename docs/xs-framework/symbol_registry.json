@@ -486,7 +486,9 @@
       "kind": "observable",
       "unit": "bit",
       "definition": "认知系统的熵／复杂度。E(k+1) − E(k) = Ψ(k)，是带漂移的随机游走。",
-      "derives_from": [],
+      "derives_from": [
+        "Psi"
+      ],
       "defined_in": [
         "03-v3.1-supp2-potential-drift-diffusion.md"
       ],
@@ -532,7 +534,9 @@
       "kind": "observable",
       "unit": "bit/步",
       "definition": "P 的通量形式：每步的注入速率。",
-      "derives_from": [],
+      "derives_from": [
+        "P_lvl"
+      ],
       "defined_in": [
         "15-v3.2-gauge-fixed-framework.md"
       ],
@@ -551,7 +555,9 @@
       "kind": "observable",
       "unit": "bit/步",
       "definition": "Q 的通量形式：每步的剪枝速率。",
-      "derives_from": [],
+      "derives_from": [
+        "Q"
+      ],
       "defined_in": [
         "15-v3.2-gauge-fixed-framework.md"
       ],
@@ -678,7 +684,9 @@
       "kind": "parameter",
       "unit": "无量纲",
       "definition": "展开子过程的投入量。λ-规范下 a ↦ λa。",
-      "derives_from": [],
+      "derives_from": [
+        "A_D"
+      ],
       "defined_in": [
         "06-v3.1-supp5-bridge-constraint-strength.md"
       ],
@@ -697,7 +705,9 @@
       "kind": "parameter",
       "unit": "无量纲",
       "definition": "消解子过程的投入量。λ-规范下 b 不变（a、e₊、u₊ 变）。",
-      "derives_from": [],
+      "derives_from": [
+        "A_D"
+      ],
       "defined_in": [
         "06-v3.1-supp5-bridge-constraint-strength.md"
       ],
@@ -716,7 +726,9 @@
       "kind": "parameter",
       "unit": "无量纲",
       "definition": "单位展开投入带来的 E 增量。",
-      "derives_from": [],
+      "derives_from": [
+        "A_D"
+      ],
       "defined_in": [
         "06-v3.1-supp5-bridge-constraint-strength.md"
       ],
@@ -735,7 +747,9 @@
       "kind": "parameter",
       "unit": "无量纲",
       "definition": "单位消解投入带来的 E 减量。",
-      "derives_from": [],
+      "derives_from": [
+        "A_D"
+      ],
       "defined_in": [
         "06-v3.1-supp5-bridge-constraint-strength.md"
       ],
@@ -754,7 +768,9 @@
       "kind": "parameter",
       "unit": "无量纲",
       "definition": "单位展开投入带来的 U 增量。",
-      "derives_from": [],
+      "derives_from": [
+        "A_D"
+      ],
       "defined_in": [
         "06-v3.1-supp5-bridge-constraint-strength.md"
       ],
@@ -773,7 +789,9 @@
       "kind": "parameter",
       "unit": "无量纲",
       "definition": "单位消解投入带来的 U 减量。",
-      "derives_from": [],
+      "derives_from": [
+        "A_D"
+      ],
       "defined_in": [
         "06-v3.1-supp5-bridge-constraint-strength.md"
       ],
@@ -1020,7 +1038,9 @@
       "kind": "procedure",
       "unit": null,
       "definition": "A_D⁺ 的边界层函数：dU/dt = a·u₊ − b·u₋·g(U)，要求 g(0)=0 且单调增。形式未知（B-B43）。",
-      "derives_from": [],
+      "derives_from": [
+        "A_D"
+      ],
       "defined_in": [
         "15-v3.2-gauge-fixed-framework.md"
       ],

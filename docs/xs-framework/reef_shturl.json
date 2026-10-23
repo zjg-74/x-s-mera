@@ -1,0 +1,82 @@
+{
+  "version": "1.0",
+  "framework": "XS v3.4",
+  "name": "reef_shturl",
+  "name_zh": "礁石台账",
+  "purpose": "登记**边界探索路线上尚未解掉的礁石**。与 B-Bxx 缺口表的区别：B-Bxx 登记的是「框架的缺口」，礁石登记的是「绘制边界地图过程中的具体待解问题」——礁石解掉后，缺口可能被重新定性。",
+  "numbering": "R-0xx，与实验编号 R18–R30、推论编号 R38–R45 分属不同序列（此处是问题编号，不是实验编号）。",
+  "registered_date": "2026-10-23",
+  "reefs": [
+    {
+      "id": "R-041",
+      "title": "可辨识分级是否随开闭实例变化",
+      "status": "待测绘",
+      "priority": "第一优先（A11）",
+      "question": "四级可辨识边界是否随实例类型（闭实例 / 开实例）发生变化？",
+      "motivation": "D-IDENT 目前标 established，但当前版本**默认统一分级，没有绑定实例开闭属性**。若分级随实例类型变化，则 D-IDENT 是「条件分层结构」而非「普适结构」，其证书必须改写。",
+      "check_items": [
+        {
+          "level": "D",
+          "question": "D 级（λ 规范冗余带来的伪目标）：闭实例、开实例下是否都恒不可读？",
+          "expectation": "预期：两者都恒不可读（规范冗余是定义层的，与观测协议无关）"
+        },
+        {
+          "level": "C",
+          "question": "C 级（依赖外部尺子）：在闭实例下，是否有一部分量可以自足读出？",
+          "expectation": "预期：是——闭实例 s(k) 可观测 ⟹ C 级闭合（命题 6.3 / R45）"
+        },
+        {
+          "level": "B",
+          "question": "B 级（截距符号）：在开实例下，是否仍然保持自足可读？",
+          "expectation": "预期：是——符号不需 κ_E，只需 ρ_exp 与 β 的符号"
+        }
+      ],
+      "output": "一张二维边界表（可辨识等级 A/B/C/D × {闭实例, 开实例}），登记每一类的可读规则、例外、依赖条件。",
+      "blocks": [
+        "D-IDENT 完整判别证书",
+        "A13 对应探索（边界地图是它的前置条件之一）"
+      ],
+      "needs_external_evidence": false,
+      "registered_in": "18-v3.3-formal-framework-charter.md §6.1 A11 / §6.4.2"
+    },
+    {
+      "id": "R-042",
+      "title": "D-SCALE 对 η、g 的参数敏感性",
+      "status": "待扫描",
+      "priority": "第二优先（A12）",
+      "question": "D-SCALE（跨尺度 / 同尺度区分）能否解除 provisional 状态？",
+      "motivation": "两条制约（B-B44 η、B-B43 g）此前被**捆在一起**当作同一强度的阻塞，导致 D-SCALE 长期压在 provisional。§4.4.1 已拆分强度，但**拆分是论证，不是检验**。",
+      "strength_split": [
+        {
+          "gap": "B-B44",
+          "item": "η 取值原则未定",
+          "strength": "弱",
+          "argument": "τ* 的**存在性不依赖 η 的精确值**，只依赖 η 落在合理区间 ⟹ 猜想：判定结果对 η 不敏感"
+        },
+        {
+          "gap": "B-B43",
+          "item": "g(U) 形式未知",
+          "strength": "弱（对判定而言）",
+          "argument": "D-SCALE 判定只需要**粗细两尺度残差对比**，**不需要反演 g(U)** ⟹ g 不进入判定流程。B-B43 阻塞的是 R32（残差反演），不是 D-SCALE 判定"
+        }
+      ],
+      "procedure": "在合理 η 区间批量采样仿真轨迹，统计 D-SCALE 判定结果的稳定性。",
+      "branch_outcomes": [
+        {
+          "case": "判定稳定",
+          "action": "D-SCALE 升级为 established，证书写明「对 η 不敏感、且 g 不进入判定流程」"
+        },
+        {
+          "case": "判定不稳定",
+          "action": "保留 provisional，**精确登记参数依赖范围与失效区间**"
+        }
+      ],
+      "note": "纯内部仿真扫描，属于 A 组边界测绘，**不属于 B 组经验锚定**，不需要外部数据。",
+      "blocks": [
+        "D-SCALE 判别证书"
+      ],
+      "needs_external_evidence": false,
+      "registered_in": "18-v3.3-formal-framework-charter.md §4.4.1 / §6.1 A12"
+    }
+  ]
+}

@@ -4,6 +4,7 @@
 
 对应合法性判据（见 docs/xs-framework/18-v3.3-formal-framework-charter.md）：
   - 判据一「内部一致性」→ 依赖无环、无自指、层归属唯一；
+    以及 v3.4 新增的 C1.7（推导链可追）、C1.8（冻结窗未被破坏）→ 由 xs_trace_gate 提供；
   - 判据二「术语明确性」→ 记号唯一、量纲与层固定、允许读法与禁止读法不相交、
     遗留冲突必须被登记且给出处置；
   - 判据三「跨实例可复用性」→ 区分登记里的非平凡实例必须互不相同。
@@ -18,6 +19,11 @@ from __future__ import annotations
 import json
 import os
 import sys
+
+try:  # 作为包被导入时（tests: from src import xs_formal_checks）
+    from src import xs_trace_gate  # type: ignore
+except ImportError:  # 作为脚本直接运行时（sys.path[0] 为 src/）
+    import xs_trace_gate  # type: ignore
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
@@ -254,6 +260,20 @@ def check_distinctions(reg, symbol_names):
             issues.append(_issue("error", "D005", where,
                                  "外部必要性不得为空——这是框架意义的核心判据"))
 
+        # v3.4：边界依赖与参数敏感度（礁石 R-041 / R-042）。
+        # 这两项目前全部「待测绘/未测」，因此这里报的是 warn 而非 error：
+        # 它是 A11/A12 待办的**显式回声**，让"还没画边界地图"这件事每次校验都可见。
+        missing_meta = []
+        bd = dist.get("boundary_dependence")
+        if not isinstance(bd, dict) or not str(bd.get("status", "")).strip():
+            missing_meta.append("boundary_dependence（R-041 边界地图）")
+        ps = dist.get("parameter_sensitivity")
+        if not isinstance(ps, dict) or not str(ps.get("status", "")).strip():
+            missing_meta.append("parameter_sensitivity（R-042 参数敏感性）")
+        if missing_meta:
+            issues.append(_issue("warn", "D010", where,
+                                 "未登记：%s" % "、".join(missing_meta)))
+
         pairs = dist.get("discriminates", []) or []
         if not pairs:
             issues.append(_issue("error", "D006", where,
@@ -275,17 +295,31 @@ def check_distinctions(reg, symbol_names):
 # 总入口
 # --------------------------------------------------------------------------
 
-def run_all(symbol_path=SYMBOL_REGISTRY, distinction_path=DISTINCTION_REGISTRY):
+def run_all(symbol_path=SYMBOL_REGISTRY, distinction_path=DISTINCTION_REGISTRY,
+            with_trace_gate=True):
     reg = load_json(symbol_path)
     dreg = load_json(distinction_path)
     names = set(s.get("symbol") for s in reg.get("symbols", []))
     issues = check_symbols(reg) + check_distinctions(dreg, names)
+
+    trace = {"errors": [], "warnings": [], "roots": 0,
+             "trace_gaps_declared": 0, "enabled": False}
+    if with_trace_gate:
+        try:
+            trace = xs_trace_gate.run_all()
+            trace["enabled"] = True
+        except FileNotFoundError as exc:
+            issues.append(_issue("warn", "G009", "xs_trace_gate",
+                                 "推导链/冻结窗闸门未运行（缺文件：%s）" % exc))
+        issues += trace.get("errors", []) + trace.get("warnings", [])
+
     errors = [i for i in issues if i["level"] == "error"]
     warns = [i for i in issues if i["level"] == "warn"]
     return {
         "symbols": len(reg.get("symbols", [])),
         "distinctions": len(dreg.get("distinctions", [])),
         "legacy_conflicts": len(reg.get("legacy_conflicts", [])),
+        "trace_gate": trace,
         "errors": errors,
         "warnings": warns,
     }
@@ -297,6 +331,10 @@ def format_report(report):
     lines.append("  记号登记：%d 条" % report["symbols"])
     lines.append("  区分登记：%d 条" % report["distinctions"])
     lines.append("  遗留冲突：%d 条" % report["legacy_conflicts"])
+    tg = report.get("trace_gate") or {}
+    if tg.get("enabled"):
+        lines.append("  推导链闸门 C1.7/C1.8：根记号 %d 条，已登记无根断言 %d 条"
+                     % (tg.get("roots", 0), tg.get("trace_gaps_declared", 0)))
     lines.append("  错误：%d    警告：%d"
                  % (len(report["errors"]), len(report["warnings"])))
     for issue in report["errors"] + report["warnings"]:

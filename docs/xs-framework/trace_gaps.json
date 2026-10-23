@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "framework": "XS v3.4",
+  "purpose": "C1.7 推导链溯源的**已知无根断言**白名单。登记在这里的记号，校验器不再报 error，但会报 warn。",
+  "slope_warning": "本文件是一个滑坡点：往里加一条就能让一个洞消失。防线：① 每条必须带 reason 与 todo；② 若某条其实可达根，校验器报 G004 要求移除（防线已在 v3.4 首次扫描中当场触发，见下）；③ 条目数只减不增。",
+  "scan_date": "2026-10-23",
+  "scan_result": {
+    "non_root_symbols": 38,
+    "unreachable_before_fix": 24,
+    "registry_omissions_fixed": 10,
+    "restored_transitively": 13,
+    "unreachable_after_fix": 1,
+    "note": "首次全库回归扫描（v3.4）抓出 24 条不可回溯到根的记号。逐条核对 definition 原文后：10 条是登记表**漏写 derives_from**（a,b,e+,e-,u+,u- 与 g 挂到 A_D；P_flx<-P_lvl、Q_flx<-Q、E<-Psi），另有 13 条因连锁恢复可达。真正无根的只剩 1 条，登记如下。",
+    "self_correction": "初稿曾把 E、P_flx、Q_flx 也登记为无根，理由写成「通量不由存量推导」。核对 definition 原文后该理由不成立：P_flx 的定义就是「P 的通量形式」，E 的定义就是 E(k+1)-E(k)=Psi(k)，二者**定义上**依赖存量侧。错在把「标定通道独立」当成了「定义独立」。校验器的 G004（白名单过期）当场抓出了这三条 ⟹ 已从本文件移除。"
+  },
+  "gaps": {
+    "eta": {
+      "kind": "observable",
+      "layer": "L2",
+      "reason": "尺度分离阈值 η 是**约定性输入**，其取值原则未定（B-B44）。它不是推导结论，是观测协议的一部分。",
+      "todo": "B-B44 若给出 η 的取值原则，本条应改为有根（derives_from 指向该原则所依赖的量）并从本文件移除。",
+      "severity": "中（它使 τ* 带约定性，进而使 D-SCALE 标 provisional，见礁石 R-042）"
+    }
+  }
+}
