@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 470" width="100%" role="img" aria-labelledby="wedgeTitle wedgeDesc">
+  <title id="wedgeTitle">XS 框架 v3.2：A_D 动力学的 (s, ρ) 平面楔形分类</title>
+  <desc id="wedgeDesc">横轴为归一化投入比 s，纵轴为效率比 ρ。竖线 s=1 与对角线 ρ=s 把平面切成四个区域：右上为越想越乱，左下为正常收敛，两片以 (1,1) 为顶点的楔形分别是钻研相与空洞相。轨迹沿 s 下降方向自右向左穿过楔形。</desc>
+
+  <defs>
+    <marker id="arrowBlack" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#2C2C2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrowGray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="680" height="470" fill="#FFFFFF"/>
+
+  <!-- 区域 -->
+  <path d="M249.5 257 L481.5 49 L554 49 L554 400 L249.5 400 Z" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.5"/>
+  <path d="M90 400 L249.5 400 L249.5 257 Z" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <path d="M249.5 257 L249.5 49 L481.5 49 Z" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <path d="M90 400 L249.5 257 L249.5 400 Z" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+
+  <!-- 轨迹（s 下降） -->
+  <line x1="548" y1="153" x2="198" y2="153" stroke="#185FA5" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arrowBlack)"/>
+  <line x1="548" y1="309" x2="146" y2="309" stroke="#854F0B" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arrowBlack)"/>
+
+  <!-- 峰位标记 -->
+  <circle cx="365.5" cy="153" r="4.5" fill="#185FA5"/>
+  <circle cx="249.5" cy="153" r="4.5" fill="#185FA5"/>
+  <circle cx="249.5" cy="309" r="4.5" fill="#854F0B"/>
+  <circle cx="191.5" cy="309" r="4.5" fill="#854F0B"/>
+
+  <!-- 轴 -->
+  <line x1="70" y1="400" x2="600" y2="400" stroke="#888780" stroke-width="1" marker-end="url(#arrowGray)"/>
+  <line x1="70" y1="410" x2="70" y2="36" stroke="#888780" stroke-width="1" marker-end="url(#arrowGray)"/>
+  <line x1="249.5" y1="36" x2="249.5" y2="408" stroke="#5F5E5A" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <line x1="70" y1="400" x2="481.5" y2="49" stroke="#5F5E5A" stroke-width="1.2"/>
+
+  <!-- 刻度 -->
+  <text x="249.5" y="422" font-family="var(--font-sans)" font-size="12" fill="#5F5E5A" text-anchor="middle">s = 1</text>
+  <text x="490" y="60" font-family="var(--font-sans)" font-size="12" fill="#5F5E5A">ρ = s</text>
+  <text x="600" y="422" font-family="var(--font-sans)" font-size="13" fill="#2C2C2A" text-anchor="end">s（归一化投入比）</text>
+  <text x="60" y="40" font-family="var(--font-sans)" font-size="13" fill="#2C2C2A" text-anchor="end">ρ</text>
+  <text x="62" y="398" font-family="var(--font-sans)" font-size="12" fill="#5F5E5A" text-anchor="end">0</text>
+
+  <!-- 区域标签 -->
+  <text x="520" y="360" font-family="var(--font-sans)" font-size="14" font-weight="500" fill="#791F1F" text-anchor="middle">越想越乱</text>
+  <text x="520" y="378" font-family="var(--font-sans)" font-size="12" fill="#A32D2D" text-anchor="middle">(+,+)</text>
+
+  <text x="140" y="378" font-family="var(--font-sans)" font-size="14" font-weight="500" fill="#085041" text-anchor="middle">正常收敛</text>
+  <text x="140" y="396" font-family="var(--font-sans)" font-size="12" fill="#0F6E56" text-anchor="middle">(−,−)</text>
+
+  <text x="352" y="100" font-family="var(--font-sans)" font-size="14" font-weight="500" fill="#0C447C" text-anchor="middle">钻研相</text>
+  <text x="352" y="118" font-family="var(--font-sans)" font-size="12" fill="#185FA5" text-anchor="middle">(+,−)　需 ρ &gt; 1</text>
+
+  <text x="176" y="278" font-family="var(--font-sans)" font-size="14" font-weight="500" fill="#633806" text-anchor="middle">空洞相</text>
+  <text x="176" y="294" font-family="var(--font-sans)" font-size="12" fill="#854F0B" text-anchor="middle">(−,+)　需 ρ &lt; 1</text>
+
+  <!-- 峰标注 -->
+  <text x="376" y="140" font-family="var(--font-sans)" font-size="12" fill="#0C447C">U 峰 (s = ρ)</text>
+  <text x="256" y="140" font-family="var(--font-sans)" font-size="12" fill="#0C447C">E 峰 (s = 1)</text>
+  <text x="150" y="296" font-family="var(--font-sans)" font-size="12" fill="#633806">E 峰</text>
+  <text x="256" y="326" font-family="var(--font-sans)" font-size="12" fill="#633806">U 峰</text>
+
+  <!-- 说明 -->
+  <text x="70" y="448" font-family="var(--font-sans)" font-size="12" fill="#5F5E5A">虚线箭头：s 随时间下降方向；上轨 ρ &gt; 1（U 峰在前 ⟹ 钻研），下轨 ρ &lt; 1（E 峰在前 ⟹ 空洞）</text>
+  <text x="70" y="464" font-family="var(--font-sans)" font-size="12" fill="#5F5E5A">两片楔形以 (1, 1) 为顶点，张开度 = |1 − ρ|；ρ → 1 时中间相消失</text>
+</svg>
