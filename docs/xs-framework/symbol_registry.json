@@ -1,0 +1,1064 @@
+{
+  "version": "1.0",
+  "framework": "XS",
+  "registry_date": "2026-10-23",
+  "purpose": "XS 框架的形式登记：把「术语明确性」与「层归属纪律」从靠人读变成可机检。合法性判据见 18-v3.3-formal-framework-charter.md。",
+  "layers": {
+    "L0": "生成层：认知如何被造出来、三种归宿在何处分岔",
+    "L1": "约束层：认知为什么能存续、为什么会失效",
+    "L2": "动力学层：认知过程长什么样（峰序、形状、演化）"
+  },
+  "kinds": [
+    "primitive",
+    "derived",
+    "observable",
+    "parameter",
+    "assumption",
+    "procedure",
+    "classification"
+  ],
+  "identifiability_levels": {
+    "A": "自足可标定（读仿射斜率，不需要外部尺子，不受调度影响）",
+    "B": "自足可标定（读仿射截距符号，不需要外部尺子，不受调度影响）",
+    "C": "需外部观测类别（需外部尺子／固定动作计数；纯 (E,U) 观测下不可分离）",
+    "D": "伪目标（规范冗余所致，不应去辨识）"
+  },
+  "symbols": [
+    {
+      "symbol": "X",
+      "name_zh": "象",
+      "layer": "L0",
+      "kind": "primitive",
+      "unit": null,
+      "definition": "认知的对象面：被处理的东西。",
+      "derives_from": [],
+      "defined_in": [
+        "01-v3.1-main-dichotomy-macro-loading-trichotomy.md"
+      ],
+      "identifiability": null,
+      "allowed_readings": [
+        "对象面",
+        "被处理的对象"
+      ],
+      "forbidden_readings": [
+        "不能读作「过程」「评价」「价值」"
+      ]
+    },
+    {
+      "symbol": "S",
+      "name_zh": "运算",
+      "layer": "L0",
+      "kind": "primitive",
+      "unit": null,
+      "definition": "认知的运算面：对 X 所做的事。",
+      "derives_from": [],
+      "defined_in": [
+        "01-v3.1-main-dichotomy-macro-loading-trichotomy.md"
+      ],
+      "identifiability": null,
+      "allowed_readings": [
+        "运算面",
+        "对对象所做之事"
+      ],
+      "forbidden_readings": [
+        "不能与 X 互换",
+        "不能读作「内容」"
+      ]
+    },
+    {
+      "symbol": "F",
+      "name_zh": "事实公理",
+      "layer": "L0",
+      "kind": "primitive",
+      "unit": null,
+      "definition": "事实集的单调公理：F_0 ⊆ F_1 ⊆ …；「否定」是增加而非删除。",
+      "derives_from": [],
+      "defined_in": [
+        "01-v3.1-main-dichotomy-macro-loading-trichotomy.md"
+      ],
+      "identifiability": null,
+      "allowed_readings": [
+        "事实集",
+        "单调公理"
+      ],
+      "forbidden_readings": [
+        "不能读作「可被证伪的命题集合」——被证伪者以「已知的假」留在集内"
+      ]
+    },
+    {
+      "symbol": "O",
+      "name_zh": "运算公理",
+      "layer": "L0",
+      "kind": "primitive",
+      "unit": null,
+      "definition": "可证伪、可追溯、可组合的运算公理。",
+      "derives_from": [],
+      "defined_in": [
+        "01-v3.1-main-dichotomy-macro-loading-trichotomy.md"
+      ],
+      "identifiability": null,
+      "allowed_readings": [
+        "运算公理"
+      ],
+      "forbidden_readings": [
+        "不能与 F 混用",
+        "不能读作「方法」"
+      ]
+    },
+    {
+      "symbol": "Cn",
+      "name_zh": "推导闭包",
+      "layer": "L0",
+      "kind": "derived",
+      "unit": null,
+      "definition": "由 F 与 O 生成的闭包。已知 Cn 不是拟阵（p∧q ∉ Cn({p})），故无「维数」不变性，正确量是 rank(π)。",
+      "derives_from": [
+        "F",
+        "O"
+      ],
+      "defined_in": [
+        "01-v3.1-main-dichotomy-macro-loading-trichotomy.md"
+      ],
+      "identifiability": null,
+      "allowed_readings": [
+        "闭包",
+        "由公理生成的结构"
+      ],
+      "forbidden_readings": [
+        "不能读作「维度」",
+        "不能假定其为拟阵（Steinitz 交换性不成立）"
+      ]
+    },
+    {
+      "symbol": "M",
+      "name_zh": "宏",
+      "layer": "L0",
+      "kind": "primitive",
+      "unit": null,
+      "definition": "认知的运算结构；加载过程分展开—加载—产出三部。",
+      "derives_from": [],
+      "defined_in": [
+        "01-v3.1-main-dichotomy-macro-loading-trichotomy.md"
+      ],
+      "identifiability": null,
+      "allowed_readings": [
+        "运算结构",
+        "被装载的模板"
+      ],
+      "forbidden_readings": [
+        "不能读作「预设的答案」——XSM 是被生成出来的"
+      ]
+    },
+    {
+      "symbol": "sigma",
+      "name_zh": "加载度",
+      "layer": "L0",
+      "kind": "derived",
+      "unit": null,
+      "definition": "有多少外部素材被真正操作过的比例。",
+      "derives_from": [
+        "M"
+      ],
+      "defined_in": [
+        "01-v3.1-main-dichotomy-macro-loading-trichotomy.md"
+      ],
+      "identifiability": null,
+      "allowed_readings": [
+        "素材被操作的比例"
+      ],
+      "forbidden_readings": [
+        "不能读作「说了多少话」「信息量」"
+      ]
+    },
+    {
+      "symbol": "A_k",
+      "name_zh": "候选集",
+      "layer": "L0",
+      "kind": "derived",
+      "unit": null,
+      "definition": "第 k 步尚未被排除的候选解释集合。",
+      "derives_from": [
+        "F",
+        "O"
+      ],
+      "defined_in": [
+        "01-v3.1-main-dichotomy-macro-loading-trichotomy.md"
+      ],
+      "identifiability": null,
+      "allowed_readings": [
+        "候选解释集合"
+      ],
+      "forbidden_readings": [
+        "不能读作「答案」"
+      ]
+    },
+    {
+      "symbol": "m",
+      "name_zh": "候选数",
+      "layer": "L0",
+      "kind": "observable",
+      "unit": "计数",
+      "definition": "|A_k|，候选集的基数。",
+      "derives_from": [
+        "A_k"
+      ],
+      "defined_in": [
+        "07-v3.1-supp6-biphasic-shape.md"
+      ],
+      "identifiability": "A",
+      "allowed_readings": [
+        "候选个数",
+        "整数计数"
+      ],
+      "forbidden_readings": [
+        "不能读作「未决量」——U 才是未决量",
+        "峰不承载在 m 上"
+      ]
+    },
+    {
+      "symbol": "m_eff",
+      "name_zh": "有效候选数",
+      "layer": "L0",
+      "kind": "observable",
+      "unit": "计数",
+      "definition": "2^U(k)。峰承载于 m_eff 而非 m；m_eff ≤ m，等号在均匀分布取到。",
+      "derives_from": [
+        "U"
+      ],
+      "defined_in": [
+        "15-v3.2-gauge-fixed-framework.md"
+      ],
+      "identifiability": "A",
+      "allowed_readings": [
+        "熵的指数",
+        "连续的有效承载量"
+      ],
+      "forbidden_readings": [
+        "不能等同于 |A_k|（仅均匀分布时相等）"
+      ]
+    },
+    {
+      "symbol": "fate",
+      "name_zh": "归宿（三分）",
+      "layer": "L0",
+      "kind": "classification",
+      "unit": null,
+      "definition": "收敛 / 震荡 / 发散。成立条件：资源有界 B < ∞ 且存在统计定向 ψ̄ ≠ 0；ψ̄ = 0 时为四分。",
+      "derives_from": [
+        "F",
+        "O"
+      ],
+      "defined_in": [
+        "03-v3.1-supp2-potential-drift-diffusion.md"
+      ],
+      "identifiability": null,
+      "allowed_readings": [
+        "三种归宿的分类"
+      ],
+      "forbidden_readings": [
+        "不能由 L2 的形状量推断（D1 层间纪律）"
+      ]
+    },
+    {
+      "symbol": "phi",
+      "name_zh": "已知",
+      "layer": "L1",
+      "kind": "primitive",
+      "unit": null,
+      "definition": "认知者已知的部分（已知事实集）。",
+      "derives_from": [],
+      "defined_in": [
+        "04-v3.1-supp3-dual-constraint-PQ.md"
+      ],
+      "identifiability": null,
+      "allowed_readings": [
+        "已知",
+        "先验条件"
+      ],
+      "forbidden_readings": [
+        "不能读作「意义 M」"
+      ]
+    },
+    {
+      "symbol": "Omega",
+      "name_zh": "理解者",
+      "layer": "L1",
+      "kind": "primitive",
+      "unit": null,
+      "definition": "认知主体；P 与「两层能否互引」都依赖它。",
+      "derives_from": [],
+      "defined_in": [
+        "06-v3.1-supp5-bridge-constraint-strength.md"
+      ],
+      "identifiability": null,
+      "allowed_readings": [
+        "理解者",
+        "认知主体"
+      ],
+      "forbidden_readings": [
+        "不能读作「样本」"
+      ]
+    },
+    {
+      "symbol": "C_in",
+      "name_zh": "输入约束",
+      "layer": "L1",
+      "kind": "primitive",
+      "unit": null,
+      "definition": "内约束（规范性）作用在输入上的部分。",
+      "derives_from": [],
+      "defined_in": [
+        "04-v3.1-supp3-dual-constraint-PQ.md"
+      ],
+      "identifiability": null,
+      "allowed_readings": [
+        "内约束",
+        "必须理解的指令"
+      ],
+      "forbidden_readings": [
+        "不能读作「外约束」"
+      ]
+    },
+    {
+      "symbol": "P_lvl",
+      "name_zh": "欠定量（水平）",
+      "layer": "L1",
+      "kind": "observable",
+      "unit": "bit",
+      "definition": "P 的水平量：H(M | φ, Ω)。外约束留下的物理形态欠定性。",
+      "derives_from": [
+        "phi",
+        "Omega"
+      ],
+      "defined_in": [
+        "15-v3.2-gauge-fixed-framework.md"
+      ],
+      "identifiability": "C",
+      "allowed_readings": [
+        "水平量",
+        "存量形式的欠定性"
+      ],
+      "forbidden_readings": [
+        "不能与 P_flx 混用",
+        "不能当作可跨群体比较的数值"
+      ]
+    },
+    {
+      "symbol": "Q",
+      "name_zh": "收敛力（现行定义）",
+      "layer": "L1",
+      "kind": "observable",
+      "unit": "bit",
+      "definition": "I(M; C_in | φ)，内约束消除了多少关于意义的不确定性。补篇四 定义 3.2′ 取代了补篇三 定义 3.2。",
+      "derives_from": [
+        "C_in",
+        "phi"
+      ],
+      "defined_in": [
+        "05-v3.1-supp4-calibration-commensurability.md"
+      ],
+      "identifiability": "C",
+      "allowed_readings": [
+        "条件互信息形式的收敛力",
+        "现行定义"
+      ],
+      "forbidden_readings": [
+        "不能读作 Q_prune（操作空间剪枝量）",
+        "不能读作「要求有多严」"
+      ]
+    },
+    {
+      "symbol": "Q_prune",
+      "name_zh": "剪枝量（Q 的机制）",
+      "layer": "L1",
+      "kind": "observable",
+      "unit": "bit",
+      "definition": "log2(|O_all| / |O_adm|)，操作空间被剪掉的信息量。补篇四 §2.2 称其为 Q 的「机制」，非现行 Q 定义。",
+      "derives_from": [
+        "O_all",
+        "O_adm"
+      ],
+      "defined_in": [
+        "06-v3.1-supp5-bridge-constraint-strength.md"
+      ],
+      "identifiability": "C",
+      "allowed_readings": [
+        "机制量",
+        "剪枝量"
+      ],
+      "forbidden_readings": [
+        "不能读作现行 Q（互信息）",
+        "补篇五 §2.2 的旧记号 Q 指的正是本量"
+      ]
+    },
+    {
+      "symbol": "U",
+      "name_zh": "净未决量（存量）",
+      "layer": "L1",
+      "kind": "observable",
+      "unit": "bit",
+      "definition": "H(M | φ, C_in) ≥ 0，净未决量。补篇四 §2.4 已把符号 Ψ 拆为 U（存量）与 Ψ（通量）。",
+      "derives_from": [
+        "P_lvl",
+        "Q"
+      ],
+      "defined_in": [
+        "05-v3.1-supp4-calibration-commensurability.md"
+      ],
+      "identifiability": "C",
+      "allowed_readings": [
+        "存量",
+        "还没想清楚的部分"
+      ],
+      "forbidden_readings": [
+        "不能读作速率/推力（那是 Ψ）",
+        "不能读作「熵 E」"
+      ]
+    },
+    {
+      "symbol": "I_bias",
+      "name_zh": "混合偏倚",
+      "layer": "L1",
+      "kind": "observable",
+      "unit": "bit",
+      "definition": "I(M; Ω | φ)。跨理解者混合估计给 H(M|φ)，偏倚恰为 I(M;Ω|φ)，是 P 定义的直接推论。",
+      "derives_from": [
+        "Omega",
+        "phi"
+      ],
+      "defined_in": [
+        "15-v3.2-gauge-fixed-framework.md"
+      ],
+      "identifiability": "C",
+      "allowed_readings": [
+        "混合估计偏倚",
+        "定义推论"
+      ],
+      "forbidden_readings": [
+        "不能读作「未知量」",
+        "不能读作测量误差"
+      ]
+    },
+    {
+      "symbol": "O_all",
+      "name_zh": "可执行操作全体",
+      "layer": "L1",
+      "kind": "primitive",
+      "unit": null,
+      "definition": "对该输入物理上可执行的全部操作。",
+      "derives_from": [],
+      "defined_in": [
+        "04-v3.1-supp3-dual-constraint-PQ.md"
+      ],
+      "identifiability": null,
+      "allowed_readings": [
+        "操作空间全体"
+      ],
+      "forbidden_readings": [
+        "不能读作「被准许的操作」"
+      ]
+    },
+    {
+      "symbol": "O_adm",
+      "name_zh": "被准许操作集",
+      "layer": "L1",
+      "kind": "derived",
+      "unit": null,
+      "definition": "在内约束下被准许的操作集合。",
+      "derives_from": [
+        "C_in"
+      ],
+      "defined_in": [
+        "04-v3.1-supp3-dual-constraint-PQ.md"
+      ],
+      "identifiability": null,
+      "allowed_readings": [
+        "被准许的操作集"
+      ],
+      "forbidden_readings": [
+        "不能与 O_all 混用"
+      ]
+    },
+    {
+      "symbol": "E",
+      "name_zh": "展开度（系统熵）",
+      "layer": "L2",
+      "kind": "observable",
+      "unit": "bit",
+      "definition": "认知系统的熵／复杂度。E(k+1) − E(k) = Ψ(k)，是带漂移的随机游走。",
+      "derives_from": [],
+      "defined_in": [
+        "03-v3.1-supp2-potential-drift-diffusion.md"
+      ],
+      "identifiability": "A",
+      "allowed_readings": [
+        "展开度",
+        "系统熵"
+      ],
+      "forbidden_readings": [
+        "不能读作「未决量 U」",
+        "不能读作「认知能力」"
+      ]
+    },
+    {
+      "symbol": "Psi",
+      "name_zh": "净驱动力（通量）",
+      "layer": "L2",
+      "kind": "observable",
+      "unit": "bit/步",
+      "definition": "净驱动力，≡ dE/dk，有正负。补篇四 §2.4 由旧记号 Ψ 拆出；存量侧改记 U。",
+      "derives_from": [
+        "P_flx",
+        "Q_flx"
+      ],
+      "defined_in": [
+        "15-v3.2-gauge-fixed-framework.md"
+      ],
+      "identifiability": "A",
+      "allowed_readings": [
+        "通量",
+        "推力",
+        "漂移的瞬时值"
+      ],
+      "forbidden_readings": [
+        "不能读作存量 U",
+        "补篇三 §3.3 的「Ψ = P − Q [bit]」是遗留旧记号"
+      ]
+    },
+    {
+      "symbol": "P_flx",
+      "name_zh": "注入通量",
+      "layer": "L2",
+      "kind": "observable",
+      "unit": "bit/步",
+      "definition": "P 的通量形式：每步的注入速率。",
+      "derives_from": [],
+      "defined_in": [
+        "15-v3.2-gauge-fixed-framework.md"
+      ],
+      "identifiability": "A",
+      "allowed_readings": [
+        "通量"
+      ],
+      "forbidden_readings": [
+        "不能与 P_lvl 混用"
+      ]
+    },
+    {
+      "symbol": "Q_flx",
+      "name_zh": "剪枝通量",
+      "layer": "L2",
+      "kind": "observable",
+      "unit": "bit/步",
+      "definition": "Q 的通量形式：每步的剪枝速率。",
+      "derives_from": [],
+      "defined_in": [
+        "15-v3.2-gauge-fixed-framework.md"
+      ],
+      "identifiability": "A",
+      "allowed_readings": [
+        "通量"
+      ],
+      "forbidden_readings": [
+        "不能与 Q_lvl 混用"
+      ]
+    },
+    {
+      "symbol": "psi_bar",
+      "name_zh": "统计定向",
+      "layer": "L2",
+      "kind": "observable",
+      "unit": "bit/步",
+      "definition": "Ψ 的系统性成分 E[Ψ]。ψ̄ ≠ 0 是三分成立的必要条件。",
+      "derives_from": [
+        "Psi"
+      ],
+      "defined_in": [
+        "03-v3.1-supp2-potential-drift-diffusion.md"
+      ],
+      "identifiability": "C",
+      "allowed_readings": [
+        "漂移项",
+        "长期方向"
+      ],
+      "forbidden_readings": [
+        "不能读作「总能量」"
+      ]
+    },
+    {
+      "symbol": "xi",
+      "name_zh": "涨落",
+      "layer": "L2",
+      "kind": "observable",
+      "unit": "bit/步",
+      "definition": "Ψ 的涨落成分，E[ξ] = 0。局部回落的来源。",
+      "derives_from": [
+        "Psi"
+      ],
+      "defined_in": [
+        "03-v3.1-supp2-potential-drift-diffusion.md"
+      ],
+      "identifiability": "C",
+      "allowed_readings": [
+        "涨落项",
+        "随机成分"
+      ],
+      "forbidden_readings": [
+        "不能读作「测量误差」——它是过程的本体属性"
+      ]
+    },
+    {
+      "symbol": "tau_star",
+      "name_zh": "分离尺度",
+      "layer": "L2",
+      "kind": "observable",
+      "unit": "步",
+      "definition": "min{τ : Var(ξ_τ)/ψ̄² < η}。一切形状命题都相对于 τ* 成立。",
+      "derives_from": [
+        "xi",
+        "psi_bar",
+        "eta"
+      ],
+      "defined_in": [
+        "15-v3.2-gauge-fixed-framework.md"
+      ],
+      "identifiability": "C",
+      "allowed_readings": [
+        "尺度",
+        "粗粒化尺度"
+      ],
+      "forbidden_readings": [
+        "不能读作「窗口长度 w」——w 是从外部塞入的旋钮"
+      ]
+    },
+    {
+      "symbol": "eta",
+      "name_zh": "分离阈值",
+      "layer": "L2",
+      "kind": "observable",
+      "unit": "无量纲",
+      "definition": "把涨落误读为定向的可接受错误率。取值原则未定（B-B44）。",
+      "derives_from": [],
+      "defined_in": [
+        "15-v3.2-gauge-fixed-framework.md"
+      ],
+      "identifiability": "C",
+      "allowed_readings": [
+        "可接受错误率"
+      ],
+      "forbidden_readings": [
+        "不能读作显著性水平 h（h 是外部旋钮）"
+      ]
+    },
+    {
+      "symbol": "A_D",
+      "name_zh": "展开/消解双速率线性分解（假设）",
+      "layer": "L2",
+      "kind": "assumption",
+      "unit": null,
+      "definition": "每一步由展开（投入 a）与消解（投入 b）两个线性子过程叠加，且由同一对 (a_k,b_k) 驱动。**全框架唯一承重假设，未获现实检验。**",
+      "derives_from": [],
+      "defined_in": [
+        "06-v3.1-supp5-bridge-constraint-strength.md"
+      ],
+      "identifiability": null,
+      "allowed_readings": [
+        "建模假设",
+        "L2 层的唯一承重前提"
+      ],
+      "forbidden_readings": [
+        "不能读作「已被证明」",
+        "不能读作「经验事实」"
+      ]
+    },
+    {
+      "symbol": "a",
+      "name_zh": "展开投入",
+      "layer": "L2",
+      "kind": "parameter",
+      "unit": "无量纲",
+      "definition": "展开子过程的投入量。λ-规范下 a ↦ λa。",
+      "derives_from": [],
+      "defined_in": [
+        "06-v3.1-supp5-bridge-constraint-strength.md"
+      ],
+      "identifiability": "D",
+      "allowed_readings": [
+        "投入量"
+      ],
+      "forbidden_readings": [
+        "不能单独辨识（D 级伪目标）"
+      ]
+    },
+    {
+      "symbol": "b",
+      "name_zh": "消解投入",
+      "layer": "L2",
+      "kind": "parameter",
+      "unit": "无量纲",
+      "definition": "消解子过程的投入量。λ-规范下 b 不变（a、e₊、u₊ 变）。",
+      "derives_from": [],
+      "defined_in": [
+        "06-v3.1-supp5-bridge-constraint-strength.md"
+      ],
+      "identifiability": "D",
+      "allowed_readings": [
+        "投入量"
+      ],
+      "forbidden_readings": [
+        "不能单独辨识（D 级伪目标）"
+      ]
+    },
+    {
+      "symbol": "e_plus",
+      "name_zh": "展开的 E 效率系数",
+      "layer": "L2",
+      "kind": "parameter",
+      "unit": "无量纲",
+      "definition": "单位展开投入带来的 E 增量。",
+      "derives_from": [],
+      "defined_in": [
+        "06-v3.1-supp5-bridge-constraint-strength.md"
+      ],
+      "identifiability": "D",
+      "allowed_readings": [
+        "单位系数"
+      ],
+      "forbidden_readings": [
+        "不能单独辨识（D 级伪目标）"
+      ]
+    },
+    {
+      "symbol": "e_minus",
+      "name_zh": "消解的 E 效率系数",
+      "layer": "L2",
+      "kind": "parameter",
+      "unit": "无量纲",
+      "definition": "单位消解投入带来的 E 减量。",
+      "derives_from": [],
+      "defined_in": [
+        "06-v3.1-supp5-bridge-constraint-strength.md"
+      ],
+      "identifiability": "D",
+      "allowed_readings": [
+        "单位系数"
+      ],
+      "forbidden_readings": [
+        "不能单独辨识（D 级伪目标）"
+      ]
+    },
+    {
+      "symbol": "u_plus",
+      "name_zh": "展开的 U 效率系数",
+      "layer": "L2",
+      "kind": "parameter",
+      "unit": "无量纲",
+      "definition": "单位展开投入带来的 U 增量。",
+      "derives_from": [],
+      "defined_in": [
+        "06-v3.1-supp5-bridge-constraint-strength.md"
+      ],
+      "identifiability": "D",
+      "allowed_readings": [
+        "单位系数"
+      ],
+      "forbidden_readings": [
+        "不能单独辨识（D 级伪目标）"
+      ]
+    },
+    {
+      "symbol": "u_minus",
+      "name_zh": "消解的 U 效率系数",
+      "layer": "L2",
+      "kind": "parameter",
+      "unit": "无量纲",
+      "definition": "单位消解投入带来的 U 减量。",
+      "derives_from": [],
+      "defined_in": [
+        "06-v3.1-supp5-bridge-constraint-strength.md"
+      ],
+      "identifiability": "D",
+      "allowed_readings": [
+        "单位系数"
+      ],
+      "forbidden_readings": [
+        "不能单独辨识（D 级伪目标）"
+      ]
+    },
+    {
+      "symbol": "r",
+      "name_zh": "投入比",
+      "layer": "L2",
+      "kind": "parameter",
+      "unit": "无量纲",
+      "definition": "a/b，展开与消解的投入之比。λ-规范下 r ↦ λr。",
+      "derives_from": [
+        "a",
+        "b"
+      ],
+      "defined_in": [
+        "06-v3.1-supp5-bridge-constraint-strength.md"
+      ],
+      "identifiability": "D",
+      "allowed_readings": [
+        "投入比"
+      ],
+      "forbidden_readings": [
+        "不能单独辨识（D 级伪目标）",
+        "不能读作「投入量」——必须先经 s = r/θ_E 规范化"
+      ]
+    },
+    {
+      "symbol": "s",
+      "name_zh": "归一化投入比",
+      "layer": "L2",
+      "kind": "parameter",
+      "unit": "无量纲",
+      "definition": "r/θ_E，λ-规范不变的无量纲投入比。",
+      "derives_from": [
+        "r",
+        "theta_E"
+      ],
+      "defined_in": [
+        "15-v3.2-gauge-fixed-framework.md"
+      ],
+      "identifiability": "B",
+      "allowed_readings": [
+        "规范化投入比",
+        "无量纲驱动量"
+      ],
+      "forbidden_readings": [
+        "不能读作「投入量」——已无量纲"
+      ]
+    },
+    {
+      "symbol": "kappa_E",
+      "name_zh": "时间尺度",
+      "layer": "L2",
+      "kind": "parameter",
+      "unit": "1/时间",
+      "definition": "b·e₋，单一时间尺度。λ-规范不变，但需要外部单位才能给绝对值。",
+      "derives_from": [
+        "b",
+        "e_minus"
+      ],
+      "defined_in": [
+        "15-v3.2-gauge-fixed-framework.md"
+      ],
+      "identifiability": "C",
+      "allowed_readings": [
+        "时间尺度",
+        "有量纲的内禀参数"
+      ],
+      "forbidden_readings": [
+        "不能由纯 (E,U) 观测单独分离（须与 ρ 联合，见 B-B45）"
+      ]
+    },
+    {
+      "symbol": "theta_E",
+      "name_zh": "Ψ=0 的临界比",
+      "layer": "L2",
+      "kind": "parameter",
+      "unit": "无量纲",
+      "definition": "e₋/e₊，E 漂移变号的临界投入比。",
+      "derives_from": [
+        "e_plus",
+        "e_minus"
+      ],
+      "defined_in": [
+        "06-v3.1-supp5-bridge-constraint-strength.md"
+      ],
+      "identifiability": "D",
+      "allowed_readings": [
+        "临界比"
+      ],
+      "forbidden_readings": [
+        "不能单独辨识（D 级伪目标）"
+      ]
+    },
+    {
+      "symbol": "theta_U",
+      "name_zh": "dU=0 的临界比",
+      "layer": "L2",
+      "kind": "parameter",
+      "unit": "无量纲",
+      "definition": "u₋/u₊，U 变号的临界投入比。",
+      "derives_from": [
+        "u_plus",
+        "u_minus"
+      ],
+      "defined_in": [
+        "06-v3.1-supp5-bridge-constraint-strength.md"
+      ],
+      "identifiability": "D",
+      "allowed_readings": [
+        "临界比"
+      ],
+      "forbidden_readings": [
+        "不能单独辨识（D 级伪目标）"
+      ]
+    },
+    {
+      "symbol": "rho_exp",
+      "name_zh": "展开效率比",
+      "layer": "L2",
+      "kind": "parameter",
+      "unit": "无量纲",
+      "definition": "u₊/e₊，每单位展开带来的新未决相对 E 增量的比。",
+      "derives_from": [
+        "u_plus",
+        "e_plus"
+      ],
+      "defined_in": [
+        "06-v3.1-supp5-bridge-constraint-strength.md"
+      ],
+      "identifiability": "A",
+      "allowed_readings": [
+        "效率比",
+        "仿射斜率"
+      ],
+      "forbidden_readings": [
+        "不能读作「好奇程度」"
+      ]
+    },
+    {
+      "symbol": "rho_res",
+      "name_zh": "消解效率比",
+      "layer": "L2",
+      "kind": "parameter",
+      "unit": "无量纲",
+      "definition": "u₋/e₋，每单位消解消除的新未决相对 E 减量的比。",
+      "derives_from": [
+        "u_minus",
+        "e_minus"
+      ],
+      "defined_in": [
+        "06-v3.1-supp5-bridge-constraint-strength.md"
+      ],
+      "identifiability": "C",
+      "allowed_readings": [
+        "效率比"
+      ],
+      "forbidden_readings": [
+        "其绝对值不能由纯 (E,U) 观测读出"
+      ]
+    },
+    {
+      "symbol": "rho",
+      "name_zh": "效率比之比",
+      "layer": "L2",
+      "kind": "parameter",
+      "unit": "无量纲",
+      "definition": "ρ_res/ρ_exp = θ_U/θ_E。符号决定峰序（钻研/空洞），数值需 κ_E。",
+      "derives_from": [
+        "rho_res",
+        "rho_exp"
+      ],
+      "defined_in": [
+        "15-v3.2-gauge-fixed-framework.md"
+      ],
+      "identifiability": "B",
+      "allowed_readings": [
+        "比值",
+        "楔形位置参数"
+      ],
+      "forbidden_readings": [
+        "其数值属 C 级——不能由峰距直接读出（越层读取）"
+      ]
+    },
+    {
+      "symbol": "alpha",
+      "name_zh": "仿射纵截距",
+      "layer": "L2",
+      "kind": "observable",
+      "unit": "bit",
+      "definition": "U − ρ_exp·E 对 k 仿射的纵截距。",
+      "derives_from": [
+        "U",
+        "E",
+        "rho_exp"
+      ],
+      "defined_in": [
+        "15-v3.2-gauge-fixed-framework.md"
+      ],
+      "identifiability": "A",
+      "allowed_readings": [
+        "截距"
+      ],
+      "forbidden_readings": [
+        "不能与 beta 混用"
+      ]
+    },
+    {
+      "symbol": "beta",
+      "name_zh": "仿射每步斜率",
+      "layer": "L2",
+      "kind": "observable",
+      "unit": "bit/步",
+      "definition": "U − ρ_exp·E 对 k 仿射的每步斜率，= dt·κ_E(ρ_exp − ρ_res)。符号给出 sign(1−ρ)。",
+      "derives_from": [
+        "U",
+        "E",
+        "rho_exp",
+        "kappa_E"
+      ],
+      "defined_in": [
+        "15-v3.2-gauge-fixed-framework.md"
+      ],
+      "identifiability": "B",
+      "allowed_readings": [
+        "截距斜率"
+      ],
+      "forbidden_readings": [
+        "其绝对值含 κ_E，属 C 级"
+      ]
+    },
+    {
+      "symbol": "g",
+      "name_zh": "边界层函数",
+      "layer": "L2",
+      "kind": "procedure",
+      "unit": null,
+      "definition": "A_D⁺ 的边界层函数：dU/dt = a·u₊ − b·u₋·g(U)，要求 g(0)=0 且单调增。形式未知（B-B43）。",
+      "derives_from": [],
+      "defined_in": [
+        "15-v3.2-gauge-fixed-framework.md"
+      ],
+      "identifiability": null,
+      "allowed_readings": [
+        "状态依赖修正项",
+        "触底保护"
+      ],
+      "forbidden_readings": [
+        "不能读作已确定的形式",
+        "补篇九全部结论只在其非常数时偏离仿射"
+      ]
+    }
+  ],
+  "legacy_conflicts": [
+    {
+      "id": "C1",
+      "title": "Ψ / U 符号冲突",
+      "symbols": [
+        "Psi",
+        "U"
+      ],
+      "identified_in": "05-v3.1-supp4-calibration-commensurability.md §2.4",
+      "status": "resolved",
+      "resolution": "v3.2 §5 落成记号分层规则：存量 U（L1，bit，≥0）、通量 Ψ（L2，bit/步，有正负）；补篇三 §3.3 的旧记号已加取代标注。",
+      "note": "作者曾在 v3.2 初稿把此误称为「新病根」——实为 v3.1 已有。这条冲突是「靠人读会漏检」的直接证据。"
+    },
+    {
+      "id": "C2",
+      "title": "Q / Q_prune 术语二义",
+      "symbols": [
+        "Q",
+        "Q_prune"
+      ],
+      "identified_in": "05-v3.1-supp4-calibration-commensurability.md §2.2（机制降级）与 06-v3.1-supp5-bridge-constraint-strength.md §2.2（仍写作 Q）",
+      "status": "annotated",
+      "resolution": "两者分别登记为 Q（互信息，现行定义）与 Q_prune（操作空间剪枝量，机制）；补篇五 §2.2 已加交叉引用标注，原文保留（U1）。",
+      "note": "补篇五 §2.2 的公式里 Q 指机制量，与补篇三/四的 Q 不是同一个量；这是「术语明确性」判据下的一处实际违规。"
+    }
+  ]
+}
