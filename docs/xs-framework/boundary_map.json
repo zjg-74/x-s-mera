@@ -1,18 +1,18 @@
 {
-  "version": "0.3",
+  "version": "0.4",
   "framework": "XS v3.4",
   "name": "boundary_map",
   "name_zh": "边界地图（机读版）",
   "created": "2026-10-24",
-  "revised": "2026-10-24 v0.3：OPEN-2 从【开放】改登记为【约定】（等待声明而非判据，与 eta、z 并列）；约定 A（工具算界内）下 C 级自足为定义上的真，约定 B 下为相对于观测协议的条件性结论；框架不裁定约定，只要求显式声明",
+  "revised": "2026-10-24 v0.3：OPEN-2 从【开放】改登记为【约定】（等待声明而非判据，与 eta、z 并列）；约定 A（工具算界内）下 C 级自足为定义上的真，约定 B 下为相对于观测协议的条件性结论；框架不裁定约定，只要求显式声明。2026-10-24 v0.4：同步用户 v1.6.14-1.6.21 更新——R-042 已扫描（判定读数对 eta 不敏感、三类场景分落三支、g 不进判定）；扫描副产品新立 R-043（tau* 落点：tau* 落在观测窗口内的 eta 区间几乎为空，A/C 场景全空、B 场景仅 eta=0.05）；A13 三类探索第一例已做（演示性映射，非现实测量）；B 组 B1/B2/B3 方法准备已交付（合成数据方法验证，非经验验证）",
   "purpose": "27-v3.4-boundary-map.md 的机读登记件：R-041 分级结构表 + 可读性条件表 + 七维边界登记 + 开放格。机检尚未接入（A10 残留），当前仅登记。",
   "dimensions": [
     {"id": "B1", "name": "可辨识边界", "judge": "四级分类 A/B/C/D x 实例资源", "refs": ["R-041", "定理 6.12", "命题 6.3"], "status": "已测绘（主表），开放格 4"},
     {"id": "B2", "name": "耦合边界", "judge": "C1/C2 三态", "refs": ["命题 2'", "F1/F2", "G-26a", "G-26c", "G-26d"], "status": "部分测绘"},
-    {"id": "B3", "name": "尺度边界", "judge": "双尺度残差对比 R(tau_fine)/R(tau_coarse)", "refs": ["D-SCALE", "R-042", "G-26f", "P5"], "status": "部分测绘"},
+    {"id": "B3", "name": "尺度边界", "judge": "双尺度残差对比 R(tau_fine)/R(tau_coarse)", "refs": ["D-SCALE", "R-042", "R-043", "G-26f", "P5"], "status": "判定程序已测绘（R42：读数对 eta 不敏感、g 不进判定）；tau* 语义层新开放（R-043）"},
     {"id": "B4", "name": "规范边界", "judge": "U5: 真值随 G_lambda 改变则不予登记", "refs": ["定理 6.12", "B-B42", "B-B45"], "status": "判定程序齐备，执行缺"},
     {"id": "B5", "name": "层间边界", "judge": "D1: 归宿 L0-L1 / 形状 L2 / 禁越层", "refs": ["D1"], "status": "判定程序齐备（纪律性）"},
-    {"id": "B6", "name": "界面边界", "judge": "新 D2: P 悬空 + 三类探索通道", "refs": ["18-1.3", "18-2.5", "18-6.4", "B-B22"], "status": "等 A13"},
+    {"id": "B6", "name": "界面边界", "judge": "新 D2: P 悬空 + 三类探索通道", "refs": ["18-1.3", "18-2.5", "18-6.4", "B-B22"], "status": "A13 已做（v1.6.17，演示性映射），仍待非认知域对照（G-26e）与第二例"},
     {"id": "B7", "name": "证据边界", "judge": "四级标记 x 辖域", "refs": ["16-13.1"], "status": "判定程序齐备，辖域外空白"}
   ],
   "r041_table": [
@@ -66,17 +66,18 @@
     {"cell": "C 级闭合实测", "ref": "R45 / B-B45", "status": "已核验（R33，2026-10-24）：36 行跨 3 参数点 x 4 调度族全过，负对照有牙齿；原型级，噪声/真实数据未做", "resolved_in": "experiments/r33_clevel_closure/report.md"},
     {"cell": "ghost 机制推导", "ref": "G-26a", "status": "待验证"},
     {"cell": "吸收态不可逆性", "ref": "G-26d", "status": "猜想"},
-    {"cell": "D-SCALE 解除 provisional", "ref": "R-042", "status": "待扫描"},
+    {"cell": "D-SCALE 解除 provisional", "ref": "R-042", "status": "已扫描（R42，v1.6.14）：判定读数在 eta 网格 [0.005,1.0] 上恒定，三类场景分落三支，g 不进判定流程；10 项结构测试全过", "resolved_in": "experiments/r42_dscale_eta/r42_results.json"},
+    {"cell": "tau* 落点（R-042 副产品）", "ref": "R-043", "status": "开放（2026-10-24 新立）：tau* 落在 (tau_fine, tau_coarse) 内的 eta 区间在本次扫描中几乎为空（A/C 场景全空、B 场景仅 eta=0.05）⟹ 判定对 eta 不敏感不等于 eta 合理区间已定。纯内部可解（加密 tau 网格 / 重选窗口），不需要外部数据", "resolved_in": null},
     {"cell": "P5-HMM 盲比行", "ref": "G-26f", "status": "待验证"},
     {"cell": "kappa_E 外部标定", "ref": "B-B42 / B-B45", "status": "待验证"},
-    {"cell": "三类探索各一例", "ref": "A13", "status": "未做"},
+    {"cell": "三类探索各一例", "ref": "A13", "status": "已做（v1.6.17）：换工作决策——D-DRILL 钻研/空洞互斥类别 + D-CONV 收敛/发散方向 + D-IDENT 分级，对照无框架程度描述；演示性映射，非现实测量。9 项结构测试全过", "resolved_in": "experiments/a13_first_case/a13_contrast.json"},
     {"cell": "A_D 经验地位", "ref": "B-B22", "status": "出界（可争议）"},
     {"cell": "非认知域对照", "ref": "G-26e", "status": "待验证"},
     {"cell": "MMS 联合执行", "ref": "G-26c", "status": "待验证"}
   ],
   "sufficiency_criterion": {
     "definition": "边界地图完成 + C1.7/C1.8 机检 = 可启动 A13 对应探索",
-    "current": "地图 v0.3：分级结构表已测绘【定理】；可读性条件表 C 行辨识层已测绘、自足层为约定声明字段（OPEN-2 已约定化，与 eta、z 并列）；OPEN-1 已解（R34）。机检主体在 xs_trace_gate.py，CI 强制门未接",
-    "verdict": "A13 可准备，不声称解锁"
+    "current": "地图 v0.4：分级结构表已测绘【定理】；可读性条件表 C 行辨识层已测绘、自足层为约定声明字段（OPEN-2 已约定化，与 eta、z 并列）；OPEN-1 已解（R34）；R-042 已扫描但副产品 R-043 新立；A13 已做出。机检主体在 xs_trace_gate.py；CI 强制门 .github/workflows/xs-gates.yml 已交付（v1.6.14）但尚未在 GitHub 启用，本地等价验证三条均通过",
+    "verdict": "A13 已做出（演示性映射），但'解锁'二字仍不能写：OPEN-3/OPEN-4 未解，R-043 新立，CI 门未启用"
   }
 }

@@ -1,0 +1,89 @@
+{
+ "case": "流行病防控（非认知域对照，G-26e）",
+ "domain": "public_health_epidemic（非流体、非认知域）",
+ "nature": "演示性映射：两条叙事 → A_D 轨迹（非现实测量）；跨域可移植性演示",
+ "seed": 20261024,
+ "method": "复用 A13 的 d_drill/d_conv/d_ident（跨域机械移植）",
+ "interpretation": {
+  "E": "累计已干预量（确诊/隔离/处置累计）",
+  "U": "未决风险存量（潜伏/未识别/未处理风险，熵的演示代理）"
+ },
+ "scenarios": {
+  "A_effective_control": {
+   "narrative": "严格管控，存量清零",
+   "rho": 2.0,
+   "framework": {
+    "D_DRILL": {
+     "wedge": "drill",
+     "peak_order": "U_first",
+     "kU": 177,
+     "kE": 259,
+     "sign_intercept": true
+    },
+    "D_CONV": {
+     "candidate_proxy": "m_eff=2^U（演示代理，非真实 |A_k|）",
+     "u_end": 0.452,
+     "umax": 6.732,
+     "K": 600,
+     "Ak_end": 1.368,
+     "verdict": "收敛方向（U 已降到峰高 7% 以下，|A_K|→O(1)，候选大幅收窄）",
+     "honest_boundary": "真/伪收敛需外部证伪信息，本演示只判方向"
+    },
+    "D_IDENT": {
+     "A_readable": {
+      "rho_exp": 1.0
+     },
+     "B_readable": {
+      "sign(1-rho)": -1
+     },
+     "C_needs_external": [
+      "kappa_E（时间尺度，需外部单位）",
+      "rho_res 绝对值"
+     ],
+     "D_pseudo_target": [
+      "a,b,e_plus,e_minus,u_plus,u_minus（规范冗余，不该读）"
+     ]
+    }
+   },
+   "no_framework_human": "『管控有效，新增和存量都下来了，快清零了。』"
+  },
+  "B_containment_lost": {
+   "narrative": "防控失守，越防越多",
+   "rho": 0.6,
+   "framework": {
+    "D_DRILL": {
+     "wedge": "hollow",
+     "peak_order": "E_first",
+     "kU": 319,
+     "kE": 259,
+     "sign_intercept": false
+    },
+    "D_CONV": {
+     "candidate_proxy": "m_eff=2^U（演示代理，非真实 |A_k|）",
+     "u_end": 26.852,
+     "umax": 28.014,
+     "K": 600,
+     "Ak_end": 121154670.78,
+     "verdict": "发散方向（U 终值仍达峰高 96%，|A_K|≫1，候选未收窄）",
+     "honest_boundary": "真/伪收敛需外部证伪信息，本演示只判方向"
+    },
+    "D_IDENT": {
+     "A_readable": {
+      "rho_exp": 1.0
+     },
+     "B_readable": {
+      "sign(1-rho)": 1
+     },
+     "C_needs_external": [
+      "kappa_E（时间尺度，需外部单位）",
+      "rho_res 绝对值"
+     ],
+     "D_pseudo_target": [
+      "a,b,e_plus,e_minus,u_plus,u_minus（规范冗余，不该读）"
+     ]
+    }
+   },
+   "no_framework_human": "『越防越多，存量下不去，感觉失控了。』"
+  }
+ }
+}
