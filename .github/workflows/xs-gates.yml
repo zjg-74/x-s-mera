@@ -1,0 +1,49 @@
+name: XS Gates
+
+# A10 · C1.7 / C1.8 机检强制门
+# ---------------------------------------------------------------------
+# 把 XS 框架的合法性机检接成 CI 强制门：
+#   - C1.7 推导链可达性（src/xs_trace_gate.py）
+#   - C1.8 冻结窗哈希比对（src/xs_trace_gate.py）
+#   - C1/C2 记号与区分登记一致性（src/xs_formal_checks.py）
+#   - 全套数值原型测试（pytest）
+#
+# 任一校验器 report["errors"] > 0（退出码非零）⟹ 本 workflow 失败 ⟹
+# PR 无法合并。这是“机检落地”的强制性质：不是口头声明，是合并门槛。
+#
+# 说明（诚实登记）：本机本地仓库无 GitHub Actions 运行时；此 workflow
+# 交付后可推送到 GitHub，在仓库 Settings → Actions 启用后即生效。
+# 本地等价验证：`python src/xs_trace_gate.py && python src/xs_formal_checks.py`
+#   && python -m pytest tests/ -q`，三条都须退出码 0。
+# ---------------------------------------------------------------------
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: C1.7 + C1.8 · 推导链溯源 + 冻结窗（xs_trace_gate.py）
+        run: python src/xs_trace_gate.py
+
+      - name: C1 + C2 · 记号/区分登记一致性（xs_formal_checks.py）
+        run: python src/xs_formal_checks.py
+
+      - name: 全套数值原型测试（pytest）
+        run: python -m pytest tests/ -q

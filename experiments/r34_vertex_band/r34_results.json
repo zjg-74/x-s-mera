@@ -1,0 +1,186 @@
+{
+  "experiment": "R34_vertex_band",
+  "definition": "B 级判读禁区 := {|beta_hat| <= z*SE(beta_hat)}, z=1.96（约定性）",
+  "v1_noiseless": [
+    {
+      "rho": 0.9,
+      "beta_hat": 0.07800000000000021,
+      "se_beta": 3.0224386125053e-17,
+      "verdict": "mid_hollow",
+      "true": "mid_hollow",
+      "sign_correct": true
+    },
+    {
+      "rho": 0.95,
+      "beta_hat": 0.03900000000000038,
+      "se_beta": 2.4868144792771046e-17,
+      "verdict": "mid_hollow",
+      "true": "mid_hollow",
+      "sign_correct": true
+    },
+    {
+      "rho": 0.98,
+      "beta_hat": 0.015599999999999769,
+      "se_beta": 3.790477971220855e-17,
+      "verdict": "mid_hollow",
+      "true": "mid_hollow",
+      "sign_correct": true
+    },
+    {
+      "rho": 1.0,
+      "beta_hat": -2.261655506033002e-16,
+      "se_beta": 2.605001028066382e-17,
+      "verdict": "vertex_band",
+      "true": "vertex",
+      "sign_correct": true
+    },
+    {
+      "rho": 1.02,
+      "beta_hat": -0.015599999999999769,
+      "se_beta": 5.187498654498272e-17,
+      "verdict": "mid_drill",
+      "true": "mid_drill",
+      "sign_correct": true
+    },
+    {
+      "rho": 1.05,
+      "beta_hat": -0.03899999999999982,
+      "se_beta": 3.0807880416122126e-17,
+      "verdict": "mid_drill",
+      "true": "mid_drill",
+      "sign_correct": true
+    },
+    {
+      "rho": 1.1,
+      "beta_hat": -0.07799999999999929,
+      "se_beta": 9.842899783108384e-17,
+      "verdict": "mid_drill",
+      "true": "mid_drill",
+      "sign_correct": true
+    }
+  ],
+  "v2_noisy": {
+    "sigma_0.05": {
+      "sigma_u": 0.05,
+      "per_rho": [
+        {
+          "rho": 0.9,
+          "sigma_u": 0.05,
+          "n_trials": 200,
+          "withheld_rate": 0.0,
+          "false_sign_rate": 0.0
+        },
+        {
+          "rho": 0.95,
+          "sigma_u": 0.05,
+          "n_trials": 200,
+          "withheld_rate": 0.0,
+          "false_sign_rate": 0.0
+        },
+        {
+          "rho": 0.98,
+          "sigma_u": 0.05,
+          "n_trials": 200,
+          "withheld_rate": 0.0,
+          "false_sign_rate": 0.0
+        },
+        {
+          "rho": 1.0,
+          "sigma_u": 0.05,
+          "n_trials": 200,
+          "withheld_rate": 0.955,
+          "false_sign_rate": 1.0
+        },
+        {
+          "rho": 1.02,
+          "sigma_u": 0.05,
+          "n_trials": 200,
+          "withheld_rate": 0.0,
+          "false_sign_rate": 0.0
+        },
+        {
+          "rho": 1.05,
+          "sigma_u": 0.05,
+          "n_trials": 200,
+          "withheld_rate": 0.0,
+          "false_sign_rate": 0.0
+        },
+        {
+          "rho": 1.1,
+          "sigma_u": 0.05,
+          "n_trials": 200,
+          "withheld_rate": 0.0,
+          "false_sign_rate": 0.0
+        }
+      ]
+    },
+    "sigma_0.20": {
+      "sigma_u": 0.2,
+      "per_rho": [
+        {
+          "rho": 0.9,
+          "sigma_u": 0.2,
+          "n_trials": 200,
+          "withheld_rate": 0.0,
+          "false_sign_rate": 0.0
+        },
+        {
+          "rho": 0.95,
+          "sigma_u": 0.2,
+          "n_trials": 200,
+          "withheld_rate": 0.0,
+          "false_sign_rate": 0.0
+        },
+        {
+          "rho": 0.98,
+          "sigma_u": 0.2,
+          "n_trials": 200,
+          "withheld_rate": 0.0,
+          "false_sign_rate": 0.0
+        },
+        {
+          "rho": 1.0,
+          "sigma_u": 0.2,
+          "n_trials": 200,
+          "withheld_rate": 0.955,
+          "false_sign_rate": 1.0
+        },
+        {
+          "rho": 1.02,
+          "sigma_u": 0.2,
+          "n_trials": 200,
+          "withheld_rate": 0.0,
+          "false_sign_rate": 0.0
+        },
+        {
+          "rho": 1.05,
+          "sigma_u": 0.2,
+          "n_trials": 200,
+          "withheld_rate": 0.0,
+          "false_sign_rate": 0.0
+        },
+        {
+          "rho": 1.1,
+          "sigma_u": 0.2,
+          "n_trials": 200,
+          "withheld_rate": 0.0,
+          "false_sign_rate": 0.0
+        }
+      ]
+    }
+  },
+  "v3_gauge": {
+    "lambda": 7.3,
+    "path_pointwise_unchanged": true,
+    "verdict_a": "mid_drill",
+    "verdict_b": "mid_drill",
+    "unchanged": true
+  },
+  "summary": {
+    "noiseless_sign_correct": true,
+    "noiseless_vertex_exact": true,
+    "band_widens_with_noise": true,
+    "gauge_invariant": true,
+    "open1_verdict": "容差带已定义并通过结构检验"
+  }
+}

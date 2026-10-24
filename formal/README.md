@@ -8,12 +8,13 @@
 
 | 文件 | 内容 |
 |---|---|
-| `lean-toolchain` | Lean 4.14.0（elan 管理） |
+| `lean-toolchain` | Lean 4.35.0（elan 管理；v1.6.18 由 v4.14.0 升级） |
 | `lakefile.toml` | lake 工程定义 |
 | `Formal/Basic.lean` | 论域（Sys/Scale/Tau）+ 全部谓词签名 + 诚实粒度声明 |
 | `Formal/Axioms.lean` | M1–M2、F1–F16、E1–E7、耦合充要条件、尺度不一致后果 |
 | `Formal/Corollaries.lean` | 归档第 7 节六条推演的演绎审计（可证的给证明，缺口登记 GAPS.md；**禁 sorry**） |
 | `Formal/AttackSurface.lean` | N1 攻击方式分析 + 一致性守卫 |
+| `Formal/DualConstraint.lean` | 认知双约束（XS v3.1 补篇三 / R18）的 Horn skeleton 编码：两类失效可分离性 + 判别签名 R18-a（v1.6.18 接入） |
 | `GAPS.md` | 编码暴露的推论缺口与候选桥接公理 B1/B2/B3/C4-full |
 
 ## 构建与核验
@@ -35,9 +36,16 @@ lake build        # 通过判据：编译成功且无 sorry 警告
 
 ## 状态
 
-**✅ 已通过 Lean 4.14.0 内核类型检查**（2026-10-18）：`Formal/{Basic,Axioms,Corollaries,AttackSurface}.lean`
-四个文件全部编译通过、零错误、零 sorry/admit（检查运行于 linux_wasm32 官方构建的 Node 运行时；
-native `lake build` 在本机仍被程序黑名单拦截，两者共用同一 elaborator，类型结论等价）。
+**✅ 已通过 Lean 内核类型检查**：`Formal/{Basic,Axioms,Corollaries,AttackSurface,DualConstraint}.lean`
+全部编译通过、零错误、零 sorry/admit。
+
+- 2026-10-18（历史）：四文件（Basic/Axioms/Corollaries/AttackSurface）通过
+  linux_wasm32 官方构建的 Node 运行时检查；当时 native `lake build` 在本机被程序黑名单拦截。
+- **2026-10-24（v1.6.18）**：本机装好 elan 后，**native `lake build` 已跑通**（8 jobs 全绿，无 sorry），
+  并接入 `Formal/DualConstraint.lean`（原 candidates，见 GAPS.md C1）。
+  **工具链**：`lean-toolchain` 原指向 v4.14.0，但本机下载 v4.14.0 反复因 SSL 连接重置失败，
+  故先以 `elan override` 用 v4.35.0 编译；**用户拍板后 `lean-toolchain` 已升级到 v4.35.0**，
+  移除 override 复核 lake build 仍全绿，项目统一 v4.35.0。
 
 核验中发现并已修复两处真实错误：
 1. `Axioms.lean`/`Corollaries.lean` 的模块文档（`/-! -/`）置于 `import` 之前，违反复合命令序

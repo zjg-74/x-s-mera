@@ -1,0 +1,82 @@
+{
+  "version": "0.3",
+  "framework": "XS v3.4",
+  "name": "boundary_map",
+  "name_zh": "边界地图（机读版）",
+  "created": "2026-10-24",
+  "revised": "2026-10-24 v0.3：OPEN-2 从【开放】改登记为【约定】（等待声明而非判据，与 eta、z 并列）；约定 A（工具算界内）下 C 级自足为定义上的真，约定 B 下为相对于观测协议的条件性结论；框架不裁定约定，只要求显式声明",
+  "purpose": "27-v3.4-boundary-map.md 的机读登记件：R-041 分级结构表 + 可读性条件表 + 七维边界登记 + 开放格。机检尚未接入（A10 残留），当前仅登记。",
+  "dimensions": [
+    {"id": "B1", "name": "可辨识边界", "judge": "四级分类 A/B/C/D x 实例资源", "refs": ["R-041", "定理 6.12", "命题 6.3"], "status": "已测绘（主表），开放格 4"},
+    {"id": "B2", "name": "耦合边界", "judge": "C1/C2 三态", "refs": ["命题 2'", "F1/F2", "G-26a", "G-26c", "G-26d"], "status": "部分测绘"},
+    {"id": "B3", "name": "尺度边界", "judge": "双尺度残差对比 R(tau_fine)/R(tau_coarse)", "refs": ["D-SCALE", "R-042", "G-26f", "P5"], "status": "部分测绘"},
+    {"id": "B4", "name": "规范边界", "judge": "U5: 真值随 G_lambda 改变则不予登记", "refs": ["定理 6.12", "B-B42", "B-B45"], "status": "判定程序齐备，执行缺"},
+    {"id": "B5", "name": "层间边界", "judge": "D1: 归宿 L0-L1 / 形状 L2 / 禁越层", "refs": ["D1"], "status": "判定程序齐备（纪律性）"},
+    {"id": "B6", "name": "界面边界", "judge": "新 D2: P 悬空 + 三类探索通道", "refs": ["18-1.3", "18-2.5", "18-6.4", "B-B22"], "status": "等 A13"},
+    {"id": "B7", "name": "证据边界", "judge": "四级标记 x 辖域", "refs": ["16-13.1"], "status": "判定程序齐备，辖域外空白"}
+  ],
+  "r041_table": [
+    {
+      "level": "A",
+      "quantity": "rho_exp（仿射斜率）",
+      "closed_instance": {"readable": true, "rule": "U - rho_exp*E 共线性读斜率，调度无关", "exception": "A_D+ 下 U 近 0 处仿射性偏离；噪声方差未做", "depends_on": []},
+      "open_instance": {"readable": true, "rule": "同闭实例（斜率不依赖 s(k)）", "exception": "同上", "depends_on": []},
+      "instance_dependent": false,
+      "evidence": "定理（第二可辨识视界）+ 原型确认（R30 跨调度族误差 0）"
+    },
+    {
+      "level": "B",
+      "quantity": "sign(1-rho) → 峰序（截距符号）",
+      "closed_instance": {"readable": true, "rule": "截距符号 = sign(beta)，beta = dt*kappa_E*(1-rho)*rho_exp；rho=1 顶点落入判读禁区（R34 容差带 {|beta_hat| <= z*SE(beta_hat)}，三值判读）", "exception": "顶点带不判（z 约定性）", "depends_on": []},
+      "open_instance": {"readable": true, "rule": "同闭实例（不需 kappa_E，只需 rho_exp 与 beta 符号；顶点带判定用 beta 形式同样不需 kappa_E）", "exception": "同上", "depends_on": []},
+      "instance_dependent": false,
+      "evidence": "定理；顶点带 R34 已解（experiments/r34_vertex_band/）"
+    },
+    {
+      "level": "C",
+      "quantity": "rho 数值、kappa_E",
+      "grading_same_across_instances": true,
+      "closed_instance": {"readable": "conditional", "rule": "辨识层【定理】：s(k) 观测补齐第二可辨识视界缺失自由度，或固定动作计数通道（命题 6.3 / R45 / R33）；自足层【约定】：约定 A（工具算界内）定义上真，约定 B（工具不算界内）相对于观测协议条件性", "exception": "未声明约定的实例，C 行自足层读法悬置", "depends_on": ["s(k) 观测", "或固定动作计数", "约定声明（OPEN-2：A/B）"]},
+      "open_instance": {"readable": false, "rule": "不可自足读出", "exception": "-", "depends_on": ["固定动作计数介入", "时间单位绝对标定"]},
+      "instance_dependent": "分级不随实例变（同级）；可读性条件依赖尺子位置，而位置判据未定",
+      "evidence": "辨识层：定理（视界+命题 6.3）+ 原型确认（R33，固定动作计数通道，辖域有限）；自足层：约定（OPEN-2：约定 A 定义上真 / 约定 B 条件性）"
+    },
+    {
+      "level": "D",
+      "quantity": "a,b,e+,e-,u+,u- 绝对值",
+      "closed_instance": {"readable": false, "rule": "恒不可读（伪目标）：G_lambda 改记号不改 (E,U)", "exception": "-", "depends_on": []},
+      "open_instance": {"readable": false, "rule": "同左（规范冗余是定义层的，与观测协议无关）", "exception": "-", "depends_on": []},
+      "instance_dependent": false,
+      "evidence": "定理（定理 6.12）"
+    }
+  ],
+  "r041_adjudication": {
+    "concern": "分级是否随实例类型变化（若变化则 D-IDENT 为条件分层）",
+    "result": "v0.3 定稿：分级层面四级同级（【定理】，表 A）；可读性层面 A/B/D 不依赖实例资源（【定理】）、C 行分层——辨识层【定理】+【原型确认】（R33）、自足层【约定】（OPEN-2：约定 A 定义上真 / 约定 B 条件性，框架不裁定只要求声明）。v0.1'三条预期全部升级定理'与 v0.2'自足层开放'均作废（定性修正链：归并 → 拆表 → 约定化）",
+    "d_ident_action": "证书附款按约定声明生效：C 级可读性分辨识层（定理）与自足层（约定）；未声明约定的实例自足层悬置；按约定 B 声明的实例自足读法自动降级为'可读（经外部尺子）'。若 A/B 级随实例漂移则分级担忧复活",
+    "evidence": "分级层【定理】；C 行自足层【开放】"
+  },
+  "open_cells": [
+    {"id": "OPEN-1", "dim": "B1", "issue": "rho=1 顶点处 B 级符号判读退化（楔形中相边界）", "status": "已解（R34，2026-10-24）", "next": "容差带定义：B 级判读禁区 := {|beta_hat| <= z*SE(beta_hat)}，三值判读；z 约定性（默认 1.96）。实验 experiments/r34_vertex_band/，6 项结构测试全过", "resolved_in": "experiments/r34_vertex_band/report.md"},
+    {"id": "OPEN-2", "dim": "B1xB6", "issue": "尺子位置：观测工具归属是约定性输入（与 eta、z 并列）。约定 A（工具算界内）下 C 级自足为定义上的真；约定 B（工具不算界内）下为相对于观测协议的条件性结论。框架不裁定，只要求声明", "status": "约定（等待声明，非等待判据）；与 R45 格同格两面", "next": "实例申报表必带约定声明字段；未声明的实例 C 行自足层悬置"},
+    {"id": "OPEN-3", "dim": "B1", "issue": "开/闭二分理想化：s(k) 可观测性可能程度化", "status": "开放", "next": "R45 后视情况连续化"},
+    {"id": "OPEN-4", "dim": "B7", "issue": "A/B 级噪声下方差与最小样本量未做", "status": "待验证", "next": "有噪声仿真对比"}
+  ],
+  "gap_index": [
+    {"cell": "C 级闭合实测", "ref": "R45 / B-B45", "status": "已核验（R33，2026-10-24）：36 行跨 3 参数点 x 4 调度族全过，负对照有牙齿；原型级，噪声/真实数据未做", "resolved_in": "experiments/r33_clevel_closure/report.md"},
+    {"cell": "ghost 机制推导", "ref": "G-26a", "status": "待验证"},
+    {"cell": "吸收态不可逆性", "ref": "G-26d", "status": "猜想"},
+    {"cell": "D-SCALE 解除 provisional", "ref": "R-042", "status": "待扫描"},
+    {"cell": "P5-HMM 盲比行", "ref": "G-26f", "status": "待验证"},
+    {"cell": "kappa_E 外部标定", "ref": "B-B42 / B-B45", "status": "待验证"},
+    {"cell": "三类探索各一例", "ref": "A13", "status": "未做"},
+    {"cell": "A_D 经验地位", "ref": "B-B22", "status": "出界（可争议）"},
+    {"cell": "非认知域对照", "ref": "G-26e", "status": "待验证"},
+    {"cell": "MMS 联合执行", "ref": "G-26c", "status": "待验证"}
+  ],
+  "sufficiency_criterion": {
+    "definition": "边界地图完成 + C1.7/C1.8 机检 = 可启动 A13 对应探索",
+    "current": "地图 v0.3：分级结构表已测绘【定理】；可读性条件表 C 行辨识层已测绘、自足层为约定声明字段（OPEN-2 已约定化，与 eta、z 并列）；OPEN-1 已解（R34）。机检主体在 xs_trace_gate.py，CI 强制门未接",
+    "verdict": "A13 可准备，不声称解锁"
+  }
+}

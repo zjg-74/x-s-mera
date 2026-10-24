@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "task": "B1/R33 固定动作计数注入（方法准备，非真人实验）",
+    "model": "A_D（15-v3.2 §7.3 命题 6.3）",
+    "dt": 0.01,
+    "K": 3000,
+    "engine": "仅标准库；确定性合成（无随机）"
+  },
+  "configs": {
+    "drill": {
+      "config": "drill",
+      "true": {
+        "e_plus": 1.0,
+        "e_minus": 1.0,
+        "u_plus": 1.0,
+        "u_minus": 3.0
+      },
+      "arms": {
+        "e_plus": 1.0,
+        "e_minus": 1.0,
+        "u_plus": 1.0,
+        "u_minus": 3.0
+      },
+      "closed": {
+        "theta_E": 1.0,
+        "theta_U": 3.0,
+        "rho_exp_arm": 1.0,
+        "rho_res_arm": 3.0,
+        "kappa_E": 1.0,
+        "beta0_arm": -2.0
+      },
+      "regression": {
+        "rho_exp_reg": 0.9999999999999886,
+        "beta0_reg": -2.0000000000000067
+      },
+      "self_consistency": {
+        "rel_rho_exp": 1.1435297153639243e-14,
+        "abs_beta0": 6.661338147750939e-15,
+        "rel_beta0": 3.3306690738754586e-15,
+        "rho_exp_ok": true,
+        "beta0_ok": true
+      }
+    },
+    "converge": {
+      "config": "converge",
+      "true": {
+        "e_plus": 1.0,
+        "e_minus": 3.0,
+        "u_plus": 1.0,
+        "u_minus": 0.3333333333333333
+      },
+      "arms": {
+        "e_plus": 1.0,
+        "e_minus": 3.0,
+        "u_plus": 1.0,
+        "u_minus": 0.3333333333333333
+      },
+      "closed": {
+        "theta_E": 3.0,
+        "theta_U": 0.3333333333333333,
+        "rho_exp_arm": 1.0,
+        "rho_res_arm": 0.1111111111111111,
+        "kappa_E": 3.0,
+        "beta0_arm": 2.6666666666666665
+      },
+      "regression": {
+        "rho_exp_reg": 1.0000000000000175,
+        "beta0_reg": 2.666666666666706
+      },
+      "self_consistency": {
+        "rel_rho_exp": 1.7541523789077164e-14,
+        "abs_beta0": 3.952393967665557e-14,
+        "rel_beta0": 1.4821477378745622e-14,
+        "rho_exp_ok": true,
+        "beta0_ok": true
+      }
+    },
+    "boundary": {
+      "config": "boundary",
+      "true": {
+        "e_plus": 1.0,
+        "e_minus": 1.0,
+        "u_plus": 1.0,
+        "u_minus": 1.0
+      },
+      "arms": {
+        "e_plus": 1.0,
+        "e_minus": 1.0,
+        "u_plus": 1.0,
+        "u_minus": 1.0
+      },
+      "closed": {
+        "theta_E": 1.0,
+        "theta_U": 1.0,
+        "rho_exp_arm": 1.0,
+        "rho_res_arm": 1.0,
+        "kappa_E": 1.0,
+        "beta0_arm": 0.0
+      },
+      "regression": {
+        "rho_exp_reg": 0.999999999999978,
+        "beta0_reg": -2.8971329996891877e-15
+      },
+      "self_consistency": {
+        "rel_rho_exp": 2.1982415887578582e-14,
+        "abs_beta0": 2.8971329996891877e-15,
+        "rel_beta0": 1.0,
+        "rho_exp_ok": true,
+        "beta0_ok": true
+      }
+    }
+  }
+}

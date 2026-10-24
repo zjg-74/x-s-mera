@@ -58,15 +58,15 @@ G1-a 的形式化价值不止于"无矛盾"——编码过程把归档版第 7 �
 
 ## C1（认知双约束：XS v3.1 补篇三 / R18 的形式化）
 
-- **状态：候选，未编译验证。** 规格见 [`candidates/DualConstraint.lean`](./candidates/DualConstraint.lean)。
-  该文件放在 `candidates/` 是**故意的**——它不在 `lakefile.toml` 的 `Formal` 目标下，
-  不会被 `lake build` 编译。
-- **为什么不在 `Formal/`**：生成它的机器上没有 Lean 工具链（`lean` / `lake` 均不可用），
-  因此**没有经过编译验证**。把未编译的文件放进 `Formal/` 会直接破坏构建，
-  也与本仓库的 no-sorry / 全套测试通过纪律相悖。
-- **接入步骤**：在有 `leanprover/lean4:v4.14.0` 的机器上单独编译 → 修正 →
-  移入 `Formal/DualConstraint.lean` → 在 `Formal.lean` 加 `import Formal.DualConstraint`
-  → 在 CHANGELOG 登记并把本条目标记为"已接入"。
+- **状态：已接入（2026-10-24，CHANGELOG v1.6.18）。** 规格现位于
+  [`Formal/DualConstraint.lean`](./Formal/DualConstraint.lean)，已加入 `Formal.lean` 的 import，
+  `lake build` 编译通过、无 sorry。原 `candidates/DualConstraint.lean` 已按"移入"移除。
+- **接入记录（诚实）**：`lean-toolchain` 原指向 `leanprover/lean4:v4.14.0`，接入机从
+  `releases.lean-lang.org` 下载 v4.14.0 反复因 **SSL 连接被重置** 失败（stable v4.35.0 可下载）；
+  先用 `elan override` 以 v4.35.0 编译验证通过（Lean 4 基础语法兼容），**随后用户拍板将
+  `lean-toolchain` 升级到 v4.35.0**，移除 override 复核 `lake build` 仍全绿，项目统一 v4.35.0。
+- **接入步骤（已完成）**：单独编译 → 移入 `Formal/DualConstraint.lean` →
+  `Formal.lean` 加 `import Formal.DualConstraint` → CHANGELOG 登记 → 本条标记"已接入"。
 
 ### 形式化范围（受 XS 侧未闭合缺口的限制）
 

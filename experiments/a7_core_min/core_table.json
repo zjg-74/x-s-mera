@@ -1,0 +1,427 @@
+{
+ "version": "1.0",
+ "framework": "XS",
+ "purpose": "A7 核心最小化：极小生成集（根记号）+ 约定输入 + 导出表",
+ "registry_date": "2026-10-23",
+ "core": {
+  "roots": [
+   "A_D",
+   "C_in",
+   "F",
+   "M",
+   "O",
+   "O_all",
+   "Omega",
+   "S",
+   "X",
+   "phi"
+  ],
+  "conventions": [
+   "eta"
+  ],
+  "core_count": 11,
+  "total_symbols": 47,
+  "derived_count": 36
+ },
+ "derived_table": [
+  {
+   "symbol": "Cn",
+   "layer": "L0",
+   "kind": "derived",
+   "type": "导出",
+   "min_roots": [
+    "F",
+    "O"
+   ],
+   "identifiability": null
+  },
+  {
+   "symbol": "sigma",
+   "layer": "L0",
+   "kind": "derived",
+   "type": "导出",
+   "min_roots": [
+    "M"
+   ],
+   "identifiability": null
+  },
+  {
+   "symbol": "A_k",
+   "layer": "L0",
+   "kind": "derived",
+   "type": "导出",
+   "min_roots": [
+    "F",
+    "O"
+   ],
+   "identifiability": null
+  },
+  {
+   "symbol": "m",
+   "layer": "L0",
+   "kind": "observable",
+   "type": "导出",
+   "min_roots": [
+    "F",
+    "O"
+   ],
+   "identifiability": "A"
+  },
+  {
+   "symbol": "m_eff",
+   "layer": "L0",
+   "kind": "observable",
+   "type": "导出",
+   "min_roots": [
+    "C_in",
+    "Omega",
+    "phi"
+   ],
+   "identifiability": "A"
+  },
+  {
+   "symbol": "fate",
+   "layer": "L0",
+   "kind": "classification",
+   "type": "导出",
+   "min_roots": [
+    "F",
+    "O"
+   ],
+   "identifiability": null
+  },
+  {
+   "symbol": "P_lvl",
+   "layer": "L1",
+   "kind": "observable",
+   "type": "导出",
+   "min_roots": [
+    "Omega",
+    "phi"
+   ],
+   "identifiability": "C"
+  },
+  {
+   "symbol": "Q",
+   "layer": "L1",
+   "kind": "observable",
+   "type": "导出",
+   "min_roots": [
+    "C_in",
+    "phi"
+   ],
+   "identifiability": "C"
+  },
+  {
+   "symbol": "Q_prune",
+   "layer": "L1",
+   "kind": "observable",
+   "type": "导出",
+   "min_roots": [
+    "C_in",
+    "O_all"
+   ],
+   "identifiability": "C"
+  },
+  {
+   "symbol": "U",
+   "layer": "L1",
+   "kind": "observable",
+   "type": "导出",
+   "min_roots": [
+    "C_in",
+    "Omega",
+    "phi"
+   ],
+   "identifiability": "C"
+  },
+  {
+   "symbol": "I_bias",
+   "layer": "L1",
+   "kind": "observable",
+   "type": "导出",
+   "min_roots": [
+    "Omega",
+    "phi"
+   ],
+   "identifiability": "C"
+  },
+  {
+   "symbol": "O_adm",
+   "layer": "L1",
+   "kind": "derived",
+   "type": "导出",
+   "min_roots": [
+    "C_in"
+   ],
+   "identifiability": null
+  },
+  {
+   "symbol": "E",
+   "layer": "L2",
+   "kind": "observable",
+   "type": "导出",
+   "min_roots": [
+    "C_in",
+    "Omega",
+    "phi"
+   ],
+   "identifiability": "A"
+  },
+  {
+   "symbol": "Psi",
+   "layer": "L2",
+   "kind": "observable",
+   "type": "导出",
+   "min_roots": [
+    "C_in",
+    "Omega",
+    "phi"
+   ],
+   "identifiability": "A"
+  },
+  {
+   "symbol": "P_flx",
+   "layer": "L2",
+   "kind": "observable",
+   "type": "导出",
+   "min_roots": [
+    "Omega",
+    "phi"
+   ],
+   "identifiability": "A"
+  },
+  {
+   "symbol": "Q_flx",
+   "layer": "L2",
+   "kind": "observable",
+   "type": "导出",
+   "min_roots": [
+    "C_in",
+    "phi"
+   ],
+   "identifiability": "A"
+  },
+  {
+   "symbol": "psi_bar",
+   "layer": "L2",
+   "kind": "observable",
+   "type": "导出",
+   "min_roots": [
+    "C_in",
+    "Omega",
+    "phi"
+   ],
+   "identifiability": "C"
+  },
+  {
+   "symbol": "xi",
+   "layer": "L2",
+   "kind": "observable",
+   "type": "导出",
+   "min_roots": [
+    "C_in",
+    "Omega",
+    "phi"
+   ],
+   "identifiability": "C"
+  },
+  {
+   "symbol": "tau_star",
+   "layer": "L2",
+   "kind": "observable",
+   "type": "导出",
+   "min_roots": [
+    "C_in",
+    "Omega",
+    "phi"
+   ],
+   "identifiability": "C"
+  },
+  {
+   "symbol": "eta",
+   "layer": "L2",
+   "kind": "observable",
+   "type": "约定输入",
+   "min_roots": [],
+   "identifiability": "C"
+  },
+  {
+   "symbol": "a",
+   "layer": "L2",
+   "kind": "parameter",
+   "type": "导出",
+   "min_roots": [
+    "A_D"
+   ],
+   "identifiability": "D"
+  },
+  {
+   "symbol": "b",
+   "layer": "L2",
+   "kind": "parameter",
+   "type": "导出",
+   "min_roots": [
+    "A_D"
+   ],
+   "identifiability": "D"
+  },
+  {
+   "symbol": "e_plus",
+   "layer": "L2",
+   "kind": "parameter",
+   "type": "导出",
+   "min_roots": [
+    "A_D"
+   ],
+   "identifiability": "D"
+  },
+  {
+   "symbol": "e_minus",
+   "layer": "L2",
+   "kind": "parameter",
+   "type": "导出",
+   "min_roots": [
+    "A_D"
+   ],
+   "identifiability": "D"
+  },
+  {
+   "symbol": "u_plus",
+   "layer": "L2",
+   "kind": "parameter",
+   "type": "导出",
+   "min_roots": [
+    "A_D"
+   ],
+   "identifiability": "D"
+  },
+  {
+   "symbol": "u_minus",
+   "layer": "L2",
+   "kind": "parameter",
+   "type": "导出",
+   "min_roots": [
+    "A_D"
+   ],
+   "identifiability": "D"
+  },
+  {
+   "symbol": "r",
+   "layer": "L2",
+   "kind": "parameter",
+   "type": "导出",
+   "min_roots": [
+    "A_D"
+   ],
+   "identifiability": "D"
+  },
+  {
+   "symbol": "s",
+   "layer": "L2",
+   "kind": "parameter",
+   "type": "导出",
+   "min_roots": [
+    "A_D"
+   ],
+   "identifiability": "B"
+  },
+  {
+   "symbol": "kappa_E",
+   "layer": "L2",
+   "kind": "parameter",
+   "type": "导出",
+   "min_roots": [
+    "A_D"
+   ],
+   "identifiability": "C"
+  },
+  {
+   "symbol": "theta_E",
+   "layer": "L2",
+   "kind": "parameter",
+   "type": "导出",
+   "min_roots": [
+    "A_D"
+   ],
+   "identifiability": "D"
+  },
+  {
+   "symbol": "theta_U",
+   "layer": "L2",
+   "kind": "parameter",
+   "type": "导出",
+   "min_roots": [
+    "A_D"
+   ],
+   "identifiability": "D"
+  },
+  {
+   "symbol": "rho_exp",
+   "layer": "L2",
+   "kind": "parameter",
+   "type": "导出",
+   "min_roots": [
+    "A_D"
+   ],
+   "identifiability": "A"
+  },
+  {
+   "symbol": "rho_res",
+   "layer": "L2",
+   "kind": "parameter",
+   "type": "导出",
+   "min_roots": [
+    "A_D"
+   ],
+   "identifiability": "C"
+  },
+  {
+   "symbol": "rho",
+   "layer": "L2",
+   "kind": "parameter",
+   "type": "导出",
+   "min_roots": [
+    "A_D"
+   ],
+   "identifiability": "B"
+  },
+  {
+   "symbol": "alpha",
+   "layer": "L2",
+   "kind": "observable",
+   "type": "导出",
+   "min_roots": [
+    "A_D",
+    "C_in",
+    "Omega",
+    "phi"
+   ],
+   "identifiability": "A"
+  },
+  {
+   "symbol": "beta",
+   "layer": "L2",
+   "kind": "observable",
+   "type": "导出",
+   "min_roots": [
+    "A_D",
+    "C_in",
+    "Omega",
+    "phi"
+   ],
+   "identifiability": "B"
+  },
+  {
+   "symbol": "g",
+   "layer": "L2",
+   "kind": "procedure",
+   "type": "导出",
+   "min_roots": [
+    "A_D"
+   ],
+   "identifiability": null
+  }
+ ],
+ "gaps": []
+}

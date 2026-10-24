@@ -2,6 +2,238 @@
 
 本仓库采用语义化版本。理论条款编号（A1–A12、C1/C2、F1/F2、I1）与《X-S-MERA 修订登记》保持同步。
 
+## v1.6.21 — 2026-10-24
+
+### B2 · 桥检验（R31：A_D 一致性守卫）——方法 + 脚本准备（不声称经验验证）
+
+> 对应 `18-v3.3-formal-framework-charter.md` §6.2 **B2**（缺口 B-B19 / R43′）。
+> B 组需外部数据；本项做「数据到达前的可执行准备」。
+
+- **范围澄清（诚实）**：R43′（β₀=−ρ_exp·Ψ(k*_U)，独立标定 Ψ）是真桥检验，但需补篇四
+  独立标定程序 + 真实认知数据，**不在合成数据方法准备范围内**。本项实现其**重言形式 R31**
+  （β₀=−ρ_exp·ΔE(k*_U)）作为 **A_D 一致性守卫**——验证数据是否满足 A_D + 内点峰自洽。
+- **方法**：合成 A_D 轨迹（钻研型，U 内点峰）→ 回归 `(ρ_exp,β₀)` → 峰点检验
+  `|ρ_exp·ΔE_c+β₀·dt|/scale`。两族对比：正常族（纯 A_D）vs 违反族（A_D⁺ 边界层注入
+  `ΔU+=κ_E·ρ_exp·(1−ρ·g(U))·dt`，g(U)=g_strength·U）。
+- **脚本**：`experiments/b2_bridge_test/b2_bridge_test.py`（仅标准库，确定性）。
+- **结果**（`b2_results.json`）：**正常族误报率 0.000**（rel_viol≈1e-4）；**违反族误报率 1.000**
+  （g∈{0.4,0.8,1.2}，rel_viol 0.95–1.0）。R31 判别能力验证通过。
+- **量纲修正（本项暴露并修复）**：峰点检验初版用 `β₀·2·dt`（应为每步 `β₀·dt`），致正常族误报 1.0；
+  修正后正常族 0.000。违反族由"ε·U 状态依赖"改为"A_D⁺ 边界层注入"（理论自然、稳定 →1.0）。
+- **诚实边界**：① R31 是重言形式守卫，通过≠桥 B-B19 成立；② R43′ 真桥检验未做（需独立 Ψ）；
+  ③ 合成数据非经验验证；④ 需 U 有内点峰。
+- **登记**：`18-v3.3` §6.2 B2 行标注「R31 守卫方法+脚本准备已完成 v1.6.21，R43′ 真检验仍属 B 组」。
+
+## v1.6.20 — 2026-10-24
+
+### B1 · 固定动作计数注入（R33 / 命题 6.3）——方法 + 脚本准备（不声称经验验证）
+
+> 对应 `18-v3.3-formal-framework-charter.md` §6.2 **B1**（缺口 B-B45 / R45，闭合 C 级）。
+> B 组需外部数据；本项做「数据到达前的可执行准备」——实现并验证四臂闭合分析流程。
+
+- **方法（命题 6.3）**：臂1（a=1,b=0）测 `(e₊,u₊)`，臂2（a=0,b=1）测 `(e₋,u₋)` ⟹ 一次闭合
+  `θ_E=e₋/e₊`、`θ_U=u₋/u₊`、`ρ_exp=u₊/e₊`、`ρ_res=u₋/e₋`、`κ_E=e₋`、`β₀=ρ_exp·e₋−u₋`。
+- **脚本**：`experiments/b1_fixed_action_counting/b1_fixed_action_counting.py`（仅标准库，确定性合成）。
+- **结果**（`b1_results.json`）：3 配置（drill/converge/boundary，借 R27 CONFIGS）四臂闭合 vs
+  轨迹回归自洽 **rel_ρ≈1e-14、abs_β≈4e-14**，全部 PASS。
+- **判据修正（本项发现）**：`β₀` 真值可为 0（如 boundary 配置），**相对差会因除零失效**，
+  改用**绝对差**判据 `abs_β < 1e-6`。
+- **诚实边界**：① 合成数据非真人实验（四臂真实测量含噪声，加噪稳健性留作扩展）；
+  ② `κ_E=e_minus` 为仓库惯例（a13 make_cfg），理论定义若有出入需核对；
+  ③ C 级闭合（R45）真正达成需真人实验数据（B 组性质）；④ 回归依赖 A_D 成立。
+- **登记**：`18-v3.3` §6.2 B1 行标注「方法+脚本准备已完成 v1.6.20，真人测量仍属 B 组」。
+
+## v1.6.19 — 2026-10-24
+
+### B3 · 残差反演 g（R32）——方法 + 脚本准备（不声称经验验证）
+
+> 对应 `18-v3.3-formal-framework-charter.md` §6.2 **B3**（缺口 B-B43 / R32）。B 组需外部数据；
+> 本项做「数据到达前的可执行准备」——实现并验证残差反演 `g` 的方法本身。
+
+- **方法**：A_D⁺（15-v3.2 §5.7 推论 R43）下 `R(k)=U−ρ_exp·E=α+βk−κ_E·ρ_exp·ρ·∫₀ᵏ(g−ḡ)dt`；
+  对残差**去仿射趋势 → 中心差分 → 除以 `κ_E·ρ_exp·ρ`** 即反演 `g(U)`（差常数平移，规范自由度 B-B23）。
+- **脚本**：`experiments/b3_residual_inversion/b3_residual_inversion.py`（仅标准库，确定性合成）。
+- **结果**（`b3_results.json`）：4 种单调增 g(0)=0 的 g（linear/square/tanh/saturated）反演
+  **corr=1.000000、norm_rmse≲1e-3、scale≈1**；负对照（g≡0、g≡常数）反演 std≈1e-14（**无虚假结构**）。
+- **诚实边界**：① 方法验证非经验验证（"真实残差是 g 信号"不由此声称，属 B4 跨人群）；
+  ② 反演恢复 g 的**变异/形状**，绝对水平不可辨识（B-B23 常数平移）；③ 振幅比例依赖
+  `κ_E·ρ_exp·ρ` 独立标定（关联 B2/B-B19）；④ U 动态范围较窄（受 ρ·g 平衡约束），更宽范围
+  与加噪稳健性留待后续扩展。
+- **登记**：`18-v3.3` §6.2 B3 行标注「方法+脚本准备已完成 v1.6.19，套用真实数据仍属 B 组」。
+
+## v1.6.18 — 2026-10-24
+
+### A9 · Lean4 形式化接入（candidates/DualConstraint.lean → Formal/）
+
+> 用户回到有仓库的原电脑并装好 Lean 工具链后，执行 A9（Lean4 全内核形式化）的核心接入步骤。
+> 对应 `formal/GAPS.md` 条目 C1（认知双约束 / R18 形式化）的接入步骤。
+
+#### 环境
+- 本机装好 elan 4.2.4，`lean`/`lake` 可用。
+- **工具链（最终决策）**：`lean-toolchain` 原指向 `leanprover/lean4:v4.14.0`，但本机从
+  `releases.lean-lang.org` 下载 v4.14.0 反复因 **SSL 连接被重置** 失败；stable（v4.35.0）可下载，
+  故先用 `elan override` 以 v4.35.0 编译验证（Lean 4 基础语法 v4.14→v4.35 兼容，`lake build` 全绿）。
+  **用户 2026-10-24 拍板：`lean-toolchain` 升级到 `leanprover/lean4:v4.35.0`**，移除 override 后
+  由 lean-toolchain 直接生效，`lake build` 复核仍 8 jobs 全绿。今后项目统一以 v4.35.0 构建。
+
+#### feat: `formal/Formal/DualConstraint.lean`（接入）
+- 将 `formal/candidates/DualConstraint.lean`（认知双约束 / R18 的 Horn skeleton 编码，
+  原"候选，未编译"）**单独编译通过**后移入 `Formal/`。
+- `Formal.lean` 增加 `import Formal.DualConstraint`。
+- `lake build` 全项目（Basic/Axioms/Corollaries/AttackSurface/DualConstraint/Formal，8 jobs）**编译通过，无 sorry**。
+- 编码内容：两类失效（外/内）的可分离性与判别签名 R18-a（DC3–DC8 公理 + T1–T6 可导出定理）；
+  定量签名（数值不等式）与依赖 B-B19 的桥按 `GAPS.md` 登记为 X1/X2 不编码。
+
+#### docs
+- `formal/GAPS.md`：C1 条目状态由「候选，未编译验证」改为「已接入」。
+- `formal/candidates/DualConstraint.lean`：按接入步骤"移入"，从 candidates 移除（避免重复），
+  内容见 `Formal/DualConstraint.lean`。
+
+## v1.6.17 — 2026-10-24
+
+### A13 · 第一例对应探索（换工作决策）
+
+> 用户指令：「A5 完成后接着 A7、A13」。本轮完成 A7（上一条目）与 A13（本条目）。
+> 对应 `18-v3.3-formal-framework-charter.md` §6.1 触发点 A13——**投影空间与现实空间的第一个正式接触点**。
+
+#### feat: `experiments/a13_first_case/`（a13_first_case.py + a13_contrast.json + README.md）
+
+对"换工作决策"单一认知案例，用 D-DRILL / D-CONV / D-IDENT 跑完整判定流程，输出
+**框架判定 vs 无框架人工判断**对照记录：
+- 场景 A（越查越笃定，ρ=2）：D-DRILL **钻研相**（U 峰在前），D-CONV **收敛方向**（U 降到峰高 7%）
+- 场景 B（越查越乱，ρ=0.6）：D-DRILL **空洞相**（E 峰在前），D-CONV **发散方向**（U 保持峰高 96%）
+
+**对照点**：无框架把"清楚/乱"当程度副词并常归因于个体特质；框架把它判读为互斥的钻研/空洞相位 +
+可定位的可辨识量（ρ_exp 斜率 A 级、sign(1−ρ) 截距 B 级、κ_E 需外部单位 C 级、四单位系数 D 级伪目标）。
+可作论文示例 / Graphical Abstract 素材 / 审稿演示案例。
+
+**诚实边界**：演示性映射，非现实测量（真实决策无客观可测 (E,U)，叙事→轨迹是构造）；
+D-CONV 只判收敛/发散方向，不裁真伪（真/伪收敛需外部证伪信息，超出本演示）；跨现实验证属 B 组 B4。
+
+#### docs
+
+- `18-v3.3-formal-framework-charter.md`：A13 触发点→已完成。
+
+## v1.6.16 — 2026-10-24
+
+### A7 · 核心最小化（47 记号 → 极小核心 + 导出表）
+
+> 用户指令：「A5 完成后接着 A7、A13」。本轮完成 A7（核心最小化）。
+> 对应 `18-v3.3-formal-framework-charter.md` 待办 A7。
+
+#### feat: `experiments/a7_core_min/`（a7_core_min.py + core_table.json + README.md）
+
+对 `symbol_registry.json`（47 记号）做依赖图机检压缩：
+- **核心 = 11**（根 10：A_D/C_in/F/M/O/O_all/Ω/S/X/φ + 约定输入 1：η）
+- **导出 = 36**，全部可由核心沿 `derives_from` 到达，**展开校验通过（不可达 0）**
+- **核心压缩率 76.6%**；L2 的 15 个动力学参数全部由 A_D 导出（体现 A_D 唯一承重假设地位）
+
+**诚实边界**：压缩率是**依赖结构层面**，非**概念独立性层面**（10 根是否彼此独立是概念判断，
+不在图论机检范围）；未改动任何记号定义与层归属，未触碰冻结文本。
+
+#### docs
+
+- `18-v3.3-formal-framework-charter.md`：A7 状态→已完成。
+
+## v1.6.15 — 2026-10-24
+
+### A5 · generics 一般性证明（代数证明 + 原型枚举）
+
+> 用户指令：「继续下一个待办」⟹ 执行 A5（generics 一般性证明）。
+> 对应 `18-v3.3-formal-framework-charter.md` §1.4（genericity 等价式）、判据 C3.1、待办 A5。
+
+#### feat: `experiments/a5_generics/`（a5_genericity.py + a5_results.json + proof.md）
+
+在 A_D 原型上证明并机器核验四条分类规则的 genericity（输出只依赖不变量）：
+- 规则 1 楔形分类（D-DRILL）：Inv=sign(ρ−1)，R∈{drill,hollow,none}
+- 规则 2 峰序（P3）：Inv=sign(ρ−1)，R=U峰前后
+- 规则 3 四级可辨识性（D-IDENT）：Inv=(ρ_exp, sign(ρ−1))，自足两级
+- 规则 4 共线性反解 ρ_exp：Inv=ρ_exp，R=OLS 斜率
+
+**机器验证**：720 实例（4 调度 × 3 θ_E × 3 ρ_exp × 5 ρ × 2 E0 × 2 U0），
+四条规则同不变量组内输出恒同，**零违反**；共线反解跨实例 max rel err 1.48e-16。
+
+**形式精确化（重要）**：章程 §1.4 的 ⟺ 双向式对细粒度不变量过强
+（楔形分类中 ρ=1/3 与 ρ=0.5 都判 hollow）。正确的 genericity 形式是**函数性** R=f∘Inv
+（f 不必单射）。证明文档 `proof.md` 详述。
+
+**诚实边界**：代数 + 原型枚举，**非 Lean 形式化**（Lean 归 A9，本机无工具链）、非现实断言。
+
+#### docs
+
+- `18-v3.3-formal-framework-charter.md`：A5 状态→已完成、判据 C3.1→原型内已证、
+  可说/不能说清单第 4 条加 v3.4.1 收尾登记（限定"已在 A_D 原型内证成"）。
+
+
+
+### A10 收尾（C1.7/C1.8 接入 CI 强制门）+ R-042 D-SCALE 参数敏感性扫描
+
+> 用户指令：「直接动手执行」A 组待办。本轮完成第一优先 A10 收尾（接 CI 强制门）与第二优先 A12/R-042（D-SCALE 扫描）。
+> 对应 `18-v3.3-formal-framework-charter.md` §6.1（A10 状态说明、优先级表）与 `reef_shturl.json`/`distinction_registry.json`。
+
+#### feat: `.github/workflows/xs-gates.yml`（A10 · CI 强制门）
+
+把 XS 合法性机检接成 CI 合并门槛，三道强制门任一 error 即阻断：
+`xs_trace_gate.py`（C1.7 推导链可达性 + C1.8 冻结窗哈希比对）、`xs_formal_checks.py`（C1/C2 记号与区分登记一致性）、`pytest tests/`（全套数值原型）。
+
+**本地等价验证全绿**：两个校验器 error=0（唯一警告为已登记的 `η` 无根断言）；`pytest` **301 passed**；
+坏样本注入验证强制门确实拦截（G001 被捕获）。
+**诚实边界**：CI 门需推送到 GitHub 并启用 Actions 后才是真正的合并门槛；本地仓库无 GitHub Actions 运行时，以上为本地等价验证。
+
+#### feat: `experiments/r42_dscale_eta/`（R-042 · D-SCALE 对 η 的参数敏感性）+ 登记
+
+- `r42_dscale_eta_sensitivity.py`：三类场景（同尺度/跨尺度弱扰动/结构性扰动）× η∈[0.005,1.0] 网格，
+  固定观测窗口 τ_fine=8/τ_coarse=128、无噪声（框架判定为无噪声语义），固定种子 20261024，逐位可复现。
+- 结果：三类场景判定读数**正确区分且对 η 稳定**——A→same_scale_coupling（R 两尺度≈0）、
+  B→cross_scale_weak（R_fine=0.195>0, R_coarse≈0）、C→structural（两尺度>0）；
+  g 不进入判定流程 ⟹ 支持 §4.4.1 B-B44「弱」拆分。
+- **登记**：`reef_shturl.json` R-042 状态→「已扫描」；`distinction_registry.json` D-SCALE status→**established**（附 B-B43/B-B44 残余说明）。
+- **方法学澄清（诚实登记）**：τ_fine/τ_coarse 是固定观测窗口，τ* 为应落在两者间的分离尺度，**判定读数与 η 无关**；
+  η 决定 τ* 是否落在窗口之间（有效区间约束）——不是"不稳定"，需在证书写明的边界。
+
+#### docs
+
+- `18-v3.3-formal-framework-charter.md`：A10 状态收尾（v3.4.1 登记）、优先级表 A10/A11/A12 三行改完成、
+  可说/不能说清单第 6/7/10/12 条加 v3.4.1 收尾登记。
+
+
+
+### R33 C 级闭合实测（R45 核验）+ R34 ρ=1 顶点容差带（OPEN-1 的解）
+
+> 用户指令：「解掉 OPEN-1（容差带）与 R45（C 级实测核验）」。
+> 对应 `27-v3.4-boundary-map.md`（边界地图 v0.1）的两个空白格。
+
+#### feat: `experiments/r33_clevel_closure/` + `tests/test_r33_clevel_closure.py`（6 项）
+
+命题 6.3「固定动作计数闭合 C 级」的实测核验（R45 判据）：四臂
+（固定展开 1 次 / 固定消解 1 次 / 自由调度序列 / 回归 `U = α + ρ_exp·E + β·k`）
+在 A_D 动作计数原型上对账。**36 行（3 θ_E × 3 ρ × 4 调度族）T1–T4 全过**，
+残差为浮点噪声；**负对照有牙齿**（b 记错破坏 T2、不动 T1；ρ=1 退化点豁免已登记）。
+⟹ R45 原型内成立，B-B42/B-B45 由「未做」改「已核验（原型级）」。
+
+#### feat: `experiments/r34_vertex_band/` + `tests/test_r34_vertex_band.py`（6 项）
+
+OPEN-1（B 级符号判读在 ρ=1 顶点退化）的解：**B 级判读禁区（顶点带）:=
+{|β̂| ≤ z·SE(β̂)}**，β̂/SE 来自 `U = α + γE + βk` 回归，z 约定性（默认 1.96）。
+判读升级为**三值**（钻研方向 / 空洞方向 / 顶点带），不强行二分。
+结构检验：无噪声禁区恰为 ρ=1；有噪声带宽随 σ 增宽、留空集中顶点邻域；
+**G_λ 下 (E,U) 逐点不变、判读不变（U5 通过）**。
+
+#### docs
+
+- `27-v3.4-boundary-map.md`：OPEN-1 关闭、R45 核验通过、B 行例外条款改写、
+  §5 交叉索引与总评更新；剩余开放格 OPEN-3（开闭二分）/OPEN-4。
+  **同日升 v0.2（拆表）→ v0.3（约定化）**：表 A 分级结构【定理】（四级不随实例变化）
+  与表 B 可读性条件分开；C 行 = 辨识层【定理】+【原型确认】（R33）+ 自足层【约定】；
+  **OPEN-2 从【开放】（等待判据）改登记为【约定】（等待声明）**——约定 A（观测工具
+  算界内）下 C 级自足为定义上的真，约定 B 下为相对于观测协议的条件性结论；
+  框架不裁定约定、只要求显式声明（与 η、z 并列的约定性输入）；R45 与 OPEN-2
+  登记为同格两面；D-IDENT 证书附款按约定声明生效。
+- `boundary_map.json`：open_cells / gap_index / r041_table 同步。
+- README 缺口表 B-B42/B-B45 改「已核验」；与代码层对应新增两行。
+
+---
+
 ## v1.6.12 — 2026-10-23
 
 ### XS 章程 v3.4 修订：前置生成理论 P 的悬空登记、三类探索谱系、A 组优先级重排

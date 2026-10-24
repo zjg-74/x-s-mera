@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "task": "B2/R31 桥检验（A_D 一致性守卫）——方法准备，非经验验证",
+    "model": "A_D（15-v3.2 §7.2/§7.4 R31）",
+    "dt": 0.01,
+    "K": 3000,
+    "note": "R31 为重言形式（用 ΔE），是 A_D 一致性守卫，非 R43′ 独立 Ψ 真桥检验；违反族 = A_D⁺ 边界层注入（g(U)=g_strength·U）",
+    "engine": "仅标准库；确定性（pivot 网格）"
+  },
+  "families": {
+    "normal": {
+      "g_strength": 0.0,
+      "trials": [
+        {
+          "pivot": 0.4,
+          "kstar": 431,
+          "rel_violation": 0.00010872281743164885,
+          "fail": false
+        },
+        {
+          "pivot": 0.5,
+          "kstar": 539,
+          "rel_violation": 0.00029994534046193027,
+          "fail": false
+        },
+        {
+          "pivot": 0.6,
+          "kstar": 647,
+          "rel_violation": 0.00042741353621162786,
+          "fail": false
+        },
+        {
+          "pivot": 0.7,
+          "kstar": 755,
+          "rel_violation": 0.0005184556380014654,
+          "fail": false
+        }
+      ],
+      "fail_rate": 0.0
+    },
+    "adplus_g0.4": {
+      "g_strength": 0.4,
+      "trials": [
+        {
+          "pivot": 0.4,
+          "kstar": 261,
+          "rel_violation": 0.9999999999239404,
+          "fail": true
+        },
+        {
+          "pivot": 0.5,
+          "kstar": 299,
+          "rel_violation": 0.9999999999026606,
+          "fail": true
+        },
+        {
+          "pivot": 0.6,
+          "kstar": 332,
+          "rel_violation": 0.9999999998764324,
+          "fail": true
+        },
+        {
+          "pivot": 0.7,
+          "kstar": 362,
+          "rel_violation": 0.9504831624450274,
+          "fail": true
+        }
+      ],
+      "fail_rate": 1.0
+    },
+    "adplus_g0.8": {
+      "g_strength": 0.8,
+      "trials": [
+        {
+          "pivot": 0.4,
+          "kstar": 191,
+          "rel_violation": 0.9999999999255613,
+          "fail": true
+        },
+        {
+          "pivot": 0.5,
+          "kstar": 214,
+          "rel_violation": 0.9999999999088196,
+          "fail": true
+        },
+        {
+          "pivot": 0.6,
+          "kstar": 234,
+          "rel_violation": 0.999999999889902,
+          "fail": true
+        },
+        {
+          "pivot": 0.7,
+          "kstar": 252,
+          "rel_violation": 0.9999999998685193,
+          "fail": true
+        }
+      ],
+      "fail_rate": 1.0
+    },
+    "adplus_g1.2": {
+      "g_strength": 1.2,
+      "trials": [
+        {
+          "pivot": 0.4,
+          "kstar": 154,
+          "rel_violation": 0.9999999999162316,
+          "fail": true
+        },
+        {
+          "pivot": 0.5,
+          "kstar": 171,
+          "rel_violation": 0.9999999998978457,
+          "fail": true
+        },
+        {
+          "pivot": 0.6,
+          "kstar": 186,
+          "rel_violation": 0.9999999998776189,
+          "fail": true
+        },
+        {
+          "pivot": 0.7,
+          "kstar": 198,
+          "rel_violation": 0.9999999998558369,
+          "fail": true
+        }
+      ],
+      "fail_rate": 1.0
+    }
+  }
+}

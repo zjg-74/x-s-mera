@@ -1,0 +1,291 @@
+{
+ "meta": {
+  "purpose": "R-042 D-SCALE η 敏感性扫描（最终版：固定两观测尺度）",
+  "framework": "XS v3.4 §4.4 / reef_shturl.json R-042",
+  "seed": 20261024,
+  "N": 1024,
+  "rho_exp": 1.3,
+  "c_const": 0.4,
+  "sig": 0.0,
+  "amp_fast": 0.55,
+  "period_fast": 16,
+  "amp_slow": 0.5,
+  "period_slow": 256,
+  "tau_fine": 8,
+  "tau_coarse": 128,
+  "eps_zero": 1e-09,
+  "eta_grid": [
+   0.005,
+   0.01,
+   0.02,
+   0.05,
+   0.1,
+   0.2,
+   0.3,
+   0.5,
+   0.7,
+   1.0
+  ],
+  "nature": "纯内部仿真（无需外部数据），固定种子逐位可复现"
+ },
+ "stability": {
+  "same_scale": {
+   "label": "A 同尺度",
+   "stable": true,
+   "distinct_verdicts": [
+    "same_scale_coupling"
+   ],
+   "base_verdict": "same_scale_coupling",
+   "R_fine": 1.0764556543415865e-16,
+   "R_coarse": 6.438754818004131e-17,
+   "fail_eta": [
+    0.005,
+    0.01,
+    0.02,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    0.7,
+    1.0
+   ],
+   "valid_eta": []
+  },
+  "cross_scale_weak": {
+   "label": "B 跨尺度弱扰动",
+   "stable": true,
+   "distinct_verdicts": [
+    "cross_scale_weak_perturbation"
+   ],
+   "base_verdict": "cross_scale_weak_perturbation",
+   "R_fine": 0.19491294251183647,
+   "R_coarse": 4.552887194208276e-17,
+   "fail_eta": [
+    0.005,
+    0.01,
+    0.02,
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    0.7,
+    1.0
+   ],
+   "valid_eta": [
+    0.05
+   ]
+  },
+  "structural": {
+   "label": "C 结构性扰动",
+   "stable": true,
+   "distinct_verdicts": [
+    "structural_perturbation"
+   ],
+   "base_verdict": "structural_perturbation",
+   "R_fine": 0.1989036552911583,
+   "R_coarse": 0.18152811433902058,
+   "fail_eta": [
+    0.005,
+    0.01,
+    0.02,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    0.7,
+    1.0
+   ],
+   "valid_eta": []
+  }
+ },
+ "results": {
+  "same_scale": [
+   {
+    "eta": 0.005,
+    "tau_star": 252,
+    "tau_in_band": false,
+    "verdict": "same_scale_coupling"
+   },
+   {
+    "eta": 0.01,
+    "tau_star": 242,
+    "tau_in_band": false,
+    "verdict": "same_scale_coupling"
+   },
+   {
+    "eta": 0.02,
+    "tau_star": 190,
+    "tau_in_band": false,
+    "verdict": "same_scale_coupling"
+   },
+   {
+    "eta": 0.05,
+    "tau_star": 2,
+    "tau_in_band": false,
+    "verdict": "same_scale_coupling"
+   },
+   {
+    "eta": 0.1,
+    "tau_star": 2,
+    "tau_in_band": false,
+    "verdict": "same_scale_coupling"
+   },
+   {
+    "eta": 0.2,
+    "tau_star": 2,
+    "tau_in_band": false,
+    "verdict": "same_scale_coupling"
+   },
+   {
+    "eta": 0.3,
+    "tau_star": 2,
+    "tau_in_band": false,
+    "verdict": "same_scale_coupling"
+   },
+   {
+    "eta": 0.5,
+    "tau_star": 2,
+    "tau_in_band": false,
+    "verdict": "same_scale_coupling"
+   },
+   {
+    "eta": 0.7,
+    "tau_star": 2,
+    "tau_in_band": false,
+    "verdict": "same_scale_coupling"
+   },
+   {
+    "eta": 1.0,
+    "tau_star": 2,
+    "tau_in_band": false,
+    "verdict": "same_scale_coupling"
+   }
+  ],
+  "cross_scale_weak": [
+   {
+    "eta": 0.005,
+    "tau_star": 325,
+    "tau_in_band": false,
+    "verdict": "cross_scale_weak_perturbation"
+   },
+   {
+    "eta": 0.01,
+    "tau_star": 244,
+    "tau_in_band": false,
+    "verdict": "cross_scale_weak_perturbation"
+   },
+   {
+    "eta": 0.02,
+    "tau_star": 191,
+    "tau_in_band": false,
+    "verdict": "cross_scale_weak_perturbation"
+   },
+   {
+    "eta": 0.05,
+    "tau_star": 13,
+    "tau_in_band": true,
+    "verdict": "cross_scale_weak_perturbation"
+   },
+   {
+    "eta": 0.1,
+    "tau_star": 2,
+    "tau_in_band": false,
+    "verdict": "cross_scale_weak_perturbation"
+   },
+   {
+    "eta": 0.2,
+    "tau_star": 2,
+    "tau_in_band": false,
+    "verdict": "cross_scale_weak_perturbation"
+   },
+   {
+    "eta": 0.3,
+    "tau_star": 2,
+    "tau_in_band": false,
+    "verdict": "cross_scale_weak_perturbation"
+   },
+   {
+    "eta": 0.5,
+    "tau_star": 2,
+    "tau_in_band": false,
+    "verdict": "cross_scale_weak_perturbation"
+   },
+   {
+    "eta": 0.7,
+    "tau_star": 2,
+    "tau_in_band": false,
+    "verdict": "cross_scale_weak_perturbation"
+   },
+   {
+    "eta": 1.0,
+    "tau_star": 2,
+    "tau_in_band": false,
+    "verdict": "cross_scale_weak_perturbation"
+   }
+  ],
+  "structural": [
+   {
+    "eta": 0.005,
+    "tau_star": 254,
+    "tau_in_band": false,
+    "verdict": "structural_perturbation"
+   },
+   {
+    "eta": 0.01,
+    "tau_star": 250,
+    "tau_in_band": false,
+    "verdict": "structural_perturbation"
+   },
+   {
+    "eta": 0.02,
+    "tau_star": 198,
+    "tau_in_band": false,
+    "verdict": "structural_perturbation"
+   },
+   {
+    "eta": 0.05,
+    "tau_star": 161,
+    "tau_in_band": false,
+    "verdict": "structural_perturbation"
+   },
+   {
+    "eta": 0.1,
+    "tau_star": 2,
+    "tau_in_band": false,
+    "verdict": "structural_perturbation"
+   },
+   {
+    "eta": 0.2,
+    "tau_star": 2,
+    "tau_in_band": false,
+    "verdict": "structural_perturbation"
+   },
+   {
+    "eta": 0.3,
+    "tau_star": 2,
+    "tau_in_band": false,
+    "verdict": "structural_perturbation"
+   },
+   {
+    "eta": 0.5,
+    "tau_star": 2,
+    "tau_in_band": false,
+    "verdict": "structural_perturbation"
+   },
+   {
+    "eta": 0.7,
+    "tau_star": 2,
+    "tau_in_band": false,
+    "verdict": "structural_perturbation"
+   },
+   {
+    "eta": 1.0,
+    "tau_star": 2,
+    "tau_in_band": false,
+    "verdict": "structural_perturbation"
+   }
+  ]
+ }
+}

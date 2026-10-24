@@ -34,8 +34,13 @@ external engineering defects. The LE (Life–Environment) prototype extends the 
 | **R27 双相形状：X 单调 / M 单峰** `experiments/r27_biphasic/` | ✅ 已实现（v1.6.4），14 项测试。峰位命中解析预测、**峰序吻合率 1.000**；**单峰性须粗粒化后检验** |
 | **R28 微观回落 / 多峰 / 局部-全局收敛** `experiments/r28_micro_reversal/` | ✅ 已实现（v1.6.5），15 项测试。回落率解析律命中；**路径层单峰率 0.000（本体性，非测量误差）**；局部收敛 100% vs 全局收敛 13–34% |
 | **R29 峰距标定程序** `experiments/r29_peak_distance_calibration/` | ✅ 已实现（v1.6.6），15 项测试。公式命中（误差 ≤1 步=离散化界）；估计量无偏；**异 K 必须归一化**（raw 差因子 2.000）；**共享噪声下峰序零判反**；U−E 恒等式残差 5.7e-14 |
-| **R18 的 Lean 命题规格** `formal/candidates/DualConstraint.lean` | ⚠️ **候选，未编译验证**（本机无 Lean 工具链），置于非编译目录；见 `formal/GAPS.md` 条目 C1 |
-
+| **R-042 D-SCALE 参数敏感性扫描** `experiments/r42_dscale_eta/` | ✅ 已实现（v1.6.14）。三类场景 × η∈[0.005,1.0] 判定读数**正确区分且对 η 稳定**，g 不进入判定流程 ⟹ 支持 B-B44「弱」拆分，D-SCALE 升级 established（见 `distinction_registry.json`） |
+| **A5 generics 一般性证明** `experiments/a5_generics/` | ✅ 已实现（v1.6.15）。四条分类规则（楔形/峰序/四级可辨识/共线反解）在 A_D 原型内满足函数性 genericity，720 实例零违反；代数证明 + 原型枚举，**非 Lean、非现实断言**（见 `proof.md`） |
+| **CI 强制门** `.github/workflows/xs-gates.yml` | ✅ 已交付（v1.6.14）。`xs_trace_gate.py`(C1.7/C1.8) + `xs_formal_checks.py`(C1/C2) + `pytest tests/` 三道合并门槛；需 GitHub Actions 启用后生效 |
+| **A7 核心最小化** `experiments/a7_core_min/` | ✅ 已实现（v1.6.16）。47 记号→11 核心（根 10+约定输入 1），36 导出全部可达，压缩率 76.6%；依赖结构层面，非概念独立性 |
+| **R18 的 Lean 命题规格** `formal/Formal/DualConstraint.lean` | ✅ 已接入（v1.6.18）。认知双约束/R18 Horn skeleton 编码，lake build 编译通过、无 sorry；见 `formal/GAPS.md` 条目 C1 |
+| **A13 第一例对应探索** experiments/a13_first_case/ | ✅ 已实现（v1.6.17）。换工作决策：D-DRILL 钻研/空洞相位 + D-CONV 收敛/发散方向 + D-IDENT 分级，对照无框架程度描述；演示性映射，非现实测量 |
+| **B 组方法准备**（B3/B1/B2，外部数据前可执行部分） | ✅ B3 残差反演 g（v1.6.19，4 种 g corr=1.0）；B1 四臂闭合（v1.6.20，自洽 1e-14）；B2 R31 守卫（v1.6.21，正常 0.000 / A_D⁺ 违反 1.000）。**非经验验证**；R43′（独立 Ψ）、真人测量、跨人群仍属 B 组待外部数据 |
 ## Repository structure
 
 ```
@@ -54,13 +59,18 @@ x-s-mera/
 │   ├── tp_temporal_potential.py      # ΔT：时间势差 TP 谓词操作化（Adler 锚定）
 │   └── kernel.py                 # ⏳ 计划中：认知架构内核（快慢耦合非对称势阱），当前不在仓库
 ├── experiments/                  # 每个 src 模块对应的出图脚本（sim_*/r*_*.py）
-│   ├── r18_dual_constraint/      # R18：双约束失效可分离性（5 脚本 + 5 json + report.md）
-│   ├── r19_bridge/               # R19：U/Psi 桥的双速率分解一致性检验（1 脚本 + json + report.md）
+│   ├── a5_generics/              # A5：generics 一般性证明（1 脚本 + 结果 json + proof.md）
+│   ├── a7_core_min/          # A7：核心最小化（1 脚本 + core_table.json + README）│   ├── r18_dual_constraint/      # R18：双约束失效可分离性（5 脚本 + 5 json + report.md）
+│   ├── a13_first_case/       # A13：第一例对应探索（1 脚本 + 对照 json + README）│   ├── r19_bridge/               # R19：U/Psi 桥的双速率分解一致性检验（1 脚本 + json + report.md）
 │   ├── r21_constraint_specificity/  # R21：内约束强度 = O_adm 剪枝量（3 脚本 + 3 json + report.md）
 │   ├── r27_biphasic/             # R27：双相形状 X 单调 / M 单峰（1 脚本 + json + report.md）
 │   ├── r28_micro_reversal/       # R28：微观回落 / 多峰 / 局部-全局收敛（1 脚本 + json + report.md）
-│   └── r29_peak_distance_calibration/  # R29：峰距标定程序（1 脚本 + json + report.md）
-├── tests/                        # 199 项单元测试，全过（17 个测试文件）
+│   ├── r29_peak_distance_calibration/  # R29：峰距标定程序（1 脚本 + json + report.md）
+│   ├── r30_gauge_fixing/         # R30：A_D 规范固定恒等式（1 脚本 + 结果 json）
+│   ├── r33_clevel_closure/       # R33：C 级闭合实测（1 脚本 + 结果 json）
+│   ├── r34_vertex_band/          # R34：ρ=1 顶点容差带（1 脚本 + 结果 json）
+│   └── r42_dscale_eta/           # R-042：D-SCALE 对 η 参数敏感性扫描（1 脚本 + 结果 json + 运行留档）
+├── tests/                        # 301 项单元测试，全过（23 个测试文件，v1.6.14 实测）
 ├── docs/
 │   ├── experiment_manual.md      # 实验手册（§5 LE 耦合实验、§6 中继链实验）
 │   ├── xs-framework/             # XS 框架理论文档集（16 篇，含 v3.1 认知框架主线）
@@ -101,13 +111,16 @@ python experiments/r29_peak_distance_calibration/r29_peak_distance_calibration.p
 - 需要 Python ≥ 3.10（依赖 `numpy>=2.0`）。
 - `tests/test_r3_case_upgrade.py` 含数据完整性校验（防回写漂移），耗时明显高于其余文件；
   只做快速自检可先跑 `python -m pytest tests/ -v -x --ignore=tests/test_r3_case_upgrade.py`。
-- 全套 141 项的分文件分布：le_kernel 19 / a10 16 / a9 13 / r3_case_upgrade 14 / r4 12 /
+- 全套 **301 项**（v1.6.14 实测 `pytest tests/` → 301 passed；含 v1.6.6 之后新增的 r30_gauge_fixing、r33_clevel_closure、r34_vertex_band 及校验器测试）。原 141 项分发（v1.6.6）：
+  le_kernel 19 / a10 16 / a9 13 / r3_case_upgrade 14 / r4 12 /
   t1d 12 / r3_sufficiency 11 / relay_chain 10 / tp 10 / a0_bootstrap 9 / d_form_audit 8 /
-  **r18_dual_constraint 7**（v1.6.2）/ **r19_bridge 7** + **r21_constraint_specificity 7**（v1.6.3）/
-  **r27_biphasic 14**（v1.6.4）/ **r28_micro_reversal 15**（v1.6.5）/
-  **r29_peak_distance_calibration 15**（v1.6.6）。
+  r18_dual_constraint 7 / r19_bridge 7 / r21_constraint_specificity 7 /
+  r27_biphasic 14 / r28_micro_reversal 15 / r29_peak_distance_calibration 15。
 - `experiments/r18_dual_constraint/` 下的脚本**只依赖标准库**，不需要 numpy；
   运行时把 json 写进当前工作目录，故请在该目录内执行（见 `report.md` §7）。
+- **CI 强制门（v1.6.14 · A10）**：`.github/workflows/xs-gates.yml` 把 `xs_trace_gate.py`（C1.7/C1.8）、
+  `xs_formal_checks.py`（C1/C2）、`pytest tests/` 串成三道合并门槛，任一 error 即阻断。
+  本地等价验证：`python src/xs_trace_gate.py && python src/xs_formal_checks.py && python -m pytest tests/ -q`，须全退出码 0。
 
 ## 理论 → 代码对照
 
@@ -136,9 +149,10 @@ python experiments/r29_peak_distance_calibration/r29_peak_distance_calibration.p
    已实现并锁进回归测试的是**二值失效的可分离性**，不是强度-反应关系。
 8. `docs/xs-framework/` 的 **XS 版本号（v3.0 / v3.1）与仓库版本号（v1.6.x）是两条独立的线**：
    前者随理论主张递增，后者随代码 API / 实验 / 测试递增。文档入库**不**触发仓库主版本升级。
-9. **`formal/candidates/DualConstraint.lean` 未经 Lean 编译验证**（本机无 `lean` / `lake`）。
-   它故意放在 `candidates/`（不在 `lakefile.toml` 的 `Formal` 目标下，不会被编译），
-   以免破坏构建。验证后移入 `Formal/` 并 import 即完成接入，步骤见 `formal/GAPS.md` 条目 C1。
+9. **`formal/Formal/DualConstraint.lean` 已通过 Lean 编译验证并接入**（v1.6.18，本机装 elan 后
+   `lake build` 全绿、无 sorry）。原 `candidates/` 副本已按接入步骤移除。**工具链**：
+   `lean-toolchain` 原指向 v4.14.0，本机下载 v4.14.0 因 SSL 连接重置反复失败，用户拍板后
+   **已升级到 v4.35.0**（移除 override 复核 lake build 仍全绿），项目统一 v4.35.0。
 10. **R19 / R21 是人造参数下的机制检验，不是经验验证。** R19 的四个系数
     （`e_pm` / `u_pm`）无任何经验来源；R21 的宏库是原型加扰动，不是自然语言。
     尤其：**R21 测到的全部效应都是 $O_{adm}$ 的**数量**效应**——按语义簇剪枝与

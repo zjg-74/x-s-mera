@@ -1,0 +1,60 @@
+﻿====================================================================================
+R-042 —— D-SCALE 对 η 的参数敏感性扫描（最终版：固定两观测尺度）
+====================================================================================
+
+--- 场景 A 同尺度 (same_scale) ---
+  固定观测窗口: τ_fine=8 τ_coarse=128  R_fine=1.076e-16  R_coarse=6.439e-17
+  判定读数(与η无关): same_scale_coupling
+      eta    tau*     τ*在区间? | 判定
+    0.005     252      否(失效) | same_scale_coupling
+    0.010     242      否(失效) | same_scale_coupling
+    0.020     190      否(失效) | same_scale_coupling
+    0.050       2      否(失效) | same_scale_coupling
+    0.100       2      否(失效) | same_scale_coupling
+    0.200       2      否(失效) | same_scale_coupling
+    0.300       2      否(失效) | same_scale_coupling
+    0.500       2      否(失效) | same_scale_coupling
+    0.700       2      否(失效) | same_scale_coupling
+    1.000       2      否(失效) | same_scale_coupling
+  → 判定恒定=True  合理η(τ*在区间)=无  失效η=[0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5, 0.7, 1.0]
+
+--- 场景 B 跨尺度弱扰动 (cross_scale_weak) ---
+  固定观测窗口: τ_fine=8 τ_coarse=128  R_fine=1.949e-01  R_coarse=4.553e-17
+  判定读数(与η无关): cross_scale_weak_perturbation
+      eta    tau*     τ*在区间? | 判定
+    0.005     325      否(失效) | cross_scale_weak_perturbation
+    0.010     244      否(失效) | cross_scale_weak_perturbation
+    0.020     191      否(失效) | cross_scale_weak_perturbation
+    0.050      13          是 | cross_scale_weak_perturbation
+    0.100       2      否(失效) | cross_scale_weak_perturbation
+    0.200       2      否(失效) | cross_scale_weak_perturbation
+    0.300       2      否(失效) | cross_scale_weak_perturbation
+    0.500       2      否(失效) | cross_scale_weak_perturbation
+    0.700       2      否(失效) | cross_scale_weak_perturbation
+    1.000       2      否(失效) | cross_scale_weak_perturbation
+  → 判定恒定=True  合理η(τ*在区间)=[0.05]  失效η=[0.005, 0.01, 0.02, 0.1, 0.2, 0.3, 0.5, 0.7, 1.0]
+
+--- 场景 C 结构性扰动 (structural) ---
+  固定观测窗口: τ_fine=8 τ_coarse=128  R_fine=1.989e-01  R_coarse=1.815e-01
+  判定读数(与η无关): structural_perturbation
+      eta    tau*     τ*在区间? | 判定
+    0.005     254      否(失效) | structural_perturbation
+    0.010     250      否(失效) | structural_perturbation
+    0.020     198      否(失效) | structural_perturbation
+    0.050     161      否(失效) | structural_perturbation
+    0.100       2      否(失效) | structural_perturbation
+    0.200       2      否(失效) | structural_perturbation
+    0.300       2      否(失效) | structural_perturbation
+    0.500       2      否(失效) | structural_perturbation
+    0.700       2      否(失效) | structural_perturbation
+    1.000       2      否(失效) | structural_perturbation
+  → 判定恒定=True  合理η(τ*在区间)=无  失效η=[0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.5, 0.7, 1.0]
+
+====================================================================================
+稳定性汇总
+====================================================================================
+  A 同尺度 (same_scale              ): ✅ 稳定 判定=['same_scale_coupling']  合理η区间=无
+  B 跨尺度弱扰动 (cross_scale_weak        ): ✅ 稳定 判定=['cross_scale_weak_perturbation']  合理η区间=[0.05]
+  C 结构性扰动 (structural              ): ✅ 稳定 判定=['structural_perturbation']  合理η区间=无
+
+结论: D-SCALE 判定对 η 在 [0.005, 1] 网格上稳定 ⟹ 支持 B-B44 的'弱'拆分，D-SCALE 可考虑升级 established

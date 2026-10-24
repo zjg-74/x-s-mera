@@ -1,0 +1,72 @@
+{
+ "meta": {
+  "K": 241,
+  "DT": 0.01,
+  "SEED": 20261024,
+  "SCHED_FAMILIES": [
+   "log_ramp",
+   "linear",
+   "sigmoid",
+   "const_blocks"
+  ],
+  "THETA_E_GRID": [
+   0.5,
+   1.0,
+   2.0
+  ],
+  "RHO_GRID": [
+   0.3333333333333333,
+   0.5,
+   1.0,
+   2.0,
+   3.0
+  ],
+  "RHO_EXP_GRID": [
+   0.8,
+   1.0,
+   1.5
+  ],
+  "E0_GRID": [
+   5.0,
+   10.0
+  ],
+  "U0_GRID": [
+   20.0,
+   30.0
+  ],
+  "nature": "generics 代数/枚举验证（纯内部，无外部数据）"
+ },
+ "rules": {
+  "wedge": {
+   "genericity": true,
+   "n_instances": 720,
+   "n_inv_groups": 3,
+   "violations": []
+  },
+  "peak_order": {
+   "genericity": true,
+   "n_instances": 720,
+   "n_inv_groups": 3,
+   "intercept_sign_crosscheck": true,
+   "violations": []
+  },
+  "identifiability": {
+   "genericity": true,
+   "n_instances": 720,
+   "n_inv_groups": 9,
+   "violations": []
+  },
+  "collinear_rho": {
+   "genericity": true,
+   "n_instances": 720,
+   "n_inv_groups": 3,
+   "max_rel_err": 1.4802973661668753e-16,
+   "max_intra_group_spread": 2.220446049250313e-16,
+   "violations": []
+  }
+ },
+ "overall": {
+  "all_ok": true,
+  "n_instances": 720
+ }
+}
