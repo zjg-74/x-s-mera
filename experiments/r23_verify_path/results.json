@@ -1,0 +1,45 @@
+{
+  "model": "A_D double-rate (expansion/resolution), oscillation r=theta_E",
+  "steps": 60,
+  "reps": 400,
+  "noise_std": 0.05,
+  "U0": 4.0,
+  "seed": 20261024,
+  "method": "R23: oscillate (control Psi≈0 by r=theta_E), read U trend (program P-hat); U down => rho_res>rho_exp, up => <, flat => =",
+  "results": {
+    "I_rho_res_gt_rho_exp": {
+      "config": "rho_res > rho_exp",
+      "avg_U_net_change": -36.024,
+      "U_bottom_rate": 1.0,
+      "U_top_rate": 0.0,
+      "down_frac": 1.0,
+      "up_frac": 0.0,
+      "verdict": "rho_res > rho_exp",
+      "truth": "rho_res > rho_exp",
+      "match": true
+    },
+    "II_rho_res_lt_rho_exp": {
+      "config": "rho_res < rho_exp",
+      "avg_U_net_change": 35.976,
+      "U_bottom_rate": 0.0,
+      "U_top_rate": 1.0,
+      "down_frac": 0.0,
+      "up_frac": 1.0,
+      "verdict": "rho_res < rho_exp",
+      "truth": "rho_res < rho_exp",
+      "match": true
+    },
+    "III_rho_res_eq_rho_exp": {
+      "config": "rho_res = rho_exp",
+      "avg_U_net_change": -0.024,
+      "U_bottom_rate": 0.0,
+      "U_top_rate": 0.0,
+      "down_frac": 0.535,
+      "up_frac": 0.465,
+      "verdict": "rho_res = rho_exp",
+      "truth": "rho_res = rho_exp",
+      "match": true
+    }
+  },
+  "all_match": true
+}
