@@ -1,0 +1,93 @@
+{
+ "meta": {
+  "purpose": "R-043 τ* 落点：η 合理取值区间（加密网格 + 窗口扫描）",
+  "framework": "XS v3.4 / reef_shturl.json R-043 / B-B44",
+  "seed": 20261024,
+  "N": 1024,
+  "eta_grid_points": 200,
+  "eta_min": 0.001,
+  "eta_max": 1.0,
+  "default_window": [
+   8,
+   128
+  ],
+  "nature": "纯内部仿真（无需外部数据），固定种子逐位可复现"
+ },
+ "summary": {
+  "same_scale": {
+   "label": "A 同尺度",
+   "eta_intervals_in_default_window": [
+    [
+     0.031120603015075375,
+     0.046180904522613066
+    ]
+   ],
+   "default_window": [
+    8,
+    128
+   ],
+   "tau_star_range": [
+    2,
+    335
+   ]
+  },
+  "cross_scale_weak": {
+   "label": "B 跨尺度弱扰动",
+   "eta_intervals_in_default_window": [
+    [
+     0.031120603015075375,
+     0.07128140703517588
+    ]
+   ],
+   "default_window": [
+    8,
+    128
+   ],
+   "tau_star_range": [
+    2,
+    336
+   ]
+  },
+  "structural": {
+   "label": "C 结构性扰动",
+   "eta_intervals_in_default_window": [
+    [
+     0.06124120603015075,
+     0.08634170854271357
+    ]
+   ],
+   "default_window": [
+    8,
+    128
+   ],
+   "tau_star_range": [
+    2,
+    512
+   ]
+  }
+ },
+ "window_scan": {
+  "same_scale": [
+   0.045180904522613065,
+   4,
+   512,
+   0.001,
+   0.046180904522613066
+  ],
+  "cross_scale_weak": [
+   0.08534170854271357,
+   4,
+   512,
+   0.001,
+   0.08634170854271357
+  ],
+  "structural": [
+   0.08032160804020101,
+   4,
+   256,
+   0.006020100502512563,
+   0.08634170854271357
+  ]
+ },
+ "conclusion": "三类场景在默认窗口下均有非空 τ* 落带 η 区间 ⟹ B-B44 可取经验值范围；登记各场景 η 合理区间，B-B44 降级为「已给出区间、待锚定取值」"
+}

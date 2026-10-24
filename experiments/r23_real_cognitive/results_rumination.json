@@ -1,0 +1,115 @@
+{
+  "method": "program P-hat (supp4 3.2) + oscillation (Psi≈0) + U trend => rho_res>rho_exp (R23)",
+  "results": {
+    "R1": {
+      "us": [
+        1.7152,
+        1.7152,
+        1.6706,
+        2.1542,
+        2.1099,
+        2.0004
+      ],
+      "rs": [
+        3,
+        3,
+        3,
+        4,
+        4,
+        4
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "osc_net_change": 0.2852,
+      "verdict": "rho_res < rho_exp"
+    },
+    "R2": {
+      "us": [
+        1.0721,
+        1.0721,
+        1.6662,
+        1.7038,
+        1.7038
+      ],
+      "rs": [
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "osc_net_change": 0.6316,
+      "verdict": "rho_res < rho_exp"
+    },
+    "R4": {
+      "us": [
+        1.0721,
+        1.0721,
+        1.6662,
+        1.7038,
+        1.7152
+      ],
+      "rs": [
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "osc_net_change": 0.6431,
+      "verdict": "rho_res < rho_exp"
+    },
+    "R5": {
+      "us": [
+        1.7152,
+        1.7152,
+        1.7038,
+        2.0508,
+        1.927
+      ],
+      "rs": [
+        3,
+        3,
+        3,
+        4,
+        4
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "osc_net_change": 0.2117,
+      "verdict": "rho_res < rho_exp"
+    }
+  },
+  "verdict_counts": {
+    "rho_res < rho_exp": 4
+  },
+  "majority": [
+    "rho_res < rho_exp",
+    4
+  ]
+}

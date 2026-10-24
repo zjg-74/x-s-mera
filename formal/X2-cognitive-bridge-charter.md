@@ -92,6 +92,8 @@ XS 侧 **B-B19**（动力学层 Ψ 与信息层 U 的桥）未闭合，故「收
 - [x] 立项评估（2026-10-24）
 - [x] 步骤 1：ρ_res>ρ_exp 验证路径（R23）——**测量协议已落实**（`experiments/r23_verify_path/`
   + `docs/xs-framework/30-v3.4-r23-verify-path-rho-res-exp.md`，模型内自洽验证通过）。
-  **触发 Lean 立项的实证判定待真实系统**（用程序 P̂ 估计真实系统震荡期 U 走向，取得 ρ_res>ρ_exp
-  实证）；在此之前按跨层引用规则两层不得互引。
-- [ ] 步骤 2：CognitiveBridge.lean 形式化（触发后）
+  **已有首个候选实证（B 线 P1，`experiments/r23_real_cognitive/`）**：真实 LLM（Doubao）在 6 个
+  构造歧义任务上全部判 ρ_res>ρ_exp（震荡期 U 下降=酝酿型），初步触发立项判据。
+  **正式立项需 P4 加硬**（多模型、真人 think-aloud/编辑历史、含反刍对照任务）——因该候选存在
+  构造偏倚（全收敛型样本）与单模型局限。
+- [ ] 步骤 2：CognitiveBridge.lean 形式化（触发后；P4 加硬后正式触发）

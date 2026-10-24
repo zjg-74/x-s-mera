@@ -67,7 +67,7 @@
     {"cell": "ghost 机制推导", "ref": "G-26a", "status": "待验证"},
     {"cell": "吸收态不可逆性", "ref": "G-26d", "status": "猜想"},
     {"cell": "D-SCALE 解除 provisional", "ref": "R-042", "status": "已扫描（R42，v1.6.14）：判定读数在 eta 网格 [0.005,1.0] 上恒定，三类场景分落三支，g 不进判定流程；10 项结构测试全过", "resolved_in": "experiments/r42_dscale_eta/r42_results.json"},
-    {"cell": "tau* 落点（R-042 副产品）", "ref": "R-043", "status": "开放（2026-10-24 新立）：tau* 落在 (tau_fine, tau_coarse) 内的 eta 区间在本次扫描中几乎为空（A/C 场景全空、B 场景仅 eta=0.05）⟹ 判定对 eta 不敏感不等于 eta 合理区间已定。纯内部可解（加密 tau 网格 / 重选窗口），不需要外部数据", "resolved_in": null},
+    {"cell": "tau* 落点（R-042 副产品）", "ref": "R-043", "status": "已解决（2026-10-24，experiments/r43_tau_star）：加密 eta 网格后三类场景均有非空 tau* 落带区间（A[0.031,0.046] B[0.031,0.071] C[0.061,0.086]），R-042『几乎为空』为网格假象；eta 取值场景相关（交集为空），B-B44 降级为已给出区间、待锚定取值", "resolved_in": "experiments/r43_tau_star/r43_results.json"},
     {"cell": "P5-HMM 盲比行", "ref": "G-26f", "status": "待验证"},
     {"cell": "kappa_E 外部标定", "ref": "B-B42 / B-B45", "status": "待验证"},
     {"cell": "三类探索各一例", "ref": "A13", "status": "已做（v1.6.17）：换工作决策——D-DRILL 钻研/空洞互斥类别 + D-CONV 收敛/发散方向 + D-IDENT 分级，对照无框架程度描述；演示性映射，非现实测量。9 项结构测试全过", "resolved_in": "experiments/a13_first_case/a13_contrast.json"},

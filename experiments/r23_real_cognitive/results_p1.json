@@ -1,0 +1,162 @@
+{
+  "method": "program P-hat (supp4 3.2) + oscillation (Psi≈0) + U trend => rho_res>rho_exp (R23)",
+  "results": {
+    "T1": {
+      "us": [
+        1.7152,
+        1.7152,
+        1.6662,
+        1.6297,
+        1.5052,
+        1.4397,
+        0.9534
+      ],
+      "rs": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "osc_net_change": -0.7618,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T2": {
+      "us": [
+        1.6297,
+        1.4397,
+        1.301
+      ],
+      "rs": [
+        3,
+        3,
+        3
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2
+      ],
+      "osc_net_change": -0.3287,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T3": {
+      "us": [
+        1.6297,
+        1.5152,
+        1.6297,
+        1.6297,
+        1.5152
+      ],
+      "rs": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "osc_net_change": -0.1145,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T4": {
+      "us": [
+        2.1874,
+        2.1874,
+        1.9774,
+        2.0628,
+        1.7874
+      ],
+      "rs": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "osc_net_change": -0.4,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T5": {
+      "us": [
+        1.7152,
+        1.6297,
+        1.6297,
+        1.6297,
+        1.5152
+      ],
+      "rs": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "osc_net_change": -0.2,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T6": {
+      "us": [
+        2.1874,
+        2.0628,
+        2.1874,
+        2.1383,
+        1.9019
+      ],
+      "rs": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "osc_net_change": -0.2855,
+      "verdict": "rho_res > rho_exp"
+    }
+  },
+  "verdict_counts": {
+    "rho_res > rho_exp": 6
+  },
+  "majority": [
+    "rho_res > rho_exp",
+    6
+  ]
+}
