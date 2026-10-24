@@ -1,0 +1,204 @@
+{
+  "method": "program P-hat (supp4 3.2) + oscillation (Psi≈0) + U trend => rho_res>rho_exp (R23)",
+  "results": {
+    "T7": {
+      "us": [
+        1.6662,
+        1.6662,
+        1.6261,
+        1.6261,
+        1.7052,
+        1.6202
+      ],
+      "rs": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "osc_net_change": -0.046,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T8": {
+      "us": [
+        1.0721,
+        1.0721,
+        1.0431,
+        1.0431,
+        1.6662,
+        1.6596
+      ],
+      "rs": [
+        2,
+        2,
+        2,
+        2,
+        3,
+        3
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "osc_net_change": 0.5874,
+      "verdict": "rho_res < rho_exp"
+    },
+    "T9": {
+      "us": [
+        1.6908,
+        1.5119,
+        1.3718,
+        1.3089
+      ],
+      "rs": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "osc_net_change": -0.3818,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T10": {
+      "us": [
+        1.7152,
+        1.6706,
+        1.7038,
+        1.6748,
+        1.6202
+      ],
+      "rs": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "osc_net_change": -0.095,
+      "verdict": "rho_res > rho_exp"
+    },
+    "R6": {
+      "us": [
+        1.6662,
+        1.7038,
+        1.7052,
+        1.6706
+      ],
+      "rs": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "osc_net_change": 0.0044,
+      "verdict": "rho_res < rho_exp"
+    },
+    "R7": {
+      "us": [
+        1.7152,
+        1.6261,
+        1.6748,
+        1.6036
+      ],
+      "rs": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "osc_net_change": -0.1116,
+      "verdict": "rho_res > rho_exp"
+    },
+    "R8": {
+      "us": [
+        1.7152,
+        1.7038,
+        1.6706,
+        1.5665
+      ],
+      "rs": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "osc_net_change": -0.1487,
+      "verdict": "rho_res > rho_exp"
+    },
+    "R9": {
+      "us": [
+        1.7152,
+        1.7038,
+        1.6748,
+        1.6202
+      ],
+      "rs": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "osc_net_change": -0.095,
+      "verdict": "rho_res > rho_exp"
+    }
+  },
+  "verdict_counts": {
+    "rho_res > rho_exp": 6,
+    "rho_res < rho_exp": 2
+  },
+  "majority": [
+    "rho_res > rho_exp",
+    6
+  ]
+}

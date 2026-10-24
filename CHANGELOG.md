@@ -131,6 +131,15 @@ P4-hardening-protocol.md，README 整合）。
   正式触发 X2 立项仍需 **P4 外部加硬**（多模型轨迹、真人 think-aloud/编辑历史），
   采集协议见 P4-hardening-protocol.md（需用户外部采集回传）。
 
+**14. Doubao 扩展样本 + X2 触发评估**——把 B 线扩至 18 任务：
+产出 `experiments/r23_real_cognitive/`（trajectory_extended.json 新增 8 任务 +
+trajectory_all.json 合并 18 + results_extended.json + results_all.json，README 更新）。
+- **汇总（18 任务）**：ρ_res>ρ_exp 12/18（67%）、ρ_res<ρ_exp 6/18（33%），多数酝酿。
+- **关键发现**：判别捕捉实际 U 走向、**不依赖任务标签**——悖论任务 R7/R8/R9 判酝酿、
+  正常权衡 T8 判反刍 ⟹ 判别器独立性增强，但"悖论→ρ_res<ρ_exp"简单叙事被修正。
+- **X2 触发评估**：酝酿方向仍多数成立，触发判据保持**"初步满足但不充分"**；反刍对照
+  存在但不稳定。正式立项仍需 P4 外部加硬（多模型/真人）。登记 X2 charter 步骤 1 更新。
+
 ## v1.6.21 — 2026-10-24
 
 ### B2 · 桥检验（R31：A_D 一致性守卫）——方法 + 脚本准备（不声称经验验证）
