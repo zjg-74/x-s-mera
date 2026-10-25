@@ -1,0 +1,34 @@
+{
+  "method": "program P-hat (supp4 3.2) + oscillation (Psi≈0) + U trend => rho_res>rho_exp (R23)",
+  "results": {
+    "G214-solve": {
+      "us": [
+        1.6662,
+        1.4397,
+        0.7941,
+        0.7496
+      ],
+      "rs": [
+        3,
+        3,
+        2,
+        2
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "osc_net_change": -0.9166,
+      "verdict": "rho_res > rho_exp"
+    }
+  },
+  "verdict_counts": {
+    "rho_res > rho_exp": 1
+  },
+  "majority": [
+    "rho_res > rho_exp",
+    1
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "method": "program P-hat (supp4 3.2) + oscillation (Psi≈0) + U trend => rho_res>rho_exp (R23)",
+  "results": {
+    "M-dbl": {
+      "us": [
+        1.5152,
+        1.301,
+        1.5665,
+        1.301,
+        1.9867,
+        1.5052
+      ],
+      "rs": [
+        3,
+        3,
+        3,
+        3,
+        4,
+        3
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "osc_net_change": -0.01,
+      "verdict": "rho_res > rho_exp"
+    }
+  },
+  "verdict_counts": {
+    "rho_res > rho_exp": 1
+  },
+  "majority": [
+    "rho_res > rho_exp",
+    1
+  ]
+}

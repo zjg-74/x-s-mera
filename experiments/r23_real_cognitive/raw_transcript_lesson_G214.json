@@ -1,0 +1,3655 @@
+{
+  "duration": 3584.258,
+  "request_id": "202610250806053D3A9C55C5687C978611",
+  "status": "completed",
+  "subtitles": [
+    {
+      "end_time": 33.34,
+      "speaker": "1",
+      "start_time": 31.8,
+      "subtitle_text": "你他妈你也是那个"
+    },
+    {
+      "end_time": 59.64,
+      "speaker": "2",
+      "start_time": 58.84,
+      "subtitle_text": "哎"
+    },
+    {
+      "end_time": 112.28,
+      "speaker": "1",
+      "start_time": 111.48,
+      "subtitle_text": "和"
+    },
+    {
+      "end_time": 115.98,
+      "speaker": "1",
+      "start_time": 114.24,
+      "subtitle_text": "椭圆的定义箱"
+    },
+    {
+      "end_time": 127.14,
+      "speaker": "1",
+      "start_time": 123.88,
+      "subtitle_text": "双曲线和椭圆之间"
+    },
+    {
+      "end_time": 132.82,
+      "speaker": "1",
+      "start_time": 130.44,
+      "subtitle_text": "它的可比性是很强的"
+    },
+    {
+      "end_time": 138.06,
+      "speaker": "1",
+      "start_time": 135.04,
+      "subtitle_text": "两个定义也很像"
+    },
+    {
+      "end_time": 139.92,
+      "speaker": "1",
+      "start_time": 139.12,
+      "subtitle_text": "它的"
+    },
+    {
+      "end_time": 142.74,
+      "speaker": "1",
+      "start_time": 141.12,
+      "subtitle_text": "标准方程"
+    },
+    {
+      "end_time": 145.7,
+      "speaker": "1",
+      "start_time": 143.96,
+      "subtitle_text": "也非常的像"
+    },
+    {
+      "end_time": 150.06,
+      "speaker": "1",
+      "start_time": 148.6,
+      "subtitle_text": "形式特点上"
+    },
+    {
+      "end_time": 153.62,
+      "speaker": "1",
+      "start_time": 151.88,
+      "subtitle_text": "只是一个符号的"
+    },
+    {
+      "end_time": 194.64,
+      "speaker": "1",
+      "start_time": 189.2,
+      "subtitle_text": "椭圆和双曲线里面虽然形式上很像"
+    },
+    {
+      "end_time": 197.22,
+      "speaker": "1",
+      "start_time": 194.64,
+      "subtitle_text": "但是它区别还是比较大"
+    },
+    {
+      "end_time": 203.98,
+      "speaker": "1",
+      "start_time": 200.48,
+      "subtitle_text": "比如说双曲线的标准方程"
+    },
+    {
+      "end_time": 207.74,
+      "speaker": "1",
+      "start_time": 204.4,
+      "subtitle_text": "是两个分式的平方差"
+    },
+    {
+      "end_time": 222.38,
+      "speaker": "1",
+      "start_time": 218.84,
+      "subtitle_text": "椭圆是两个分式的"
+    },
+    {
+      "end_time": 225.3,
+      "speaker": "1",
+      "start_time": 223.88,
+      "subtitle_text": "平方和"
+    },
+    {
+      "end_time": 232.82,
+      "speaker": "1",
+      "start_time": 230.64,
+      "subtitle_text": "右边都是一"
+    },
+    {
+      "end_time": 238.06,
+      "speaker": "1",
+      "start_time": 236.36,
+      "subtitle_text": "右边都是一"
+    },
+    {
+      "end_time": 245.18,
+      "speaker": "1",
+      "start_time": 242.84,
+      "subtitle_text": "椭圆用加号相连"
+    },
+    {
+      "end_time": 249.02,
+      "speaker": "1",
+      "start_time": 246.24,
+      "subtitle_text": "双曲线用斜号相连"
+    },
+    {
+      "end_time": 255.02,
+      "speaker": "1",
+      "start_time": 252.04,
+      "subtitle_text": "好接下来的区别很大"
+    },
+    {
+      "end_time": 260.74,
+      "speaker": "1",
+      "start_time": 256.44,
+      "subtitle_text": "椭圆a大于b大于a"
+    },
+    {
+      "end_time": 263.34,
+      "speaker": "1",
+      "start_time": 260.92,
+      "subtitle_text": "双曲线a大于零"
+    },
+    {
+      "end_time": 264.54,
+      "speaker": "1",
+      "start_time": 263.48,
+      "subtitle_text": "z大于零"
+    },
+    {
+      "end_time": 267.42,
+      "speaker": "1",
+      "start_time": 266,
+      "subtitle_text": "区别在哪里呢"
+    },
+    {
+      "end_time": 271.5,
+      "speaker": "1",
+      "start_time": 269.28,
+      "subtitle_text": "圆里面a一定要a"
+    },
+    {
+      "end_time": 277.58,
+      "speaker": "1",
+      "start_time": 274.12,
+      "subtitle_text": "一定要b b要大"
+    },
+    {
+      "end_time": 282.1,
+      "speaker": "1",
+      "start_time": 278.96,
+      "subtitle_text": "双曲线里面有没有这个限制啊"
+    },
+    {
+      "end_time": 285.54,
+      "speaker": "1",
+      "start_time": 283.48,
+      "subtitle_text": "双曲线里面有没有这个限制啊"
+    },
+    {
+      "end_time": 287.74,
+      "speaker": "1",
+      "start_time": 286.92,
+      "subtitle_text": "啊"
+    },
+    {
+      "end_time": 289.36,
+      "speaker": "1",
+      "start_time": 288.56,
+      "subtitle_text": "注意"
+    },
+    {
+      "end_time": 294.36,
+      "speaker": "1",
+      "start_time": 290,
+      "subtitle_text": "双曲线里面a与b之间可以大"
+    },
+    {
+      "end_time": 296.82,
+      "speaker": "1",
+      "start_time": 294.36,
+      "subtitle_text": "可以小也可以相等"
+    },
+    {
+      "end_time": 304.34,
+      "speaker": "1",
+      "start_time": 301.76,
+      "subtitle_text": "接下来就是焦点位"
+    },
+    {
+      "end_time": 307.74,
+      "speaker": "1",
+      "start_time": 306.84,
+      "subtitle_text": "他的"
+    },
+    {
+      "end_time": 312.86,
+      "speaker": "1",
+      "start_time": 310.72,
+      "subtitle_text": "两个标准方程"
+    },
+    {
+      "end_time": 316.82,
+      "speaker": "1",
+      "start_time": 314.84,
+      "subtitle_text": "因为a大于b大于零"
+    },
+    {
+      "end_time": 320.94,
+      "speaker": "1",
+      "start_time": 317,
+      "subtitle_text": "所以椭圆里面就看分母谁大"
+    },
+    {
+      "end_time": 322.78,
+      "speaker": "1",
+      "start_time": 321.36,
+      "subtitle_text": "焦点就在"
+    },
+    {
+      "end_time": 327.7,
+      "speaker": "1",
+      "start_time": 326.08,
+      "subtitle_text": "哪一条走上"
+    },
+    {
+      "end_time": 329.48,
+      "speaker": "1",
+      "start_time": 328.68,
+      "subtitle_text": "而"
+    },
+    {
+      "end_time": 332.98,
+      "speaker": "1",
+      "start_time": 331.76,
+      "subtitle_text": "双曲线呢"
+    },
+    {
+      "end_time": 340.46,
+      "speaker": "1",
+      "start_time": 335.56,
+      "subtitle_text": "a分之y方减b分之x方等"
+    },
+    {
+      "end_time": 344.68,
+      "speaker": "1",
+      "start_time": 342.76,
+      "subtitle_text": "它比较的不是大小"
+    },
+    {
+      "end_time": 346.14,
+      "speaker": "1",
+      "start_time": 344.68,
+      "subtitle_text": "它比较的是什么"
+    },
+    {
+      "end_time": 349.58,
+      "speaker": "1",
+      "start_time": 347.64,
+      "subtitle_text": "正负是符号"
+    },
+    {
+      "end_time": 351.98,
+      "speaker": "1",
+      "start_time": 350.8,
+      "subtitle_text": "是符号"
+    },
+    {
+      "end_time": 354.2,
+      "speaker": "1",
+      "start_time": 353.4,
+      "subtitle_text": "好"
+    },
+    {
+      "end_time": 361.26,
+      "speaker": "1",
+      "start_time": 357.32,
+      "subtitle_text": "跟分母的大小是无关的"
+    },
+    {
+      "end_time": 365.38,
+      "speaker": "1",
+      "start_time": 363.8,
+      "subtitle_text": "我刚刚在讲"
+    },
+    {
+      "end_time": 368.02,
+      "speaker": "1",
+      "start_time": 365.68,
+      "subtitle_text": "我就看又有个别同学"
+    },
+    {
+      "end_time": 371.6,
+      "speaker": "1",
+      "start_time": 370.8,
+      "subtitle_text": "又在"
+    },
+    {
+      "end_time": 375.1,
+      "speaker": "1",
+      "start_time": 373.52,
+      "subtitle_text": "啊走神掉了"
+    },
+    {
+      "end_time": 379.1,
+      "speaker": "1",
+      "start_time": 376.96,
+      "subtitle_text": "我最重要的这些东西再讲"
+    },
+    {
+      "end_time": 382.14,
+      "speaker": "1",
+      "start_time": 381.04,
+      "subtitle_text": "往往是"
+    },
+    {
+      "end_time": 386.66,
+      "speaker": "1",
+      "start_time": 384.12,
+      "subtitle_text": "要错的这几个他要走成交"
+    },
+    {
+      "end_time": 390.14,
+      "speaker": "1",
+      "start_time": 387.12,
+      "subtitle_text": "然后做成功的时候要稀里糊涂"
+    },
+    {
+      "end_time": 396.7,
+      "speaker": "1",
+      "start_time": 395.72,
+      "subtitle_text": "第四个"
+    },
+    {
+      "end_time": 401.1,
+      "speaker": "1",
+      "start_time": 398.88,
+      "subtitle_text": "也是非常容易搞错的"
+    },
+    {
+      "end_time": 405.94,
+      "speaker": "1",
+      "start_time": 404.64,
+      "subtitle_text": "三个参数"
+    },
+    {
+      "end_time": 409.72,
+      "speaker": "1",
+      "start_time": 407.28,
+      "subtitle_text": "双曲线里面c"
+    },
+    {
+      "end_time": 411.56,
+      "speaker": "1",
+      "start_time": 409.72,
+      "subtitle_text": "方等于a方加b方"
+    },
+    {
+      "end_time": 412.66,
+      "speaker": "1",
+      "start_time": 411.56,
+      "subtitle_text": "谁最大呢"
+    },
+    {
+      "end_time": 418.14,
+      "speaker": "1",
+      "start_time": 413.48,
+      "subtitle_text": "c最大而椭圆里面是a最大"
+    },
+    {
+      "end_time": 421.54,
+      "speaker": "1",
+      "start_time": 418.24,
+      "subtitle_text": "a方等于b方加c"
+    },
+    {
+      "end_time": 427.58,
+      "speaker": "1",
+      "start_time": 424.48,
+      "subtitle_text": "这是非常容易搞混掉"
+    },
+    {
+      "end_time": 429.5,
+      "speaker": "1",
+      "start_time": 428.32,
+      "subtitle_text": "有些同学"
+    },
+    {
+      "end_time": 434.6,
+      "speaker": "1",
+      "start_time": 430.2,
+      "subtitle_text": "双曲线和椭圆分不清的时候"
+    },
+    {
+      "end_time": 436.34,
+      "speaker": "1",
+      "start_time": 434.6,
+      "subtitle_text": "谁最大谁最小就搞"
+    },
+    {
+      "end_time": 438.66,
+      "speaker": "1",
+      "start_time": 436.48,
+      "subtitle_text": "谁最大就搞不清"
+    },
+    {
+      "end_time": 442.5,
+      "speaker": "1",
+      "start_time": 439.68,
+      "subtitle_text": "然后就导致了乱掉"
+    },
+    {
+      "end_time": 444.84,
+      "speaker": "1",
+      "start_time": 444.04,
+      "subtitle_text": "好"
+    },
+    {
+      "end_time": 447.18,
+      "speaker": "1",
+      "start_time": 446.32,
+      "subtitle_text": "你下来"
+    },
+    {
+      "end_time": 449.26,
+      "speaker": "1",
+      "start_time": 448.2,
+      "subtitle_text": "我们来看"
+    },
+    {
+      "end_time": 451.9,
+      "speaker": "1",
+      "start_time": 450.6,
+      "subtitle_text": "谁来上面来"
+    },
+    {
+      "end_time": 461.54,
+      "speaker": "1",
+      "start_time": 459.8,
+      "subtitle_text": "来来来谁来举一下"
+    },
+    {
+      "end_time": 463.52,
+      "speaker": "3",
+      "start_time": 462.36,
+      "subtitle_text": "老队友先来一个"
+    },
+    {
+      "end_time": 464.62,
+      "speaker": "2",
+      "start_time": 463.52,
+      "subtitle_text": "老队友先来一个"
+    },
+    {
+      "end_time": 467.34,
+      "speaker": "1",
+      "start_time": 464.8,
+      "subtitle_text": "好我爱你祝明泽"
+    },
+    {
+      "end_time": 470.98,
+      "speaker": "2",
+      "start_time": 467.36,
+      "subtitle_text": "哎呀哇塞哈哈"
+    },
+    {
+      "end_time": 473.16,
+      "speaker": "2",
+      "start_time": 472.36,
+      "subtitle_text": "哈"
+    },
+    {
+      "end_time": 486.02,
+      "speaker": "1",
+      "start_time": 484.72,
+      "subtitle_text": "啊快啊"
+    },
+    {
+      "end_time": 508.36,
+      "speaker": "3",
+      "start_time": 507.56,
+      "subtitle_text": "哦"
+    },
+    {
+      "end_time": 511.94,
+      "speaker": "2",
+      "start_time": 509.4,
+      "subtitle_text": "啊啊"
+    },
+    {
+      "end_time": 527.06,
+      "speaker": "2",
+      "start_time": 522.84,
+      "subtitle_text": "哈哈哈哈哈"
+    },
+    {
+      "end_time": 544.82,
+      "speaker": "1",
+      "start_time": 542.4,
+      "subtitle_text": "再来啊"
+    },
+    {
+      "end_time": 550.28,
+      "speaker": "2",
+      "start_time": 549.48,
+      "subtitle_text": "哎"
+    },
+    {
+      "end_time": 559.92,
+      "speaker": "2",
+      "start_time": 559.12,
+      "subtitle_text": "哈"
+    },
+    {
+      "end_time": 565.66,
+      "speaker": "2",
+      "start_time": 564.32,
+      "subtitle_text": "哈哈"
+    },
+    {
+      "end_time": 572.08,
+      "speaker": "2",
+      "start_time": 571.28,
+      "subtitle_text": "我爱"
+    },
+    {
+      "end_time": 576.7,
+      "speaker": "3",
+      "start_time": 575.68,
+      "subtitle_text": "你"
+    },
+    {
+      "end_time": 594.58,
+      "speaker": "3",
+      "start_time": 589.28,
+      "subtitle_text": "别别别别点点点点"
+    },
+    {
+      "end_time": 596.8,
+      "speaker": "2",
+      "start_time": 596,
+      "subtitle_text": "点"
+    },
+    {
+      "end_time": 601.02,
+      "speaker": "2",
+      "start_time": 597.68,
+      "subtitle_text": "别别别别别别别别别点点"
+    },
+    {
+      "end_time": 607.66,
+      "speaker": "2",
+      "start_time": 602.84,
+      "subtitle_text": "点我去点点点点点点点"
+    },
+    {
+      "end_time": 609.8,
+      "speaker": "2",
+      "start_time": 609,
+      "subtitle_text": "点点"
+    },
+    {
+      "end_time": 612.18,
+      "speaker": "2",
+      "start_time": 611.2,
+      "subtitle_text": "点点"
+    },
+    {
+      "end_time": 618.58,
+      "speaker": "1",
+      "start_time": 615.2,
+      "subtitle_text": "哇连对九次都没打过薛博瑞"
+    },
+    {
+      "end_time": 623.74,
+      "speaker": "2",
+      "start_time": 620.4,
+      "subtitle_text": "社会轮椅"
+    },
+    {
+      "end_time": 635.08,
+      "speaker": "2",
+      "start_time": 634.32,
+      "subtitle_text": "前面都点了"
+    },
+    {
+      "end_time": 636.34,
+      "speaker": "1",
+      "start_time": 635.08,
+      "subtitle_text": "不是不来了"
+    },
+    {
+      "end_time": 638.56,
+      "speaker": "1",
+      "start_time": 637.76,
+      "subtitle_text": "就是"
+    },
+    {
+      "end_time": 641.1,
+      "speaker": "2",
+      "start_time": 638.8,
+      "subtitle_text": "气死我了"
+    },
+    {
+      "end_time": 643.14,
+      "speaker": "1",
+      "start_time": 641.88,
+      "subtitle_text": "这次不要搞"
+    },
+    {
+      "end_time": 646.62,
+      "speaker": "3",
+      "start_time": 645.2,
+      "subtitle_text": "我没看见"
+    },
+    {
+      "end_time": 647.52,
+      "speaker": "2",
+      "start_time": 646.72,
+      "subtitle_text": "好"
+    },
+    {
+      "end_time": 648.9,
+      "speaker": "1",
+      "start_time": 647.56,
+      "subtitle_text": "下面有机会了"
+    },
+    {
+      "end_time": 662,
+      "speaker": "1",
+      "start_time": 661.2,
+      "subtitle_text": "哎"
+    },
+    {
+      "end_time": 708.86,
+      "speaker": "3",
+      "start_time": 706.44,
+      "subtitle_text": "嘘这真是太深"
+    },
+    {
+      "end_time": 712.32,
+      "speaker": "2",
+      "start_time": 711.76,
+      "subtitle_text": "奥了"
+    },
+    {
+      "end_time": 713.38,
+      "speaker": "1",
+      "start_time": 712.32,
+      "subtitle_text": "这太深奥了"
+    },
+    {
+      "end_time": 720.46,
+      "speaker": "3",
+      "start_time": 718.72,
+      "subtitle_text": "路易真是太深奥了"
+    },
+    {
+      "end_time": 742.74,
+      "speaker": "3",
+      "start_time": 739.64,
+      "subtitle_text": "不要再炸鱼了不"
+    },
+    {
+      "end_time": 746.6,
+      "speaker": "1",
+      "start_time": 744.04,
+      "subtitle_text": "要再炸鱼了"
+    },
+    {
+      "end_time": 747.4,
+      "speaker": "1",
+      "start_time": 746.6,
+      "subtitle_text": "来"
+    },
+    {
+      "end_time": 749.92,
+      "speaker": "3",
+      "start_time": 749.12,
+      "subtitle_text": "来"
+    },
+    {
+      "end_time": 753.66,
+      "speaker": "1",
+      "start_time": 751.24,
+      "subtitle_text": "来解释一下来来来"
+    },
+    {
+      "end_time": 758.72,
+      "speaker": "1",
+      "start_time": 755.08,
+      "subtitle_text": "呃根据双曲线性质可以得到呃"
+    },
+    {
+      "end_time": 762.88,
+      "speaker": "1",
+      "start_time": 758.72,
+      "subtitle_text": "双曲线上任意一点呃到呃"
+    },
+    {
+      "end_time": 767.1,
+      "speaker": "3",
+      "start_time": 762.88,
+      "subtitle_text": "p f一减p f二的绝对值等于呃二a"
+    },
+    {
+      "end_time": 768.72,
+      "speaker": "3",
+      "start_time": 767.4,
+      "subtitle_text": "然后呢呃"
+    },
+    {
+      "end_time": 771.48,
+      "speaker": "1",
+      "start_time": 768.72,
+      "subtitle_text": "其中给出了呃"
+    },
+    {
+      "end_time": 775.1,
+      "speaker": "3",
+      "start_time": 771.48,
+      "subtitle_text": "这个p f一减p f二的对值除以二"
+    },
+    {
+      "end_time": 777.46,
+      "speaker": "1",
+      "start_time": 775.16,
+      "subtitle_text": "呃对k求a等于一"
+    },
+    {
+      "end_time": 778.8,
+      "speaker": "3",
+      "start_time": 777.92,
+      "subtitle_text": "呃因为呢"
+    },
+    {
+      "end_time": 781.96,
+      "speaker": "1",
+      "start_time": 778.8,
+      "subtitle_text": "双g是将交易为呃"
+    },
+    {
+      "end_time": 786.1,
+      "speaker": "1",
+      "start_time": 781.96,
+      "subtitle_text": "在题目中给出的呃焦点呃"
+    },
+    {
+      "end_time": 788.48,
+      "speaker": "1",
+      "start_time": 787.2,
+      "subtitle_text": "我们可以看到"
+    },
+    {
+      "end_time": 792.72,
+      "speaker": "1",
+      "start_time": 788.48,
+      "subtitle_text": "这个呃f e f二的这个呃数字"
+    },
+    {
+      "end_time": 795.96,
+      "speaker": "2",
+      "start_time": 792.72,
+      "subtitle_text": "就是呃x上的呃"
+    },
+    {
+      "end_time": 799.98,
+      "speaker": "3",
+      "start_time": 795.96,
+      "subtitle_text": "说明它这个焦点是呃x轴上的焦点"
+    },
+    {
+      "end_time": 801.42,
+      "speaker": "1",
+      "start_time": 800,
+      "subtitle_text": "呃我们可以得知"
+    },
+    {
+      "end_time": 808.4,
+      "speaker": "1",
+      "start_time": 804.56,
+      "subtitle_text": "呃呃我们可以知道这个呃"
+    },
+    {
+      "end_time": 810.78,
+      "speaker": "1",
+      "start_time": 808.4,
+      "subtitle_text": "x方a方分之x方"
+    },
+    {
+      "end_time": 812.26,
+      "speaker": "3",
+      "start_time": 810.92,
+      "subtitle_text": "呃减去b方"
+    },
+    {
+      "end_time": 814.62,
+      "speaker": "1",
+      "start_time": 813,
+      "subtitle_text": "分是y方等于一"
+    },
+    {
+      "end_time": 815.72,
+      "speaker": "3",
+      "start_time": 814.92,
+      "subtitle_text": "呃"
+    },
+    {
+      "end_time": 818.88,
+      "speaker": "1",
+      "start_time": 817.8,
+      "subtitle_text": "交点坐标"
+    },
+    {
+      "end_time": 821.56,
+      "speaker": "1",
+      "start_time": 818.88,
+      "subtitle_text": "呃两个坐坐标为呃"
+    },
+    {
+      "end_time": 823.54,
+      "speaker": "3",
+      "start_time": 821.56,
+      "subtitle_text": "c到零和c到零"
+    },
+    {
+      "end_time": 825.94,
+      "speaker": "3",
+      "start_time": 823.6,
+      "subtitle_text": "然后有一个叫c的值"
+    },
+    {
+      "end_time": 827.62,
+      "speaker": "1",
+      "start_time": 826.8,
+      "subtitle_text": "呃"
+    },
+    {
+      "end_time": 831.24,
+      "speaker": "2",
+      "start_time": 827.84,
+      "subtitle_text": "因为当你线的c值"
+    },
+    {
+      "end_time": 833.38,
+      "speaker": "1",
+      "start_time": 831.24,
+      "subtitle_text": "a方加b方等于c方"
+    },
+    {
+      "end_time": 835.76,
+      "speaker": "3",
+      "start_time": 833.4,
+      "subtitle_text": "呃我们知道其中两个位的数"
+    },
+    {
+      "end_time": 836.78,
+      "speaker": "3",
+      "start_time": 835.76,
+      "subtitle_text": "这个位的数"
+    },
+    {
+      "end_time": 838.68,
+      "speaker": "1",
+      "start_time": 837.88,
+      "subtitle_text": "好"
+    },
+    {
+      "end_time": 841.22,
+      "speaker": "1",
+      "start_time": 839.84,
+      "subtitle_text": "整个思路啊"
+    },
+    {
+      "end_time": 844.04,
+      "speaker": "1",
+      "start_time": 842.68,
+      "subtitle_text": "而且比较清爽"
+    },
+    {
+      "end_time": 845.98,
+      "speaker": "1",
+      "start_time": 844.04,
+      "subtitle_text": "清爽这里呢"
+    },
+    {
+      "end_time": 852.98,
+      "speaker": "1",
+      "start_time": 849.6,
+      "subtitle_text": "有一个点容易漏掉"
+    },
+    {
+      "end_time": 854.8,
+      "speaker": "1",
+      "start_time": 853.8,
+      "subtitle_text": "就是什么呢"
+    },
+    {
+      "end_time": 857.66,
+      "speaker": "1",
+      "start_time": 854.8,
+      "subtitle_text": "有些刚才这里是讲的很清楚的"
+    },
+    {
+      "end_time": 861.86,
+      "speaker": "1",
+      "start_time": 858.6,
+      "subtitle_text": "这里负四零和四零"
+    },
+    {
+      "end_time": 865.38,
+      "speaker": "1",
+      "start_time": 862.52,
+      "subtitle_text": "它其实包含着两个信息"
+    },
+    {
+      "end_time": 869.3,
+      "speaker": "1",
+      "start_time": 866.76,
+      "subtitle_text": "一个是c等于四"
+    },
+    {
+      "end_time": 874.38,
+      "speaker": "1",
+      "start_time": 870.28,
+      "subtitle_text": "第二个是焦点在x x角上"
+    },
+    {
+      "end_time": 879.42,
+      "speaker": "1",
+      "start_time": 875.4,
+      "subtitle_text": "这样就保证了它只有这么一种情况"
+    },
+    {
+      "end_time": 883.34,
+      "speaker": "1",
+      "start_time": 879.84,
+      "subtitle_text": "而不会焦点到y角上"
+    },
+    {
+      "end_time": 886,
+      "speaker": "1",
+      "start_time": 885.2,
+      "subtitle_text": "注意啊"
+    },
+    {
+      "end_time": 888.08,
+      "speaker": "1",
+      "start_time": 886.64,
+      "subtitle_text": "这一个这里呀"
+    },
+    {
+      "end_time": 889.82,
+      "speaker": "1",
+      "start_time": 888.08,
+      "subtitle_text": "有两个信息"
+    },
+    {
+      "end_time": 891.2,
+      "speaker": "1",
+      "start_time": 890.4,
+      "subtitle_text": "好"
+    },
+    {
+      "end_time": 894.36,
+      "speaker": "1",
+      "start_time": 892.92,
+      "subtitle_text": "做的好讲的好的啊"
+    },
+    {
+      "end_time": 895.16,
+      "speaker": "1",
+      "start_time": 894.36,
+      "subtitle_text": "作业做的好的"
+    },
+    {
+      "end_time": 896.26,
+      "speaker": "1",
+      "start_time": 895.16,
+      "subtitle_text": "很顺利的啊"
+    },
+    {
+      "end_time": 909.36,
+      "speaker": "1",
+      "start_time": 907.6,
+      "subtitle_text": "做好以后交对一下答案"
+    },
+    {
+      "end_time": 910.7,
+      "speaker": "1",
+      "start_time": 909.36,
+      "subtitle_text": "你的答案是"
+    },
+    {
+      "end_time": 916.68,
+      "speaker": "1",
+      "start_time": 915.52,
+      "subtitle_text": "自己做出来以后"
+    },
+    {
+      "end_time": 919.56,
+      "speaker": "1",
+      "start_time": 916.68,
+      "subtitle_text": "马上交换自己"
+    },
+    {
+      "end_time": 920.68,
+      "speaker": "1",
+      "start_time": 919.56,
+      "subtitle_text": "相互交对"
+    },
+    {
+      "end_time": 922.06,
+      "speaker": "1",
+      "start_time": 920.68,
+      "subtitle_text": "你的答案是什么"
+    },
+    {
+      "end_time": 927.04,
+      "speaker": "1",
+      "start_time": 925.48,
+      "subtitle_text": "你做出来的第一答"
+    },
+    {
+      "end_time": 927.72,
+      "speaker": "1",
+      "start_time": 927.04,
+      "subtitle_text": "往往以后"
+    },
+    {
+      "end_time": 929.98,
+      "speaker": "1",
+      "start_time": 927.72,
+      "subtitle_text": "就是你考试的时候的第一答"
+    },
+    {
+      "end_time": 944.88,
+      "speaker": "2",
+      "start_time": 943.84,
+      "subtitle_text": "哦no我没抢"
+    },
+    {
+      "end_time": 947.06,
+      "speaker": "1",
+      "start_time": 944.88,
+      "subtitle_text": "谁血压最美的答案是多少"
+    },
+    {
+      "end_time": 949.84,
+      "speaker": "1",
+      "start_time": 949.04,
+      "subtitle_text": "四"
+    },
+    {
+      "end_time": 956.98,
+      "speaker": "1",
+      "start_time": 955.12,
+      "subtitle_text": "有不同意见没有有"
+    },
+    {
+      "end_time": 960.26,
+      "speaker": "1",
+      "start_time": 958.92,
+      "subtitle_text": "有不同意见没有"
+    },
+    {
+      "end_time": 963.54,
+      "speaker": "1",
+      "start_time": 961.52,
+      "subtitle_text": "来不同意见的再来"
+    },
+    {
+      "end_time": 971.88,
+      "speaker": "1",
+      "start_time": 970.4,
+      "subtitle_text": "你的意见是"
+    },
+    {
+      "end_time": 974.22,
+      "speaker": "1",
+      "start_time": 971.88,
+      "subtitle_text": "或十四四或十四"
+    },
+    {
+      "end_time": 979.56,
+      "speaker": "1",
+      "start_time": 978.56,
+      "subtitle_text": "四个十四"
+    },
+    {
+      "end_time": 981.06,
+      "speaker": "1",
+      "start_time": 979.56,
+      "subtitle_text": "这个十四怎么来的"
+    },
+    {
+      "end_time": 984.86,
+      "speaker": "1",
+      "start_time": 982.88,
+      "subtitle_text": "啊因为有绝对值"
+    },
+    {
+      "end_time": 991.78,
+      "speaker": "1",
+      "start_time": 986.48,
+      "subtitle_text": "大师十减多少四"
+    },
+    {
+      "end_time": 995.04,
+      "speaker": "3",
+      "start_time": 991.96,
+      "subtitle_text": "十减四绝对是多少四哈哈哈"
+    },
+    {
+      "end_time": 996.74,
+      "speaker": "2",
+      "start_time": 995.04,
+      "subtitle_text": "十减四绝对是多少"
+    },
+    {
+      "end_time": 999.62,
+      "speaker": "2",
+      "start_time": 998.08,
+      "subtitle_text": "十减十减"
+    },
+    {
+      "end_time": 1006.58,
+      "speaker": "2",
+      "start_time": 1004.28,
+      "subtitle_text": "哈哈"
+    },
+    {
+      "end_time": 1014.1,
+      "speaker": "1",
+      "start_time": 1010.6,
+      "subtitle_text": "哈哈"
+    },
+    {
+      "end_time": 1024.06,
+      "speaker": "1",
+      "start_time": 1021.04,
+      "subtitle_text": "很多同学会和陈旭阳一样"
+    },
+    {
+      "end_time": 1025.52,
+      "speaker": "1",
+      "start_time": 1024.72,
+      "subtitle_text": "这个答案"
+    },
+    {
+      "end_time": 1031.12,
+      "speaker": "1",
+      "start_time": 1028.6,
+      "subtitle_text": "这个题答案有两个"
+    },
+    {
+      "end_time": 1032.26,
+      "speaker": "1",
+      "start_time": 1031.12,
+      "subtitle_text": "原因是什么"
+    },
+    {
+      "end_time": 1035.36,
+      "speaker": "1",
+      "start_time": 1033.48,
+      "subtitle_text": "刚才我已经讲了"
+    },
+    {
+      "end_time": 1037.62,
+      "speaker": "1",
+      "start_time": 1035.36,
+      "subtitle_text": "有要加女队员"
+    },
+    {
+      "end_time": 1040.78,
+      "speaker": "1",
+      "start_time": 1039.08,
+      "subtitle_text": "所以要重视"
+    },
+    {
+      "end_time": 1042.98,
+      "speaker": "1",
+      "start_time": 1042.08,
+      "subtitle_text": "这就是"
+    },
+    {
+      "end_time": 1048.8,
+      "speaker": "1",
+      "start_time": 1044.04,
+      "subtitle_text": "而特别是刚才解出来"
+    },
+    {
+      "end_time": 1049.36,
+      "speaker": "1",
+      "start_time": 1048.8,
+      "subtitle_text": "只有一个"
+    },
+    {
+      "end_time": 1052.26,
+      "speaker": "1",
+      "start_time": 1049.36,
+      "subtitle_text": "答案我刚才讲了"
+    },
+    {
+      "end_time": 1056.62,
+      "speaker": "1",
+      "start_time": 1053.8,
+      "subtitle_text": "你考试的时候很有可能就执行"
+    },
+    {
+      "end_time": 1061.98,
+      "speaker": "1",
+      "start_time": 1059.76,
+      "subtitle_text": "所以要引起各位重视啊"
+    },
+    {
+      "end_time": 1065.54,
+      "speaker": "1",
+      "start_time": 1062.84,
+      "subtitle_text": "他的答案有两个"
+    },
+    {
+      "end_time": 1068.54,
+      "speaker": "1",
+      "start_time": 1066.4,
+      "subtitle_text": "四或十六"
+    },
+    {
+      "end_time": 1094.62,
+      "speaker": "2",
+      "start_time": 1090.28,
+      "subtitle_text": "哎呀哈哈哈哈"
+    },
+    {
+      "end_time": 1101.56,
+      "speaker": "1",
+      "start_time": 1100.76,
+      "subtitle_text": "第一个"
+    },
+    {
+      "end_time": 1106.66,
+      "speaker": "1",
+      "start_time": 1104.56,
+      "subtitle_text": "是谁第二个"
+    },
+    {
+      "end_time": 1110.9,
+      "speaker": "1",
+      "start_time": 1109.88,
+      "subtitle_text": "对啊"
+    },
+    {
+      "end_time": 1113.82,
+      "speaker": "1",
+      "start_time": 1111.76,
+      "subtitle_text": "对对的第三个"
+    },
+    {
+      "end_time": 1115.8,
+      "speaker": "3",
+      "start_time": 1115,
+      "subtitle_text": "啊"
+    },
+    {
+      "end_time": 1117.6,
+      "speaker": "2",
+      "start_time": 1116.96,
+      "subtitle_text": "对"
+    },
+    {
+      "end_time": 1118.54,
+      "speaker": "3",
+      "start_time": 1117.6,
+      "subtitle_text": "对对"
+    },
+    {
+      "end_time": 1121.14,
+      "speaker": "1",
+      "start_time": 1118.72,
+      "subtitle_text": "对对第三个"
+    },
+    {
+      "end_time": 1123.24,
+      "speaker": "1",
+      "start_time": 1122.44,
+      "subtitle_text": "对"
+    },
+    {
+      "end_time": 1124.3,
+      "speaker": "3",
+      "start_time": 1123.4,
+      "subtitle_text": "辛苦呀"
+    },
+    {
+      "end_time": 1125.92,
+      "speaker": "3",
+      "start_time": 1125.16,
+      "subtitle_text": "错"
+    },
+    {
+      "end_time": 1127.14,
+      "speaker": "1",
+      "start_time": 1125.92,
+      "subtitle_text": "错了第四个"
+    },
+    {
+      "end_time": 1136.6,
+      "speaker": "1",
+      "start_time": 1133.48,
+      "subtitle_text": "对的那么错的两个为什么错"
+    },
+    {
+      "end_time": 1137.4,
+      "speaker": "3",
+      "start_time": 1136.6,
+      "subtitle_text": "你给我讲"
+    },
+    {
+      "end_time": 1139.52,
+      "speaker": "3",
+      "start_time": 1137.4,
+      "subtitle_text": "第一个a b的值确定"
+    },
+    {
+      "end_time": 1141.68,
+      "speaker": "3",
+      "start_time": 1139.52,
+      "subtitle_text": "所以说有可能是a小于b的"
+    },
+    {
+      "end_time": 1143.52,
+      "speaker": "3",
+      "start_time": 1141.68,
+      "subtitle_text": "可以分为双曲线"
+    },
+    {
+      "end_time": 1144.92,
+      "speaker": "3",
+      "start_time": 1143.52,
+      "subtitle_text": "因为双曲线"
+    },
+    {
+      "end_time": 1147.12,
+      "speaker": "3",
+      "start_time": 1144.92,
+      "subtitle_text": "它下面的值又分为a和大于b"
+    },
+    {
+      "end_time": 1149.74,
+      "speaker": "3",
+      "start_time": 1147.12,
+      "subtitle_text": "和大平然后同时第三个"
+    },
+    {
+      "end_time": 1151,
+      "speaker": "3",
+      "start_time": 1149.84,
+      "subtitle_text": "第三个在"
+    },
+    {
+      "end_time": 1152.24,
+      "speaker": "3",
+      "start_time": 1151,
+      "subtitle_text": "他与a呃"
+    },
+    {
+      "end_time": 1153.76,
+      "speaker": "3",
+      "start_time": 1152.24,
+      "subtitle_text": "他的焦点在x轴上"
+    },
+    {
+      "end_time": 1155.36,
+      "speaker": "3",
+      "start_time": 1153.76,
+      "subtitle_text": "他只与y的c区无关"
+    },
+    {
+      "end_time": 1156.74,
+      "speaker": "3",
+      "start_time": 1155.36,
+      "subtitle_text": "但他与a方"
+    },
+    {
+      "end_time": 1158.9,
+      "speaker": "3",
+      "start_time": 1156.96,
+      "subtitle_text": "a方与b方的大小无关"
+    },
+    {
+      "end_time": 1160.38,
+      "speaker": "3",
+      "start_time": 1158.92,
+      "subtitle_text": "所以说a j是三也不错"
+    },
+    {
+      "end_time": 1163.32,
+      "speaker": "1",
+      "start_time": 1161.16,
+      "subtitle_text": "第一个你再给我讲讲"
+    },
+    {
+      "end_time": 1166.5,
+      "speaker": "1",
+      "start_time": 1163.32,
+      "subtitle_text": "他两个都是负数不行吗"
+    },
+    {
+      "end_time": 1169.54,
+      "speaker": "3",
+      "start_time": 1168.16,
+      "subtitle_text": "可以"
+    },
+    {
+      "end_time": 1173.92,
+      "speaker": "1",
+      "start_time": 1172.32,
+      "subtitle_text": "比如说负二"
+    },
+    {
+      "end_time": 1176.44,
+      "speaker": "1",
+      "start_time": 1173.92,
+      "subtitle_text": "x方减负二"
+    },
+    {
+      "end_time": 1177.48,
+      "speaker": "1",
+      "start_time": 1176.44,
+      "subtitle_text": "y方等于一"
+    },
+    {
+      "end_time": 1179.02,
+      "speaker": "1",
+      "start_time": 1177.48,
+      "subtitle_text": "它不是双曲线吗"
+    },
+    {
+      "end_time": 1187.96,
+      "speaker": "1",
+      "start_time": 1186.72,
+      "subtitle_text": "你刚才讲两个都是"
+    },
+    {
+      "end_time": 1189.16,
+      "speaker": "1",
+      "start_time": 1187.96,
+      "subtitle_text": "住宿的时候不行啊"
+    },
+    {
+      "end_time": 1190.22,
+      "speaker": "1",
+      "start_time": 1189.16,
+      "subtitle_text": "我做数的"
+    },
+    {
+      "end_time": 1212.2,
+      "speaker": "3",
+      "start_time": 1211.44,
+      "subtitle_text": "一个a大于零"
+    },
+    {
+      "end_time": 1213.04,
+      "speaker": "3",
+      "start_time": 1212.2,
+      "subtitle_text": "一个b小于零"
+    },
+    {
+      "end_time": 1214.44,
+      "speaker": "3",
+      "start_time": 1213.04,
+      "subtitle_text": "那它表示就是"
+    },
+    {
+      "end_time": 1215.74,
+      "speaker": "1",
+      "start_time": 1214.44,
+      "subtitle_text": "例如说这里一个"
+    },
+    {
+      "end_time": 1219.16,
+      "speaker": "1",
+      "start_time": 1217.56,
+      "subtitle_text": "h h二"
+    },
+    {
+      "end_time": 1220.14,
+      "speaker": "3",
+      "start_time": 1219.16,
+      "subtitle_text": "b h负二"
+    },
+    {
+      "end_time": 1222.14,
+      "speaker": "1",
+      "start_time": 1221.04,
+      "subtitle_text": "这就变成了"
+    },
+    {
+      "end_time": 1224.38,
+      "speaker": "1",
+      "start_time": 1223.52,
+      "subtitle_text": "椭圆吗"
+    },
+    {
+      "end_time": 1225.6,
+      "speaker": "2",
+      "start_time": 1224.8,
+      "subtitle_text": "这是椭"
+    },
+    {
+      "end_time": 1229.16,
+      "speaker": "2",
+      "start_time": 1228.36,
+      "subtitle_text": "圆"
+    },
+    {
+      "end_time": 1231.8,
+      "speaker": "2",
+      "start_time": 1231,
+      "subtitle_text": "啊"
+    },
+    {
+      "end_time": 1236.02,
+      "speaker": "1",
+      "start_time": 1234.68,
+      "subtitle_text": "看看这是椭圆吗"
+    },
+    {
+      "end_time": 1243.62,
+      "speaker": "1",
+      "start_time": 1242.16,
+      "subtitle_text": "现在这是椭圆吗"
+    },
+    {
+      "end_time": 1247.96,
+      "speaker": "1",
+      "start_time": 1246.84,
+      "subtitle_text": "这不是双曲线"
+    },
+    {
+      "end_time": 1248.88,
+      "speaker": "1",
+      "start_time": 1247.96,
+      "subtitle_text": "也不是椭圆"
+    },
+    {
+      "end_time": 1251.12,
+      "speaker": "1",
+      "start_time": 1248.88,
+      "subtitle_text": "这是圆一圆"
+    },
+    {
+      "end_time": 1252.78,
+      "speaker": "1",
+      "start_time": 1251.12,
+      "subtitle_text": "正确这是正确"
+    },
+    {
+      "end_time": 1259.18,
+      "speaker": "2",
+      "start_time": 1254.68,
+      "subtitle_text": "哈哈"
+    },
+    {
+      "end_time": 1262.84,
+      "speaker": "2",
+      "start_time": 1262.04,
+      "subtitle_text": "哈"
+    },
+    {
+      "end_time": 1267,
+      "speaker": "2",
+      "start_time": 1266.2,
+      "subtitle_text": "来"
+    },
+    {
+      "end_time": 1268.78,
+      "speaker": "1",
+      "start_time": 1267.96,
+      "subtitle_text": "赶紧啊"
+    },
+    {
+      "end_time": 1270.64,
+      "speaker": "1",
+      "start_time": 1269.84,
+      "subtitle_text": "看看"
+    },
+    {
+      "end_time": 1279.18,
+      "speaker": "1",
+      "start_time": 1275.24,
+      "subtitle_text": "来来来来来来来来"
+    },
+    {
+      "end_time": 1285.1,
+      "speaker": "3",
+      "start_time": 1284.08,
+      "subtitle_text": "来啊"
+    },
+    {
+      "end_time": 1293.64,
+      "speaker": "1",
+      "start_time": 1292.84,
+      "subtitle_text": "二"
+    },
+    {
+      "end_time": 1296.44,
+      "speaker": "3",
+      "start_time": 1295.64,
+      "subtitle_text": "一"
+    },
+    {
+      "end_time": 1300.86,
+      "speaker": "2",
+      "start_time": 1299.56,
+      "subtitle_text": "哎呀"
+    },
+    {
+      "end_time": 1314.82,
+      "speaker": "1",
+      "start_time": 1312.04,
+      "subtitle_text": "然后看就点赞"
+    },
+    {
+      "end_time": 1342.04,
+      "speaker": "3",
+      "start_time": 1341.24,
+      "subtitle_text": "来"
+    },
+    {
+      "end_time": 1357.06,
+      "speaker": "3",
+      "start_time": 1355.48,
+      "subtitle_text": "我还没算呢"
+    },
+    {
+      "end_time": 1373.76,
+      "speaker": "2",
+      "start_time": 1372.96,
+      "subtitle_text": "来"
+    },
+    {
+      "end_time": 1390.28,
+      "speaker": "3",
+      "start_time": 1389.6,
+      "subtitle_text": "哎呀老人"
+    },
+    {
+      "end_time": 1392.9,
+      "speaker": "3",
+      "start_time": 1390.28,
+      "subtitle_text": "我都笑开了坐下"
+    },
+    {
+      "end_time": 1407.32,
+      "speaker": "1",
+      "start_time": 1400.64,
+      "subtitle_text": "四分之x八减五分之y八等于一百"
+    },
+    {
+      "end_time": 1411.18,
+      "speaker": "3",
+      "start_time": 1407.32,
+      "subtitle_text": "哈哈哈多少四"
+    },
+    {
+      "end_time": 1415.02,
+      "speaker": "3",
+      "start_time": 1412.76,
+      "subtitle_text": "分之外减五十等于"
+    },
+    {
+      "end_time": 1420.24,
+      "speaker": "2",
+      "start_time": 1419.44,
+      "subtitle_text": "哈哈哈"
+    },
+    {
+      "end_time": 1429.06,
+      "speaker": "2",
+      "start_time": 1424.84,
+      "subtitle_text": "哈哈哈哈"
+    },
+    {
+      "end_time": 1434.58,
+      "speaker": "3",
+      "start_time": 1433.48,
+      "subtitle_text": "哎呀"
+    },
+    {
+      "end_time": 1438.62,
+      "speaker": "1",
+      "start_time": 1436.64,
+      "subtitle_text": "大哥有没有不同意见"
+    },
+    {
+      "end_time": 1441.36,
+      "speaker": "3",
+      "start_time": 1440.56,
+      "subtitle_text": "有"
+    },
+    {
+      "end_time": 1460.94,
+      "speaker": "1",
+      "start_time": 1459.72,
+      "subtitle_text": "区别在哪里"
+    },
+    {
+      "end_time": 1466.74,
+      "speaker": "1",
+      "start_time": 1464.28,
+      "subtitle_text": "黑方和黑方的会"
+    },
+    {
+      "end_time": 1469.76,
+      "speaker": "1",
+      "start_time": 1468.96,
+      "subtitle_text": "所"
+    },
+    {
+      "end_time": 1473.66,
+      "speaker": "1",
+      "start_time": 1471.08,
+      "subtitle_text": "这里我再强调一下"
+    },
+    {
+      "end_time": 1477.54,
+      "speaker": "1",
+      "start_time": 1473.96,
+      "subtitle_text": "这个是很容易做错的地方"
+    },
+    {
+      "end_time": 1482.06,
+      "speaker": "1",
+      "start_time": 1479.48,
+      "subtitle_text": "在这里很明显c等于三"
+    },
+    {
+      "end_time": 1484.94,
+      "speaker": "1",
+      "start_time": 1482.92,
+      "subtitle_text": "一等于啊二"
+    },
+    {
+      "end_time": 1488.42,
+      "speaker": "2",
+      "start_time": 1486.52,
+      "subtitle_text": "等于五"
+    },
+    {
+      "end_time": 1490.26,
+      "speaker": "1",
+      "start_time": 1488.72,
+      "subtitle_text": "这是很容易出来的"
+    },
+    {
+      "end_time": 1496.5,
+      "speaker": "1",
+      "start_time": 1493.32,
+      "subtitle_text": "焦点在玩着上的时候"
+    },
+    {
+      "end_time": 1504.98,
+      "speaker": "1",
+      "start_time": 1501.96,
+      "subtitle_text": "焦点在y上的时候"
+    },
+    {
+      "end_time": 1507.98,
+      "speaker": "1",
+      "start_time": 1505.48,
+      "subtitle_text": "一定是a方分之"
+    },
+    {
+      "end_time": 1511,
+      "speaker": "1",
+      "start_time": 1508.04,
+      "subtitle_text": "y方减b方分之"
+    },
+    {
+      "end_time": 1512.58,
+      "speaker": "1",
+      "start_time": 1511,
+      "subtitle_text": "x方等于d"
+    },
+    {
+      "end_time": 1516.56,
+      "speaker": "1",
+      "start_time": 1514.12,
+      "subtitle_text": "那么希伯瑞当时搞错了"
+    },
+    {
+      "end_time": 1521.02,
+      "speaker": "1",
+      "start_time": 1516.56,
+      "subtitle_text": "就是a b的位置闹反了"
+    },
+    {
+      "end_time": 1527.94,
+      "speaker": "1",
+      "start_time": 1525.56,
+      "subtitle_text": "这很容易搞错的"
+    },
+    {
+      "end_time": 1529.88,
+      "speaker": "1",
+      "start_time": 1528.84,
+      "subtitle_text": "有些同学"
+    },
+    {
+      "end_time": 1533.22,
+      "speaker": "1",
+      "start_time": 1529.88,
+      "subtitle_text": "直接把他的正符号换了一下"
+    },
+    {
+      "end_time": 1535.42,
+      "speaker": "1",
+      "start_time": 1533.92,
+      "subtitle_text": "就认为是对的"
+    },
+    {
+      "end_time": 1542.62,
+      "speaker": "1",
+      "start_time": 1538.12,
+      "subtitle_text": "好所以这个地方请大家引起重视"
+    },
+    {
+      "end_time": 1550.74,
+      "speaker": "1",
+      "start_time": 1548.68,
+      "subtitle_text": "咱不要走门票啊"
+    },
+    {
+      "end_time": 1556.74,
+      "speaker": "1",
+      "start_time": 1554.84,
+      "subtitle_text": "这个先思考一下"
+    },
+    {
+      "end_time": 1566.82,
+      "speaker": "1",
+      "start_time": 1563.92,
+      "subtitle_text": "好自己可以先吃"
+    },
+    {
+      "end_time": 1582.38,
+      "speaker": "1",
+      "start_time": 1578.52,
+      "subtitle_text": "我看刚才有几个这个同学很好啊"
+    },
+    {
+      "end_time": 1586.7,
+      "speaker": "1",
+      "start_time": 1583.24,
+      "subtitle_text": "有问题马上解决掉"
+    },
+    {
+      "end_time": 1657.86,
+      "speaker": "3",
+      "start_time": 1656.88,
+      "subtitle_text": "哎举手"
+    },
+    {
+      "end_time": 1661.62,
+      "speaker": "3",
+      "start_time": 1659.12,
+      "subtitle_text": "怎么打人臭屁眼啊"
+    },
+    {
+      "end_time": 1667.46,
+      "speaker": "3",
+      "start_time": 1665.8,
+      "subtitle_text": "哈哈"
+    },
+    {
+      "end_time": 1669.6,
+      "speaker": "2",
+      "start_time": 1668.8,
+      "subtitle_text": "哈"
+    },
+    {
+      "end_time": 1671.52,
+      "speaker": "1",
+      "start_time": 1670.56,
+      "subtitle_text": "我看看"
+    },
+    {
+      "end_time": 1675.06,
+      "speaker": "1",
+      "start_time": 1671.52,
+      "subtitle_text": "我还有钱来吃饭"
+    },
+    {
+      "end_time": 1677.78,
+      "speaker": "2",
+      "start_time": 1675.2,
+      "subtitle_text": "哈哈哈哈"
+    },
+    {
+      "end_time": 1679.26,
+      "speaker": "1",
+      "start_time": 1677.92,
+      "subtitle_text": "你的答案是什么"
+    },
+    {
+      "end_time": 1684.82,
+      "speaker": "1",
+      "start_time": 1682.88,
+      "subtitle_text": "哎你再给大家上面来讲讲"
+    },
+    {
+      "end_time": 1687.7,
+      "speaker": "1",
+      "start_time": 1685.6,
+      "subtitle_text": "你这个鼻是怎么样做出来"
+    },
+    {
+      "end_time": 1689.96,
+      "speaker": "1",
+      "start_time": 1689.16,
+      "subtitle_text": "的"
+    },
+    {
+      "end_time": 1696.74,
+      "speaker": "1",
+      "start_time": 1694.52,
+      "subtitle_text": "好下面同学比一下"
+    },
+    {
+      "end_time": 1707.64,
+      "speaker": "1",
+      "start_time": 1706.84,
+      "subtitle_text": "我"
+    },
+    {
+      "end_time": 1716.86,
+      "speaker": "3",
+      "start_time": 1714.52,
+      "subtitle_text": "去这注意力这么集"
+    },
+    {
+      "end_time": 1724.86,
+      "speaker": "3",
+      "start_time": 1723.8,
+      "subtitle_text": "献福了"
+    },
+    {
+      "end_time": 1727.48,
+      "speaker": "2",
+      "start_time": 1726.48,
+      "subtitle_text": "献血说话"
+    },
+    {
+      "end_time": 1728.24,
+      "speaker": "1",
+      "start_time": 1727.48,
+      "subtitle_text": "好"
+    },
+    {
+      "end_time": 1729.4,
+      "speaker": "2",
+      "start_time": 1728.24,
+      "subtitle_text": "再献上"
+    },
+    {
+      "end_time": 1731.1,
+      "speaker": "1",
+      "start_time": 1729.4,
+      "subtitle_text": "劳不要干扰他"
+    },
+    {
+      "end_time": 1800.14,
+      "speaker": "1",
+      "start_time": 1797.76,
+      "subtitle_text": "然后如果给出来是吧"
+    },
+    {
+      "end_time": 1801.76,
+      "speaker": "2",
+      "start_time": 1800.96,
+      "subtitle_text": "啊"
+    },
+    {
+      "end_time": 1804.34,
+      "speaker": "1",
+      "start_time": 1803.52,
+      "subtitle_text": "看看啊"
+    },
+    {
+      "end_time": 1807.5,
+      "speaker": "1",
+      "start_time": 1805.2,
+      "subtitle_text": "我们看看刘德凡说的对不对哦"
+    },
+    {
+      "end_time": 1808.78,
+      "speaker": "3",
+      "start_time": 1807.88,
+      "subtitle_text": "说了呀"
+    },
+    {
+      "end_time": 1817.72,
+      "speaker": "1",
+      "start_time": 1816.56,
+      "subtitle_text": "李白说的对不对啊"
+    },
+    {
+      "end_time": 1822.18,
+      "speaker": "1",
+      "start_time": 1817.72,
+      "subtitle_text": "错了那这个书写是莆田没关系"
+    },
+    {
+      "end_time": 1825.28,
+      "speaker": "2",
+      "start_time": 1823.2,
+      "subtitle_text": "这个当初保持最小的"
+    },
+    {
+      "end_time": 1826.66,
+      "speaker": "1",
+      "start_time": 1825.28,
+      "subtitle_text": "文天的觉得挺好"
+    },
+    {
+      "end_time": 1828.62,
+      "speaker": "1",
+      "start_time": 1827.08,
+      "subtitle_text": "但是现在从这里写"
+    },
+    {
+      "end_time": 1832.22,
+      "speaker": "1",
+      "start_time": 1830.68,
+      "subtitle_text": "分了两种情况"
+    },
+    {
+      "end_time": 1834.42,
+      "speaker": "1",
+      "start_time": 1833.24,
+      "subtitle_text": "一种情况"
+    },
+    {
+      "end_time": 1838.6,
+      "speaker": "1",
+      "start_time": 1836.24,
+      "subtitle_text": "看好书写的时候"
+    },
+    {
+      "end_time": 1843.66,
+      "speaker": "1",
+      "start_time": 1838.6,
+      "subtitle_text": "两种情况同时满足要用大火火起来"
+    },
+    {
+      "end_time": 1847.06,
+      "speaker": "1",
+      "start_time": 1845.12,
+      "subtitle_text": "这也是同时满足"
+    },
+    {
+      "end_time": 1850.02,
+      "speaker": "1",
+      "start_time": 1848.56,
+      "subtitle_text": "要大火火起来"
+    },
+    {
+      "end_time": 1850.84,
+      "speaker": "2",
+      "start_time": 1850.04,
+      "subtitle_text": "a"
+    },
+    {
+      "end_time": 1853.14,
+      "speaker": "1",
+      "start_time": 1851.72,
+      "subtitle_text": "小于五的数"
+    },
+    {
+      "end_time": 1854.28,
+      "speaker": "1",
+      "start_time": 1853.44,
+      "subtitle_text": "k小于五"
+    },
+    {
+      "end_time": 1855.08,
+      "speaker": "1",
+      "start_time": 1854.28,
+      "subtitle_text": "的数"
+    },
+    {
+      "end_time": 1857.3,
+      "speaker": "1",
+      "start_time": 1855.6,
+      "subtitle_text": "也就是这是个负数"
+    },
+    {
+      "end_time": 1860.82,
+      "speaker": "1",
+      "start_time": 1858.32,
+      "subtitle_text": "那么这也是一个负数"
+    },
+    {
+      "end_time": 1862.18,
+      "speaker": "1",
+      "start_time": 1861.04,
+      "subtitle_text": "是不是这个意思啊"
+    },
+    {
+      "end_time": 1866.26,
+      "speaker": "1",
+      "start_time": 1864.28,
+      "subtitle_text": "好得到的是这样一个"
+    },
+    {
+      "end_time": 1868.86,
+      "speaker": "1",
+      "start_time": 1868,
+      "subtitle_text": "第二个"
+    },
+    {
+      "end_time": 1870.82,
+      "speaker": "1",
+      "start_time": 1869.64,
+      "subtitle_text": "这是一个证书"
+    },
+    {
+      "end_time": 1873.08,
+      "speaker": "1",
+      "start_time": 1871.08,
+      "subtitle_text": "这也是一个证书"
+    },
+    {
+      "end_time": 1876.1,
+      "speaker": "1",
+      "start_time": 1873.08,
+      "subtitle_text": "得到的应该是care大于"
+    },
+    {
+      "end_time": 1878.3,
+      "speaker": "1",
+      "start_time": 1876.28,
+      "subtitle_text": "所以合起来是不是这样一答"
+    },
+    {
+      "end_time": 1879.76,
+      "speaker": "1",
+      "start_time": 1878.96,
+      "subtitle_text": "好"
+    },
+    {
+      "end_time": 1882.08,
+      "speaker": "1",
+      "start_time": 1881.28,
+      "subtitle_text": "那么"
+    },
+    {
+      "end_time": 1886.54,
+      "speaker": "1",
+      "start_time": 1884.6,
+      "subtitle_text": "下边不要议论轻饶"
+    },
+    {
+      "end_time": 1889.88,
+      "speaker": "1",
+      "start_time": 1889.08,
+      "subtitle_text": "那么"
+    },
+    {
+      "end_time": 1891.94,
+      "speaker": "1",
+      "start_time": 1891.12,
+      "subtitle_text": "其实"
+    },
+    {
+      "end_time": 1894.9,
+      "speaker": "1",
+      "start_time": 1893.4,
+      "subtitle_text": "这里什么意思呢"
+    },
+    {
+      "end_time": 1898.5,
+      "speaker": "1",
+      "start_time": 1896.72,
+      "subtitle_text": "这里的意思就是说"
+    },
+    {
+      "end_time": 1901.58,
+      "speaker": "1",
+      "start_time": 1898.88,
+      "subtitle_text": "我把它写成这样一个形式"
+    },
+    {
+      "end_time": 1907.06,
+      "speaker": "1",
+      "start_time": 1905.24,
+      "subtitle_text": "中间用减号的话"
+    },
+    {
+      "end_time": 1910.22,
+      "speaker": "1",
+      "start_time": 1908.08,
+      "subtitle_text": "这里m n必须是什么啊"
+    },
+    {
+      "end_time": 1914.1,
+      "speaker": "1",
+      "start_time": 1911.52,
+      "subtitle_text": "啊m n必须是同号"
+    },
+    {
+      "end_time": 1916.38,
+      "speaker": "1",
+      "start_time": 1914.56,
+      "subtitle_text": "要么m n呢"
+    },
+    {
+      "end_time": 1918.82,
+      "speaker": "1",
+      "start_time": 1916.64,
+      "subtitle_text": "多大于点大于"
+    },
+    {
+      "end_time": 1922.38,
+      "speaker": "1",
+      "start_time": 1919.68,
+      "subtitle_text": "要么m n多小于"
+    },
+    {
+      "end_time": 1926.74,
+      "speaker": "1",
+      "start_time": 1922.64,
+      "subtitle_text": "好同号还有一种写法是"
+    },
+    {
+      "end_time": 1929.44,
+      "speaker": "1",
+      "start_time": 1928.12,
+      "subtitle_text": "还有一种写法"
+    },
+    {
+      "end_time": 1931.54,
+      "speaker": "1",
+      "start_time": 1929.44,
+      "subtitle_text": "就是m乘n大于"
+    },
+    {
+      "end_time": 1935.22,
+      "speaker": "1",
+      "start_time": 1933.4,
+      "subtitle_text": "是不是就是就算同化了"
+    },
+    {
+      "end_time": 1940.42,
+      "speaker": "1",
+      "start_time": 1936.24,
+      "subtitle_text": "n乘n大于零就算同化了啊"
+    },
+    {
+      "end_time": 1944.1,
+      "speaker": "1",
+      "start_time": 1941.08,
+      "subtitle_text": "这是我们完整的解法"
+    },
+    {
+      "end_time": 1946.34,
+      "speaker": "1",
+      "start_time": 1945.16,
+      "subtitle_text": "对于选择题"
+    },
+    {
+      "end_time": 1949.74,
+      "speaker": "1",
+      "start_time": 1947.28,
+      "subtitle_text": "还有一种很简单的方法"
+    },
+    {
+      "end_time": 1954.46,
+      "speaker": "1",
+      "start_time": 1951.88,
+      "subtitle_text": "就是对入法"
+    },
+    {
+      "end_time": 1956.48,
+      "speaker": "3",
+      "start_time": 1955.72,
+      "subtitle_text": "对眼法"
+    },
+    {
+      "end_time": 1957.92,
+      "speaker": "1",
+      "start_time": 1956.48,
+      "subtitle_text": "对眼法之中呢"
+    },
+    {
+      "end_time": 1959.84,
+      "speaker": "1",
+      "start_time": 1957.92,
+      "subtitle_text": "也是不现实的"
+    },
+    {
+      "end_time": 1962.26,
+      "speaker": "1",
+      "start_time": 1959.84,
+      "subtitle_text": "这个眼睛要瞪出来有点难度"
+    },
+    {
+      "end_time": 1964.22,
+      "speaker": "1",
+      "start_time": 1963.12,
+      "subtitle_text": "眼睛瞪出来"
+    },
+    {
+      "end_time": 1966.54,
+      "speaker": "1",
+      "start_time": 1964.36,
+      "subtitle_text": "比如说k等于六的时候"
+    },
+    {
+      "end_time": 1972.06,
+      "speaker": "1",
+      "start_time": 1968.68,
+      "subtitle_text": "x方减四分之五x方等于一"
+    },
+    {
+      "end_time": 1975.24,
+      "speaker": "1",
+      "start_time": 1974.44,
+      "subtitle_text": "是吧"
+    },
+    {
+      "end_time": 1978.62,
+      "speaker": "1",
+      "start_time": 1976.52,
+      "subtitle_text": "所以调就错了"
+    },
+    {
+      "end_time": 1981.26,
+      "speaker": "1",
+      "start_time": 1979.48,
+      "subtitle_text": "k等于零的时候"
+    },
+    {
+      "end_time": 1983.42,
+      "speaker": "2",
+      "start_time": 1982.56,
+      "subtitle_text": "负五"
+    },
+    {
+      "end_time": 1988.06,
+      "speaker": "1",
+      "start_time": 1983.48,
+      "subtitle_text": "x方减五二y方等于一"
+    },
+    {
+      "end_time": 1988.72,
+      "speaker": "1",
+      "start_time": 1988.24,
+      "subtitle_text": "也就是"
+    },
+    {
+      "end_time": 1992.42,
+      "speaker": "1",
+      "start_time": 1988.72,
+      "subtitle_text": "二分之y方减五分之x方等于一了"
+    },
+    {
+      "end_time": 1995.34,
+      "speaker": "1",
+      "start_time": 1993.36,
+      "subtitle_text": "也是双矩形"
+    },
+    {
+      "end_time": 1998.9,
+      "speaker": "1",
+      "start_time": 1996.44,
+      "subtitle_text": "所以k等于零也要包含起来"
+    },
+    {
+      "end_time": 2001.06,
+      "speaker": "1",
+      "start_time": 2000,
+      "subtitle_text": "k等于零"
+    },
+    {
+      "end_time": 2002.22,
+      "speaker": "1",
+      "start_time": 2001.08,
+      "subtitle_text": "a就不对了"
+    },
+    {
+      "end_time": 2003.04,
+      "speaker": "3",
+      "start_time": 2002.24,
+      "subtitle_text": "c也不对了"
+    },
+    {
+      "end_time": 2004.2,
+      "speaker": "1",
+      "start_time": 2003.04,
+      "subtitle_text": "c也不对了"
+    },
+    {
+      "end_time": 2006.02,
+      "speaker": "1",
+      "start_time": 2004.2,
+      "subtitle_text": "所以留下来啊b"
+    },
+    {
+      "end_time": 2010.38,
+      "speaker": "1",
+      "start_time": 2009.4,
+      "subtitle_text": "留下来"
+    },
+    {
+      "end_time": 2012.2,
+      "speaker": "1",
+      "start_time": 2011.4,
+      "subtitle_text": "好"
+    },
+    {
+      "end_time": 2013.82,
+      "speaker": "1",
+      "start_time": 2012.96,
+      "subtitle_text": "总结一下"
+    },
+    {
+      "end_time": 2020.64,
+      "speaker": "1",
+      "start_time": 2018.28,
+      "subtitle_text": "我们这里如果用加号的话"
+    },
+    {
+      "end_time": 2021.98,
+      "speaker": "1",
+      "start_time": 2020.64,
+      "subtitle_text": "m n就是什么"
+    },
+    {
+      "end_time": 2026,
+      "speaker": "1",
+      "start_time": 2024.28,
+      "subtitle_text": "这里中间用加号的话"
+    },
+    {
+      "end_time": 2029.02,
+      "speaker": "1",
+      "start_time": 2026,
+      "subtitle_text": "m n就是什么啊"
+    },
+    {
+      "end_time": 2030.44,
+      "speaker": "1",
+      "start_time": 2029.64,
+      "subtitle_text": "同号"
+    },
+    {
+      "end_time": 2032.44,
+      "speaker": "1",
+      "start_time": 2031.64,
+      "subtitle_text": "同号"
+    },
+    {
+      "end_time": 2038.2,
+      "speaker": "1",
+      "start_time": 2033.76,
+      "subtitle_text": "异号异号表示双曲线mn同为"
+    },
+    {
+      "end_time": 2040.38,
+      "speaker": "1",
+      "start_time": 2038.2,
+      "subtitle_text": "正表示什么椭圆"
+    },
+    {
+      "end_time": 2043.56,
+      "speaker": "1",
+      "start_time": 2041.76,
+      "subtitle_text": "注意mn同为正"
+    },
+    {
+      "end_time": 2045.22,
+      "speaker": "1",
+      "start_time": 2043.56,
+      "subtitle_text": "不一定表示椭圆"
+    },
+    {
+      "end_time": 2048.98,
+      "speaker": "1",
+      "start_time": 2047.16,
+      "subtitle_text": "mn同为正"
+    },
+    {
+      "end_time": 2056.54,
+      "speaker": "1",
+      "start_time": 2052.16,
+      "subtitle_text": "还要加上m不等于n才是椭圆"
+    },
+    {
+      "end_time": 2059.72,
+      "speaker": "1",
+      "start_time": 2057.68,
+      "subtitle_text": "是不是还要加上m不等于n"
+    },
+    {
+      "end_time": 2060.58,
+      "speaker": "1",
+      "start_time": 2059.72,
+      "subtitle_text": "才是椭圆"
+    },
+    {
+      "end_time": 2062.38,
+      "speaker": "1",
+      "start_time": 2061.16,
+      "subtitle_text": "m等于n的"
+    },
+    {
+      "end_time": 2065.06,
+      "speaker": "1",
+      "start_time": 2063.28,
+      "subtitle_text": "就像刚才这一个"
+    },
+    {
+      "end_time": 2067.42,
+      "speaker": "1",
+      "start_time": 2065.72,
+      "subtitle_text": "这是什么圆"
+    },
+    {
+      "end_time": 2068.94,
+      "speaker": "1",
+      "start_time": 2068,
+      "subtitle_text": "这是圆"
+    },
+    {
+      "end_time": 2071.46,
+      "speaker": "1",
+      "start_time": 2070.52,
+      "subtitle_text": "这是圆"
+    },
+    {
+      "end_time": 2073.86,
+      "speaker": "1",
+      "start_time": 2072.04,
+      "subtitle_text": "m n就是复数呢"
+    },
+    {
+      "end_time": 2077.98,
+      "speaker": "1",
+      "start_time": 2076.28,
+      "subtitle_text": "m n都是负数的"
+    },
+    {
+      "end_time": 2080.46,
+      "speaker": "1",
+      "start_time": 2079.6,
+      "subtitle_text": "呃"
+    },
+    {
+      "end_time": 2081.68,
+      "speaker": "2",
+      "start_time": 2080.88,
+      "subtitle_text": "服务员"
+    },
+    {
+      "end_time": 2083.06,
+      "speaker": "1",
+      "start_time": 2082.16,
+      "subtitle_text": "椭圆吗"
+    },
+    {
+      "end_time": 2087.1,
+      "speaker": "1",
+      "start_time": 2084.56,
+      "subtitle_text": "有这样的点吗"
+    },
+    {
+      "end_time": 2094.12,
+      "speaker": "1",
+      "start_time": 2093.36,
+      "subtitle_text": "这样的x"
+    },
+    {
+      "end_time": 2095.34,
+      "speaker": "1",
+      "start_time": 2094.12,
+      "subtitle_text": "y存不存在啊"
+    },
+    {
+      "end_time": 2098.1,
+      "speaker": "1",
+      "start_time": 2096.4,
+      "subtitle_text": "不表示任何"
+    },
+    {
+      "end_time": 2100.82,
+      "speaker": "1",
+      "start_time": 2099.84,
+      "subtitle_text": "注意啊"
+    },
+    {
+      "end_time": 2107.96,
+      "speaker": "1",
+      "start_time": 2106.2,
+      "subtitle_text": "好接下来自己做一下"
+    },
+    {
+      "end_time": 2109.98,
+      "speaker": "1",
+      "start_time": 2107.96,
+      "subtitle_text": "看看这个题"
+    },
+    {
+      "end_time": 2119.54,
+      "speaker": "1",
+      "start_time": 2113.88,
+      "subtitle_text": "谁的速度一定要又快又准确"
+    },
+    {
+      "end_time": 2121.22,
+      "speaker": "1",
+      "start_time": 2119.56,
+      "subtitle_text": "一小题没问题的"
+    },
+    {
+      "end_time": 2126.78,
+      "speaker": "1",
+      "start_time": 2124.2,
+      "subtitle_text": "我们主要是看第二小题"
+    },
+    {
+      "end_time": 2129.42,
+      "speaker": "1",
+      "start_time": 2127.24,
+      "subtitle_text": "你的速度能不能保证"
+    },
+    {
+      "end_time": 2174.12,
+      "speaker": "1",
+      "start_time": 2173.32,
+      "subtitle_text": "你不做"
+    },
+    {
+      "end_time": 2176.18,
+      "speaker": "1",
+      "start_time": 2174.64,
+      "subtitle_text": "你永远挤不上"
+    },
+    {
+      "end_time": 2178.74,
+      "speaker": "1",
+      "start_time": 2177.44,
+      "subtitle_text": "你拿出来做"
+    },
+    {
+      "end_time": 2180.7,
+      "speaker": "1",
+      "start_time": 2179.84,
+      "subtitle_text": "你拿起来"
+    },
+    {
+      "end_time": 2184.9,
+      "speaker": "1",
+      "start_time": 2182.52,
+      "subtitle_text": "你不做永远出现都挤不上"
+    },
+    {
+      "end_time": 2191.7,
+      "speaker": "1",
+      "start_time": 2190.12,
+      "subtitle_text": "自己不去做过"
+    },
+    {
+      "end_time": 2194.46,
+      "speaker": "1",
+      "start_time": 2191.72,
+      "subtitle_text": "你永远都不知道你会错在哪里"
+    },
+    {
+      "end_time": 2207.52,
+      "speaker": "2",
+      "start_time": 2206.72,
+      "subtitle_text": "嗯"
+    },
+    {
+      "end_time": 2254.94,
+      "speaker": "2",
+      "start_time": 2254.04,
+      "subtitle_text": "十三"
+    },
+    {
+      "end_time": 2279.1,
+      "speaker": "1",
+      "start_time": 2277.76,
+      "subtitle_text": "来抢一下"
+    },
+    {
+      "end_time": 2297.28,
+      "speaker": "3",
+      "start_time": 2296.04,
+      "subtitle_text": "首先技巧提高"
+    },
+    {
+      "end_time": 2298.4,
+      "speaker": "3",
+      "start_time": 2297.28,
+      "subtitle_text": "你们a等于三"
+    },
+    {
+      "end_time": 2299.34,
+      "speaker": "3",
+      "start_time": 2298.4,
+      "subtitle_text": "b等于四"
+    },
+    {
+      "end_time": 2301.08,
+      "speaker": "3",
+      "start_time": 2299.56,
+      "subtitle_text": "所以我们可以把b求出来"
+    },
+    {
+      "end_time": 2301.98,
+      "speaker": "3",
+      "start_time": 2301.08,
+      "subtitle_text": "b等于二"
+    },
+    {
+      "end_time": 2303.42,
+      "speaker": "3",
+      "start_time": 2302.48,
+      "subtitle_text": "然后呢"
+    },
+    {
+      "end_time": 2306.66,
+      "speaker": "3",
+      "start_time": 2304.08,
+      "subtitle_text": "要求也切出a方还是b方"
+    },
+    {
+      "end_time": 2312.2,
+      "speaker": "3",
+      "start_time": 2309.08,
+      "subtitle_text": "注意啊这里他只告诉我们a等于c"
+    },
+    {
+      "end_time": 2312.8,
+      "speaker": "3",
+      "start_time": 2312.2,
+      "subtitle_text": "a等于三"
+    },
+    {
+      "end_time": 2314.02,
+      "speaker": "3",
+      "start_time": 2312.8,
+      "subtitle_text": "b等于c等于四"
+    },
+    {
+      "end_time": 2315.9,
+      "speaker": "3",
+      "start_time": 2314.96,
+      "subtitle_text": "a等于三"
+    },
+    {
+      "end_time": 2317.42,
+      "speaker": "3",
+      "start_time": 2316.48,
+      "subtitle_text": "b等于四"
+    },
+    {
+      "end_time": 2319.62,
+      "speaker": "3",
+      "start_time": 2318.8,
+      "subtitle_text": "c等于四"
+    },
+    {
+      "end_time": 2320.76,
+      "speaker": "3",
+      "start_time": 2319.96,
+      "subtitle_text": "所以"
+    },
+    {
+      "end_time": 2323.48,
+      "speaker": "3",
+      "start_time": 2321.12,
+      "subtitle_text": "所以我文化判断这个焦点是在l轴"
+    },
+    {
+      "end_time": 2324.24,
+      "speaker": "3",
+      "start_time": 2323.48,
+      "subtitle_text": "是在y轴上"
+    },
+    {
+      "end_time": 2325.8,
+      "speaker": "3",
+      "start_time": 2324.24,
+      "subtitle_text": "所以说它应该有两种可能"
+    },
+    {
+      "end_time": 2327.18,
+      "speaker": "3",
+      "start_time": 2325.8,
+      "subtitle_text": "要么是a发生起来"
+    },
+    {
+      "end_time": 2329.66,
+      "speaker": "3",
+      "start_time": 2327.56,
+      "subtitle_text": "外方减x方"
+    },
+    {
+      "end_time": 2331.16,
+      "speaker": "3",
+      "start_time": 2329.88,
+      "subtitle_text": "四分之x方"
+    },
+    {
+      "end_time": 2331.96,
+      "speaker": "1",
+      "start_time": 2331.16,
+      "subtitle_text": "对"
+    },
+    {
+      "end_time": 2334.9,
+      "speaker": "3",
+      "start_time": 2332.36,
+      "subtitle_text": "所以我们把数带一下就知道了"
+    },
+    {
+      "end_time": 2335.6,
+      "speaker": "3",
+      "start_time": 2334.92,
+      "subtitle_text": "这一本"
+    },
+    {
+      "end_time": 2339.82,
+      "speaker": "3",
+      "start_time": 2335.6,
+      "subtitle_text": "应该是九分之x方减x分之y方对"
+    },
+    {
+      "end_time": 2341.26,
+      "speaker": "3",
+      "start_time": 2340.24,
+      "subtitle_text": "或者是"
+    },
+    {
+      "end_time": 2345.58,
+      "speaker": "3",
+      "start_time": 2341.28,
+      "subtitle_text": "呃九分之外方减七分之x方对"
+    },
+    {
+      "end_time": 2349.1,
+      "speaker": "1",
+      "start_time": 2347.96,
+      "subtitle_text": "好第一小题"
+    },
+    {
+      "end_time": 2350.7,
+      "speaker": "3",
+      "start_time": 2349.4,
+      "subtitle_text": "然后第二条题"
+    },
+    {
+      "end_time": 2354.22,
+      "speaker": "3",
+      "start_time": 2351.04,
+      "subtitle_text": "然后焦点告诉我们积等于六"
+    },
+    {
+      "end_time": 2357,
+      "speaker": "3",
+      "start_time": 2354.44,
+      "subtitle_text": "然后呢写这个零六"
+    },
+    {
+      "end_time": 2358.6,
+      "speaker": "3",
+      "start_time": 2357,
+      "subtitle_text": "说明它在y轴上"
+    },
+    {
+      "end_time": 2359.56,
+      "speaker": "3",
+      "start_time": 2358.6,
+      "subtitle_text": "焦点在y轴上"
+    },
+    {
+      "end_time": 2361.1,
+      "speaker": "3",
+      "start_time": 2359.56,
+      "subtitle_text": "说明说明"
+    },
+    {
+      "end_time": 2363.38,
+      "speaker": "3",
+      "start_time": 2361.2,
+      "subtitle_text": "我们可以把这个方程设成"
+    },
+    {
+      "end_time": 2367.16,
+      "speaker": "3",
+      "start_time": 2363.4,
+      "subtitle_text": "a方分成y方减去b方分成x方"
+    },
+    {
+      "end_time": 2368.02,
+      "speaker": "3",
+      "start_time": 2367.16,
+      "subtitle_text": "等于七"
+    },
+    {
+      "end_time": 2370,
+      "speaker": "3",
+      "start_time": 2369,
+      "subtitle_text": "然后呢再看"
+    },
+    {
+      "end_time": 2372.82,
+      "speaker": "3",
+      "start_time": 2370,
+      "subtitle_text": "他告诉我们经过减a负五六"
+    },
+    {
+      "end_time": 2375.48,
+      "speaker": "3",
+      "start_time": 2372.88,
+      "subtitle_text": "那么我们可以利用什么呢"
+    },
+    {
+      "end_time": 2378.6,
+      "speaker": "3",
+      "start_time": 2375.48,
+      "subtitle_text": "p f一减p f二的绝对值"
+    },
+    {
+      "end_time": 2381.34,
+      "speaker": "3",
+      "start_time": 2378.6,
+      "subtitle_text": "它是等于这个二a的"
+    },
+    {
+      "end_time": 2384.28,
+      "speaker": "3",
+      "start_time": 2381.88,
+      "subtitle_text": "我们可以把p f一p f二说出来"
+    },
+    {
+      "end_time": 2385.7,
+      "speaker": "3",
+      "start_time": 2384.28,
+      "subtitle_text": "这相当于就是a"
+    },
+    {
+      "end_time": 2392.66,
+      "speaker": "3",
+      "start_time": 2390.28,
+      "subtitle_text": "所以这相当于是a f一减a f"
+    },
+    {
+      "end_time": 2394.74,
+      "speaker": "3",
+      "start_time": 2393.64,
+      "subtitle_text": "那绝对是"
+    },
+    {
+      "end_time": 2397.46,
+      "speaker": "3",
+      "start_time": 2395.68,
+      "subtitle_text": "那么算一下"
+    },
+    {
+      "end_time": 2398.72,
+      "speaker": "3",
+      "start_time": 2397.64,
+      "subtitle_text": "算上一个"
+    },
+    {
+      "end_time": 2399.52,
+      "speaker": "3",
+      "start_time": 2398.72,
+      "subtitle_text": "一个是十三"
+    },
+    {
+      "end_time": 2400.38,
+      "speaker": "3",
+      "start_time": 2399.52,
+      "subtitle_text": "一个是五"
+    },
+    {
+      "end_time": 2404.5,
+      "speaker": "3",
+      "start_time": 2401.96,
+      "subtitle_text": "等于二所以a就等于四"
+    },
+    {
+      "end_time": 2408.08,
+      "speaker": "3",
+      "start_time": 2405.96,
+      "subtitle_text": "所以那个方程解出来"
+    },
+    {
+      "end_time": 2409.52,
+      "speaker": "3",
+      "start_time": 2408.08,
+      "subtitle_text": "那b的b方"
+    },
+    {
+      "end_time": 2410.12,
+      "speaker": "3",
+      "start_time": 2409.52,
+      "subtitle_text": "我们知道"
+    },
+    {
+      "end_time": 2412.9,
+      "speaker": "3",
+      "start_time": 2410.12,
+      "subtitle_text": "a方加b方它就等于c方嘛"
+    },
+    {
+      "end_time": 2414.6,
+      "speaker": "3",
+      "start_time": 2413.28,
+      "subtitle_text": "所以解开b方"
+    },
+    {
+      "end_time": 2415.52,
+      "speaker": "3",
+      "start_time": 2414.6,
+      "subtitle_text": "它就等于二十"
+    },
+    {
+      "end_time": 2416.84,
+      "speaker": "3",
+      "start_time": 2415.52,
+      "subtitle_text": "所以方程应该是"
+    },
+    {
+      "end_time": 2420.26,
+      "speaker": "3",
+      "start_time": 2416.84,
+      "subtitle_text": "十六分之外方减去二十分之x方"
+    },
+    {
+      "end_time": 2421.08,
+      "speaker": "3",
+      "start_time": 2420.28,
+      "subtitle_text": "等于"
+    },
+    {
+      "end_time": 2422.4,
+      "speaker": "2",
+      "start_time": 2421.6,
+      "subtitle_text": "哦我知道"
+    },
+    {
+      "end_time": 2426.5,
+      "speaker": "1",
+      "start_time": 2425.32,
+      "subtitle_text": "做的很好"
+    },
+    {
+      "end_time": 2431.22,
+      "speaker": "1",
+      "start_time": 2430.2,
+      "subtitle_text": "做的很好"
+    },
+    {
+      "end_time": 2433.96,
+      "speaker": "1",
+      "start_time": 2433.16,
+      "subtitle_text": "第一个"
+    },
+    {
+      "end_time": 2438.66,
+      "speaker": "1",
+      "start_time": 2436.48,
+      "subtitle_text": "有问题我等会再讲啊"
+    },
+    {
+      "end_time": 2443.42,
+      "speaker": "1",
+      "start_time": 2439.84,
+      "subtitle_text": "第一个容易出现问题的事"
+    },
+    {
+      "end_time": 2445.22,
+      "speaker": "1",
+      "start_time": 2444.16,
+      "subtitle_text": "漏掉一个"
+    },
+    {
+      "end_time": 2452.94,
+      "speaker": "1",
+      "start_time": 2448.16,
+      "subtitle_text": "或者这个地方七和九位置调错"
+    },
+    {
+      "end_time": 2456.42,
+      "speaker": "1",
+      "start_time": 2454.24,
+      "subtitle_text": "这是容易产生的问题的"
+    },
+    {
+      "end_time": 2459.06,
+      "speaker": "1",
+      "start_time": 2457.36,
+      "subtitle_text": "你自己对比一下"
+    },
+    {
+      "end_time": 2465.1,
+      "speaker": "1",
+      "start_time": 2461.16,
+      "subtitle_text": "第二个容易产生的问题是"
+    },
+    {
+      "end_time": 2468.22,
+      "speaker": "1",
+      "start_time": 2466.4,
+      "subtitle_text": "我们有些同学呢"
+    },
+    {
+      "end_time": 2471.26,
+      "speaker": "1",
+      "start_time": 2469.92,
+      "subtitle_text": "直接往里带"
+    },
+    {
+      "end_time": 2477.26,
+      "speaker": "1",
+      "start_time": 2472.52,
+      "subtitle_text": "a方加b方是等于c方三十六"
+    },
+    {
+      "end_time": 2482.28,
+      "speaker": "1",
+      "start_time": 2478.12,
+      "subtitle_text": "a方分之y三十六"
+    },
+    {
+      "end_time": 2486.2,
+      "speaker": "1",
+      "start_time": 2482.28,
+      "subtitle_text": "减b方分之x二十五"
+    },
+    {
+      "end_time": 2487.1,
+      "speaker": "1",
+      "start_time": 2486.2,
+      "subtitle_text": "等于一"
+    },
+    {
+      "end_time": 2489.46,
+      "speaker": "1",
+      "start_time": 2488.24,
+      "subtitle_text": "用这个"
+    },
+    {
+      "end_time": 2492.48,
+      "speaker": "1",
+      "start_time": 2491.16,
+      "subtitle_text": "来减a方"
+    },
+    {
+      "end_time": 2494.34,
+      "speaker": "1",
+      "start_time": 2492.48,
+      "subtitle_text": "b方能不能减呢"
+    },
+    {
+      "end_time": 2496.14,
+      "speaker": "3",
+      "start_time": 2494.96,
+      "subtitle_text": "是这样减的"
+    },
+    {
+      "end_time": 2499.24,
+      "speaker": "1",
+      "start_time": 2497.2,
+      "subtitle_text": "解肯定是可以解的"
+    },
+    {
+      "end_time": 2503.42,
+      "speaker": "3",
+      "start_time": 2499.24,
+      "subtitle_text": "是不是有点麻烦"
+    },
+    {
+      "end_time": 2507.06,
+      "speaker": "1",
+      "start_time": 2504.8,
+      "subtitle_text": "解起来有点麻烦"
+    },
+    {
+      "end_time": 2509.64,
+      "speaker": "1",
+      "start_time": 2508.84,
+      "subtitle_text": "好"
+    },
+    {
+      "end_time": 2516.42,
+      "speaker": "1",
+      "start_time": 2514.84,
+      "subtitle_text": "接下来我们来看"
+    },
+    {
+      "end_time": 2520.46,
+      "speaker": "1",
+      "start_time": 2518.72,
+      "subtitle_text": "我刚才讲了"
+    },
+    {
+      "end_time": 2523.18,
+      "speaker": "1",
+      "start_time": 2521.68,
+      "subtitle_text": "要解的快"
+    },
+    {
+      "end_time": 2525.54,
+      "speaker": "1",
+      "start_time": 2523.52,
+      "subtitle_text": "你用这个方法来解"
+    },
+    {
+      "end_time": 2529.38,
+      "speaker": "1",
+      "start_time": 2527.68,
+      "subtitle_text": "一是运算量大"
+    },
+    {
+      "end_time": 2532.14,
+      "speaker": "1",
+      "start_time": 2529.68,
+      "subtitle_text": "第二个是容易产生错误"
+    },
+    {
+      "end_time": 2536.56,
+      "speaker": "1",
+      "start_time": 2534.04,
+      "subtitle_text": "那么我们用它的定义来做呢"
+    },
+    {
+      "end_time": 2537.9,
+      "speaker": "1",
+      "start_time": 2536.56,
+      "subtitle_text": "注意书写"
+    },
+    {
+      "end_time": 2540.74,
+      "speaker": "1",
+      "start_time": 2539.44,
+      "subtitle_text": "注意书写"
+    },
+    {
+      "end_time": 2543.64,
+      "speaker": "1",
+      "start_time": 2542.84,
+      "subtitle_text": "啊"
+    },
+    {
+      "end_time": 2547.18,
+      "speaker": "1",
+      "start_time": 2544.96,
+      "subtitle_text": "这个书写要注意"
+    },
+    {
+      "end_time": 2551.98,
+      "speaker": "1",
+      "start_time": 2549,
+      "subtitle_text": "有些同学a f一等于十三"
+    },
+    {
+      "end_time": 2554.94,
+      "speaker": "1",
+      "start_time": 2552.84,
+      "subtitle_text": "a f二等于五"
+    },
+    {
+      "end_time": 2558.68,
+      "speaker": "1",
+      "start_time": 2557.88,
+      "subtitle_text": "你看"
+    },
+    {
+      "end_time": 2561.68,
+      "speaker": "1",
+      "start_time": 2560.4,
+      "subtitle_text": "这里是f一"
+    },
+    {
+      "end_time": 2563.58,
+      "speaker": "1",
+      "start_time": 2561.68,
+      "subtitle_text": "这里是f二要标"
+    },
+    {
+      "end_time": 2569.94,
+      "speaker": "1",
+      "start_time": 2565.52,
+      "subtitle_text": "他减他的平方加上他减他的平方"
+    },
+    {
+      "end_time": 2572.82,
+      "speaker": "1",
+      "start_time": 2570.12,
+      "subtitle_text": "是不是五个平方加十二个平方"
+    },
+    {
+      "end_time": 2576.26,
+      "speaker": "1",
+      "start_time": 2573.96,
+      "subtitle_text": "五十二十三"
+    },
+    {
+      "end_time": 2581.1,
+      "speaker": "1",
+      "start_time": 2579.84,
+      "subtitle_text": "直接就出来了"
+    },
+    {
+      "end_time": 2584.46,
+      "speaker": "1",
+      "start_time": 2583.24,
+      "subtitle_text": "直接就出来了"
+    },
+    {
+      "end_time": 2587.5,
+      "speaker": "1",
+      "start_time": 2585.08,
+      "subtitle_text": "所以a等于十啊"
+    },
+    {
+      "end_time": 2589,
+      "speaker": "1",
+      "start_time": 2588.2,
+      "subtitle_text": "注意"
+    },
+    {
+      "end_time": 2592.5,
+      "speaker": "1",
+      "start_time": 2589.52,
+      "subtitle_text": "这个运算显然比这个运算要来大"
+    },
+    {
+      "end_time": 2598.06,
+      "speaker": "1",
+      "start_time": 2594.28,
+      "subtitle_text": "简单而且不容易产生错误"
+    },
+    {
+      "end_time": 2603.56,
+      "speaker": "2",
+      "start_time": 2602.76,
+      "subtitle_text": "哎"
+    },
+    {
+      "end_time": 2608.8,
+      "speaker": "2",
+      "start_time": 2608,
+      "subtitle_text": "好"
+    },
+    {
+      "end_time": 2615.74,
+      "speaker": "1",
+      "start_time": 2613.2,
+      "subtitle_text": "下面我们自己看一下"
+    },
+    {
+      "end_time": 2622.34,
+      "speaker": "1",
+      "start_time": 2618.84,
+      "subtitle_text": "求双曲线的标准方程"
+    },
+    {
+      "end_time": 2626.74,
+      "speaker": "1",
+      "start_time": 2623.92,
+      "subtitle_text": "求双曲线的标准方程"
+    },
+    {
+      "end_time": 2628.06,
+      "speaker": "1",
+      "start_time": 2626.84,
+      "subtitle_text": "仔细先看一下"
+    },
+    {
+      "end_time": 2637.42,
+      "speaker": "1",
+      "start_time": 2633.84,
+      "subtitle_text": "球看看看黑板"
+    },
+    {
+      "end_time": 2643.02,
+      "speaker": "1",
+      "start_time": 2639.8,
+      "subtitle_text": "球双曲线的标准方程"
+    },
+    {
+      "end_time": 2686.54,
+      "speaker": "1",
+      "start_time": 2683.56,
+      "subtitle_text": "网上不要去看他"
+    },
+    {
+      "end_time": 2688.06,
+      "speaker": "1",
+      "start_time": 2687.08,
+      "subtitle_text": "先看这里"
+    },
+    {
+      "end_time": 2697.26,
+      "speaker": "1",
+      "start_time": 2696.32,
+      "subtitle_text": "先看这里"
+    },
+    {
+      "end_time": 2716.38,
+      "speaker": "2",
+      "start_time": 2712.72,
+      "subtitle_text": "啊啊啊"
+    },
+    {
+      "end_time": 2723.9,
+      "speaker": "2",
+      "start_time": 2721.96,
+      "subtitle_text": "啊你快叫立秋"
+    },
+    {
+      "end_time": 2736.54,
+      "speaker": "2",
+      "start_time": 2735.6,
+      "subtitle_text": "吃不吃啊"
+    },
+    {
+      "end_time": 2750.14,
+      "speaker": "1",
+      "start_time": 2748.84,
+      "subtitle_text": "二十六个快点"
+    },
+    {
+      "end_time": 2755.34,
+      "speaker": "3",
+      "start_time": 2753.92,
+      "subtitle_text": "哎呀"
+    },
+    {
+      "end_time": 2758.1,
+      "speaker": "1",
+      "start_time": 2756.88,
+      "subtitle_text": "二十六个拐"
+    },
+    {
+      "end_time": 2760.28,
+      "speaker": "2",
+      "start_time": 2759.48,
+      "subtitle_text": "点"
+    },
+    {
+      "end_time": 2773.38,
+      "speaker": "2",
+      "start_time": 2769,
+      "subtitle_text": "你随意我们是当代的"
+    },
+    {
+      "end_time": 2776.78,
+      "speaker": "2",
+      "start_time": 2775.64,
+      "subtitle_text": "哈哈哈"
+    },
+    {
+      "end_time": 2798.08,
+      "speaker": "2",
+      "start_time": 2796.04,
+      "subtitle_text": "哎我就说你你就走了"
+    },
+    {
+      "end_time": 2798.9,
+      "speaker": "3",
+      "start_time": 2798.08,
+      "subtitle_text": "没有人陪"
+    },
+    {
+      "end_time": 2800.2,
+      "speaker": "2",
+      "start_time": 2799.56,
+      "subtitle_text": "可以这么说"
+    },
+    {
+      "end_time": 2803.34,
+      "speaker": "2",
+      "start_time": 2800.2,
+      "subtitle_text": "我家差不多洗下来我妈同意"
+    },
+    {
+      "end_time": 2805.92,
+      "speaker": "2",
+      "start_time": 2803.96,
+      "subtitle_text": "我问你可能可能走"
+    },
+    {
+      "end_time": 2807.56,
+      "speaker": "2",
+      "start_time": 2805.92,
+      "subtitle_text": "因为就是如果要走的话"
+    },
+    {
+      "end_time": 2810.16,
+      "speaker": "2",
+      "start_time": 2807.56,
+      "subtitle_text": "就星期六早上拿下"
+    },
+    {
+      "end_time": 2811.78,
+      "speaker": "2",
+      "start_time": 2810.16,
+      "subtitle_text": "拿下你爸妈让"
+    },
+    {
+      "end_time": 2814.46,
+      "speaker": "3",
+      "start_time": 2813.16,
+      "subtitle_text": "你看一下"
+    },
+    {
+      "end_time": 2816.08,
+      "speaker": "3",
+      "start_time": 2815.04,
+      "subtitle_text": "我今天早上一起来发的"
+    },
+    {
+      "end_time": 2816.88,
+      "speaker": "3",
+      "start_time": 2816.08,
+      "subtitle_text": "很好"
+    },
+    {
+      "end_time": 2819.56,
+      "speaker": "3",
+      "start_time": 2817.76,
+      "subtitle_text": "我今天早上一起来发个鬼脑"
+    },
+    {
+      "end_time": 2820.82,
+      "speaker": "3",
+      "start_time": 2819.56,
+      "subtitle_text": "发现昨天晚上"
+    },
+    {
+      "end_time": 2822.6,
+      "speaker": "3",
+      "start_time": 2822.04,
+      "subtitle_text": "对对对"
+    },
+    {
+      "end_time": 2823.46,
+      "speaker": "3",
+      "start_time": 2822.6,
+      "subtitle_text": "我跟你讲"
+    },
+    {
+      "end_time": 2825.88,
+      "speaker": "3",
+      "start_time": 2823.6,
+      "subtitle_text": "因为来学校的话我妈不一定给我钱"
+    },
+    {
+      "end_time": 2827.9,
+      "speaker": "2",
+      "start_time": 2825.88,
+      "subtitle_text": "我师弟这是嘛"
+    },
+    {
+      "end_time": 2831.54,
+      "speaker": "2",
+      "start_time": 2830.68,
+      "subtitle_text": "哈哈"
+    },
+    {
+      "end_time": 2879.82,
+      "speaker": "2",
+      "start_time": 2878.96,
+      "subtitle_text": "排队"
+    },
+    {
+      "end_time": 3193.04,
+      "speaker": "2",
+      "start_time": 3192.24,
+      "subtitle_text": "回家"
+    },
+    {
+      "end_time": 3308.12,
+      "speaker": "2",
+      "start_time": 3307.32,
+      "subtitle_text": "我"
+    },
+    {
+      "end_time": 3316.62,
+      "speaker": "2",
+      "start_time": 3314.16,
+      "subtitle_text": "爱你"
+    },
+    {
+      "end_time": 3405.42,
+      "speaker": "3",
+      "start_time": 3403.92,
+      "subtitle_text": "你们不怕你"
+    },
+    {
+      "end_time": 3410.88,
+      "speaker": "2",
+      "start_time": 3410.08,
+      "subtitle_text": "这"
+    }
+  ],
+  "task_id": "amk-tool-asr-subtitles-1406901369602",
+  "task_type": "asr-subtitles",
+  "usage": {
+    "normalized_usage": 1.79213
+  }
+}
+
