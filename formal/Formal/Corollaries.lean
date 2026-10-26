@@ -27,6 +27,10 @@ theorem mismatch_forbids_coupling :
 --   无任何公理断言"损伤必然突破阈值"或"修复存在上限"。
 --   "必然老化"在 Horn skeleton 层不可导出 → 候选桥接公理 B1（见 GAPS.md）。
 -- 可证的部分只是"老化机制存在"（= F4 重述）：
+-- 决策登记（GAPS.md B1，2026-10-27）：**降级为"机制存在性"**
+--   （AgingMechanism := DamageAccIrrev，F4 直接给出），不引入必然性桥接公理（B1a/B1b
+--   均不采纳）。理由：必然老化是无资格条件的全称动力学必然，应留 L2 仿真层
+--   （与 B3/X1 同构）；强制入 L1 引入未经验证的强断言。
 theorem aging_mechanism_exists :
     ∀ s : Sys, LifeS s → DamageAccIrrev s := fun s hs => F4 s hs
 
@@ -54,6 +58,16 @@ theorem evolution_materials :
       (UndirectedHeritableVariation s ∧ Competition s) := by
   intro s hs hm hdiv
   exact ⟨F14 s hs hdiv, (F13 s hs).2⟩
+
+-- 决策登记（GAPS.md B2，2026-10-27）：**条件化引入桥接公理 B2_evolution**——
+--   新增 DirectedEvolution 谓词 + EvoQualified（R5 C_q：Ns≳5）资格谓词，
+--   正 Horn 公理：LifeS → 无向变异 → 竞争 → EvoQualified ⇒ 定向演化。
+--   资格条件显式化，与 R5 一致（EvoQualified 不满足时不成立）；正 Horn 不破坏攻击面检查。
+-- 由此"定向演化"在演化资格满足时可导出（不再只是素材存在性）：
+theorem directed_evolution :
+    ∀ s : Sys, LifeS s → UndirectedHeritableVariation s → Competition s →
+      EvoQualified s → DirectedEvolution s :=
+  fun s hs hv hc hq => B2_evolution s hs hv hc hq
 
 -- ========== 推论 4（耗散结构）——骨架可证，完整版缺口 ==========
 

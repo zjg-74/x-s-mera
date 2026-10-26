@@ -2,6 +2,33 @@
 
 本仓库采用语义化版本。理论条款编号（A1–A12、C1/C2、F1/F2、I1）与《X-S-MERA 修订登记》保持同步。
 
+## v1.6.27 — 2026-10-27
+
+### GAPS B1/B2 桥接公理论证 + AttackSurface 一致性检查（纯内部形式化）
+
+> 用户指定推进纯内部形式化缺口闭合。对 GAPS.md 的 B1（衰老）/B2（演化）缺口做桥接
+> 公理决策并编码，重跑 AttackSurface 一致性检查。
+
+#### 决策（论证结论）
+- **B1（衰老）→ 降级**，不引入桥接公理（B1a/B1b 均不采纳）。
+  理由：必然老化是**无资格条件的全称动力学必然**，强制入 L1 引入未经验证的强断言，
+  应留 L2 仿真层（与 B3/X1 同构）。降级形态 = `aging_mechanism_exists`（F4 重述，已编码）。
+- **B2（演化）→ 条件化引入**。与 B1 不同，定向演化有明确资格条件（R5：Ns≳5），
+  可显式化为正前提。新增 `DirectedEvolution` + `EvoQualified`（C_q 资格抽象）谓词，
+  正 Horn 桥接公理 `B2_evolution`，资格显式化与 R5 一致。
+- **对称性洞察**：B1 降级 vs B2 引入的差别在于**资格条件可否显式化**——B2 可，B1 不可
+  （无条件全称必然）。
+
+#### feat: `formal/`
+- `Basic.lean`：新增谓词 `DirectedEvolution`、`EvoQualified`（新概念申请，见 GAPS B2）。
+- `Axioms.lean`：新增正 Horn 桥接公理 `B2_evolution`。
+- `Corollaries.lean`：登记 B1 降级；新增定理 `directed_evolution`（由 B2_evolution 导出）。
+- `AttackSurface.lean`：登记重跑记录——B2 为正 Horn（无否定前提），第 1 条一致性保持有效。
+
+#### 验证
+- `lake build` 通过（Lean v4.35.0），全工程无 sorry/admit（G1-a 判据满足）。
+- AttackSurface 攻击面分析：正片段无 ⊥ 推导源，无需切换到模型构造路线。
+
 ## v1.6.26 — 2026-10-27
 
 ### P4 B 线加硬 · 真人录音 S0 样本（单人6题判断）入库

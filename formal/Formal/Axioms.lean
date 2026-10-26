@@ -70,6 +70,16 @@ axiom F15 : ∀ s : Sys, LineageS s → BelowReplacementRate s → LineageDeclin
 /-- F16 环境感知耦合：感知有阈值/噪声/延迟；生长分裂修复变异速率受环境调控。 -/
 axiom F16 : ∀ s : Sys, LifeS s → PerceivesEnv s ∧ EnvRegulates s
 
+-- ========== 桥接公理（GAPS.md 决策，2026-10-27） ==========
+
+/-- B2（演化桥接，GAPS.md）：无向变异 + 竞争 + 演化资格(Ns≳5) ⇒ 定向演化。
+    正 Horn（无否定前提），带 C_q 资格条件（EvoQualified），与 R5 一致；
+    不引入否定，故不破坏 AttackSurface 攻击面分析第 1 条（正片段无 ⊥ 推导源）。
+    B1（衰老）已决策降级，不引入桥接公理（见 GAPS.md 与 Corollaries 注释）。 -/
+axiom B2_evolution :
+  ∀ s : Sys, LifeS s → UndirectedHeritableVariation s → Competition s →
+    EvoQualified s → DirectedEvolution s
+
 -- ========== 环境事实公理 E1–E7 ==========
 
 /-- E1 资源生成：环境可自主生成可利用底物与自由能，速率受环境结构约束。 -/

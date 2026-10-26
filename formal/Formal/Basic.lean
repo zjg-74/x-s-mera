@@ -83,6 +83,11 @@ axiom InteractionLocal : Sys → Prop           -- F12
 axiom ResourceFiniteFor : Sys → Prop          -- F13
 axiom Competition : Sys → Prop
 axiom UndirectedHeritableVariation : Sys → Prop  -- F14
+/-- 定向演化（归档推论 3 的结论谓词；新概念申请，见 GAPS.md B2） -/
+axiom DirectedEvolution : Sys → Prop
+/-- 演化资格（R5 的 C_q：Ns≳5 语境成立 / Ns→0 不成立；"逐语境宏 M"的谓词抽象。
+    新概念申请，见 GAPS.md B2） -/
+axiom EvoQualified : Sys → Prop
 axiom BelowReplacementRate : Sys → Prop     -- F15
 axiom LineageDeclineToExtinction : Sys → Prop
 axiom PerceivesEnv : Sys → Prop             -- F16

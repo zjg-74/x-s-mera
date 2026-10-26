@@ -18,6 +18,9 @@ G1-a 的形式化价值不止于"无矛盾"——编码过程把归档版第 7 �
 - 若两者都不采纳：衰老推论降级为"机制存在性"
   （`AgingMechanism := DamageAccIrrev`，F4 直接给出）而非"必然性"。
   该降级须登记——与 R5 的"逐语境宏 M"降级机制同构。
+- **决策（2026-10-27）：降级为"机制存在性"，不引入桥接公理（B1a/B1b 均不采纳）。**
+  理由：必然老化是**无资格条件的全称动力学必然**，强制入 L1 引入未经验证的强断言，
+  应留 L2 仿真层（与 B3/X1 同构）。降级后的可导出形态 = `aging_mechanism_exists`（F4 重述，已编码）。
 
 ## B2（归档推论 3：演化）
 
@@ -29,6 +32,12 @@ G1-a 的形式化价值不止于"无矛盾"——编码过程把归档版第 7 �
 - **前置条件**：R5 已证"定向演化"是逐语境命题
   （Ns≳5 语境成立 / Ns→0 不成立）。B2 若入 Γ 必须带 C_q 资格条件
   （尺度/参数区间申报，R5 字段），否则与 R5 结论直接冲突。
+- **决策（2026-10-27）：条件化引入。** 新增 `DirectedEvolution` 谓词 +
+  `EvoQualified`（R5 C_q 资格抽象）谓词，正 Horn 桥接公理 `B2_evolution`：
+  `LifeS → UndirectedHeritableVariation → Competition → EvoQualified → DirectedEvolution`。
+  资格条件显式化为**正前提**，与 R5 一致（EvoQualified 不满足时不成立）；
+  **正 Horn（无否定前提）不破坏 AttackSurface 检查**。已编码于 `Axioms.lean`，
+  `Corollaries.lean` 导出 `directed_evolution` 定理，`lake build` 通过、无 sorry。
 
 ## B3（归档推论 6：吸引子分类）
 
