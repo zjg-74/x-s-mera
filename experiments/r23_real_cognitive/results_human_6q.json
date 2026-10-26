@@ -1,0 +1,106 @@
+{
+  "method": "program P-hat (supp4 3.2) + oscillation (Psi≈0) + U trend => rho_res>rho_exp (R23)",
+  "results": {
+    "H6q-1-zexiao": {
+      "us": [
+        0.9662,
+        0.8444,
+        0.6337,
+        0.5411
+      ],
+      "rs": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "osc_net_change": -0.425,
+      "verdict": "rho_res > rho_exp"
+    },
+    "H6q-2-xiaofei": {
+      "us": [
+        1.1202,
+        0.9014,
+        1.0712
+      ],
+      "rs": [
+        2,
+        2,
+        2
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2
+      ],
+      "osc_net_change": -0.049,
+      "verdict": "rho_res > rho_exp"
+    },
+    "H6q-3-shijian": {
+      "us": [
+        1.4791,
+        1.5794,
+        1.5346
+      ],
+      "rs": [
+        3,
+        3,
+        3
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2
+      ],
+      "osc_net_change": 0.0555,
+      "verdict": "rho_res < rho_exp"
+    },
+    "H6q-4-beilun": {
+      "us": [
+        1.5958
+      ],
+      "rs": [
+        3
+      ],
+      "longest_seg": null,
+      "osc_net_change": null,
+      "verdict": null
+    },
+    "H6q-5-shadui": {
+      "us": [
+        0.7941
+      ],
+      "rs": [
+        2
+      ],
+      "longest_seg": null,
+      "osc_net_change": null,
+      "verdict": null
+    },
+    "H6q-6-jihe": {
+      "us": [
+        0.5411
+      ],
+      "rs": [
+        2
+      ],
+      "longest_seg": null,
+      "osc_net_change": null,
+      "verdict": null
+    }
+  },
+  "verdict_counts": {
+    "rho_res > rho_exp": 2,
+    "rho_res < rho_exp": 1
+  },
+  "majority": [
+    "rho_res > rho_exp",
+    2
+  ]
+}
