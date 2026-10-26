@@ -59,7 +59,7 @@
   "open_cells": [
     {"id": "OPEN-1", "dim": "B1", "issue": "rho=1 顶点处 B 级符号判读退化（楔形中相边界）", "status": "已解（R34，2026-10-24）", "next": "容差带定义：B 级判读禁区 := {|beta_hat| <= z*SE(beta_hat)}，三值判读；z 约定性（默认 1.96）。实验 experiments/r34_vertex_band/，6 项结构测试全过", "resolved_in": "experiments/r34_vertex_band/report.md"},
     {"id": "OPEN-2", "dim": "B1xB6", "issue": "尺子位置：观测工具归属是约定性输入（与 eta、z 并列）。约定 A（工具算界内）下 C 级自足为定义上的真；约定 B（工具不算界内）下为相对于观测协议的条件性结论。框架不裁定，只要求声明", "status": "约定（等待声明，非等待判据）；与 R45 格同格两面", "next": "实例申报表必带约定声明字段；未声明的实例 C 行自足层悬置"},
-    {"id": "OPEN-3", "dim": "B1", "issue": "开/闭二分理想化：s(k) 可观测性可能程度化", "status": "开放", "next": "R45 后视情况连续化"},
+    {"id": "OPEN-3", "dim": "B1", "issue": "开/闭二分理想化：s(k) 可观测性可能程度化", "status": "规格已拟（v1.6.28，32-v3.4-open3），待评审", "next": "θ_k 可观测度∈[0,1]替代二值；θ_min 阈值并入实例申报约定字段（与 OPEN-2/z/η 同类）；连续化不新增 L1 公理，不改变 A/B 级分级【定理】"},
     {"id": "OPEN-4", "dim": "B7", "issue": "A/B 级噪声下方差与最小样本量未做", "status": "待验证", "next": "有噪声仿真对比"}
   ],
   "gap_index": [
