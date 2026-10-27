@@ -1,0 +1,465 @@
+{
+ "meta": {
+  "purpose": "R46 语言化序列化算子+判别方向稳定性",
+  "framework": "XS/B线P4方法论",
+  "seed": 20261028,
+  "classes": 4,
+  "steps": 8,
+  "traj_per_dir": 12,
+  "m_scan": [
+   1,
+   2,
+   3,
+   5
+  ],
+  "focus_scan": [
+   0.0,
+   0.3,
+   0.6,
+   0.9
+  ],
+  "nature": "纯内部仿真，判别器=analyze_trajectories同逻辑"
+ },
+ "original_verdict": {
+  "down": [
+   "ruminate_down",
+   "ruminate_down",
+   "ruminate_down",
+   "ruminate_down",
+   "ruminate_down",
+   "ruminate_down",
+   "ruminate_down",
+   "ruminate_down",
+   "ruminate_down",
+   "ruminate_down",
+   "ruminate_down",
+   "ruminate_down"
+  ],
+  "up": [
+   "ruminate_up",
+   "ruminate_up",
+   "ruminate_up",
+   "ruminate_up",
+   "ruminate_up",
+   "ruminate_up",
+   "ruminate_up",
+   "ruminate_up",
+   "ruminate_up",
+   "ruminate_up",
+   "ruminate_up",
+   "ruminate_up"
+  ]
+ },
+ "lang_verdict": {
+  "keep,m1,f0.0": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "focus,m1,f0.0": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "keep,m1,f0.3": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "focus,m1,f0.3": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "keep,m1,f0.6": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "focus,m1,f0.6": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "keep,m1,f0.9": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "focus,m1,f0.9": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "keep,m2,f0.0": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "focus,m2,f0.0": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "keep,m2,f0.3": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "focus,m2,f0.3": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "keep,m2,f0.6": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "focus,m2,f0.6": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "keep,m2,f0.9": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "focus,m2,f0.9": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "keep,m3,f0.0": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "focus,m3,f0.0": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "keep,m3,f0.3": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "focus,m3,f0.3": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "keep,m3,f0.6": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "focus,m3,f0.6": {
+   "down": {
+    "keep": 0,
+    "flip": 0,
+    "flat": 12
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "keep,m3,f0.9": {
+   "down": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   },
+   "up": {
+    "keep": 12,
+    "flip": 0,
+    "flat": 0
+   }
+  },
+  "focus,m3,f0.9": {
+   "down": {
+    "keep": 0,
+    "flip": 0,
+    "flat": 12
+   },
+   "up": {
+    "keep": 2,
+    "flip": 0,
+    "flat": 10
+   }
+  },
+  "keep,m5,f0.0": {
+   "down": {
+    "keep": 0,
+    "flip": 0,
+    "flat": 12
+   },
+   "up": {
+    "keep": 0,
+    "flip": 0,
+    "flat": 12
+   }
+  },
+  "focus,m5,f0.0": {
+   "down": {
+    "keep": 0,
+    "flip": 0,
+    "flat": 12
+   },
+   "up": {
+    "keep": 0,
+    "flip": 0,
+    "flat": 12
+   }
+  },
+  "keep,m5,f0.3": {
+   "down": {
+    "keep": 0,
+    "flip": 0,
+    "flat": 12
+   },
+   "up": {
+    "keep": 0,
+    "flip": 0,
+    "flat": 12
+   }
+  },
+  "focus,m5,f0.3": {
+   "down": {
+    "keep": 0,
+    "flip": 0,
+    "flat": 12
+   },
+   "up": {
+    "keep": 0,
+    "flip": 0,
+    "flat": 12
+   }
+  },
+  "keep,m5,f0.6": {
+   "down": {
+    "keep": 0,
+    "flip": 0,
+    "flat": 12
+   },
+   "up": {
+    "keep": 0,
+    "flip": 0,
+    "flat": 12
+   }
+  },
+  "focus,m5,f0.6": {
+   "down": {
+    "keep": 0,
+    "flip": 0,
+    "flat": 12
+   },
+   "up": {
+    "keep": 0,
+    "flip": 0,
+    "flat": 12
+   }
+  },
+  "keep,m5,f0.9": {
+   "down": {
+    "keep": 0,
+    "flip": 0,
+    "flat": 12
+   },
+   "up": {
+    "keep": 0,
+    "flip": 0,
+    "flat": 12
+   }
+  },
+  "focus,m5,f0.9": {
+   "down": {
+    "keep": 0,
+    "flip": 0,
+    "flat": 12
+   },
+   "up": {
+    "keep": 0,
+    "flip": 0,
+    "flat": 12
+   }
+  }
+ },
+ "conclusion": "✅ 方向稳健：语言化**不翻转**方向（全部翻转率=0）；在现实采集参数（m=2/3, focus=0~0.3）下方向保持率 100%。污染效果是**抹平方向→判空转(flat)**，仅发生在病理性语言化（高聚焦 focus≥0.6 或碎片化 m≥5），可经采集引导规避 ⟹ think-aloud 判**方向**仍可用；最差格 focus,m5,f0.0 保持率 0.00",
+ "keep_rates_focus_real": [
+  1.0,
+  1.0,
+  1.0,
+  1.0
+ ],
+ "flip_rates_focus_real": [
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "flattened_heavy": {
+  "focus,m3,f0.6": 0.5,
+  "focus,m3,f0.9": 0.917,
+  "keep,m5,f0.0": 1.0,
+  "focus,m5,f0.0": 1.0,
+  "keep,m5,f0.3": 1.0,
+  "focus,m5,f0.3": 1.0,
+  "keep,m5,f0.6": 1.0,
+  "focus,m5,f0.6": 1.0,
+  "keep,m5,f0.9": 1.0,
+  "focus,m5,f0.9": 1.0
+ },
+ "verdict": true
+}
