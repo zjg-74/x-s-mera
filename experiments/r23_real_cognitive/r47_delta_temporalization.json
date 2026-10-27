@@ -1,0 +1,209 @@
+{
+ "meta": {
+  "purpose": "R47 δ-时间化检验：震荡/方向是否算子伪影",
+  "framework": "XS/B线P4方法论",
+  "seed": 20261028,
+  "classes": 4,
+  "events": 12,
+  "per_quality": 100,
+  "m_scan": [
+   1,
+   2,
+   3,
+   5
+  ],
+  "focus_scan": [
+   0.0,
+   0.3,
+   0.6,
+   0.9
+  ],
+  "trials": 30,
+  "nature": "纯内部仿真，判别器=analyze_trajectories同逻辑；快思维δ=无时间结构瞬时选择"
+ },
+ "grid_3class": {
+  "ruminate_down,m1,f0.0": {
+   "ruminate_down": 30
+  },
+  "ruminate_down,m1,f0.3": {
+   "ruminate_down": 30
+  },
+  "ruminate_down,m1,f0.6": {
+   "ruminate_down": 30
+  },
+  "ruminate_down,m1,f0.9": {
+   "ruminate_down": 30
+  },
+  "ruminate_down,m2,f0.0": {
+   "ruminate_down": 30
+  },
+  "ruminate_down,m2,f0.3": {
+   "ruminate_down": 30
+  },
+  "ruminate_down,m2,f0.6": {
+   "ruminate_down": 30
+  },
+  "ruminate_down,m2,f0.9": {
+   "flat": 30
+  },
+  "ruminate_down,m3,f0.0": {
+   "ruminate_down": 30
+  },
+  "ruminate_down,m3,f0.3": {
+   "ruminate_down": 30
+  },
+  "ruminate_down,m3,f0.6": {
+   "ruminate_down": 30
+  },
+  "ruminate_down,m3,f0.9": {
+   "none": 30
+  },
+  "ruminate_down,m5,f0.0": {
+   "ruminate_down": 30
+  },
+  "ruminate_down,m5,f0.3": {
+   "ruminate_down": 30
+  },
+  "ruminate_down,m5,f0.6": {
+   "ruminate_down": 30
+  },
+  "ruminate_down,m5,f0.9": {
+   "none": 30
+  },
+  "ruminate_up,m1,f0.0": {
+   "ruminate_up": 30
+  },
+  "ruminate_up,m1,f0.3": {
+   "ruminate_up": 30
+  },
+  "ruminate_up,m1,f0.6": {
+   "ruminate_up": 30
+  },
+  "ruminate_up,m1,f0.9": {
+   "ruminate_up": 30
+  },
+  "ruminate_up,m2,f0.0": {
+   "ruminate_up": 30
+  },
+  "ruminate_up,m2,f0.3": {
+   "ruminate_up": 30
+  },
+  "ruminate_up,m2,f0.6": {
+   "ruminate_up": 30
+  },
+  "ruminate_up,m2,f0.9": {
+   "flat": 30
+  },
+  "ruminate_up,m3,f0.0": {
+   "ruminate_up": 30
+  },
+  "ruminate_up,m3,f0.3": {
+   "ruminate_up": 30
+  },
+  "ruminate_up,m3,f0.6": {
+   "ruminate_up": 30
+  },
+  "ruminate_up,m3,f0.9": {
+   "none": 30
+  },
+  "ruminate_up,m5,f0.0": {
+   "ruminate_up": 30
+  },
+  "ruminate_up,m5,f0.3": {
+   "ruminate_up": 30
+  },
+  "ruminate_up,m5,f0.6": {
+   "ruminate_up": 30
+  },
+  "ruminate_up,m5,f0.9": {
+   "none": 30
+  },
+  "random,m1,f0.0": {
+   "flat": 30
+  },
+  "random,m1,f0.3": {
+   "flat": 30
+  },
+  "random,m1,f0.6": {
+   "flat": 30
+  },
+  "random,m1,f0.9": {
+   "flat": 30
+  },
+  "random,m2,f0.0": {
+   "flat": 30
+  },
+  "random,m2,f0.3": {
+   "flat": 30
+  },
+  "random,m2,f0.6": {
+   "flat": 30
+  },
+  "random,m2,f0.9": {
+   "flat": 30
+  },
+  "random,m3,f0.0": {
+   "flat": 30
+  },
+  "random,m3,f0.3": {
+   "flat": 30
+  },
+  "random,m3,f0.6": {
+   "flat": 30
+  },
+  "random,m3,f0.9": {
+   "none": 30
+  },
+  "random,m5,f0.0": {
+   "flat": 30
+  },
+  "random,m5,f0.3": {
+   "flat": 30
+  },
+  "random,m5,f0.6": {
+   "flat": 30
+  },
+  "random,m5,f0.9": {
+   "none": 30
+  }
+ },
+ "Q0_delta_untemporalizable": {
+  "no_segment_ratio_30": 30
+ },
+ "Q1_random_direction_rate": {
+  "m1,f0.0": 0.0,
+  "m1,f0.3": 0.0,
+  "m1,f0.6": 0.0,
+  "m1,f0.9": 0.0,
+  "m2,f0.0": 0.0,
+  "m2,f0.3": 0.0,
+  "m2,f0.6": 0.0,
+  "m2,f0.9": 0.0,
+  "m3,f0.0": 0.0,
+  "m3,f0.3": 0.0,
+  "m3,f0.6": 0.0,
+  "m3,f0.9": 0.0,
+  "m5,f0.0": 0.0,
+  "m5,f0.3": 0.0,
+  "m5,f0.6": 0.0,
+  "m5,f0.9": 0.0
+ },
+ "Q1_max_random_direction_rate": 0.0,
+ "Q1_false_direction": false,
+ "Q2_keep_rates_real": {
+  "ruminate_down": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "ruminate_up": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ "Q2_robust": true,
+ "conclusion": "✅ 命题得到三层支持：Q0判别器需时间结构、快思维δ本体不可测；Q1时间化不凭空造方向；Q2潜在结构（酝酿/反刍）在现实参数下跨算子稳健恢复 ⟹ 判别器测的方向部分反映慢思维真实结构、非纯时间化伪影；但快思维本体方向不可测，仍登记为'慢思维(时间化认知)轨迹'。"
+}

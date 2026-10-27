@@ -5,7 +5,7 @@ Manifold Projection and Asymmetric Potential Well: Cognitive Dynamics Framework
 > This repository contains the reference simulation code for the X‑S‑MERA theoretical framework.
 > Author: [zjg]
 >
-> Current version: **v1.6.35**（2026-10-28） · Tests: **393 passed** · License: **MIT**
+> Current version: **v1.6.36**（2026-10-28） · Tests: **393 passed** · License: **MIT**
 >
 > 测试数为**含 numpy 环境**（CI 的 `requirements.txt`）下的全套计数；本机若缺
 > numpy，11 个历史模块（LE 内核 / relay / R2–R4 / A0 / A9 / A10 / T1-d / ΔT）
