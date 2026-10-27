@@ -1,5 +1,5 @@
 {
-  "version": "0.4",
+  "version": "0.5",
   "framework": "XS v3.4",
   "name": "boundary_map",
   "name_zh": "边界地图（机读版）",
@@ -60,7 +60,7 @@
     {"id": "OPEN-1", "dim": "B1", "issue": "rho=1 顶点处 B 级符号判读退化（楔形中相边界）", "status": "已解（R34，2026-10-24）", "next": "容差带定义：B 级判读禁区 := {|beta_hat| <= z*SE(beta_hat)}，三值判读；z 约定性（默认 1.96）。实验 experiments/r34_vertex_band/，6 项结构测试全过", "resolved_in": "experiments/r34_vertex_band/report.md"},
     {"id": "OPEN-2", "dim": "B1xB6", "issue": "尺子位置：观测工具归属是约定性输入（与 eta、z 并列）。约定 A（工具算界内）下 C 级自足为定义上的真；约定 B（工具不算界内）下为相对于观测协议的条件性结论。框架不裁定，只要求声明", "status": "约定（等待声明，非等待判据）；与 R45 格同格两面", "next": "实例申报表必带约定声明字段；未声明的实例 C 行自足层悬置"},
     {"id": "OPEN-3", "dim": "B1", "issue": "开/闭二分理想化：s(k) 可观测性可能程度化", "status": "已评审定稿（v1.6.31，32 §6）：三待评审点拍板——θ_min/Δ 并入实例申报约定字段（与 OPEN-2/z/η 同类）、C 级三值降级（R34 先例）、程度化严格限 C 级辨识层、B 级判读不受影响", "next": "实现路线：θ_min/Δ 纳入实例申报表约定声明字段模板（A13 申报规范）；不新增 L1 公理，不改变 A/B 级分级【定理】"},
-    {"id": "OPEN-4", "dim": "B7", "issue": "A/B 级噪声下方差与最小样本量未做", "status": "待验证", "next": "有噪声仿真对比"}
+    {"id": "OPEN-4", "dim": "B7", "issue": "A/B 级噪声下方差与最小样本量（已做：A(E)观测噪声破坏共线性斜率、B(U)观测噪声影响小）", "status": "已闭合（v1.6.22，experiments/open4_noise_variance/）", "next": "无（纯仿真已闭合；真实数据方差待 B 组）"}
   ],
   "gap_index": [
     {"cell": "C 级闭合实测", "ref": "R45 / B-B45", "status": "已核验（R33，2026-10-24）：36 行跨 3 参数点 x 4 调度族全过，负对照有牙齿；原型级，噪声/真实数据未做", "resolved_in": "experiments/r33_clevel_closure/report.md"},
@@ -77,7 +77,7 @@
   ],
   "sufficiency_criterion": {
     "definition": "边界地图完成 + C1.7/C1.8 机检 = 可启动 A13 对应探索",
-    "current": "地图 v0.5：分级结构表已测绘【定理】；可读性条件表 C 行辨识层已测绘、自足层为约定声明字段（OPEN-2 已约定化，与 eta、z 并列）；OPEN-1 已解（R34）；OPEN-3 已评审定稿（v1.6.31，程度化严格限 C 级辨识层）；R-042 已扫描但副产品 R-043 已解决（v1.6.23）；A13 已做出。机检主体在 xs_trace_gate.py；CI 强制门 .github/workflows/xs-gates.yml 已交付（v1.6.14）但尚未在 GitHub 启用，本地等价验证三条均通过",
-    "verdict": "A13 已做出（演示性映射），但'解锁'二字仍不能写：OPEN-4 未验证，CI 门未启用（OPEN-3 已评审定稿 v1.6.31）"
+    "current": "地图 v0.5：分级结构表已测绘【定理】；可读性条件表 C 行辨识层已测绘、自足层为约定声明字段（OPEN-2 已约定化，与 eta、z 并列）；OPEN-1 已解（R34）；OPEN-3 已评审定稿（v1.6.31，程度化严格限 C 级辨识层）；R-042 已扫描但副产品 R-043 已解决（v1.6.23）；A13 已做出。机检主体在 xs_trace_gate.py；CI 强制门 .github/workflows/xs-gates.yml（第48-49行 pytest 步骤）已在 GitHub 启用",
+    "verdict": "A13 已做出（演示性映射），OPEN-4 已闭合（v1.6.22）、CI 门已启用（xs-gates.yml）；'解锁'二字仍不能写：B-B9 唯一性仍开放（R8 仅证 M1 存在性）、X2 触发不充分（真人 think-aloud 受'未解出偏差'主导，需严格单人+控制难度）、CI 实际跑通验证待持续"
   }
 }

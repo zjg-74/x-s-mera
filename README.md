@@ -5,7 +5,7 @@ Manifold Projection and Asymmetric Potential Well: Cognitive Dynamics Framework
 > This repository contains the reference simulation code for the X‑S‑MERA theoretical framework.
 > Author: [zjg]
 >
-> Current version: **v1.6.21**（2026-10-24） · Tests: **368 passed** · License: **MIT**
+> Current version: **v1.6.34**（2026-10-27） · Tests: **393 passed** · License: **MIT**
 >
 > 测试数为**含 numpy 环境**（CI 的 `requirements.txt`）下的全套计数；本机若缺
 > numpy，11 个历史模块（LE 内核 / relay / R2–R4 / A0 / A9 / A10 / T1-d / ΔT）
@@ -39,15 +39,17 @@ external engineering defects. The LE (Life–Environment) prototype extends the 
 | **R27 双相形状：X 单调 / M 单峰** `experiments/r27_biphasic/` | ✅ 已实现（v1.6.4），14 项测试。峰位命中解析预测、**峰序吻合率 1.000**；**单峰性须粗粒化后检验** |
 | **R28 微观回落 / 多峰 / 局部-全局收敛** `experiments/r28_micro_reversal/` | ✅ 已实现（v1.6.5），15 项测试。回落率解析律命中；**路径层单峰率 0.000（本体性，非测量误差）**；局部收敛 100% vs 全局收敛 13–34% |
 | **R29 峰距标定程序** `experiments/r29_peak_distance_calibration/` | ✅ 已实现（v1.6.6），15 项测试。公式命中（误差 ≤1 步=离散化界）；估计量无偏；**异 K 必须归一化**（raw 差因子 2.000）；**共享噪声下峰序零判反**；U−E 恒等式残差 5.7e-14 |
-| **R-042 D-SCALE 参数敏感性扫描** `experiments/r42_dscale_eta/` | ✅ 已实现（v1.6.14）。三类场景 × η∈[0.005,1.0] 判定读数**正确区分且对 η 稳定**，g 不进入判定流程 ⟹ 支持 B-B44「弱」拆分。**⚠️ 扫描副产品（v0.4 补登记，见礁石 R-043）**：τ\* 落在 (τ_fine, τ_coarse) 内的 η 区间在该网格上**几乎为空**（A/C 场景全空，B 场景仅 η=0.05 一格）⟹ "判定对 η 不敏感" ≠ "η 合理区间已定"；若加密 τ 扫描后仍为空，τ\*/η 须从**判定程序**降级为**解释性装置** |
+| **R-042 D-SCALE 参数敏感性扫描** `experiments/r42_dscale_eta/` | ✅ 已实现（v1.6.14）。三类场景 × η∈[0.005,1.0] 判定读数**正确区分且对 η 稳定**，g 不进入判定流程 ⟹ **判定程序层已过**（g、τ\*/η 均未越界，U5 通过）。**扫描副产品 R-043 曾疑"τ\* 落带区间几乎为空" ⟹ 已解决（v1.6.23）：加密 η 网格（200 点）后落带区间非空，原疑为网格假象**；η 取值原则由 **R-044（v1.6.32）** 锚定 ⟹ **B-B44 闭合**（见下两条） |
 | **A5 generics 一般性证明** `experiments/a5_generics/` | ✅ 已实现（v1.6.15）。四条分类规则（楔形/峰序/四级可辨识/共线反解）在 A_D 原型内满足函数性 genericity，720 实例零违反；代数证明 + 原型枚举，**非 Lean、非现实断言**（见 `proof.md`） |
-| **CI 强制门** `.github/workflows/xs-gates.yml` | ✅ 已交付（v1.6.14）。`xs_trace_gate.py`(C1.7/C1.8) + `xs_formal_checks.py`(C1/C2) + `pytest tests/` 三道合并门槛；需 GitHub Actions 启用后生效 |
+| **CI 强制门** `.github/workflows/xs-gates.yml` | ✅ 已交付（v1.6.14）且**已在 GitHub 启用**（2026-10-27 确认）。`xs_trace_gate.py`(C1.7/C1.8) + `xs_formal_checks.py`(C1/C2) + `pytest tests/` 三道合并门槛 |
 | **A7 核心最小化** `experiments/a7_core_min/` | ✅ 已实现（v1.6.16）。47 记号→11 核心（根 10+约定输入 1），36 导出全部可达，压缩率 76.6%；依赖结构层面，非概念独立性 |
 | **R18 的 Lean 命题规格** `formal/Formal/DualConstraint.lean` | ✅ 已接入（v1.6.18）。认知双约束/R18 Horn skeleton 编码，lake build 编译通过、无 sorry；见 `formal/GAPS.md` 条目 C1 |
 | **A13 第一例对应探索** experiments/a13_first_case/ | ✅ 已实现（v1.6.17）。换工作决策：D-DRILL 钻研/空洞相位 + D-CONV 收敛/发散方向 + D-IDENT 分级，对照无框架程度描述；演示性映射，非现实测量 |
 | **B 组方法准备**（B3/B1/B2，外部数据前可执行部分） | ✅ B3 残差反演 g（v1.6.19，4 种 g corr=1.0）；B1 四臂闭合（v1.6.20，自洽 1e-14）；B2 R31 守卫（v1.6.21，正常 0.000 / A_D⁺ 违反 1.000）。**非经验验证**；R43′（独立 Ψ）、真人测量、跨人群仍属 B 组待外部数据 |
 | **v1.6.14–1.6.21 新增实验的 pytest 覆盖** `tests/test_{a5,a7,a13,b1,b2,b3,r42}_*.py` | ✅ 已补齐（本地未提交）。7 套共 **67 项**结构性测试（锁结构预言、不锁数字，仅标准库，1.2 s 跑完）；**CI 强制门 `xs-gates.yml` 的 pytest 步骤自动覆盖**，无需改 workflow |
-| **礁石 R-043（τ\* 落点）** `docs/xs-framework/reef_shturl.json` | ⬜ **新立（2026-10-24）**。R42 只验证"读数对 η 不敏感"，未验证"τ\* 落在观测窗口内"；纯内部可解（加密 τ 网格 / 重选窗口），**不需要外部数据** |
+| **R8 / R11 / R44 的 pytest 覆盖** `tests/test_{r8_period_doubling,r11_pseudo_drift,r44_eta_principle}.py` | ✅ 已补齐（v1.6.34）。3 套共 **15 项**（R8 8 项锁 M1 周期倍增 V1–V4；R11 5 项锁推论 4.1 的 legal/violate 双臂区分；R44 2 项锁 τ\* 对 η 单调 + 可靠子区间非空）。均**调底层函数复现结构预言、不调 `main()`**，零文件写入副作用；仅标准库 |
+| **礁石 R-043（τ\* 落点）** `docs/xs-framework/reef_shturl.json` | ✅ **已解决（v1.6.23，`experiments/r43_tau_star/`）**。原疑：τ\* 落在 (τ_fine,τ_coarse) 内的 η 区间在该网格上几乎为空。**加密 η 网格（200 点）后三类场景在窗口 (8,128) 内均有非空落带区间**（A[0.031,0.046]／B[0.031,0.071]／C[0.061,0.086]）——此前"几乎为空"是**网格假象**。η 取值**场景相关**（三区间交集为空），不由单一全局值给出 |
+| **R-044 η 取值原则锚定** `experiments/r44_eta_principle/` | ✅ 已实现（v1.6.32）。落带区间内 Bootstrap 压出**可靠子区间**（落带率≥90%：A[0.031,0.046]／B[0.032,0.071]／C[0.061,0.086]）；**取值原则 P1–P5 定稿**（`33-v3.4-eta-scaling-principle.md`）⟹ **B-B44 闭合**。诚实边界：可靠子区间为**原型内**结果，REL_TH=0.90 为约定水平；η 场景相关，**不存在全局单值**（须按场景显式声明） |
 ## Repository structure
 
 ```
@@ -104,7 +106,7 @@ python -m venv .venv
 # source .venv/bin/activate && pip install -r requirements.txt   # Linux/macOS
 
 python experiments/sim_le_coupling.py     # 出图 + 分段统计摘要
-python -m pytest tests/ -v                # 199 tests
+python -m pytest tests/ -v                # 393 tests（R29 单跑 ~35 s，全套 ~70 s）
 python experiments/r18_dual_constraint/r18_dual_constraint.py   # R18 主实验（仅标准库）
 python experiments/r19_bridge/r19_bridge.py                     # R19（仅标准库）
 python experiments/r21_constraint_specificity/r21_constraint_specificity.py  # R21（仅标准库）

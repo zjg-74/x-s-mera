@@ -2,6 +2,56 @@
 
 本仓库采用语义化版本。理论条款编号（A1–A12、C1/C2、F1/F2、I1）与《X-S-MERA 修订登记》保持同步。
 
+## v1.6.34 — 2026-10-27
+
+### R8 / R11 / R44 结构测试补齐 + 台账同步 + 两处既有校验缺陷修复
+
+> 承接 v1.6.33。三项早于 v1.6.31 落地的实验（R8/R11/R44）此前无 pytest 覆盖，
+> 且台账停在 v1.6.21。本版补齐测试、同步台账，并**修复两处既有校验失败**（非本版测试引入）。
+
+#### test: 新增三组结构测试（共 15 项，仅标准库，锁结构不锁数字）
+- `tests/test_r8_period_doubling.py`（**8 项**）：锁 logistic 形式（g 仅乘性）、迭代值有界
+  ∈[0,1)、g=4.0 必混沌（λ>0 且无非平凡短周期）、g=2.5 周期 1、`_coarse_scan()` 复现 main
+  扫描逻辑（不调 main，避免写文件污染仓库）、V1 周期倍增链 1→2→4→8、V2 混沌带宽≥20、
+  V3 g_chaos∈[3.4,3.7]、M1 机制 V1∧V2∧V3∧V4。
+- `tests/test_r11_pseudo_drift.py`（**5 项**）：调 `run_arm_g(arm,g)`（不调 main）。锁两臂均
+  有 F2 字段、P1 legal F2 极差≤4pp、P2 violate F2 峰值−legal 峰值≥20pp 且自基线升起、
+  violate 每档 g 的 F2 均高于 legal 峰值且上升幅度 >2×legal 波动 ⟹ 推论 4.1 成立（越权
+  ⟹ F2/ghost 伪力）。
+- `tests/test_r44_eta_principle.py`（**2 项**）：调底层 `make_trajectory/ratio_curve/tau_star`。
+  锁 τ* 随 η 单调不增、三场景在落带区间内存在使落带率≥0.90 的 η（可靠子区间非空）。
+
+#### fix: 两处既有校验失败（ regression 回归时发现，均由更早版本引入）
+1. **S006（记号表）**——`symbol_registry.json` 中 `eta` 的 `derives_from` 在 v1.6.32 被填入
+   4 条**描述性字符串**（可接受错误率语义／场景落带区间／可靠子区间／判定灵敏度），效果是
+   ① 引用未登记记号触发 S006；② 违反「η 是约定性输入、`derives_from` 必须为空」契约
+   （`test_a7_core_min.py::test_eta_is_registered_as_convention_input` 对此有显式断言）。
+   **处置**：`derives_from` 清空为 `[]`，四条外部标定来源（R-042 带内不敏感／R-043 落带区间／
+   R44 可靠子区间／OPEN-2 观测协议约定）**移入 `definition` 字段显式登记**（U3：C 级量须登记
+   其外部标定来源），信息未丢失。
+2. **G002（冻结窗）**——`docs/xs-framework/06-v3.1-supp5-bridge-constraint-strength.md` 在
+   **v1.6.28（`089cf90`）** 被修订（§自审第 3 条：R21 复核 σ 离散化量子 1/8，N_FEAT=16／
+   N_MACRO=40 下倒 U 保持、峰值仍在 Q≈1.0，已排除伪像），但**未重新冻结**，manifest 仍锁
+   v1.6.12 哈希 ⟹ 冻结窗被破坏。已核查 git diff 干净（工作区未被改动）、该修订为有意且
+   唯一（4faf5ea→089cf90 之间仅此一处）⟹ **补重冻结**：哈希刷新至 v1.6.28 内容
+   `e13b59d1481a…`，并在 `reason` 登记 v1.6.28 修订说明。
+
+#### docs: 台账同步
+- `CITATION.cff`：1.6.21 → **1.6.33**（date-released 2026-10-27）。
+- `README.md`：顶部 v1.6.21/368 → **v1.6.34/393**。
+- `boundary_map.json` → **v0.5**：修正 `version` 字段仍为 "0.4" 的自相矛盾（文件内已写 v0.5
+  内容但 version 未同步）；OPEN-4 状态「待验证」→「已闭合（v1.6.22）」；sufficiency 改写
+  （CI 门已在 GitHub 启用，不再写"尚未启用"）。
+- `27-v3.4-boundary-map.md` → **v0.5**：标题/版本声明 + §3.4③、§4.2、§4.5、§4.6 + §5 五处表格行
+  + §6 两条 + §5 总评段整段重写（R-043 已解决／R-044 锚定／OPEN-3 定稿／B-B44 闭合／
+  B-B43 降级／B6 三类探索已启动；剩余开放格收敛为 B-B9 唯一性、X2 触发、CI 持续验证）。
+- `experiments/r23_real_cognitive/thinkaloud-math-script.md`（NEW，并入）：B 线 P4 M 系列
+  数学 think-aloud 采集脚本（判别信息三要素 + 10 题 + 归约规则 + 8/9 触发线）。
+
+#### 回归
+- 全套（除 R29）**378 passed**；R29 单跑 **15 passed** ⟹ **393 passed**（含 numpy 环境口径）。
+- 两道形式校验器 `xs_formal_checks.py` / `xs_trace_gate.py` **均 exit=0**。
+
 ## v1.6.33 — 2026-10-27
 
 ### B-B43（g(U) 形式）降级：R45 真实数据可行性评估（加噪稳健性 + 形式辨识）

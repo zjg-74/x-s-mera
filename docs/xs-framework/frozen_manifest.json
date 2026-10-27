@@ -32,8 +32,8 @@
     },
     {
       "path": "docs/xs-framework/06-v3.1-supp5-bridge-constraint-strength.md",
-      "reason": "v3.1 补篇五。A_D 与桥的原始登记处（含 v3.4 加入的交叉引用标注）。",
-      "sha256": "ebcf869020adb3f73576ca6284276fa5e0313b36b695ced6aa68b9585d527f9e"
+      "reason": "v3.1 补篇五。A_D 与桥的原始登记处（含 v3.4 加入的交叉引用标注）。v1.6.28 修订（§自审第 3 条：R21 复核 σ 离散化量子 1/8，N_FEAT=16/N_MACRO=40 下倒 U 保持、峰值仍在 Q≈1.0，已排除伪像）——属有意修订但当时未重新冻结，本次补冻结窗口（哈希刷新至 v1.6.28 内容）。",
+      "sha256": "e13b59d1481a2c30ee4a6c8ffcebfd7d75826136da4e6f6e9b41c5528b913f4d"
     },
     {
       "path": "docs/xs-framework/07-v3.1-supp6-biphasic-shape.md",
