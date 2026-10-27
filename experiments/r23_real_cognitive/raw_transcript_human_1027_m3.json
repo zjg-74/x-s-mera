@@ -1,0 +1,108 @@
+﻿{
+  "duration": 41.562,
+  "request_id": "20261027141034A298AD9FCA52587B3358",
+  "status": "completed",
+  "subtitles": [
+    {
+      "end_time": 5.48,
+      "speaker": "1",
+      "start_time": 1.32,
+      "subtitle_text": "等腰三角形的一个底角为三十度"
+    },
+    {
+      "end_time": 7.92,
+      "speaker": "1",
+      "start_time": 5.48,
+      "subtitle_text": "顶角的一条三等分线"
+    },
+    {
+      "end_time": 10.86,
+      "speaker": "1",
+      "start_time": 7.92,
+      "subtitle_text": "与底边所夹的角是多少度"
+    },
+    {
+      "end_time": 13.4,
+      "speaker": "2",
+      "start_time": 11.84,
+      "subtitle_text": "底边所夹角就是这个"
+    },
+    {
+      "end_time": 15.6,
+      "speaker": "2",
+      "start_time": 13.4,
+      "subtitle_text": "角c他的度数"
+    },
+    {
+      "end_time": 16.76,
+      "speaker": "2",
+      "start_time": 15.6,
+      "subtitle_text": "角c他的度数"
+    },
+    {
+      "end_time": 19.54,
+      "speaker": "2",
+      "start_time": 16.76,
+      "subtitle_text": "然后这个是三十度"
+    },
+    {
+      "end_time": 22.26,
+      "speaker": "2",
+      "start_time": 19.72,
+      "subtitle_text": "然后可以算出来这个是三十度"
+    },
+    {
+      "end_time": 26.94,
+      "speaker": "2",
+      "start_time": 22.84,
+      "subtitle_text": "然后三十三十一百八进去"
+    },
+    {
+      "end_time": 28.6,
+      "speaker": "2",
+      "start_time": 27.4,
+      "subtitle_text": "六十一百二"
+    },
+    {
+      "end_time": 29.46,
+      "speaker": "2",
+      "start_time": 28.6,
+      "subtitle_text": "一百二"
+    },
+    {
+      "end_time": 32.9,
+      "speaker": "2",
+      "start_time": 30.12,
+      "subtitle_text": "一百二一百二的话除以三"
+    },
+    {
+      "end_time": 35.04,
+      "speaker": "2",
+      "start_time": 33.24,
+      "subtitle_text": "一百二除以三是多少度"
+    },
+    {
+      "end_time": 35.88,
+      "speaker": "2",
+      "start_time": 35.04,
+      "subtitle_text": "一百二除以三"
+    },
+    {
+      "end_time": 37.74,
+      "speaker": "2",
+      "start_time": 35.88,
+      "subtitle_text": "四十度那这个角就四十度"
+    },
+    {
+      "end_time": 40.46,
+      "speaker": "2",
+      "start_time": 37.96,
+      "subtitle_text": "四十度那七十度算出来了"
+    }
+  ],
+  "task_id": "amk-tool-asr-subtitles-1963151751426",
+  "task_type": "asr-subtitles",
+  "usage": {
+    "normalized_usage": 0.02078
+  }
+}

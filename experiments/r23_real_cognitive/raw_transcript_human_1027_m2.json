@@ -1,0 +1,798 @@
+﻿{
+  "duration": 422.238,
+  "request_id": "20261027135640C52AC2280950F67B1473",
+  "status": "completed",
+  "subtitles": [
+    {
+      "end_time": 3.96,
+      "speaker": "1",
+      "start_time": 0.76,
+      "subtitle_text": "这个第二题的话是甲从a d"
+    },
+    {
+      "end_time": 6.26,
+      "speaker": "1",
+      "start_time": 3.96,
+      "subtitle_text": "e从b d向下三个斜点"
+    },
+    {
+      "end_time": 10.62,
+      "speaker": "1",
+      "start_time": 6.68,
+      "subtitle_text": "甲从a d e从b d向下而行a b e"
+    },
+    {
+      "end_time": 13.86,
+      "speaker": "1",
+      "start_time": 11.88,
+      "subtitle_text": "这个学题啊这个是"
+    },
+    {
+      "end_time": 17.88,
+      "speaker": "1",
+      "start_time": 15.32,
+      "subtitle_text": "相遇之后甲的速度每秒增加"
+    },
+    {
+      "end_time": 19.5,
+      "speaker": "1",
+      "start_time": 17.88,
+      "subtitle_text": "每小时增加一千"
+    },
+    {
+      "end_time": 21.52,
+      "speaker": "1",
+      "start_time": 19.84,
+      "subtitle_text": "两人人同时到达"
+    },
+    {
+      "end_time": 22.8,
+      "speaker": "1",
+      "start_time": 21.52,
+      "subtitle_text": "各自重点"
+    },
+    {
+      "end_time": 25.22,
+      "speaker": "1",
+      "start_time": 22.8,
+      "subtitle_text": "求甲一元速度值"
+    },
+    {
+      "end_time": 27.54,
+      "speaker": "1",
+      "start_time": 25.88,
+      "subtitle_text": "这个是乙"
+    },
+    {
+      "end_time": 29.7,
+      "speaker": "1",
+      "start_time": 27.68,
+      "subtitle_text": "然后相遇之后"
+    },
+    {
+      "end_time": 31.88,
+      "speaker": "1",
+      "start_time": 29.88,
+      "subtitle_text": "先把甲速度设为x"
+    },
+    {
+      "end_time": 35.38,
+      "speaker": "1",
+      "start_time": 31.88,
+      "subtitle_text": "一的速度设设为a b a"
+    },
+    {
+      "end_time": 39.02,
+      "speaker": "1",
+      "start_time": 36.4,
+      "subtitle_text": "然后相遇之后他们"
+    },
+    {
+      "end_time": 43.38,
+      "speaker": "1",
+      "start_time": 39.28,
+      "subtitle_text": "然后他们中间距离是五个m"
+    },
+    {
+      "end_time": 47.2,
+      "speaker": "1",
+      "start_time": 43.68,
+      "subtitle_text": "然后可以变成他们相遇的话"
+    },
+    {
+      "end_time": 51.22,
+      "speaker": "1",
+      "start_time": 47.2,
+      "subtitle_text": "就是说是m除以a加上b"
+    },
+    {
+      "end_time": 53.14,
+      "speaker": "1",
+      "start_time": 51.32,
+      "subtitle_text": "是相遇这种体积"
+    },
+    {
+      "end_time": 57.06,
+      "speaker": "1",
+      "start_time": 53.88,
+      "subtitle_text": "然后过了这段时间之后"
+    },
+    {
+      "end_time": 60.72,
+      "speaker": "1",
+      "start_time": 58.16,
+      "subtitle_text": "他们的加到这里"
+    },
+    {
+      "end_time": 66.6,
+      "speaker": "1",
+      "start_time": 60.72,
+      "subtitle_text": "然后然后加这时间就是一甲甲"
+    },
+    {
+      "end_time": 73.88,
+      "speaker": "1",
+      "start_time": 66.6,
+      "subtitle_text": "甲的甲行驶过程就是一体等于a"
+    },
+    {
+      "end_time": 74.72,
+      "speaker": "1",
+      "start_time": 73.88,
+      "subtitle_text": "m二加上a"
+    },
+    {
+      "end_time": 76.38,
+      "speaker": "1",
+      "start_time": 74.72,
+      "subtitle_text": "b除以a b"
+    },
+    {
+      "end_time": 78.24,
+      "speaker": "1",
+      "start_time": 76.84,
+      "subtitle_text": "然后这是甲"
+    },
+    {
+      "end_time": 81.14,
+      "speaker": "1",
+      "start_time": 78.24,
+      "subtitle_text": "然后在这时候甲速中间就是增加一"
+    },
+    {
+      "end_time": 84.66,
+      "speaker": "1",
+      "start_time": 81.68,
+      "subtitle_text": "然后它的总时间就是m二除以"
+    },
+    {
+      "end_time": 88.06,
+      "speaker": "1",
+      "start_time": 86.4,
+      "subtitle_text": "就二等于"
+    },
+    {
+      "end_time": 92.54,
+      "speaker": "1",
+      "start_time": 89.88,
+      "subtitle_text": "呃m二一又加什么"
+    },
+    {
+      "end_time": 93.9,
+      "speaker": "1",
+      "start_time": 93.08,
+      "subtitle_text": "这是"
+    },
+    {
+      "end_time": 101.06,
+      "speaker": "1",
+      "start_time": 95.44,
+      "subtitle_text": "然后它可以写成这个速度"
+    },
+    {
+      "end_time": 104.78,
+      "speaker": "1",
+      "start_time": 101.28,
+      "subtitle_text": "后半部分的速度就是a加上"
+    },
+    {
+      "end_time": 107.86,
+      "speaker": "1",
+      "start_time": 106.04,
+      "subtitle_text": "总直径就是m"
+    },
+    {
+      "end_time": 112.42,
+      "speaker": "1",
+      "start_time": 110.44,
+      "subtitle_text": "加上m除以b"
+    },
+    {
+      "end_time": 113.86,
+      "speaker": "2",
+      "start_time": 112.8,
+      "subtitle_text": "下去"
+    },
+    {
+      "end_time": 117.08,
+      "speaker": "1",
+      "start_time": 114.96,
+      "subtitle_text": "然后减去一个什么减去一个"
+    },
+    {
+      "end_time": 120.38,
+      "speaker": "1",
+      "start_time": 117.08,
+      "subtitle_text": "它是a加上b分成m"
+    },
+    {
+      "end_time": 125.22,
+      "speaker": "1",
+      "start_time": 121.72,
+      "subtitle_text": "然后括这是它所用的"
+    },
+    {
+      "end_time": 127.5,
+      "speaker": "1",
+      "start_time": 125.6,
+      "subtitle_text": "后面乘以a"
+    },
+    {
+      "end_time": 130.04,
+      "speaker": "1",
+      "start_time": 127.56,
+      "subtitle_text": "然后这总的速度在后面去速度"
+    },
+    {
+      "end_time": 131.16,
+      "speaker": "1",
+      "start_time": 130.04,
+      "subtitle_text": "这个关于速度函数"
+    },
+    {
+      "end_time": 133.82,
+      "speaker": "1",
+      "start_time": 131.16,
+      "subtitle_text": "然后我再乘以它所用的时间"
+    },
+    {
+      "end_time": 146.7,
+      "speaker": "1",
+      "start_time": 143.44,
+      "subtitle_text": "m减去a加b分之m"
+    },
+    {
+      "end_time": 150.04,
+      "speaker": "1",
+      "start_time": 147.64,
+      "subtitle_text": "然后可以列出这么一个方程"
+    },
+    {
+      "end_time": 151.08,
+      "speaker": "1",
+      "start_time": 150.04,
+      "subtitle_text": "m求什么"
+    },
+    {
+      "end_time": 153.82,
+      "speaker": "1",
+      "start_time": 151.08,
+      "subtitle_text": "a b b c b"
+    },
+    {
+      "end_time": 157.56,
+      "speaker": "1",
+      "start_time": 154.4,
+      "subtitle_text": "然后把这个方程填进去"
+    },
+    {
+      "end_time": 162.98,
+      "speaker": "1",
+      "start_time": 157.56,
+      "subtitle_text": "a加上m d减去m二a加"
+    },
+    {
+      "end_time": 165.12,
+      "speaker": "2",
+      "start_time": 164.32,
+      "subtitle_text": "b"
+    },
+    {
+      "end_time": 169.16,
+      "speaker": "1",
+      "start_time": 165.88,
+      "subtitle_text": "乘以一个m二分之b"
+    },
+    {
+      "end_time": 170.02,
+      "speaker": "2",
+      "start_time": 169.16,
+      "subtitle_text": "减去"
+    },
+    {
+      "end_time": 173.74,
+      "speaker": "1",
+      "start_time": 172.04,
+      "subtitle_text": "加b分之m"
+    },
+    {
+      "end_time": 177.42,
+      "speaker": "1",
+      "start_time": 173.76,
+      "subtitle_text": "然后就公式通一下"
+    },
+    {
+      "end_time": 182.84,
+      "speaker": "1",
+      "start_time": 180.44,
+      "subtitle_text": "然后是可以把它算出来"
+    },
+    {
+      "end_time": 184.94,
+      "speaker": "1",
+      "start_time": 182.84,
+      "subtitle_text": "里面是一杯的"
+    },
+    {
+      "end_time": 188.54,
+      "speaker": "2",
+      "start_time": 186.72,
+      "subtitle_text": "这什么玩意"
+    },
+    {
+      "end_time": 205.1,
+      "speaker": "1",
+      "start_time": 203.56,
+      "subtitle_text": "减去主"
+    },
+    {
+      "end_time": 210.22,
+      "speaker": "1",
+      "start_time": 206.52,
+      "subtitle_text": "m a分之a加b"
+    },
+    {
+      "end_time": 215.56,
+      "speaker": "1",
+      "start_time": 211.16,
+      "subtitle_text": "然后再加上一个m方"
+    },
+    {
+      "end_time": 220.28,
+      "speaker": "1",
+      "start_time": 215.56,
+      "subtitle_text": "b方加上一个a加b的b"
+    },
+    {
+      "end_time": 223.14,
+      "speaker": "1",
+      "start_time": 220.28,
+      "subtitle_text": "b的m方加上一个角"
+    },
+    {
+      "end_time": 227.18,
+      "speaker": "1",
+      "start_time": 226.12,
+      "subtitle_text": "这样的话"
+    },
+    {
+      "end_time": 228.68,
+      "speaker": "1",
+      "start_time": 228.04,
+      "subtitle_text": "平方差"
+    },
+    {
+      "end_time": 230.88,
+      "speaker": "1",
+      "start_time": 228.68,
+      "subtitle_text": "这一集透一个平方差就可以了"
+    },
+    {
+      "end_time": 235.96,
+      "speaker": "1",
+      "start_time": 230.88,
+      "subtitle_text": "那就是m a的平方减去m加b"
+    },
+    {
+      "end_time": 239.78,
+      "speaker": "1",
+      "start_time": 235.96,
+      "subtitle_text": "口碑的平方好看一下"
+    },
+    {
+      "end_time": 243.48,
+      "speaker": "1",
+      "start_time": 239.88,
+      "subtitle_text": "然后把它往这边投一个平方差"
+    },
+    {
+      "end_time": 245.48,
+      "speaker": "1",
+      "start_time": 243.48,
+      "subtitle_text": "后面题目就不能报备下来"
+    },
+    {
+      "end_time": 252.18,
+      "speaker": "1",
+      "start_time": 245.48,
+      "subtitle_text": "就是说是m b等于m a加b"
+    },
+    {
+      "end_time": 255.78,
+      "speaker": "1",
+      "start_time": 252.48,
+      "subtitle_text": "然后再加上一个"
+    },
+    {
+      "end_time": 261.04,
+      "speaker": "1",
+      "start_time": 257.16,
+      "subtitle_text": "m a分之b减去一个m a"
+    },
+    {
+      "end_time": 264.66,
+      "speaker": "1",
+      "start_time": 261.04,
+      "subtitle_text": "a加b加上一个a"
+    },
+    {
+      "end_time": 268.42,
+      "speaker": "1",
+      "start_time": 264.88,
+      "subtitle_text": "m括围的平方加上一个a加b"
+    },
+    {
+      "end_time": 270.14,
+      "speaker": "1",
+      "start_time": 268.64,
+      "subtitle_text": "m括围的平方"
+    },
+    {
+      "end_time": 272.64,
+      "speaker": "1",
+      "start_time": 270.88,
+      "subtitle_text": "然后对这个方程"
+    },
+    {
+      "end_time": 274.36,
+      "speaker": "1",
+      "start_time": 272.64,
+      "subtitle_text": "我们可以同出一个m"
+    },
+    {
+      "end_time": 276.42,
+      "speaker": "1",
+      "start_time": 274.36,
+      "subtitle_text": "那这样m就没有了"
+    },
+    {
+      "end_time": 278.98,
+      "speaker": "1",
+      "start_time": 277.44,
+      "subtitle_text": "这里这里要留一个"
+    },
+    {
+      "end_time": 280.7,
+      "speaker": "1",
+      "start_time": 279.04,
+      "subtitle_text": "就把小平方写到下面"
+    },
+    {
+      "end_time": 282.42,
+      "speaker": "1",
+      "start_time": 281.12,
+      "subtitle_text": "这里写平方"
+    },
+    {
+      "end_time": 284.98,
+      "speaker": "2",
+      "start_time": 283.36,
+      "subtitle_text": "一页一页一页"
+    },
+    {
+      "end_time": 287.14,
+      "speaker": "1",
+      "start_time": 285.36,
+      "subtitle_text": "这个这里是"
+    },
+    {
+      "end_time": 289.7,
+      "speaker": "1",
+      "start_time": 288.88,
+      "subtitle_text": "然后"
+    },
+    {
+      "end_time": 294.26,
+      "speaker": "1",
+      "start_time": 290.68,
+      "subtitle_text": "然后这次注意的话好像"
+    },
+    {
+      "end_time": 297.36,
+      "speaker": "1",
+      "start_time": 295.56,
+      "subtitle_text": "a加b a加b"
+    },
+    {
+      "end_time": 298.38,
+      "speaker": "1",
+      "start_time": 297.36,
+      "subtitle_text": "然后这是a"
+    },
+    {
+      "end_time": 303.74,
+      "speaker": "1",
+      "start_time": 300,
+      "subtitle_text": "b分之b等于a加b分之一"
+    },
+    {
+      "end_time": 307.62,
+      "speaker": "1",
+      "start_time": 304.16,
+      "subtitle_text": "加上这个b分之a"
+    },
+    {
+      "end_time": 314.56,
+      "speaker": "1",
+      "start_time": 308,
+      "subtitle_text": "加上a加b分之a加上一个m"
+    },
+    {
+      "end_time": 317.06,
+      "speaker": "1",
+      "start_time": 314.56,
+      "subtitle_text": "a加b b分之"
+    },
+    {
+      "end_time": 318.36,
+      "speaker": "1",
+      "start_time": 317.52,
+      "subtitle_text": "什么操作的"
+    },
+    {
+      "end_time": 320.18,
+      "speaker": "1",
+      "start_time": 318.36,
+      "subtitle_text": "a方分之m"
+    },
+    {
+      "end_time": 324.6,
+      "speaker": "1",
+      "start_time": 321.44,
+      "subtitle_text": "b方分之减去的b方分之m"
+    },
+    {
+      "end_time": 325.4,
+      "speaker": "2",
+      "start_time": 324.6,
+      "subtitle_text": "这项"
+    },
+    {
+      "end_time": 327.2,
+      "speaker": "1",
+      "start_time": 326.28,
+      "subtitle_text": "然后往后面那一圈"
+    },
+    {
+      "end_time": 330.26,
+      "speaker": "1",
+      "start_time": 327.2,
+      "subtitle_text": "把前面一串看通分处理"
+    },
+    {
+      "end_time": 333.36,
+      "speaker": "1",
+      "start_time": 331.64,
+      "subtitle_text": "把一项统计一下"
+    },
+    {
+      "end_time": 334.58,
+      "speaker": "2",
+      "start_time": 333.36,
+      "subtitle_text": "画不一样"
+    },
+    {
+      "end_time": 338.34,
+      "speaker": "1",
+      "start_time": 334.84,
+      "subtitle_text": "若是b分之a加一"
+    },
+    {
+      "end_time": 341.54,
+      "speaker": "1",
+      "start_time": 338.68,
+      "subtitle_text": "加上这a加b分之a加c"
+    },
+    {
+      "end_time": 346.3,
+      "speaker": "1",
+      "start_time": 343.04,
+      "subtitle_text": "然后这后面这一串同个分"
+    },
+    {
+      "end_time": 348.74,
+      "speaker": "1",
+      "start_time": 347.68,
+      "subtitle_text": "这里是角"
+    },
+    {
+      "end_time": 349.96,
+      "speaker": "1",
+      "start_time": 349.32,
+      "subtitle_text": "不好意思"
+    },
+    {
+      "end_time": 352.38,
+      "speaker": "1",
+      "start_time": 349.96,
+      "subtitle_text": "走错了这里是角"
+    },
+    {
+      "end_time": 354.84,
+      "speaker": "1",
+      "start_time": 352.8,
+      "subtitle_text": "就是一下移过来"
+    },
+    {
+      "end_time": 356.06,
+      "speaker": "1",
+      "start_time": 354.84,
+      "subtitle_text": "就是一点a"
+    },
+    {
+      "end_time": 360.1,
+      "speaker": "1",
+      "start_time": 357,
+      "subtitle_text": "然后再加上一个"
+    },
+    {
+      "end_time": 369.76,
+      "speaker": "1",
+      "start_time": 361.6,
+      "subtitle_text": "m倍的这个a方减b方除以a方加a b"
+    },
+    {
+      "end_time": 370.7,
+      "speaker": "1",
+      "start_time": 369.76,
+      "subtitle_text": "a方b方"
+    },
+    {
+      "end_time": 372.64,
+      "speaker": "1",
+      "start_time": 371.92,
+      "subtitle_text": "然后乘f"
+    },
+    {
+      "end_time": 373.46,
+      "speaker": "2",
+      "start_time": 372.64,
+      "subtitle_text": "等于零"
+    },
+    {
+      "end_time": 376.26,
+      "speaker": "1",
+      "start_time": 373.8,
+      "subtitle_text": "然后上面这里八"
+    },
+    {
+      "end_time": 380.52,
+      "speaker": "1",
+      "start_time": 377.24,
+      "subtitle_text": "我其实没有那么好处理哎"
+    },
+    {
+      "end_time": 381.44,
+      "speaker": "1",
+      "start_time": 380.52,
+      "subtitle_text": "对逆向过来"
+    },
+    {
+      "end_time": 382.94,
+      "speaker": "1",
+      "start_time": 381.44,
+      "subtitle_text": "他这里也是变减号"
+    },
+    {
+      "end_time": 385.26,
+      "speaker": "1",
+      "start_time": 383.32,
+      "subtitle_text": "一减a减一"
+    },
+    {
+      "end_time": 386.88,
+      "speaker": "1",
+      "start_time": 385.6,
+      "subtitle_text": "到时候我这提个减号"
+    },
+    {
+      "end_time": 388.64,
+      "speaker": "1",
+      "start_time": 386.88,
+      "subtitle_text": "就是a减一"
+    },
+    {
+      "end_time": 390.26,
+      "speaker": "1",
+      "start_time": 388.64,
+      "subtitle_text": "可以同样一次处理"
+    },
+    {
+      "end_time": 392.26,
+      "speaker": "1",
+      "start_time": 390.36,
+      "subtitle_text": "然后a加b"
+    },
+    {
+      "end_time": 398.18,
+      "speaker": "1",
+      "start_time": 392.6,
+      "subtitle_text": "a把的话会是a加一分之这个b倍的"
+    },
+    {
+      "end_time": 401.56,
+      "speaker": "1",
+      "start_time": 399.72,
+      "subtitle_text": "a加一b在这里"
+    },
+    {
+      "end_time": 405.62,
+      "speaker": "1",
+      "start_time": 401.56,
+      "subtitle_text": "然后再乘一个a加b分之"
+    },
+    {
+      "end_time": 407.78,
+      "speaker": "1",
+      "start_time": 405.92,
+      "subtitle_text": "b分之a加b"
+    },
+    {
+      "end_time": 415.56,
+      "speaker": "1",
+      "start_time": 409.4,
+      "subtitle_text": "哎这个加上一个n倍的a房"
+    },
+    {
+      "end_time": 416.86,
+      "speaker": "1",
+      "start_time": 415.56,
+      "subtitle_text": "加上b房"
+    },
+    {
+      "end_time": 419.18,
+      "speaker": "1",
+      "start_time": 416.92,
+      "subtitle_text": "出一个a房b房"
+    },
+    {
+      "end_time": 422.64,
+      "speaker": "1",
+      "start_time": 421.24,
+      "subtitle_text": "口香往这里进"
+    },
+    {
+      "end_time": 423.36,
+      "speaker": "1",
+      "start_time": 422.64,
+      "subtitle_text": "行不下去"
+    },
+    {
+      "end_time": 426.44,
+      "speaker": "1",
+      "start_time": 423.36,
+      "subtitle_text": "这里应该等着写不下去了"
+    },
+    {
+      "end_time": 427.26,
+      "speaker": "1",
+      "start_time": 426.44,
+      "subtitle_text": "就这么多"
+    }
+  ],
+  "task_id": "amk-tool-asr-subtitles-1407657087490",
+  "task_type": "asr-subtitles",
+  "usage": {
+    "normalized_usage": 0.21112
+  }
+}

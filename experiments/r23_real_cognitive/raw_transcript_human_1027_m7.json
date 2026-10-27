@@ -1,0 +1,210 @@
+﻿{
+  "duration": 81.967,
+  "request_id": "20261027141034A298AD9FCA52587B3358",
+  "status": "completed",
+  "subtitles": [
+    {
+      "end_time": 5.82,
+      "speaker": "1",
+      "start_time": 0.68,
+      "subtitle_text": "正方形内一点到三条边的距离相等"
+    },
+    {
+      "end_time": 7.78,
+      "speaker": "1",
+      "start_time": 6.68,
+      "subtitle_text": "都等于一"
+    },
+    {
+      "end_time": 11.46,
+      "speaker": "1",
+      "start_time": 8.08,
+      "subtitle_text": "求到第四条边的距离"
+    },
+    {
+      "end_time": 16.48,
+      "speaker": "2",
+      "start_time": 13.84,
+      "subtitle_text": "正方形的边长是这个"
+    },
+    {
+      "end_time": 18.02,
+      "speaker": "2",
+      "start_time": 16.48,
+      "subtitle_text": "这是标准正方形吗"
+    },
+    {
+      "end_time": 20.44,
+      "speaker": "1",
+      "start_time": 18.44,
+      "subtitle_text": "那你假如不知道"
+    },
+    {
+      "end_time": 22.1,
+      "speaker": "1",
+      "start_time": 20.44,
+      "subtitle_text": "你可以先设为a吗"
+    },
+    {
+      "end_time": 23.14,
+      "speaker": "2",
+      "start_time": 22.16,
+      "subtitle_text": "那就行吧"
+    },
+    {
+      "end_time": 26.26,
+      "speaker": "2",
+      "start_time": 25.4,
+      "subtitle_text": "这个a"
+    },
+    {
+      "end_time": 27.7,
+      "speaker": "2",
+      "start_time": 26.84,
+      "subtitle_text": "四个a"
+    },
+    {
+      "end_time": 32.58,
+      "speaker": "2",
+      "start_time": 28.36,
+      "subtitle_text": "然后他一点到三条边的距离都相对"
+    },
+    {
+      "end_time": 33.82,
+      "speaker": "2",
+      "start_time": 32.76,
+      "subtitle_text": "这怎么做到啊"
+    },
+    {
+      "end_time": 36.14,
+      "speaker": "2",
+      "start_time": 34.76,
+      "subtitle_text": "那a对零啊"
+    },
+    {
+      "end_time": 37.46,
+      "speaker": "2",
+      "start_time": 36.56,
+      "subtitle_text": "那不一定啊"
+    },
+    {
+      "end_time": 39.56,
+      "speaker": "2",
+      "start_time": 37.64,
+      "subtitle_text": "听到吧还有三条"
+    },
+    {
+      "end_time": 41.6,
+      "speaker": "2",
+      "start_time": 39.56,
+      "subtitle_text": "有一点他动一下"
+    },
+    {
+      "end_time": 44.54,
+      "speaker": "2",
+      "start_time": 41.6,
+      "subtitle_text": "这个正方形内的"
+    },
+    {
+      "end_time": 46.7,
+      "speaker": "2",
+      "start_time": 45.76,
+      "subtitle_text": "哎对"
+    },
+    {
+      "end_time": 48.58,
+      "speaker": "2",
+      "start_time": 47.32,
+      "subtitle_text": "这很奇怪啊"
+    },
+    {
+      "end_time": 52.86,
+      "speaker": "2",
+      "start_time": 49.12,
+      "subtitle_text": "正方形的三角边距离相等"
+    },
+    {
+      "end_time": 54.44,
+      "speaker": "2",
+      "start_time": 53.08,
+      "subtitle_text": "所以呢嗯"
+    },
+    {
+      "end_time": 56.92,
+      "speaker": "2",
+      "start_time": 54.44,
+      "subtitle_text": "这个它会不会在由其之后"
+    },
+    {
+      "end_time": 58.58,
+      "speaker": "2",
+      "start_time": 56.92,
+      "subtitle_text": "在中间距离相等"
+    },
+    {
+      "end_time": 62.42,
+      "speaker": "2",
+      "start_time": 59.04,
+      "subtitle_text": "那就是说两边之间的距离为二"
+    },
+    {
+      "end_time": 64.3,
+      "speaker": "2",
+      "start_time": 63.16,
+      "subtitle_text": "等于一等于一"
+    },
+    {
+      "end_time": 66.8,
+      "speaker": "2",
+      "start_time": 64.52,
+      "subtitle_text": "平常是正常平"
+    },
+    {
+      "end_time": 67.84,
+      "speaker": "2",
+      "start_time": 66.8,
+      "subtitle_text": "平常是a一"
+    },
+    {
+      "end_time": 68.78,
+      "speaker": "2",
+      "start_time": 67.84,
+      "subtitle_text": "你不是二"
+    },
+    {
+      "end_time": 71.56,
+      "speaker": "2",
+      "start_time": 71.04,
+      "subtitle_text": "就是说"
+    },
+    {
+      "end_time": 74.54,
+      "speaker": "2",
+      "start_time": 71.56,
+      "subtitle_text": "他最后一条边的距离应该也等于一"
+    },
+    {
+      "end_time": 78.7,
+      "speaker": "2",
+      "start_time": 75.08,
+      "subtitle_text": "一点八跟第四条变成九九"
+    },
+    {
+      "end_time": 81.96,
+      "speaker": "1",
+      "start_time": 81.36,
+      "subtitle_text": "多少"
+    },
+    {
+      "end_time": 82.76,
+      "speaker": "2",
+      "start_time": 81.96,
+      "subtitle_text": "一"
+    }
+  ],
+  "task_id": "amk-tool-asr-subtitles-1317063321858",
+  "task_type": "asr-subtitles",
+  "usage": {
+    "normalized_usage": 0.040985
+  }
+}

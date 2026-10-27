@@ -1,0 +1,348 @@
+﻿{
+  "duration": 107.948,
+  "request_id": "20261027141034A298AD9FCA52587B3358",
+  "status": "completed",
+  "subtitles": [
+    {
+      "end_time": 3.24,
+      "speaker": "1",
+      "start_time": 0.96,
+      "subtitle_text": "四封信装入四个信封"
+    },
+    {
+      "end_time": 4.72,
+      "speaker": "1",
+      "start_time": 3.24,
+      "subtitle_text": "每封都装错"
+    },
+    {
+      "end_time": 7.02,
+      "speaker": "1",
+      "start_time": 4.72,
+      "subtitle_text": "共有几种写法"
+    },
+    {
+      "end_time": 8.78,
+      "speaker": "1",
+      "start_time": 7.24,
+      "subtitle_text": "两个人一起写"
+    },
+    {
+      "end_time": 11.76,
+      "speaker": "2",
+      "start_time": 9.48,
+      "subtitle_text": "哎拿个笔把想法说出来"
+    },
+    {
+      "end_time": 12.44,
+      "speaker": "2",
+      "start_time": 11.76,
+      "subtitle_text": "好像两条"
+    },
+    {
+      "end_time": 14.34,
+      "speaker": "2",
+      "start_time": 12.44,
+      "subtitle_text": "以后你自己写着吧"
+    },
+    {
+      "end_time": 17.72,
+      "speaker": "2",
+      "start_time": 14.88,
+      "subtitle_text": "这个四封信比这个篇好吧"
+    },
+    {
+      "end_time": 19.06,
+      "speaker": "3",
+      "start_time": 17.72,
+      "subtitle_text": "笔嗯"
+    },
+    {
+      "end_time": 21.48,
+      "speaker": "3",
+      "start_time": 19.24,
+      "subtitle_text": "不要急八的十四成形"
+    },
+    {
+      "end_time": 22.92,
+      "speaker": "3",
+      "start_time": 21.48,
+      "subtitle_text": "成为一号形状"
+    },
+    {
+      "end_time": 26.72,
+      "speaker": "3",
+      "start_time": 22.92,
+      "subtitle_text": "二号形成四号形成四"
+    },
+    {
+      "end_time": 28.12,
+      "speaker": "3",
+      "start_time": 26.72,
+      "subtitle_text": "然后有四成形"
+    },
+    {
+      "end_time": 29,
+      "speaker": "3",
+      "start_time": 28.12,
+      "subtitle_text": "然后呃"
+    },
+    {
+      "end_time": 31.54,
+      "speaker": "3",
+      "start_time": 29,
+      "subtitle_text": "编号为a b c d"
+    },
+    {
+      "end_time": 34.06,
+      "speaker": "3",
+      "start_time": 31.76,
+      "subtitle_text": "题目要求每分b"
+    },
+    {
+      "end_time": 35.48,
+      "speaker": "3",
+      "start_time": 34.12,
+      "subtitle_text": "就是中式三"
+    },
+    {
+      "end_time": 37.06,
+      "speaker": "3",
+      "start_time": 35.48,
+      "subtitle_text": "它有两种解法"
+    },
+    {
+      "end_time": 38.84,
+      "speaker": "3",
+      "start_time": 37.44,
+      "subtitle_text": "一种是呃"
+    },
+    {
+      "end_time": 41.96,
+      "speaker": "2",
+      "start_time": 38.84,
+      "subtitle_text": "其实他已经在一定比较这个里面"
+    },
+    {
+      "end_time": 43.08,
+      "speaker": "2",
+      "start_time": 41.96,
+      "subtitle_text": "就是说"
+    },
+    {
+      "end_time": 47.06,
+      "speaker": "2",
+      "start_time": 43.08,
+      "subtitle_text": "剩下这个假设他被装进了二号系列"
+    },
+    {
+      "end_time": 50.06,
+      "speaker": "2",
+      "start_time": 48.08,
+      "subtitle_text": "好像这种解法太复杂了"
+    },
+    {
+      "end_time": 50.92,
+      "speaker": "3",
+      "start_time": 50.2,
+      "subtitle_text": "看有没有呃"
+    },
+    {
+      "end_time": 52.24,
+      "speaker": "3",
+      "start_time": 50.92,
+      "subtitle_text": "b种题呃"
+    },
+    {
+      "end_time": 54.4,
+      "speaker": "3",
+      "start_time": 52.24,
+      "subtitle_text": "a是a和e"
+    },
+    {
+      "end_time": 56.16,
+      "speaker": "3",
+      "start_time": 54.4,
+      "subtitle_text": "a中有e是正确解法"
+    },
+    {
+      "end_time": 57.84,
+      "speaker": "3",
+      "start_time": 56.16,
+      "subtitle_text": "a b c d依次装入"
+    },
+    {
+      "end_time": 59.8,
+      "speaker": "3",
+      "start_time": 57.84,
+      "subtitle_text": "一二三四是正确解法"
+    },
+    {
+      "end_time": 62.46,
+      "speaker": "3",
+      "start_time": 59.8,
+      "subtitle_text": "按要求要求每分都装错"
+    },
+    {
+      "end_time": 64.54,
+      "speaker": "3",
+      "start_time": 62.48,
+      "subtitle_text": "所以一号也不能装"
+    },
+    {
+      "end_time": 66.8,
+      "speaker": "3",
+      "start_time": 64.56,
+      "subtitle_text": "呃a信分二号不能装"
+    },
+    {
+      "end_time": 68.58,
+      "speaker": "3",
+      "start_time": 66.8,
+      "subtitle_text": "b五分三号不能装"
+    },
+    {
+      "end_time": 70.74,
+      "speaker": "3",
+      "start_time": 68.72,
+      "subtitle_text": "b信分b"
+    },
+    {
+      "end_time": 72.24,
+      "speaker": "3",
+      "start_time": 71.44,
+      "subtitle_text": "c"
+    },
+    {
+      "end_time": 74.48,
+      "speaker": "2",
+      "start_time": 73.32,
+      "subtitle_text": "d中的d中"
+    },
+    {
+      "end_time": 75.64,
+      "speaker": "2",
+      "start_time": 74.48,
+      "subtitle_text": "错的可能性有三种"
+    },
+    {
+      "end_time": 77.26,
+      "speaker": "3",
+      "start_time": 75.64,
+      "subtitle_text": "分为b c d"
+    },
+    {
+      "end_time": 79.62,
+      "speaker": "3",
+      "start_time": 77.56,
+      "subtitle_text": "b中错的可能性a"
+    },
+    {
+      "end_time": 81.12,
+      "speaker": "2",
+      "start_time": 80.04,
+      "subtitle_text": "实际上也有三种"
+    },
+    {
+      "end_time": 81.8,
+      "speaker": "2",
+      "start_time": 81.12,
+      "subtitle_text": "d乘以三"
+    },
+    {
+      "end_time": 83.54,
+      "speaker": "2",
+      "start_time": 81.8,
+      "subtitle_text": "乘以三就是三的四次方"
+    },
+    {
+      "end_time": 85.12,
+      "speaker": "3",
+      "start_time": 84.32,
+      "subtitle_text": "就是八十一种"
+    },
+    {
+      "end_time": 86.82,
+      "speaker": "3",
+      "start_time": 85.12,
+      "subtitle_text": "d四就是a b c"
+    },
+    {
+      "end_time": 88.2,
+      "speaker": "3",
+      "start_time": 87.56,
+      "subtitle_text": "然后八十一种"
+    },
+    {
+      "end_time": 89.64,
+      "speaker": "2",
+      "start_time": 88.2,
+      "subtitle_text": "有三种应该是八十一"
+    },
+    {
+      "end_time": 90.72,
+      "speaker": "3",
+      "start_time": 89.64,
+      "subtitle_text": "每个有三种"
+    },
+    {
+      "end_time": 91.98,
+      "speaker": "3",
+      "start_time": 90.72,
+      "subtitle_text": "所以呃"
+    },
+    {
+      "end_time": 94.88,
+      "speaker": "3",
+      "start_time": 92.8,
+      "subtitle_text": "三分之一乘三分之一乘三分之一"
+    },
+    {
+      "end_time": 96.42,
+      "speaker": "3",
+      "start_time": 94.88,
+      "subtitle_text": "等于八十一分之一"
+    },
+    {
+      "end_time": 98.2,
+      "speaker": "2",
+      "start_time": 97.4,
+      "subtitle_text": "几种装法"
+    },
+    {
+      "end_time": 99.52,
+      "speaker": "2",
+      "start_time": 98.2,
+      "subtitle_text": "你让我的概率全部装"
+    },
+    {
+      "end_time": 101.42,
+      "speaker": "3",
+      "start_time": 99.52,
+      "subtitle_text": "哦那就八十一种"
+    },
+    {
+      "end_time": 102.56,
+      "speaker": "2",
+      "start_time": 101.8,
+      "subtitle_text": "就八十一种"
+    },
+    {
+      "end_time": 103.62,
+      "speaker": "2",
+      "start_time": 102.56,
+      "subtitle_text": "装错的方法"
+    },
+    {
+      "end_time": 108.802,
+      "speaker": "1",
+      "start_time": 107.16,
+      "subtitle_text": "两个人都八十一种嗯"
+    }
+  ],
+  "task_id": "amk-tool-asr-subtitles-1572684121602",
+  "task_type": "asr-subtitles",
+  "usage": {
+    "normalized_usage": 0.053975
+  }
+}

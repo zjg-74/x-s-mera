@@ -1,0 +1,468 @@
+﻿{
+  "duration": 247.59,
+  "request_id": "20261027135640C52AC2280950F67B1473",
+  "status": "completed",
+  "subtitles": [
+    {
+      "end_time": 6.12,
+      "speaker": "1",
+      "start_time": 3.16,
+      "subtitle_text": "呃有个学生漏写两"
+    },
+    {
+      "end_time": 8.4,
+      "speaker": "1",
+      "start_time": 6.12,
+      "subtitle_text": "两个两位数的乘号得到一个四位数"
+    },
+    {
+      "end_time": 11.82,
+      "speaker": "1",
+      "start_time": 8.4,
+      "subtitle_text": "乘以两数乘积两倍除这个四位数"
+    },
+    {
+      "end_time": 18.02,
+      "speaker": "1",
+      "start_time": 12.92,
+      "subtitle_text": "呃两个两位数的乘号"
+    },
+    {
+      "end_time": 20.14,
+      "speaker": "1",
+      "start_time": 18.36,
+      "subtitle_text": "两位数得到一个四位数"
+    },
+    {
+      "end_time": 22.94,
+      "speaker": "1",
+      "start_time": 20.48,
+      "subtitle_text": "就是说这个四位数它可以写成"
+    },
+    {
+      "end_time": 25.5,
+      "speaker": "1",
+      "start_time": 23.4,
+      "subtitle_text": "你可以把它写成一千"
+    },
+    {
+      "end_time": 28.74,
+      "speaker": "1",
+      "start_time": 26.24,
+      "subtitle_text": "可以写成a b c d"
+    },
+    {
+      "end_time": 29.92,
+      "speaker": "1",
+      "start_time": 29.24,
+      "subtitle_text": "这样子"
+    },
+    {
+      "end_time": 33.5,
+      "speaker": "1",
+      "start_time": 29.92,
+      "subtitle_text": "然后他a这里四个位数可以把它"
+    },
+    {
+      "end_time": 35.06,
+      "speaker": "1",
+      "start_time": 33.72,
+      "subtitle_text": "a b c"
+    },
+    {
+      "end_time": 36,
+      "speaker": "2",
+      "start_time": 35.2,
+      "subtitle_text": "d"
+    },
+    {
+      "end_time": 37.94,
+      "speaker": "1",
+      "start_time": 36.12,
+      "subtitle_text": "就是说是一千"
+    },
+    {
+      "end_time": 42.5,
+      "speaker": "1",
+      "start_time": 38.56,
+      "subtitle_text": "一千a加上一百b加上"
+    },
+    {
+      "end_time": 45.98,
+      "speaker": "1",
+      "start_time": 43.12,
+      "subtitle_text": "十c加上d等于"
+    },
+    {
+      "end_time": 47.86,
+      "speaker": "1",
+      "start_time": 46.6,
+      "subtitle_text": "十a"
+    },
+    {
+      "end_time": 52.38,
+      "speaker": "1",
+      "start_time": 48.44,
+      "subtitle_text": "等于差为两数乘积两c所以说是"
+    },
+    {
+      "end_time": 56.78,
+      "speaker": "1",
+      "start_time": 53.64,
+      "subtitle_text": "二b的这个十十a"
+    },
+    {
+      "end_time": 61.54,
+      "speaker": "1",
+      "start_time": 57.48,
+      "subtitle_text": "加上b乘以一个十c加上d"
+    },
+    {
+      "end_time": 63.86,
+      "speaker": "1",
+      "start_time": 61.96,
+      "subtitle_text": "可以得到最美的谎称"
+    },
+    {
+      "end_time": 65.239,
+      "speaker": "1",
+      "start_time": 64.759,
+      "subtitle_text": "但是呢"
+    },
+    {
+      "end_time": 68.1,
+      "speaker": "1",
+      "start_time": 65.239,
+      "subtitle_text": "这个方程好像看不出什么东西来"
+    },
+    {
+      "end_time": 70.58,
+      "speaker": "1",
+      "start_time": 68.52,
+      "subtitle_text": "有点麻烦我想要"
+    },
+    {
+      "end_time": 72.42,
+      "speaker": "1",
+      "start_time": 71.32,
+      "subtitle_text": "两位"
+    },
+    {
+      "end_time": 75.7,
+      "speaker": "1",
+      "start_time": 72.96,
+      "subtitle_text": "两个两位数之间乘号得到一个四位"
+    },
+    {
+      "end_time": 77.46,
+      "speaker": "1",
+      "start_time": 76.16,
+      "subtitle_text": "数乘以两位"
+    },
+    {
+      "end_time": 80.42,
+      "speaker": "1",
+      "start_time": 78.24,
+      "subtitle_text": "两个数撑起的两倍"
+    },
+    {
+      "end_time": 84.34,
+      "speaker": "1",
+      "start_time": 81.64,
+      "subtitle_text": "两倍就是说我可以得到什么"
+    },
+    {
+      "end_time": 89.7,
+      "speaker": "1",
+      "start_time": 86.44,
+      "subtitle_text": "得到什么四位数两倍这个是"
+    },
+    {
+      "end_time": 93.06,
+      "speaker": "1",
+      "start_time": 90.04,
+      "subtitle_text": "两倍两倍两倍说明这个数能被二整除"
+    },
+    {
+      "end_time": 95.78,
+      "speaker": "1",
+      "start_time": 93.08,
+      "subtitle_text": "也就是说他的目的是零二"
+    },
+    {
+      "end_time": 97.44,
+      "speaker": "1",
+      "start_time": 96.64,
+      "subtitle_text": "四"
+    },
+    {
+      "end_time": 100.42,
+      "speaker": "1",
+      "start_time": 98.8,
+      "subtitle_text": "一二四六"
+    },
+    {
+      "end_time": 103.96,
+      "speaker": "1",
+      "start_time": 102.36,
+      "subtitle_text": "这个是我们可以看到"
+    },
+    {
+      "end_time": 106.24,
+      "speaker": "1",
+      "start_time": 103.96,
+      "subtitle_text": "他的末尾是这么一个数"
+    },
+    {
+      "end_time": 109.44,
+      "speaker": "1",
+      "start_time": 106.24,
+      "subtitle_text": "他的然后他是"
+    },
+    {
+      "end_time": 110.34,
+      "speaker": "2",
+      "start_time": 109.44,
+      "subtitle_text": "一个"
+    },
+    {
+      "end_time": 114.82,
+      "speaker": "1",
+      "start_time": 112.36,
+      "subtitle_text": "我靠好像没撕过这道题没做过"
+    },
+    {
+      "end_time": 118.36,
+      "speaker": "1",
+      "start_time": 117.56,
+      "subtitle_text": "他"
+    },
+    {
+      "end_time": 126.3,
+      "speaker": "3",
+      "start_time": 124.88,
+      "subtitle_text": "两位数的沉默"
+    },
+    {
+      "end_time": 127.32,
+      "speaker": "1",
+      "start_time": 126.52,
+      "subtitle_text": "死灰尘"
+    },
+    {
+      "end_time": 128.26,
+      "speaker": "3",
+      "start_time": 127.32,
+      "subtitle_text": "太多了"
+    },
+    {
+      "end_time": 129.94,
+      "speaker": "2",
+      "start_time": 129.04,
+      "subtitle_text": "太多了"
+    },
+    {
+      "end_time": 136.58,
+      "speaker": "1",
+      "start_time": 133.96,
+      "subtitle_text": "四个未知数太多了四"
+    },
+    {
+      "end_time": 140.72,
+      "speaker": "3",
+      "start_time": 139.92,
+      "subtitle_text": "个"
+    },
+    {
+      "end_time": 142.26,
+      "speaker": "3",
+      "start_time": 141.2,
+      "subtitle_text": "未知数"
+    },
+    {
+      "end_time": 158.38,
+      "speaker": "3",
+      "start_time": 157.16,
+      "subtitle_text": "就是说是"
+    },
+    {
+      "end_time": 162.16,
+      "speaker": "1",
+      "start_time": 161.36,
+      "subtitle_text": "呀"
+    },
+    {
+      "end_time": 167.86,
+      "speaker": "1",
+      "start_time": 166.28,
+      "subtitle_text": "这个这个这个这个"
+    },
+    {
+      "end_time": 172.18,
+      "speaker": "1",
+      "start_time": 168.76,
+      "subtitle_text": "好像没什么特别好思路可以写"
+    },
+    {
+      "end_time": 173.54,
+      "speaker": "1",
+      "start_time": 172.28,
+      "subtitle_text": "嗯这个r"
+    },
+    {
+      "end_time": 175.6,
+      "speaker": "2",
+      "start_time": 174.8,
+      "subtitle_text": "x"
+    },
+    {
+      "end_time": 177.98,
+      "speaker": "1",
+      "start_time": 175.96,
+      "subtitle_text": "不对x one不适合表示"
+    },
+    {
+      "end_time": 179.78,
+      "speaker": "1",
+      "start_time": 178.8,
+      "subtitle_text": "哎呀"
+    },
+    {
+      "end_time": 182.1,
+      "speaker": "3",
+      "start_time": 179.88,
+      "subtitle_text": "这个这个这个这个这个这个"
+    },
+    {
+      "end_time": 183.66,
+      "speaker": "3",
+      "start_time": 182.28,
+      "subtitle_text": "如果是一个"
+    },
+    {
+      "end_time": 185.64,
+      "speaker": "3",
+      "start_time": 184.16,
+      "subtitle_text": "四位数的话"
+    },
+    {
+      "end_time": 186.44,
+      "speaker": "3",
+      "start_time": 185.64,
+      "subtitle_text": "四位数"
+    },
+    {
+      "end_time": 193.46,
+      "speaker": "3",
+      "start_time": 189.4,
+      "subtitle_text": "加微量数指一乘一的话"
+    },
+    {
+      "end_time": 195.02,
+      "speaker": "3",
+      "start_time": 193.96,
+      "subtitle_text": "那就是"
+    },
+    {
+      "end_time": 196.58,
+      "speaker": "3",
+      "start_time": 195.64,
+      "subtitle_text": "这个"
+    },
+    {
+      "end_time": 200.96,
+      "speaker": "1",
+      "start_time": 199.72,
+      "subtitle_text": "是不是可以先把它展"
+    },
+    {
+      "end_time": 202.1,
+      "speaker": "3",
+      "start_time": 200.96,
+      "subtitle_text": "开一下"
+    },
+    {
+      "end_time": 204.26,
+      "speaker": "3",
+      "start_time": 202.72,
+      "subtitle_text": "识别加上"
+    },
+    {
+      "end_time": 209.26,
+      "speaker": "3",
+      "start_time": 207.44,
+      "subtitle_text": "是c加上b"
+    },
+    {
+      "end_time": 212.94,
+      "speaker": "3",
+      "start_time": 209.8,
+      "subtitle_text": "然后把这个拆开这个是"
+    },
+    {
+      "end_time": 217.86,
+      "speaker": "1",
+      "start_time": 213.28,
+      "subtitle_text": "这个二十a c加上二十"
+    },
+    {
+      "end_time": 219.78,
+      "speaker": "1",
+      "start_time": 218.84,
+      "subtitle_text": "二百a c"
+    },
+    {
+      "end_time": 222.58,
+      "speaker": "1",
+      "start_time": 220.88,
+      "subtitle_text": "加上二十"
+    },
+    {
+      "end_time": 225.26,
+      "speaker": "1",
+      "start_time": 223.24,
+      "subtitle_text": "a d加上"
+    },
+    {
+      "end_time": 226.7,
+      "speaker": "1",
+      "start_time": 225.8,
+      "subtitle_text": "二十"
+    },
+    {
+      "end_time": 233.3,
+      "speaker": "1",
+      "start_time": 227.64,
+      "subtitle_text": "c加上二bc二十bc二十bd"
+    },
+    {
+      "end_time": 236.86,
+      "speaker": "1",
+      "start_time": 234.6,
+      "subtitle_text": "然后这一串等于"
+    },
+    {
+      "end_time": 240.22,
+      "speaker": "1",
+      "start_time": 237.2,
+      "subtitle_text": "但是好像依旧看不出什么东西了"
+    },
+    {
+      "end_time": 249.3,
+      "speaker": "1",
+      "start_time": 247.32,
+      "subtitle_text": "我地铁好像确实卡住了"
+    },
+    {
+      "end_time": 251.074,
+      "speaker": "1",
+      "start_time": 249.36,
+      "subtitle_text": "这个完全没死我这地"
+    }
+  ],
+  "task_id": "amk-tool-asr-subtitles-1617900453634",
+  "task_type": "asr-subtitles",
+  "usage": {
+    "normalized_usage": 0.123795
+  }
+}

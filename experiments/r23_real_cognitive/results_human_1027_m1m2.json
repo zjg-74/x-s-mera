@@ -1,0 +1,71 @@
+{
+  "method": "program P-hat (supp4 3.2) + oscillation (Psi≈0) + U trend => rho_res>rho_exp (R23)",
+  "results": {
+    "T-M1-1027b": {
+      "us": [
+        1.3549,
+        1.5958,
+        1.6908,
+        2.2495,
+        2.535,
+        2.335,
+        2.2006
+      ],
+      "rs": [
+        3,
+        3,
+        3,
+        5,
+        5,
+        5,
+        5
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "osc_net_change": 0.8456,
+      "verdict": "rho_res < rho_exp"
+    },
+    "T-M2-1027b": {
+      "us": [
+        1.3549,
+        1.3549,
+        1.4791,
+        1.8193,
+        1.8193,
+        1.8982
+      ],
+      "rs": [
+        3,
+        3,
+        3,
+        4,
+        4,
+        4
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "osc_net_change": 0.5433,
+      "verdict": "rho_res < rho_exp"
+    }
+  },
+  "verdict_counts": {
+    "rho_res < rho_exp": 2
+  },
+  "majority": [
+    "rho_res < rho_exp",
+    2
+  ]
+}

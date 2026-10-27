@@ -1,0 +1,600 @@
+﻿{
+  "duration": 291.762,
+  "request_id": "20261027141034A298AD9FCA52587B3358",
+  "status": "completed",
+  "subtitles": [
+    {
+      "end_time": 5.24,
+      "speaker": "1",
+      "start_time": 1,
+      "subtitle_text": "一列数一二三五八十三"
+    },
+    {
+      "end_time": 7.78,
+      "speaker": "1",
+      "start_time": 5.24,
+      "subtitle_text": "第三十项是多少"
+    },
+    {
+      "end_time": 9.52,
+      "speaker": "1",
+      "start_time": 8.68,
+      "subtitle_text": "其实啊"
+    },
+    {
+      "end_time": 12.3,
+      "speaker": "1",
+      "start_time": 9.52,
+      "subtitle_text": "这道题可以等一下我找个草纸"
+    },
+    {
+      "end_time": 17.3,
+      "speaker": "1",
+      "start_time": 15.28,
+      "subtitle_text": "这屋里还有点东西给我"
+    },
+    {
+      "end_time": 20.32,
+      "speaker": "1",
+      "start_time": 19.52,
+      "subtitle_text": "然后"
+    },
+    {
+      "end_time": 22.24,
+      "speaker": "1",
+      "start_time": 21.08,
+      "subtitle_text": "啊其实理论上"
+    },
+    {
+      "end_time": 24.68,
+      "speaker": "1",
+      "start_time": 22.24,
+      "subtitle_text": "后面第三十箱是多少都可以"
+    },
+    {
+      "end_time": 26,
+      "speaker": "1",
+      "start_time": 24.68,
+      "subtitle_text": "反正都能找你喝"
+    },
+    {
+      "end_time": 27.7,
+      "speaker": "1",
+      "start_time": 26,
+      "subtitle_text": "但反正先按规矩做吧"
+    },
+    {
+      "end_time": 32.62,
+      "speaker": "1",
+      "start_time": 28.8,
+      "subtitle_text": "啊dn项等于n"
+    },
+    {
+      "end_time": 35.98,
+      "speaker": "1",
+      "start_time": 32.92,
+      "subtitle_text": "n减一乘以再加上n减二"
+    },
+    {
+      "end_time": 37.94,
+      "speaker": "1",
+      "start_time": 36,
+      "subtitle_text": "事实上是这样的一个规律"
+    },
+    {
+      "end_time": 39.86,
+      "speaker": "1",
+      "start_time": 38.4,
+      "subtitle_text": "d n相当n"
+    },
+    {
+      "end_time": 42.56,
+      "speaker": "2",
+      "start_time": 41.76,
+      "subtitle_text": "对"
+    },
+    {
+      "end_time": 43.42,
+      "speaker": "1",
+      "start_time": 42.6,
+      "subtitle_text": "n减"
+    },
+    {
+      "end_time": 44.88,
+      "speaker": "1",
+      "start_time": 44.08,
+      "subtitle_text": "n"
+    },
+    {
+      "end_time": 48.34,
+      "speaker": "1",
+      "start_time": 45.72,
+      "subtitle_text": "等一下啊n项合适用场"
+    },
+    {
+      "end_time": 49.52,
+      "speaker": "1",
+      "start_time": 48.76,
+      "subtitle_text": "d x"
+    },
+    {
+      "end_time": 53.94,
+      "speaker": "1",
+      "start_time": 49.52,
+      "subtitle_text": "n项等于x n减一加上x n减二"
+    },
+    {
+      "end_time": 55.38,
+      "speaker": "1",
+      "start_time": 54.36,
+      "subtitle_text": "这样子"
+    },
+    {
+      "end_time": 59.28,
+      "speaker": "1",
+      "start_time": 56.48,
+      "subtitle_text": "然后第三十项就是第二"
+    },
+    {
+      "end_time": 61.74,
+      "speaker": "1",
+      "start_time": 59.28,
+      "subtitle_text": "十九项加上二十二项"
+    },
+    {
+      "end_time": 65.42,
+      "speaker": "1",
+      "start_time": 62.68,
+      "subtitle_text": "嗯然后我想想"
+    },
+    {
+      "end_time": 67.82,
+      "speaker": "1",
+      "start_time": 66.68,
+      "subtitle_text": "二九效"
+    },
+    {
+      "end_time": 69.66,
+      "speaker": "1",
+      "start_time": 68.36,
+      "subtitle_text": "加二十八效"
+    },
+    {
+      "end_time": 76.14,
+      "speaker": "1",
+      "start_time": 70.56,
+      "subtitle_text": "一二五一二三五八十三"
+    },
+    {
+      "end_time": 80.1,
+      "speaker": "1",
+      "start_time": 77.48,
+      "subtitle_text": "一二三四五六"
+    },
+    {
+      "end_time": 81.9,
+      "speaker": "1",
+      "start_time": 80.96,
+      "subtitle_text": "这个"
+    },
+    {
+      "end_time": 83.66,
+      "speaker": "2",
+      "start_time": 82.72,
+      "subtitle_text": "看一下啊"
+    },
+    {
+      "end_time": 85.14,
+      "speaker": "1",
+      "start_time": 84.08,
+      "subtitle_text": "他可以"
+    },
+    {
+      "end_time": 88.22,
+      "speaker": "1",
+      "start_time": 86.28,
+      "subtitle_text": "第第五项是十三"
+    },
+    {
+      "end_time": 92.94,
+      "speaker": "1",
+      "start_time": 89.76,
+      "subtitle_text": "n减一小它可以被写成"
+    },
+    {
+      "end_time": 97.9,
+      "speaker": "1",
+      "start_time": 93.52,
+      "subtitle_text": "x n减一等于x n减二"
+    },
+    {
+      "end_time": 100.78,
+      "speaker": "1",
+      "start_time": 98.36,
+      "subtitle_text": "加上x n减三"
+    },
+    {
+      "end_time": 103.14,
+      "speaker": "1",
+      "start_time": 101.56,
+      "subtitle_text": "这样子我们可以略写"
+    },
+    {
+      "end_time": 106.58,
+      "speaker": "1",
+      "start_time": 103.16,
+      "subtitle_text": "x n就等于二倍的x n减二"
+    },
+    {
+      "end_time": 109.76,
+      "speaker": "1",
+      "start_time": 106.68,
+      "subtitle_text": "加上x n减三的x n减二"
+    },
+    {
+      "end_time": 110.98,
+      "speaker": "1",
+      "start_time": 109.76,
+      "subtitle_text": "就可以写成"
+    },
+    {
+      "end_time": 113.42,
+      "speaker": "1",
+      "start_time": 111.64,
+      "subtitle_text": "x n减三"
+    },
+    {
+      "end_time": 117.42,
+      "speaker": "1",
+      "start_time": 114.24,
+      "subtitle_text": "减继续加上x n减四"
+    },
+    {
+      "end_time": 118.5,
+      "speaker": "1",
+      "start_time": 117.64,
+      "subtitle_text": "就是说"
+    },
+    {
+      "end_time": 123.58,
+      "speaker": "1",
+      "start_time": 119.4,
+      "subtitle_text": "它可以被写成三倍的x n减三"
+    },
+    {
+      "end_time": 130.26,
+      "speaker": "1",
+      "start_time": 126.92,
+      "subtitle_text": "嗯加上n s n g s"
+    },
+    {
+      "end_time": 133.38,
+      "speaker": "1",
+      "start_time": 131.68,
+      "subtitle_text": "实质上就是"
+    },
+    {
+      "end_time": 136.18,
+      "speaker": "1",
+      "start_time": 134.32,
+      "subtitle_text": "它可以被写成"
+    },
+    {
+      "end_time": 141.14,
+      "speaker": "1",
+      "start_time": 137.88,
+      "subtitle_text": "按x n x减一x n减二"
+    },
+    {
+      "end_time": 143.54,
+      "speaker": "1",
+      "start_time": 141.96,
+      "subtitle_text": "这是一倍"
+    },
+    {
+      "end_time": 145.22,
+      "speaker": "1",
+      "start_time": 144.4,
+      "subtitle_text": "然后"
+    },
+    {
+      "end_time": 149.5,
+      "speaker": "1",
+      "start_time": 147,
+      "subtitle_text": "这然后变成两倍"
+    },
+    {
+      "end_time": 155.1,
+      "speaker": "1",
+      "start_time": 151.72,
+      "subtitle_text": "这些是x n等于"
+    },
+    {
+      "end_time": 157.3,
+      "speaker": "1",
+      "start_time": 155.88,
+      "subtitle_text": "猜想一下"
+    },
+    {
+      "end_time": 161.42,
+      "speaker": "1",
+      "start_time": 158.68,
+      "subtitle_text": "我可以给他赋予个地灵像时期的余零"
+    },
+    {
+      "end_time": 163.5,
+      "speaker": "1",
+      "start_time": 162.04,
+      "subtitle_text": "就是猜想就是"
+    },
+    {
+      "end_time": 165.54,
+      "speaker": "1",
+      "start_time": 164.16,
+      "subtitle_text": "m倍的x"
+    },
+    {
+      "end_time": 169.02,
+      "speaker": "1",
+      "start_time": 167.72,
+      "subtitle_text": "n减m"
+    },
+    {
+      "end_time": 174.28,
+      "speaker": "1",
+      "start_time": 173.48,
+      "subtitle_text": "不对"
+    },
+    {
+      "end_time": 176.4,
+      "speaker": "1",
+      "start_time": 175.28,
+      "subtitle_text": "哦对的好像"
+    },
+    {
+      "end_time": 178.26,
+      "speaker": "1",
+      "start_time": 176.4,
+      "subtitle_text": "哎呀好像又不对你看"
+    },
+    {
+      "end_time": 186.34,
+      "speaker": "1",
+      "start_time": 182.6,
+      "subtitle_text": "这个好像通向方程不是这么跌的"
+    },
+    {
+      "end_time": 188.64,
+      "speaker": "1",
+      "start_time": 187.84,
+      "subtitle_text": "嗯"
+    },
+    {
+      "end_time": 190.26,
+      "speaker": "1",
+      "start_time": 189.28,
+      "subtitle_text": "看看啊"
+    },
+    {
+      "end_time": 192.1,
+      "speaker": "2",
+      "start_time": 191.24,
+      "subtitle_text": "这个"
+    },
+    {
+      "end_time": 193.36,
+      "speaker": "1",
+      "start_time": 192.56,
+      "subtitle_text": "x"
+    },
+    {
+      "end_time": 194.78,
+      "speaker": "1",
+      "start_time": 193.84,
+      "subtitle_text": "m二"
+    },
+    {
+      "end_time": 198.54,
+      "speaker": "1",
+      "start_time": 195.36,
+      "subtitle_text": "这个m减m二减一"
+    },
+    {
+      "end_time": 201.64,
+      "speaker": "1",
+      "start_time": 199.92,
+      "subtitle_text": "这个通向方程应该是这样子"
+    },
+    {
+      "end_time": 204.28,
+      "speaker": "1",
+      "start_time": 201.64,
+      "subtitle_text": "但是是会遇到一些问题"
+    },
+    {
+      "end_time": 206.3,
+      "speaker": "1",
+      "start_time": 204.28,
+      "subtitle_text": "他等于三十的时候"
+    },
+    {
+      "end_time": 209.82,
+      "speaker": "1",
+      "start_time": 207.6,
+      "subtitle_text": "你可以令其对于"
+    },
+    {
+      "end_time": 215.18,
+      "speaker": "1",
+      "start_time": 211.2,
+      "subtitle_text": "二代进去如果是呃"
+    },
+    {
+      "end_time": 219.02,
+      "speaker": "1",
+      "start_time": 215.52,
+      "subtitle_text": "m减去二十八三十"
+    },
+    {
+      "end_time": 222.82,
+      "speaker": "1",
+      "start_time": 219.4,
+      "subtitle_text": "x三十x减去二十八三十"
+    },
+    {
+      "end_time": 225.58,
+      "speaker": "1",
+      "start_time": 224.04,
+      "subtitle_text": "应该这里是二十八"
+    },
+    {
+      "end_time": 227.46,
+      "speaker": "1",
+      "start_time": 225.92,
+      "subtitle_text": "加上x"
+    },
+    {
+      "end_time": 231.08,
+      "speaker": "1",
+      "start_time": 227.64,
+      "subtitle_text": "n减m减一就是说是三等于二十九"
+    },
+    {
+      "end_time": 232.54,
+      "speaker": "1",
+      "start_time": 231.08,
+      "subtitle_text": "所以这一项就是一"
+    },
+    {
+      "end_time": 236.24,
+      "speaker": "1",
+      "start_time": 233.68,
+      "subtitle_text": "然后它就是三十二十八"
+    },
+    {
+      "end_time": 237.86,
+      "speaker": "1",
+      "start_time": 236.24,
+      "subtitle_text": "第二项它是二"
+    },
+    {
+      "end_time": 239.94,
+      "speaker": "1",
+      "start_time": 238.64,
+      "subtitle_text": "可以被写成"
+    },
+    {
+      "end_time": 244.04,
+      "speaker": "1",
+      "start_time": 240.52,
+      "subtitle_text": "二十八乘以二二八十六进一"
+    },
+    {
+      "end_time": 247.18,
+      "speaker": "1",
+      "start_time": 244.04,
+      "subtitle_text": "五十六五十七也就是说第三十项"
+    },
+    {
+      "end_time": 249.18,
+      "speaker": "1",
+      "start_time": 247.8,
+      "subtitle_text": "但我咋记得不是呢"
+    },
+    {
+      "end_time": 251.66,
+      "speaker": "1",
+      "start_time": 249.52,
+      "subtitle_text": "应该算错的啦又有问题"
+    },
+    {
+      "end_time": 254.74,
+      "speaker": "2",
+      "start_time": 253.8,
+      "subtitle_text": "嗯"
+    },
+    {
+      "end_time": 256.62,
+      "speaker": "2",
+      "start_time": 255.8,
+      "subtitle_text": "这下"
+    },
+    {
+      "end_time": 259.86,
+      "speaker": "1",
+      "start_time": 257.44,
+      "subtitle_text": "有问题不对劲"
+    },
+    {
+      "end_time": 263.86,
+      "speaker": "1",
+      "start_time": 262.28,
+      "subtitle_text": "有问题不对劲"
+    },
+    {
+      "end_time": 267.7,
+      "speaker": "1",
+      "start_time": 265.4,
+      "subtitle_text": "n减号n减三m倍的"
+    },
+    {
+      "end_time": 273.66,
+      "speaker": "1",
+      "start_time": 269.48,
+      "subtitle_text": "三倍的零减三减m就是x就这"
+    },
+    {
+      "end_time": 277.92,
+      "speaker": "1",
+      "start_time": 275.24,
+      "subtitle_text": "然后好像又没有什么大的问题"
+    },
+    {
+      "end_time": 279.06,
+      "speaker": "1",
+      "start_time": 277.92,
+      "subtitle_text": "现在出现"
+    },
+    {
+      "end_time": 283.02,
+      "speaker": "1",
+      "start_time": 280,
+      "subtitle_text": "那就是说是x二十pro"
+    },
+    {
+      "end_time": 285.58,
+      "speaker": "1",
+      "start_time": 284.4,
+      "subtitle_text": "二八倍的x"
+    },
+    {
+      "end_time": 287.84,
+      "speaker": "1",
+      "start_time": 285.6,
+      "subtitle_text": "你这第二项没有问题好像"
+    },
+    {
+      "end_time": 289.58,
+      "speaker": "1",
+      "start_time": 287.84,
+      "subtitle_text": "所以是补水器"
+    },
+    {
+      "end_time": 291.86,
+      "speaker": "2",
+      "start_time": 290.84,
+      "subtitle_text": "好像不对"
+    },
+    {
+      "end_time": 294.62,
+      "speaker": "1",
+      "start_time": 292.72,
+      "subtitle_text": "算了就先打这么细吧"
+    }
+  ],
+  "task_id": "amk-tool-asr-subtitles-1963151752706",
+  "task_type": "asr-subtitles",
+  "usage": {
+    "normalized_usage": 0.14588
+  }
+}
