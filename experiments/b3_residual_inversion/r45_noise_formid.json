@@ -1,0 +1,260 @@
+{
+ "meta": {
+  "purpose": "B-B43 纯内部推进：R32 反演加噪稳健性（裸/去噪平滑）+ g 形式辨识",
+  "framework": "XS v3.4 / B-B43 / R32 / b3_residual_inversion",
+  "seed": 20261027,
+  "N": 2001,
+  "M_noise": 40,
+  "sigs": [
+   0.0,
+   0.01,
+   0.02,
+   0.05,
+   0.1
+  ],
+  "smooth_window": 11,
+  "candidates": [
+   "linear",
+   "square",
+   "tanh",
+   "saturated"
+  ],
+  "nature": "纯内部仿真，固定种子可复现"
+ },
+ "robustness": {
+  "linear": {
+   "raw": {
+    "0.0": {
+     "median": 1.0,
+     "min": 1.0
+    },
+    "0.01": {
+     "median": 0.048,
+     "min": 0.048
+    },
+    "0.02": {
+     "median": 0.024,
+     "min": 0.024
+    },
+    "0.05": {
+     "median": 0.008,
+     "min": 0.008
+    },
+    "0.1": {
+     "median": 0.008,
+     "min": 0.008
+    }
+   },
+   "smooth": {
+    "0.0": {
+     "median": 0.985,
+     "min": 0.985
+    },
+    "0.01": {
+     "median": 0.337,
+     "min": 0.337
+    },
+    "0.02": {
+     "median": 0.182,
+     "min": 0.182
+    },
+    "0.05": {
+     "median": 0.061,
+     "min": 0.061
+    },
+    "0.1": {
+     "median": 0.03,
+     "min": 0.03
+    }
+   },
+   "raw_tolerance": 0.0,
+   "smooth_tolerance": 0.0
+  },
+  "square": {
+   "raw": {
+    "0.0": {
+     "median": 1.0,
+     "min": 1.0
+    },
+    "0.01": {
+     "median": 0.037,
+     "min": 0.037
+    },
+    "0.02": {
+     "median": 0.017,
+     "min": 0.017
+    },
+    "0.05": {
+     "median": 0.004,
+     "min": 0.004
+    },
+    "0.1": {
+     "median": 0.008,
+     "min": 0.008
+    }
+   },
+   "smooth": {
+    "0.0": {
+     "median": 0.973,
+     "min": 0.973
+    },
+    "0.01": {
+     "median": 0.257,
+     "min": 0.257
+    },
+    "0.02": {
+     "median": 0.136,
+     "min": 0.136
+    },
+    "0.05": {
+     "median": 0.036,
+     "min": 0.036
+    },
+    "0.1": {
+     "median": 0.018,
+     "min": 0.018
+    }
+   },
+   "raw_tolerance": 0.0,
+   "smooth_tolerance": 0.0
+  },
+  "tanh": {
+   "raw": {
+    "0.0": {
+     "median": 1.0,
+     "min": 1.0
+    },
+    "0.01": {
+     "median": 0.007,
+     "min": 0.007
+    },
+    "0.02": {
+     "median": 0.003,
+     "min": 0.003
+    },
+    "0.05": {
+     "median": 0.0,
+     "min": 0.0
+    },
+    "0.1": {
+     "median": 0.002,
+     "min": 0.002
+    }
+   },
+   "smooth": {
+    "0.0": {
+     "median": 0.92,
+     "min": 0.92
+    },
+    "0.01": {
+     "median": 0.056,
+     "min": 0.056
+    },
+    "0.02": {
+     "median": 0.031,
+     "min": 0.031
+    },
+    "0.05": {
+     "median": 0.004,
+     "min": 0.004
+    },
+    "0.1": {
+     "median": 0.0,
+     "min": 0.0
+    }
+   },
+   "raw_tolerance": 0.0,
+   "smooth_tolerance": 0.0
+  },
+  "saturated": {
+   "raw": {
+    "0.0": {
+     "median": 1.0,
+     "min": 1.0
+    },
+    "0.01": {
+     "median": 0.052,
+     "min": 0.052
+    },
+    "0.02": {
+     "median": 0.027,
+     "min": 0.027
+    },
+    "0.05": {
+     "median": 0.012,
+     "min": 0.012
+    },
+    "0.1": {
+     "median": 0.005,
+     "min": 0.005
+    }
+   },
+   "smooth": {
+    "0.0": {
+     "median": 0.997,
+     "min": 0.997
+    },
+    "0.01": {
+     "median": 0.366,
+     "min": 0.366
+    },
+    "0.02": {
+     "median": 0.193,
+     "min": 0.193
+    },
+    "0.05": {
+     "median": 0.087,
+     "min": 0.087
+    },
+    "0.1": {
+     "median": 0.047,
+     "min": 0.047
+    }
+   },
+   "raw_tolerance": 0.0,
+   "smooth_tolerance": 0.0
+  }
+ },
+ "form_identification": {
+  "sigma_0.0": {
+   "linear": {
+    "identified": "linear",
+    "correct": false
+   },
+   "square": {
+    "identified": "square",
+    "correct": false
+   },
+   "tanh": {
+    "identified": "tanh",
+    "correct": false
+   },
+   "saturated": {
+    "identified": "saturated",
+    "correct": false
+   },
+   "identify_rate": 0.0
+  },
+  "sigma_0.02": {
+   "linear": {
+    "identified": "tanh",
+    "correct": false
+   },
+   "square": {
+    "identified": "tanh",
+    "correct": false
+   },
+   "tanh": {
+    "identified": "tanh",
+    "correct": true
+   },
+   "saturated": {
+    "identified": "saturated",
+    "correct": true
+   },
+   "identify_rate": 0.5
+  }
+ },
+ "conclusion": "⚠️ 部分失败：去噪平滑后加噪容忍或形式识别未达标 ⟹ B-B43 剩余自由度能否由数据闭合存疑，需登记（可能只能降级为结构约束+形状）",
+ "verdict": false
+}
