@@ -643,8 +643,13 @@
       "layer": "L2",
       "kind": "observable",
       "unit": "无量纲",
-      "definition": "把涨落误读为定向的可接受错误率。取值原则未定（B-B44）。",
-      "derives_from": [],
+      "definition": "把涨落误读为定向的可接受错误率。**取值原则已锚定（2026-10-27，33-v3.4-eta-scaling-principle.md）**：η 取目标场景『可靠子区间』内的值（① 落带 R-043、② 落带率≥90% 可靠子区间 R44、③ 带内不敏感 R-042）。",
+      "derives_from": [
+        "可接受错误率语义（观测协议约定）",
+        "场景落带区间（R-043）",
+        "可靠子区间（R44）",
+        "判定灵敏度（R-042）"
+      ],
       "defined_in": [
         "15-v3.2-gauge-fixed-framework.md"
       ],

@@ -1,0 +1,106 @@
+{
+ "meta": {
+  "purpose": "B-B44 取值原则锚定验证（可接受错误率语义兑现）",
+  "framework": "XS v3.4 / B-B44 / R-042 / R-043",
+  "seed": 20261027,
+  "N": 1024,
+  "M_traj": 200,
+  "sigs": [
+   0.05,
+   0.1
+  ],
+  "window": [
+   8,
+   128
+  ],
+  "nature": "纯内部仿真，固定种子可复现"
+ },
+ "scenes": {
+  "same_scale": {
+   "band": [
+    0.031120603015075375,
+    0.046180904522613066
+   ],
+   "sig_metrics": {
+    "0.05": {
+     "median_reliability": 1.0,
+     "worst_reliability": 0.975,
+     "reliable_eta_intervals": [
+      [
+       0.031120603015075375,
+       0.046180904522613066
+      ]
+     ]
+    },
+    "0.1": {
+     "median_reliability": 1.0,
+     "worst_reliability": 0.92,
+     "reliable_eta_intervals": [
+      [
+       0.031120603015075375,
+       0.046180904522613066
+      ]
+     ]
+    }
+   }
+  },
+  "cross_scale_weak": {
+   "band": [
+    0.031120603015075375,
+    0.07128140703517588
+   ],
+   "sig_metrics": {
+    "0.05": {
+     "median_reliability": 1.0,
+     "worst_reliability": 0.715,
+     "reliable_eta_intervals": [
+      [
+       0.03215036722071898,
+       0.07128140703517588
+      ]
+     ]
+    },
+    "0.1": {
+     "median_reliability": 1.0,
+     "worst_reliability": 0.61,
+     "reliable_eta_intervals": [
+      [
+       0.03215036722071898,
+       0.07128140703517588
+      ]
+     ]
+    }
+   }
+  },
+  "structural": {
+   "band": [
+    0.06124120603015075,
+    0.08634170854271357
+   ],
+   "sig_metrics": {
+    "0.05": {
+     "median_reliability": 1.0,
+     "worst_reliability": 1.0,
+     "reliable_eta_intervals": [
+      [
+       0.06124120603015075,
+       0.08634170854271357
+      ]
+     ]
+    },
+    "0.1": {
+     "median_reliability": 1.0,
+     "worst_reliability": 1.0,
+     "reliable_eta_intervals": [
+      [
+       0.06124120603015075,
+       0.08634170854271357
+      ]
+     ]
+    }
+   }
+  }
+ },
+ "verdict": true,
+ "conclusion": "✅ 取值原则可锚定：每场景/σ 下存在非空可靠子区间（落带率≥0.90）⟹ η 的取值原则 = 取目标场景可靠子区间内的值（带内落带率≥90%、误读为定向率受控）；A/C 可靠子区间≈落带区间，B（跨尺度弱）需收窄到边界以内——'可接受错误率'语义被兑现"
+}
