@@ -5,7 +5,7 @@ Manifold Projection and Asymmetric Potential Well: Cognitive Dynamics Framework
 > This repository contains the reference simulation code for the X‑S‑MERA theoretical framework.
 > Author: [zjg]
 >
-> Current version: **v1.6.37**（2026-10-28） · Tests: **393 passed** · License: **MIT**
+> Current version: **v1.6.38**（2026-10-28） · Tests: **393 passed** · License: **MIT**
 >
 > 测试数为**含 numpy 环境**（CI 的 `requirements.txt`）下的全套计数；本机若缺
 > numpy，11 个历史模块（LE 内核 / relay / R2–R4 / A0 / A9 / A10 / T1-d / ΔT）
@@ -41,7 +41,7 @@ external engineering defects. The LE (Life–Environment) prototype extends the 
 | **R29 峰距标定程序** `experiments/r29_peak_distance_calibration/` | ✅ 已实现（v1.6.6），15 项测试。公式命中（误差 ≤1 步=离散化界）；估计量无偏；**异 K 必须归一化**（raw 差因子 2.000）；**共享噪声下峰序零判反**；U−E 恒等式残差 5.7e-14 |
 | **R-042 D-SCALE 参数敏感性扫描** `experiments/r42_dscale_eta/` | ✅ 已实现（v1.6.14）。三类场景 × η∈[0.005,1.0] 判定读数**正确区分且对 η 稳定**，g 不进入判定流程 ⟹ **判定程序层已过**（g、τ\*/η 均未越界，U5 通过）。**扫描副产品 R-043 曾疑"τ\* 落带区间几乎为空" ⟹ 已解决（v1.6.23）：加密 η 网格（200 点）后落带区间非空，原疑为网格假象**；η 取值原则由 **R-044（v1.6.32）** 锚定 ⟹ **B-B44 闭合**（见下两条） |
 | **A5 generics 一般性证明** `experiments/a5_generics/` | ✅ 已实现（v1.6.15）。四条分类规则（楔形/峰序/四级可辨识/共线反解）在 A_D 原型内满足函数性 genericity，720 实例零违反；代数证明 + 原型枚举，**非 Lean、非现实断言**（见 `proof.md`） |
-| **CI 强制门** `.github/workflows/xs-gates.yml` | ✅ 已交付（v1.6.14）且**已在 GitHub 启用**（2026-10-27 确认）。`xs_trace_gate.py`(C1.7/C1.8) + `xs_formal_checks.py`(C1/C2) + `pytest tests/` 三道合并门槛 |
+| **CI 强制门** `.github/workflows/xs-gates.yml` | ✅ 已交付（v1.6.14）且**已在 GitHub 启用**（2026-10-27 确认）。`xs_trace_gate.py`(C1.7/C1.8) + `xs_formal_checks.py`(C1/C2) + `xs_boundary_map_check.py`（A10 残留，v1.6.38） + `pytest tests/` 四道合并门槛 |
 | **A7 核心最小化** `experiments/a7_core_min/` | ✅ 已实现（v1.6.16）。47 记号→11 核心（根 10+约定输入 1），36 导出全部可达，压缩率 76.6%；依赖结构层面，非概念独立性 |
 | **R18 的 Lean 命题规格** `formal/Formal/DualConstraint.lean` | ✅ 已接入（v1.6.18）。认知双约束/R18 Horn skeleton 编码，lake build 编译通过、无 sorry；见 `formal/GAPS.md` 条目 C1 |
 | **A13 第一例对应探索** experiments/a13_first_case/ | ✅ 已实现（v1.6.17）。换工作决策：D-DRILL 钻研/空洞相位 + D-CONV 收敛/发散方向 + D-IDENT 分级，对照无框架程度描述；演示性映射，非现实测量 |
@@ -49,6 +49,8 @@ external engineering defects. The LE (Life–Environment) prototype extends the 
 | **v1.6.14–1.6.21 新增实验的 pytest 覆盖** `tests/test_{a5,a7,a13,b1,b2,b3,r42}_*.py` | ✅ 已补齐（本地未提交）。7 套共 **67 项**结构性测试（锁结构预言、不锁数字，仅标准库，1.2 s 跑完）；**CI 强制门 `xs-gates.yml` 的 pytest 步骤自动覆盖**，无需改 workflow |
 | **R8 / R11 / R44 的 pytest 覆盖** `tests/test_{r8_period_doubling,r11_pseudo_drift,r44_eta_principle}.py` | ✅ 已补齐（v1.6.34）。3 套共 **15 项**（R8 8 项锁 M1 周期倍增 V1–V4；R11 5 项锁推论 4.1 的 legal/violate 双臂区分；R44 2 项锁 τ\* 对 η 单调 + 可靠子区间非空）。均**调底层函数复现结构预言、不调 `main()`**，零文件写入副作用；仅标准库 |
 | **R8-B9 唯一性归约** `experiments/r8_gain_stepchain/r8b_uniqueness.py` | ✅ 已实现（v1.6.37）。机制消融四判据 U1–U4 全真 ⟹ **框架内唯一性成立**：A11-R 下唯一能改变混沌拓扑的势机制是 M1；M2 合法形式归约 M1（增益不对称=多候选有效步长调制）、非法形式（状态偏向）被排除；M3 强制归宿只压缩混沌寿命（300000→51）、不移动 g_chaos（恒 3.57）⟹ **B-B9 推到位移**（框架内唯一性已证；跨框架全局唯一性转外部开放）。诚实边界：S2 最小离散原型，非全局唯一性主张 |
+| **边界地图机检** `src/xs_boundary_map_check.py` | ✅ 已实现（v1.6.38）。A10 残留落地：`boundary_map.json` 从"仅登记"推进到"被机器看住"——逐版本结构/枚举/解决指向校验，已接入 CI 门第四步；`boundary_map.json` 升级 v0.6；11 项结构测试（`tests/test_xs_boundary_map_check.py`） |
+| **B-B32 震荡判据一致性** `experiments/b32_shape_prob_consistency/` | ✅ 已实现（v1.6.38）。S2 合成检验推论 6.11 形状判据 vs 主文 U 概率判据，**一致率 0.75、双向均有反例，一致性不成立**：反复重开震荡中 U 被重开抬高不满足"U 仍在下降"（概率判据漏判）；从未到 m=1 的未决振荡中无局部收敛可重开（形状判据漏判）⟹ **二者互补而非冗余，需合并覆盖**（08 supp7 缺口表 B-B32 → 已检验）。诚实边界：判据操作化为建模选择 |
 | **礁石 R-043（τ\* 落点）** `docs/xs-framework/reef_shturl.json` | ✅ **已解决（v1.6.23，`experiments/r43_tau_star/`）**。原疑：τ\* 落在 (τ_fine,τ_coarse) 内的 η 区间在该网格上几乎为空。**加密 η 网格（200 点）后三类场景在窗口 (8,128) 内均有非空落带区间**（A[0.031,0.046]／B[0.031,0.071]／C[0.061,0.086]）——此前"几乎为空"是**网格假象**。η 取值**场景相关**（三区间交集为空），不由单一全局值给出 |
 | **R-044 η 取值原则锚定** `experiments/r44_eta_principle/` | ✅ 已实现（v1.6.32）。落带区间内 Bootstrap 压出**可靠子区间**（落带率≥90%：A[0.031,0.046]／B[0.032,0.071]／C[0.061,0.086]）；**取值原则 P1–P5 定稿**（`33-v3.4-eta-scaling-principle.md`）⟹ **B-B44 闭合**。诚实边界：可靠子区间为**原型内**结果，REL_TH=0.90 为约定水平；η 场景相关，**不存在全局单值**（须按场景显式声明） |
 ## Repository structure

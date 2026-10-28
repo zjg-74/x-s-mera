@@ -1,0 +1,451 @@
+{
+  "experiment": "B-B32-shape-vs-prob-consistency",
+  "framework": "XS v3.4 · 补篇七 B-B32（震荡两判据一致性）",
+  "hardness": "S2（合成候选竞争模型，纯标准库，固定种子可复现）",
+  "params": {
+    "M_MAX": 8,
+    "TAU_C": 5,
+    "LEN": 400,
+    "burn": 50,
+    "end_win": 20,
+    "u_end_tol": 1e-06
+  },
+  "grid": {
+    "c_rates": [
+      0.05,
+      0.3,
+      0.6,
+      0.9
+    ],
+    "o_rates": [
+      0.0,
+      0.05,
+      0.15,
+      0.3,
+      0.6
+    ]
+  },
+  "rows": [
+    {
+      "c": 0.05,
+      "o": 0.0,
+      "shape_osc": false,
+      "prob_osc": false,
+      "agree": true,
+      "reopen": 0,
+      "segments": 1,
+      "u_mean": 0.0,
+      "u_end": 0.0
+    },
+    {
+      "c": 0.05,
+      "o": 0.05,
+      "shape_osc": true,
+      "prob_osc": true,
+      "agree": true,
+      "reopen": 3,
+      "segments": 3,
+      "u_mean": 1.0724,
+      "u_end": 0.09214
+    },
+    {
+      "c": 0.05,
+      "o": 0.15,
+      "shape_osc": false,
+      "prob_osc": false,
+      "agree": true,
+      "reopen": 0,
+      "segments": 0,
+      "u_mean": 1.6903,
+      "u_end": 1.1073
+    },
+    {
+      "c": 0.05,
+      "o": 0.3,
+      "shape_osc": false,
+      "prob_osc": false,
+      "agree": true,
+      "reopen": 0,
+      "segments": 0,
+      "u_mean": 1.7135,
+      "u_end": 1.31745
+    },
+    {
+      "c": 0.05,
+      "o": 0.6,
+      "shape_osc": false,
+      "prob_osc": false,
+      "agree": true,
+      "reopen": 0,
+      "segments": 0,
+      "u_mean": 1.8035,
+      "u_end": 1.51522
+    },
+    {
+      "c": 0.3,
+      "o": 0.0,
+      "shape_osc": false,
+      "prob_osc": false,
+      "agree": true,
+      "reopen": 0,
+      "segments": 1,
+      "u_mean": 0.0,
+      "u_end": 0.0
+    },
+    {
+      "c": 0.3,
+      "o": 0.05,
+      "shape_osc": false,
+      "prob_osc": false,
+      "agree": true,
+      "reopen": 11,
+      "segments": 12,
+      "u_mean": 0.145,
+      "u_end": 0.09204
+    },
+    {
+      "c": 0.3,
+      "o": 0.15,
+      "shape_osc": false,
+      "prob_osc": false,
+      "agree": true,
+      "reopen": 14,
+      "segments": 15,
+      "u_mean": 0.3967,
+      "u_end": 0.46548
+    },
+    {
+      "c": 0.3,
+      "o": 0.3,
+      "shape_osc": true,
+      "prob_osc": false,
+      "agree": false,
+      "reopen": 6,
+      "segments": 6,
+      "u_mean": 0.6959,
+      "u_end": 0.8336
+    },
+    {
+      "c": 0.3,
+      "o": 0.6,
+      "shape_osc": false,
+      "prob_osc": true,
+      "agree": false,
+      "reopen": 0,
+      "segments": 0,
+      "u_mean": 1.0578,
+      "u_end": 1.13942
+    },
+    {
+      "c": 0.6,
+      "o": 0.0,
+      "shape_osc": false,
+      "prob_osc": false,
+      "agree": true,
+      "reopen": 0,
+      "segments": 1,
+      "u_mean": 0.0,
+      "u_end": 0.0
+    },
+    {
+      "c": 0.6,
+      "o": 0.05,
+      "shape_osc": false,
+      "prob_osc": false,
+      "agree": true,
+      "reopen": 11,
+      "segments": 12,
+      "u_mean": 0.0223,
+      "u_end": 0.09203
+    },
+    {
+      "c": 0.6,
+      "o": 0.15,
+      "shape_osc": false,
+      "prob_osc": false,
+      "agree": true,
+      "reopen": 20,
+      "segments": 21,
+      "u_mean": 0.1513,
+      "u_end": 0.09205
+    },
+    {
+      "c": 0.6,
+      "o": 0.3,
+      "shape_osc": true,
+      "prob_osc": false,
+      "agree": false,
+      "reopen": 12,
+      "segments": 12,
+      "u_mean": 0.2979,
+      "u_end": 0.36815
+    },
+    {
+      "c": 0.6,
+      "o": 0.6,
+      "shape_osc": true,
+      "prob_osc": true,
+      "agree": true,
+      "reopen": 1,
+      "segments": 1,
+      "u_mean": 0.479,
+      "u_end": 0.74507
+    },
+    {
+      "c": 0.9,
+      "o": 0.0,
+      "shape_osc": false,
+      "prob_osc": false,
+      "agree": true,
+      "reopen": 0,
+      "segments": 1,
+      "u_mean": 0.0,
+      "u_end": 0.0
+    },
+    {
+      "c": 0.9,
+      "o": 0.05,
+      "shape_osc": false,
+      "prob_osc": false,
+      "agree": true,
+      "reopen": 13,
+      "segments": 14,
+      "u_mean": 0.0056,
+      "u_end": 1e-05
+    },
+    {
+      "c": 0.9,
+      "o": 0.15,
+      "shape_osc": false,
+      "prob_osc": false,
+      "agree": true,
+      "reopen": 24,
+      "segments": 25,
+      "u_mean": 0.0279,
+      "u_end": 1e-05
+    },
+    {
+      "c": 0.9,
+      "o": 0.3,
+      "shape_osc": true,
+      "prob_osc": false,
+      "agree": false,
+      "reopen": 19,
+      "segments": 19,
+      "u_mean": 0.0673,
+      "u_end": 0.09207
+    },
+    {
+      "c": 0.9,
+      "o": 0.6,
+      "shape_osc": true,
+      "prob_osc": false,
+      "agree": false,
+      "reopen": 2,
+      "segments": 2,
+      "u_mean": 0.1231,
+      "u_end": 0.36821
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "agree": 15,
+    "agree_rate": 0.75,
+    "disagree_count": 5,
+    "disagree_cases": [
+      {
+        "c": 0.3,
+        "o": 0.3,
+        "shape_osc": true,
+        "prob_osc": false,
+        "shape": {
+          "local_segments": 6,
+          "reopen": 6,
+          "settled": false
+        },
+        "prob": {
+          "u_mean": 0.6959,
+          "declining": false,
+          "u_end": 0.8336,
+          "u_positive": true,
+          "unset": true
+        }
+      },
+      {
+        "c": 0.3,
+        "o": 0.6,
+        "shape_osc": false,
+        "prob_osc": true,
+        "shape": {
+          "local_segments": 0,
+          "reopen": 0,
+          "settled": []
+        },
+        "prob": {
+          "u_mean": 1.0578,
+          "declining": true,
+          "u_end": 1.13942,
+          "u_positive": true,
+          "unset": true
+        }
+      },
+      {
+        "c": 0.6,
+        "o": 0.3,
+        "shape_osc": true,
+        "prob_osc": false,
+        "shape": {
+          "local_segments": 12,
+          "reopen": 12,
+          "settled": false
+        },
+        "prob": {
+          "u_mean": 0.2979,
+          "declining": false,
+          "u_end": 0.36815,
+          "u_positive": true,
+          "unset": true
+        }
+      },
+      {
+        "c": 0.9,
+        "o": 0.3,
+        "shape_osc": true,
+        "prob_osc": false,
+        "shape": {
+          "local_segments": 19,
+          "reopen": 19,
+          "settled": false
+        },
+        "prob": {
+          "u_mean": 0.0673,
+          "declining": false,
+          "u_end": 0.09207,
+          "u_positive": true,
+          "unset": true
+        }
+      },
+      {
+        "c": 0.9,
+        "o": 0.6,
+        "shape_osc": true,
+        "prob_osc": false,
+        "shape": {
+          "local_segments": 2,
+          "reopen": 2,
+          "settled": false
+        },
+        "prob": {
+          "u_mean": 0.1231,
+          "declining": false,
+          "u_end": 0.36821,
+          "u_positive": true,
+          "unset": true
+        }
+      }
+    ]
+  },
+  "conclusion": "两判据不一致（一致率 0.750，双向均有反例）。① 形状=震荡 & 概率=非震荡（4 例）：反复「局部收敛被重开」的经典震荡中，U 被重开反复抬高、不满足主文『U 仍在下降』，概率判据漏判。② 形状=非震荡 & 概率=震荡（1 例）：一直 m≥2、U 下降但从未到 m=1 的未决振荡中，无局部收敛可被重开，形状判据（推论 6.11）漏判。⟹ 两判据并不同指同一类过程：形状判据锁定『局部收敛被推翻』的结构事件（要求先到 m=1），概率判据锁定『未决熵收敛趋势』（要求 U 下降）。推论 6.11 与主文概率判据的一致性不成立，二者为互补关系而非冗余，需合并覆盖。（判据操作化为建模选择，S2 合成证据，如实登记。）",
+  "disagree_typology": {
+    "shape=非震荡 & prob=震荡（无重开的未决振荡）": {
+      "count": 1,
+      "cases": [
+        {
+          "c": 0.3,
+          "o": 0.6,
+          "shape_osc": false,
+          "prob_osc": true,
+          "shape": {
+            "local_segments": 0,
+            "reopen": 0,
+            "settled": []
+          },
+          "prob": {
+            "u_mean": 1.0578,
+            "declining": true,
+            "u_end": 1.13942,
+            "u_positive": true,
+            "unset": true
+          }
+        }
+      ]
+    },
+    "shape=震荡 & prob=非震荡": {
+      "count": 4,
+      "cases": [
+        {
+          "c": 0.3,
+          "o": 0.3,
+          "shape_osc": true,
+          "prob_osc": false,
+          "shape": {
+            "local_segments": 6,
+            "reopen": 6,
+            "settled": false
+          },
+          "prob": {
+            "u_mean": 0.6959,
+            "declining": false,
+            "u_end": 0.8336,
+            "u_positive": true,
+            "unset": true
+          }
+        },
+        {
+          "c": 0.6,
+          "o": 0.3,
+          "shape_osc": true,
+          "prob_osc": false,
+          "shape": {
+            "local_segments": 12,
+            "reopen": 12,
+            "settled": false
+          },
+          "prob": {
+            "u_mean": 0.2979,
+            "declining": false,
+            "u_end": 0.36815,
+            "u_positive": true,
+            "unset": true
+          }
+        },
+        {
+          "c": 0.9,
+          "o": 0.3,
+          "shape_osc": true,
+          "prob_osc": false,
+          "shape": {
+            "local_segments": 19,
+            "reopen": 19,
+            "settled": false
+          },
+          "prob": {
+            "u_mean": 0.0673,
+            "declining": false,
+            "u_end": 0.09207,
+            "u_positive": true,
+            "unset": true
+          }
+        },
+        {
+          "c": 0.9,
+          "o": 0.6,
+          "shape_osc": true,
+          "prob_osc": false,
+          "shape": {
+            "local_segments": 2,
+            "reopen": 2,
+            "settled": false
+          },
+          "prob": {
+            "u_mean": 0.1231,
+            "declining": false,
+            "u_end": 0.36821,
+            "u_positive": true,
+            "unset": true
+          }
+        }
+      ]
+    }
+  }
+}

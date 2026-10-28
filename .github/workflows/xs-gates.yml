@@ -45,5 +45,8 @@ jobs:
       - name: C1 + C2 · 记号/区分登记一致性（xs_formal_checks.py）
         run: python src/xs_formal_checks.py
 
+      - name: A10 残留 · 边界地图机检（xs_boundary_map_check.py）
+        run: python src/xs_boundary_map_check.py
+
       - name: 全套数值原型测试（pytest）
         run: python -m pytest tests/ -q

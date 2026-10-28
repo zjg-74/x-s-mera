@@ -2,6 +2,42 @@
 
 本仓库采用语义化版本。理论条款编号（A1–A12、C1/C2、F1/F2、I1）与《X-S-MERA 修订登记》保持同步。
 
+## v1.6.38 — 2026-10-28
+
+### 纯内部批次：边界图机检接入（A10 残留）+ B-B32 震荡判据一致性检验
+
+> 承 v1.6.37 用户"继续清纯内部项"。两项均纯内部可解（S2 / 机检），真实数据仍待 B 线采集。
+
+#### feat: A10 残留落地 · 边界地图机检（`src/xs_boundary_map_check.py` NEW）
+- 让边界地图 `docs/xs-framework/boundary_map.json` 从"仅登记"推进到"被机器看住"
+  （对应 27 §6.5 A10 残留、逻辑桥"让地图被机器看住"）。
+- 校验器（纯标准库，仿 xs_formal_checks 模式）：顶层必填字段、dimensions/r041_table/
+  open_cells/gap_index 必填与 id 唯一、gap_index 已解决格 resolved_in 指向仓库内真实文件、
+  状态词软校验；error>0 退出码 1。
+- 本地运行 0 错误 0 警告（当前登记件完整）；`boundary_map.json` 升级 **v0.6**（purpose 更新为
+  "机检已接入"，revised 追加 2026-10-28）。
+- 接入 CI 门 `xs-gates.yml` 第四步（`python src/xs_boundary_map_check.py`）。
+- 测试：`tests/test_xs_boundary_map_check.py`（11 项，纯标准库、调底层函数、零文件写入）。
+
+#### feat: B-B32 震荡两种判据一致性检验（`experiments/b32_shape_prob_consistency/` NEW）
+- 缺口：补篇七 B-B32——推论 6.11 形状判据（震荡 = 局部收敛被重开，重开次数可数）vs
+  主文概率判据（U>0 且仍在下降），一致性未检验。
+- S2 合成候选竞争模型（固定种子 20261028，纯标准库）：网格 20 条轨迹（c×o），
+  对每条分别用两判据判"震荡/非震荡"，比较一致性与不一致形态。
+- **结果：一致率 0.75，双向均有反例，一致性不成立**——
+  - 反复「局部收敛被重开」的经典震荡中，U 被重开反复抬高、不满足"U 仍在下降"（概率判据漏判）；
+  - 从未到 m=1 的未决振荡中，无局部收敛可被重开（形状判据漏判）。
+- 结论：形状判据锁定"局部收敛被推翻"的结构事件（要求先到 m=1），概率判据锁定
+  "未决熵收敛趋势"（要求 U 下降）。**二者互补而非冗余，需合并覆盖**；主文若以"震荡"为统一
+  构念需声明主判据。
+- 输出 `b32_consistency.json` + `report.md`；08 supp7 缺口表 B-B32 更新为"已检验"。
+
+#### docs
+- `CHANGELOG.md`：本段（v1.6.38）。
+- `docs/xs-framework/boundary_map.json`：v0.6（机检接入登记）。
+- `docs/xs-framework/08-v3.1-supp7-micro-reversal-locality.md`：B-B32 状态 → 已检验。
+- `README.md`：顶部 v1.6.37 → **v1.6.38**，Repository state 增补两行。
+
 ## v1.6.37 — 2026-10-28
 
 ### B-B9 唯一性推进：势消除混沌的唯一机制归约（M1/M2/M3 消融判别）
