@@ -1,0 +1,57 @@
+{
+  "experiment": "R8-B9-uniqueness",
+  "framework": "XS v3.4 · 补篇一 B-B9（M1/M2/M3 唯一性消融）",
+  "hardness": "S2（自制最小离散原型，纯标准库，固定种子可复现）",
+  "seed": 20261028,
+  "U1": {
+    "g_start": 3.8,
+    "lam_start": 0.4256,
+    "g_low": 3.5,
+    "lam_low": -0.8725,
+    "gain_is_multiplicative_only": true,
+    "M1_sufficient_and_compliant": true
+  },
+  "U2": {
+    "additive_bias_enters_state_derivative": true,
+    "a11r_compliance_check": "FAIL_势进入状态导数(加性项),非乘性",
+    "channel_excluded_by_framework": true
+  },
+  "U3": {
+    "host": "对称双候选 logistic（s=0 完全对称，乘性、无加性项）",
+    "lam_vs_s": {
+      "0.0": 0.4152,
+      "0.02": 0.4589,
+      "0.05": 0.6378,
+      "0.08": 1.4051,
+      "0.1": 1.4234,
+      "0.15": 1.4679,
+      "0.2": 1.5104
+    },
+    "s_only_in_multiplicative_gain": true,
+    "s_monotonic_drives_dynamics": true,
+    "conclusion": "M2 合法形式（增益不对称）⊆ M1（多候选有效步长调制）",
+    "M2_legal_reduces_to_M1": true
+  },
+  "U4": {
+    "g_chaos_theta_underscore": 3.57,
+    "g_chaos_independent_of_mu": true,
+    "chaos_lifetime_vs_mu": {
+      "0.0": 300000,
+      "0.002": 3135,
+      "0.01": 861,
+      "0.05": 244,
+      "0.1": 95,
+      "0.2": 51
+    },
+    "lifetime_monotonic_decreasing_in_mu": true,
+    "M3_orthogonal_to_topology_only_compresses_lifetime": true
+  },
+  "verdicts": {
+    "U1_M1_sufficient_compliant": true,
+    "U2_illegal_channel_excluded": true,
+    "U3_M2_legal_reduces_to_M1": true,
+    "U4_M3_orthogonal_compresses_lifetime": true
+  },
+  "uniqueness_framework_internal": true,
+  "conclusion": "框架内唯一性成立：在 A11-R（势-流分离）约束下，唯一能改变混沌出现与否（拓扑）的势机制是 M1；M2 合法形式归约 M1、非法形式被排除；M3 与拓扑正交（只压缩寿命）。"
+}

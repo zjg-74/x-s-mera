@@ -5,7 +5,7 @@ Manifold Projection and Asymmetric Potential Well: Cognitive Dynamics Framework
 > This repository contains the reference simulation code for the X‑S‑MERA theoretical framework.
 > Author: [zjg]
 >
-> Current version: **v1.6.36**（2026-10-28） · Tests: **393 passed** · License: **MIT**
+> Current version: **v1.6.37**（2026-10-28） · Tests: **393 passed** · License: **MIT**
 >
 > 测试数为**含 numpy 环境**（CI 的 `requirements.txt`）下的全套计数；本机若缺
 > numpy，11 个历史模块（LE 内核 / relay / R2–R4 / A0 / A9 / A10 / T1-d / ΔT）
@@ -48,6 +48,7 @@ external engineering defects. The LE (Life–Environment) prototype extends the 
 | **B 组方法准备**（B3/B1/B2，外部数据前可执行部分） | ✅ B3 残差反演 g（v1.6.19，4 种 g corr=1.0）；B1 四臂闭合（v1.6.20，自洽 1e-14）；B2 R31 守卫（v1.6.21，正常 0.000 / A_D⁺ 违反 1.000）。**非经验验证**；R43′（独立 Ψ）、真人测量、跨人群仍属 B 组待外部数据 |
 | **v1.6.14–1.6.21 新增实验的 pytest 覆盖** `tests/test_{a5,a7,a13,b1,b2,b3,r42}_*.py` | ✅ 已补齐（本地未提交）。7 套共 **67 项**结构性测试（锁结构预言、不锁数字，仅标准库，1.2 s 跑完）；**CI 强制门 `xs-gates.yml` 的 pytest 步骤自动覆盖**，无需改 workflow |
 | **R8 / R11 / R44 的 pytest 覆盖** `tests/test_{r8_period_doubling,r11_pseudo_drift,r44_eta_principle}.py` | ✅ 已补齐（v1.6.34）。3 套共 **15 项**（R8 8 项锁 M1 周期倍增 V1–V4；R11 5 项锁推论 4.1 的 legal/violate 双臂区分；R44 2 项锁 τ\* 对 η 单调 + 可靠子区间非空）。均**调底层函数复现结构预言、不调 `main()`**，零文件写入副作用；仅标准库 |
+| **R8-B9 唯一性归约** `experiments/r8_gain_stepchain/r8b_uniqueness.py` | ✅ 已实现（v1.6.37）。机制消融四判据 U1–U4 全真 ⟹ **框架内唯一性成立**：A11-R 下唯一能改变混沌拓扑的势机制是 M1；M2 合法形式归约 M1（增益不对称=多候选有效步长调制）、非法形式（状态偏向）被排除；M3 强制归宿只压缩混沌寿命（300000→51）、不移动 g_chaos（恒 3.57）⟹ **B-B9 推到位移**（框架内唯一性已证；跨框架全局唯一性转外部开放）。诚实边界：S2 最小离散原型，非全局唯一性主张 |
 | **礁石 R-043（τ\* 落点）** `docs/xs-framework/reef_shturl.json` | ✅ **已解决（v1.6.23，`experiments/r43_tau_star/`）**。原疑：τ\* 落在 (τ_fine,τ_coarse) 内的 η 区间在该网格上几乎为空。**加密 η 网格（200 点）后三类场景在窗口 (8,128) 内均有非空落带区间**（A[0.031,0.046]／B[0.031,0.071]／C[0.061,0.086]）——此前"几乎为空"是**网格假象**。η 取值**场景相关**（三区间交集为空），不由单一全局值给出 |
 | **R-044 η 取值原则锚定** `experiments/r44_eta_principle/` | ✅ 已实现（v1.6.32）。落带区间内 Bootstrap 压出**可靠子区间**（落带率≥90%：A[0.031,0.046]／B[0.032,0.071]／C[0.061,0.086]）；**取值原则 P1–P5 定稿**（`33-v3.4-eta-scaling-principle.md`）⟹ **B-B44 闭合**。诚实边界：可靠子区间为**原型内**结果，REL_TH=0.90 为约定水平；η 场景相关，**不存在全局单值**（须按场景显式声明） |
 ## Repository structure
