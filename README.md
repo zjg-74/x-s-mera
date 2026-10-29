@@ -33,7 +33,7 @@ external engineering defects. The LE (Life–Environment) prototype extends the 
 | LE 公理体系 Lean4 形式化工程 `formal/` | ✅ 已通过 Lean 4.14.0 内核类型检查（wasm 运行时；native lake 见 formal/README.md） |
 | LICENSE | ✅ MIT（见 `LICENSE`）；release 待发布 |
 | CITATION | ✅ `CITATION.cff` 已补 |
-| **XS 框架理论文档集** `docs/xs-framework/`（v3.1 认知框架主线 + v3.0 统一版 + 8 月稿与审计 + v3.4 新增） | ✅ 已入库，**34 篇**（v1.6.6 主线 19 篇 + 8 月存档 6 篇 + v3.4 新增 9 篇；最新 `34-v3.4-six-articles-v2.md` 六篇文章 v2 修订合集，v1.6.41）；索引见该目录 `README.md` |
+| **XS 框架理论文档集** `docs/xs-framework/`（v3.1 认知框架主线 + v3.0 统一版 + 8 月稿与审计 + v3.4 新增） | ✅ 已入库，**35 篇**（v1.6.6 主线 19 篇 + 8 月存档 6 篇 + v3.4 新增 10 篇；最新 `35-v3.4-cognitive-dynamics-structure.md` 认知系统的动力学结构·理论重构 v4.0，v1.6.42）；索引见该目录 `README.md` |
 | **R18 双约束失效可分离性实验** `experiments/r18_dual_constraint/` | ✅ 已实现（v1.6.2），7 项测试；报告见该目录 `report.md` |
 | **R19 U/Psi 桥一致性检验** `experiments/r19_bridge/` | ✅ 已实现（v1.6.3），7 项测试 |
 | **R21 内约束强度 = O_adm 剪枝量** `experiments/r21_constraint_specificity/` | ✅ 已实现（v1.6.3），7 项测试 |
