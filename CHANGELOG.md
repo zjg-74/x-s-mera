@@ -2,7 +2,37 @@
 
 本仓库采用语义化版本。理论条款编号（A1–A12、C1/C2、F1/F2、I1）与《X-S-MERA 修订登记》保持同步。
 
+## v1.6.48 — 2026-10-29
+
+### OPEN-3 实现路线：θ_min/Δ 纳入实例申报表约定声明字段模板（A13 落地）
+
+> 承接 OPEN-3 连续化规格评审定稿（v1.6.31，`32-v3.4-open3` §6）的
+> `boundary_map.json` next 字段："实现路线：θ_min/Δ 纳入实例申报表约定声明
+> 字段模板（A13 申报规范）；不新增 L1 公理，不改变 A/B 级分级【定理】"。
+
+#### feat: `experiments/a13_first_case/declaration_template.md`（新建）
+- 实例申报表**约定声明字段模板**：`open2_declaration`（OPEN-2 A/B）、
+  `z_vertex`（R34，约定 1.96）、`eta`（R-042/043/044）、`open3_theta_min`、
+  `open3_delta`（OPEN-3，约束 `Δ∈[0,θ_min)`，`Δ=0` 退化二值）。
+- OPEN-3 连续化 C 级辨识层三值判读（R34 先例）：`θ_k≥θ_min` 可读 /
+  `θ_k∈[θ_min−Δ,θ_min)` 边缘不判 / `θ_k<θ_min−Δ` 闭。
+- 诚实边界：Δ 为约定输入、框架不裁定；边缘带不产出闭合结论。
+
+#### feat: `experiments/a13_first_case/a13_contrast.json`（+declaration 块）
+- 顶层新增 `declaration` 示范块：`open2_declaration="A"`、`z_vertex=1.96`、
+  `eta=0.05`、`open3_theta_min=0.8`、`open3_delta=0.1`，与 OPEN-2/z/η 并列。
+  标注"示范性约定声明，非测量断言"。
+
+#### feat: `experiments/a13_first_case/README.md`（+§5 OPEN-3 落地说明）
+
+#### 验证与诚实边界
+- `a13_contrast.json` 合法 JSON，`declaration` 块字段完整（open3_theta_min/
+  open3_delta/open2_declaration）。
+- **诚实声明**：模板为示范性约定声明字段模板，示范块不构成对现实的测量断言；
+  连续化不新增 L1 公理、不改变 A/B 级分级【定理】（OPEN-3 规格 §6 定稿）。
+
 ## v1.6.47 — 2026-10-29
+
 
 ### B3-ext：LE 内核四类终态机制扩展（L2 仿真层）
 

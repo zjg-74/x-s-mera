@@ -48,3 +48,15 @@
 cd experiments/a13_first_case
 python a13_first_case.py        # 仅标准库；写 a13_contrast.json
 ```
+
+## 5. OPEN-3 落地（v1.6.48）：约定声明字段模板
+
+承接 OPEN-3 连续化规格定稿（v1.6.31）的实现路线：**把 θ_min/Δ 纳入实例申报表
+约定声明字段模板**。见 [`declaration_template.md`](declaration_template.md)。
+
+- `a13_contrast.json` 顶层新增 `declaration` 块：`open2_declaration` / `z_vertex` /
+  `eta` / `open3_theta_min` / `open3_delta`，与 OPEN-2 A/B、z、η 并列登记。
+- OPEN-3 连续化 C 级辨识层三值判读（R34 先例）：`θ_k ≥ θ_min` → 可读；
+  `θ_k ∈ [θ_min−Δ, θ_min)` → 边缘不判；`θ_k < θ_min−Δ` → 闭。
+- **诚实边界**：该块为示范性约定声明（演示如何申报），非测量断言；框架不裁定
+  取值，只要求显式申报。

@@ -2,6 +2,15 @@
  "case": "换工作决策（第一例对应探索）",
  "nature": "演示性映射：两条叙事 → A_D 轨迹（非现实测量）",
  "seed": 20261024,
+ "declaration": {
+  "open2_declaration": "A",
+  "z_vertex": 1.96,
+  "eta": 0.05,
+  "open3_theta_min": 0.8,
+  "open3_delta": 0.1,
+  "c_level_rule": "theta>=theta_min readable; theta in [theta_min-delta,theta_min) edge-nopad; theta<theta_min-delta closed",
+  "note": "OPEN-3 落地（v1.6.48）：θ_min/Δ 纳入实例申报表约定声明字段（与 OPEN-2 A/B、z、η 同类）；示范性声明，非测量断言"
+ },
  "scenarios": {
   "A_drill": {
    "narrative": "越查越笃定",
