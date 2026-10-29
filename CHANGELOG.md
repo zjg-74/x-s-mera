@@ -2,7 +2,45 @@
 
 本仓库采用语义化版本。理论条款编号（A1–A12、C1/C2、F1/F2、I1）与《X-S-MERA 修订登记》保持同步。
 
+## v1.6.47 — 2026-10-29
+
+### B3-ext：LE 内核四类终态机制扩展（L2 仿真层）
+
+> 承接 v1.6.45 B3 Part A 的关键发现：当前 LE 内核（v3.4-le.1）单调稳定，
+> 四类终态（稳态/周期振荡/生态锁定/全局灭绝）在内核本身**不可达**（仅扩展
+> 原型可及）→ 登记 B3-ext。本轮为内核引入**可选扩展机制**，使四类终态在
+> **LE 内核本身**可达。
+
+#### feat: `src/le_coupling_kernel.py`（+ext）
+- 新增 `mechanisms` 参数 + `_validate_mechanisms`（`EXT_MECH_KEYS` 校验，非法键
+  `ValueError`）。**默认 None 保持 v3.4-le.1 单调稳定内核（向后兼容）**。
+- `_life_rhs` 扩展项：
+  - **灭绝**：`death_threshold`/`death_rate` → life 低于阈值不可逆加速死亡（吸收态）；
+  - **锁定**：`allee_threshold`/`allee_strength` → Allee 双稳（乘 `(1-bio/k)` 有界化）；
+  - **振荡**：`oscillation_gain` + `env_r`/`consumer_mortality`/`half_override`/
+    `uptake_override`/`conversion` → **纯消费者 R-M 结构**（bio 完全依赖资源摄食
+    + 线性死亡，替换 d0）→ Hopf 极限环。
+- `_env_rhs` 扩展：振荡机制下资源用 **logistic 再生**（替代线性供给，真 R-M）。
+
+#### feat: `experiments/b3_ext_mechanisms/`（新建）
+- `b3_ext_mechanisms.py` 测绘 → `results.json`（seed=20261029，T=2000）。
+- **四类代表全部可达**：steady（final 1.309）/ extinction（0.000）/
+  lock（0.164）/ oscillation（8.167）。
+- **机制分岔扫描**：灭绝阈值 death_threshold≥0.9 → 灭绝；锁定 allee_threshold≥1.0 →
+  锁定（低态）；振荡 conversion≥0.8 → 持续极限环（Hopf）。
+
+#### feat: `tests/test_b3_ext_mechanisms.py`（新增 9 项）
+- 默认内核向后兼容（单调稳定，末期无波动）；四类可达；三处分岔
+  （灭绝/锁定/振荡 Hopf）；非法机制键拒绝。
+
+#### 验证与诚实边界
+- `python -m pytest tests/test_b3_ext_mechanisms.py` **9 passed**；全套回归见下。
+- **诚实声明**：机制为操作化原型扩展，非对现实的生态学断言；四类标签是数值
+  轨迹的操作化分类；**默认内核（无机制）行为不变**。振荡（Hopf）是纯消费者
+  R-M 结构的数学性质，不代表认知系统必然振荡。
+
 ## v1.6.46 — 2026-10-29
+
 
 ### B-B25 互信息估计器 I(M; Ω | φ)（纯工程闭合）
 

@@ -1,0 +1,157 @@
+{
+  "experiment": "B3-ext: LE-kernel four-attractor mechanism extension",
+  "version": "v1.6.47",
+  "kernel_version": "3.4-le.1+ext",
+  "method": "optional mechanisms on le_coupling_kernel; death_threshold(extinction) / allee(lock) / pure-consumer R-M(oscillation); default None = monotone stable",
+  "representatives": {
+    "steady": {
+      "mechanism": {},
+      "class": "steady",
+      "final_bio": 1.3087843013625595,
+      "tail_wave": 8.251177519014163e-13
+    },
+    "extinction": {
+      "mechanism": {
+        "death_threshold": 0.9,
+        "death_rate": 1.5
+      },
+      "class": "extinction",
+      "final_bio": 0.0,
+      "tail_wave": 0.0
+    },
+    "lock": {
+      "mechanism": {
+        "allee_threshold": 1.0,
+        "allee_strength": 1.2
+      },
+      "class": "lock",
+      "final_bio": 0.16423749605267152,
+      "tail_wave": 9.151859287070963e-08
+    },
+    "oscillation": {
+      "mechanism": {
+        "oscillation_gain": 1.0,
+        "half_override": 0.05,
+        "uptake_override": 2.5,
+        "env_r": 2.5,
+        "consumer_mortality": 0.5,
+        "conversion": 0.8
+      },
+      "class": "oscillation",
+      "final_bio": 8.167241690754855,
+      "tail_wave": 6.831979238394154
+    }
+  },
+  "sweeps": {
+    "extinction": {
+      "th60": {
+        "mechanism": {
+          "death_threshold": 0.6,
+          "death_rate": 1.5
+        },
+        "class": "steady",
+        "final_bio": 1.3087843013625595,
+        "tail_wave": 8.251177519014163e-13
+      },
+      "th75": {
+        "mechanism": {
+          "death_threshold": 0.75,
+          "death_rate": 1.5
+        },
+        "class": "steady",
+        "final_bio": 1.3087843013625595,
+        "tail_wave": 8.251177519014163e-13
+      },
+      "th90": {
+        "mechanism": {
+          "death_threshold": 0.9,
+          "death_rate": 1.5
+        },
+        "class": "extinction",
+        "final_bio": 0.0,
+        "tail_wave": 0.0
+      }
+    },
+    "lock": {
+      "th70": {
+        "mechanism": {
+          "allee_threshold": 0.7,
+          "allee_strength": 1.2
+        },
+        "class": "steady",
+        "final_bio": 1.4614994887098882,
+        "tail_wave": 0.0
+      },
+      "th90": {
+        "mechanism": {
+          "allee_threshold": 0.9,
+          "allee_strength": 1.2
+        },
+        "class": "steady",
+        "final_bio": 1.4360931137485333,
+        "tail_wave": 0.0
+      },
+      "th100": {
+        "mechanism": {
+          "allee_threshold": 1.0,
+          "allee_strength": 1.2
+        },
+        "class": "lock",
+        "final_bio": 0.16423749605267152,
+        "tail_wave": 9.151859287070963e-08
+      },
+      "th120": {
+        "mechanism": {
+          "allee_threshold": 1.2,
+          "allee_strength": 1.2
+        },
+        "class": "lock",
+        "final_bio": 0.10382898240889432,
+        "tail_wave": 1.3356205030845558e-11
+      }
+    },
+    "oscillation": {
+      "conv05": {
+        "mechanism": {
+          "oscillation_gain": 1.0,
+          "half_override": 0.05,
+          "uptake_override": 2.5,
+          "env_r": 2.5,
+          "consumer_mortality": 0.5,
+          "conversion": 0.5
+        },
+        "class": "steady",
+        "final_bio": 7.716049382716044,
+        "tail_wave": 0.2083929225572696
+      },
+      "conv08": {
+        "mechanism": {
+          "oscillation_gain": 1.0,
+          "half_override": 0.05,
+          "uptake_override": 2.5,
+          "env_r": 2.5,
+          "consumer_mortality": 0.5,
+          "conversion": 0.8
+        },
+        "class": "oscillation",
+        "final_bio": 8.167241690754855,
+        "tail_wave": 6.831979238394154
+      },
+      "conv12": {
+        "mechanism": {
+          "oscillation_gain": 1.0,
+          "half_override": 0.05,
+          "uptake_override": 2.5,
+          "env_r": 2.5,
+          "consumer_mortality": 0.5,
+          "conversion": 1.2
+        },
+        "class": "oscillation",
+        "final_bio": 2.87065528147501,
+        "tail_wave": 18.78542816271587
+      }
+    }
+  },
+  "honest_boundary": "mechanisms are operationalized prototype extensions, not claims about reality; default kernel (no mechanism) behavior unchanged v3.4-le.1; four-class labels are operational classification of numerical trajectories",
+  "seed": 20261029
+}

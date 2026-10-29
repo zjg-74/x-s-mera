@@ -28,9 +28,36 @@ from __future__ import annotations
 
 import numpy as np
 
-__all__ = ["LEProjectionSystem", "LECouplingKernel", "KERNEL_VERSION"]
+__all__ = ["LEProjectionSystem", "LECouplingKernel", "KERNEL_VERSION",
+           "EXT_MECH_KEYS"]
+
+
+def _validate_mechanisms(mechs: dict | None) -> dict | None:
+    """校验扩展机制字典；非法键抛出 ValueError（默认 None 保持单调稳定内核）。"""
+    if mechs is None:
+        return None
+    unknown = set(mechs) - EXT_MECH_KEYS
+    if unknown:
+        raise ValueError(f"未知机制键: {sorted(unknown)}；合法键: "
+                         f"{sorted(EXT_MECH_KEYS)}")
+    return dict(mechs)
 
 KERNEL_VERSION = "3.4-le.1"
+
+
+# 扩展机制（B3-ext）的合法键
+EXT_MECH_KEYS = {
+    "death_threshold",   # 灭绝机制：life 低于该阈值 → 不可逆加速死亡
+    "death_rate",        # 灭绝机制：死亡速率系数
+    "allee_threshold",   # 锁定机制：Allee 最小存活密度（双稳分岔点）
+    "allee_strength",    # 锁定机制：双稳强度
+    "oscillation_gain",  # 振荡机制：启用 logistic 资源再生 + R-M 结构（Hopf 来源）
+    "env_r",             # 振荡机制：资源 logistic 再生率
+    "consumer_mortality",# 振荡机制：消费者线性死亡（R-M 需平衡项）
+    "half_override",     # 振荡机制：覆盖摄食半饱和常数（小 → 强捕食 → 振荡区）
+    "uptake_override",   # 振荡机制：覆盖摄食强度（大 → 转换效率高 → 振荡区）
+    "conversion",        # 振荡机制：摄食→消费者转换效率（大 → 振荡区）
+}
 
 
 class LEProjectionSystem:
@@ -135,6 +162,7 @@ class LECouplingKernel:
                  ghost_bimodal_offset: float = 0.05,
                  d_sample_noise: float = 0.02, d_var_max: float = 0.01,
                  d_window: int = 200,
+                 mechanisms: dict | None = None,
                  seed: int | None = None):
 
         self.dim_life = int(dim_life)
@@ -151,6 +179,7 @@ class LECouplingKernel:
         self.d_sample_noise = float(d_sample_noise)
         self.d_var_max = float(d_var_max)
         self.d_window = int(d_window)
+        self.mechanisms = _validate_mechanisms(mechanisms)
 
         self._rng = np.random.default_rng(seed)
 
@@ -262,6 +291,28 @@ class LECouplingKernel:
         growth = self.r_life * bio * (1.0 - bio / self.k_life)
         uptake = self.uptake * bio * max(self.E.state[0], 0.0) / (self.half_sat + max(self.E.state[0], 0.0))
         d0 = growth - uptake
+        mech = self.mechanisms
+        if mech:
+            # ---- B3-ext 扩展机制（可选；默认 None 保持单调稳定） ----
+            # 灭绝：life 低于死亡阈值 → 不可逆加速死亡（吸收态）
+            if "death_threshold" in mech and bio < mech["death_threshold"]:
+                d0 += mech.get("death_rate", 1.0) * (bio - mech["death_threshold"])
+            # 锁定：Allee 双稳（bio<阈值趋 0，阈值<bio<k 趋 k）→ 低态/高态锁定
+            # 乘 (1-bio/k) 使项在 bio→k 时归零，保持有界（防溢出）
+            if "allee_threshold" in mech:
+                k_ = max(self.k_life, 1e-9)
+                d0 += (mech.get("allee_strength", 0.5) * bio
+                       * (bio - mech["allee_threshold"]) * (1.0 - bio / k_))
+            # 振荡：纯消费者 R-M 结构——bio 完全依赖资源摄食（替换 d0）
+            # bio' = e·a·bio·R/(h+R) − m·bio；env 侧 logistic 再生（_env_rhs）
+            # e（conversion）大、h（half_override）小 → Hopf 极限环
+            if "oscillation_gain" in mech:
+                hs = mech.get("half_override", self.half_sat)
+                up = mech.get("uptake_override", self.uptake)
+                eff = mech.get("conversion", 1.0)
+                res_e = max(self.E.state[0], 0.0)
+                feeding = up * bio * res_e / (hs + res_e)
+                d0 = eff * feeding - mech.get("consumer_mortality", 0.1) * bio
         if s.size >= 3:
             dmg = self.damage_rate * max(0.0, uptake - self.maint) - self.repair * s[1]
             div = 0.25 * (1.0 - s[2] / 0.60) - 0.10 * bio
@@ -271,6 +322,15 @@ class LECouplingKernel:
     def _env_rhs(self, s: np.ndarray) -> np.ndarray:
         s = np.asarray(s, dtype=float)
         res = max(s[0], 0.0)
+        mech = self.mechanisms
+        if mech and "oscillation_gain" in mech:
+            # 振荡机制：logistic 资源再生（替代线性供给）→ 真 R-M 结构
+            env_r = mech.get("env_r", 0.6)
+            supply = env_r * res * (1.0 - res / max(self.env_cap, 1e-9))
+            d0 = supply - self.env_consum * max(self.L.state[0], 0.0) * res
+            if s.size >= 3:
+                return np.array([d0, 0.30 * (0.25 - s[1]), 0.30 * (0.55 - s[2])])
+            return np.array([d0] + [0.0] * (s.size - 1))
         supply = self.env_supply * (self.env_cap - res)
         consum = self.env_consum * max(self.L.state[0], 0.0) * res
         d0 = supply - consum
