@@ -2,6 +2,19 @@
 
 本仓库采用语义化版本。理论条款编号（A1–A12、C1/C2、F1/F2、I1）与《X-S-MERA 修订登记》保持同步。
 
+## v1.6.39 — 2026-10-29
+
+### 补录 R46 / R47 运行记录（证据补录，无代码/结论变更）
+
+> 仓库更新检查：工作树仅 3 个未跟踪文件。其中 `r23_real_cognitive/r8b_uniqueness.json`
+> 与已入库的 `r8_gain_stepchain/r8b_uniqueness.json` **内容完全相同**（重复副本，不入库）；
+> 其余两个为 R46 / R47 的运行 stdout 记录，补录入库作为运行证据。
+> 远程 main 与本地 HEAD 一致（= a7b7d3cb，v1.6.38），无远程新提交。
+
+- `experiments/r23_real_cognitive/r46_run.txt`（NEW）：R46 语言化序列化算子运行输出。
+- `experiments/r23_real_cognitive/r47_run.txt`（NEW）：R47 δ-时间化检验运行输出。
+- R46（v1.6.35）、R47（v1.6.36）的脚本 / report / json 均已在此前入库，本段仅补录运行记录。
+
 ## v1.6.38 — 2026-10-28
 
 ### 纯内部批次：边界图机检接入（A10 残留）+ B-B32 震荡判据一致性检验
