@@ -2,6 +2,34 @@
 
 本仓库采用语义化版本。理论条款编号（A1–A12、C1/C2、F1/F2、I1）与《X-S-MERA 修订登记》保持同步。
 
+## v1.6.44 — 2026-10-29
+
+### C4-full 耗散结构完整版形式化（Lean L1）
+
+> GAPS.md 归档推论 4（耗散结构）**完整版**——骨架版（F6→F8、F9）此前可证，
+> 完整版"生命以环境熵增为代价维持有序"缺合系统孤立性前提，登记为缺口 C4-full。
+> 本轮**采用签名扩展路线**实现（B3 为 L2 仿真层目标，非 Lean，转后续仿真优先级）。
+
+#### feat: `formal/Formal/Basic.lean`
+- 新增**二元合系统孤立性**谓词 `IsolatedCouple : Sys → Sys → Prop`（C4-full 前件）。
+  **不改单目 `Isolated`**（M1 用），不破坏现有 AttackSurface/推论。
+
+#### feat: `formal/Formal/Axioms.lean`
+- 新增**正 Horn 桥接公理** `C4_isolated_entropy_cost`：
+  `LifeS → EnvS → IsolatedCouple → (NeedsEnergyForStructure → EntropyNonDec)`。
+  无否定前提 ⟹ AttackSurface 第 1 条（正片段无 ⊥ 推导源）保持有效，无需切换模型构造路线。
+
+#### feat: `formal/Formal/Corollaries.lean`
+- 更新 C4-full 缺口注释（缺口 → 已实现），新增导出定理 `dissipative_structure_full`。
+
+#### feat: `formal/GAPS.md`
+- C4-full 条目更新为**决策（2026-10-29）：采用签名扩展路线**；登记操作化诚实声明。
+
+#### 验证
+- `lake build` **通过、无 sorry**（8 jobs，v4.35.0）。
+- 操作化诚实声明：Horn 层把"以环境熵增为代价"表达为"合系统孤立 + 生命需持续
+  自由能 ⇒ 环境熵不减"——熵"增/不减"的**数值核算**属 L2 仿真层（熵账本），不在 L1 断言数值。
+
 ## v1.6.43 — 2026-10-29
 
 ### 推论 R1 / R2 落地（宏-槽-事实离散原型）

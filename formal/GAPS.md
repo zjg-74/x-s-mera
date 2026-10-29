@@ -52,8 +52,15 @@ G1-a 的形式化价值不止于"无矛盾"——编码过程把归档版第 7 �
 - 骨架版可证（Corollaries.lean：F6→F8、F9 前件）。
 - 完整版"生命以环境熵增为代价维持有序"须 M1 + 一个未在签名中的前提：
   生命-环境**合系统**的孤立性（Isolated 作用于合系统）。
-- 候选处置：扩展签名为 `Isolated : Sys → Sys → Prop`（两元合系统孤立性），
-  或登记完整版为 M1 的 L2 操作层实例（仿真验证熵账本闭合），不进 L1。
+- **决策（2026-10-29）：采用签名扩展路线。** 新增二元合系统孤立性谓词
+  `IsolatedCouple : Sys → Sys → Prop`（Basic.lean，**不改单目 `Isolated`**，不破坏 M1）
+  + 正 Horn 桥接公理 `C4_isolated_entropy_cost`（Axioms.lean）：
+  `LifeS → EnvS → IsolatedCouple → (NeedsEnergyForStructure → EntropyNonDec)`。
+  正 Horn 无否定前提 ⟹ 不破坏 AttackSurface 第 1 条。Corollaries.lean 导出
+  `dissipative_structure_full` 定理，`lake build` 通过、无 sorry。
+  操作化诚实声明：Horn 层把"以环境熵增为代价"表达为"合系统孤立 + 生命需
+  持续自由能 ⇒ 环境熵不减"——熵"增/不减"的**数值核算**属 L2 仿真层（熵账本），
+  不在 L1 断言数值。原候选（登记完整版为 L2 操作层实例）未采纳。
 
 ## 相对一致性注记
 

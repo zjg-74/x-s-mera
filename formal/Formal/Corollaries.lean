@@ -82,7 +82,18 @@ theorem structure_needs_energy :
     ∀ s : Sys, LifeS s → NeedsEnergyForStructure s := fun s hs => (F9 s hs).1
 
 -- 完整版（"以环境熵增为代价维持有序"）须 M1 + 生命-环境合系统的孤立性前提；
--- 合系统孤立性不在 Γ_LE 签名内 → 登记为 GAPS.md 缺口 C4-full，不入本文件。
+-- 合系统孤立性不在 Γ_LE 签名内 → 曾登记为 GAPS.md 缺口 C4-full。
+-- 决策登记（GAPS.md C4-full，2026-10-29）：**采用签名扩展路线**——新增二元
+--   合系统孤立性谓词 `IsolatedCouple : Sys → Sys → Prop`（不改单目 `Isolated`，
+--   不破坏 M1），桥接公理 `C4_isolated_entropy_cost`（正 Horn，见 Axioms.lean）。
+-- 由此完整版耗散结构定理可导出（不再只是缺口）：
+
+/-- 完整版耗散结构定理（C4-full）：生命-环境合系统孤立时，生命需持续自由能
+    维持有序 ⇒ 环境熵不减少（有序以环境熵增为代价）。由桥接公理直接导出。 -/
+theorem dissipative_structure_full :
+    ∀ l e : Sys, LifeS l → EnvS e → IsolatedCouple l e →
+      (NeedsEnergyForStructure l → EntropyNonDec e) :=
+  fun l e hl he hic hneed => C4_isolated_entropy_cost l e hl he hic hneed
 
 -- ========== 推论 5（生态共演化）——可证 ==========
 

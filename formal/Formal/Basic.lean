@@ -49,6 +49,10 @@ axiom OneWayPerturb : Sys → Sys → Prop
 
 /-- 孤立系统 / 开放系统 / 受约束（M1/M2 前提） -/
 axiom Isolated : Sys → Prop
+/-- 生命-环境合系统的孤立性（二元合系统；C4-full 完整版耗散结构前提，GAPS.md）。
+    与单目 `Isolated`（M1 用）区分：此谓词作用于生命-环境合系统整体，
+    由调用方声明合系统孤立——是 C4-full 桥接公理的前件。 -/
+axiom IsolatedCouple : Sys → Sys → Prop
 axiom OpenS : Sys → Prop
 axiom Constrained : Sys → Prop
 

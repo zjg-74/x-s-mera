@@ -80,6 +80,17 @@ axiom B2_evolution :
   ∀ s : Sys, LifeS s → UndirectedHeritableVariation s → Competition s →
     EvoQualified s → DirectedEvolution s
 
+/-- C4-full（耗散结构完整版，GAPS.md）：生命-环境**合系统**孤立时，
+    生命需持续自由能维持有序 ⇒ 环境熵不减少（有序以环境熵增为代价）。
+    这是骨架版（F6→F8、F9）之外的**完整版桥接前提**——合系统孤立性
+    `IsolatedCouple` 不在 Γ_LE 原有签名内，故登记为桥接公理（GAPS.md C4-full）。
+    正 Horn（无否定前提）⟹ 不破坏 AttackSurface 第 1 条（正片段无 ⊥ 推导源）。
+    操作化诚实声明：Horn 骨架把"以环境熵增为代价"表达为"合系统孤立 + 生命
+    需持续自由能 ⇒ 环境熵不减"——熵"增/不减"的数值核算属 L2 仿真层（熵账本）。 -/
+axiom C4_isolated_entropy_cost :
+  ∀ l e : Sys, LifeS l → EnvS e → IsolatedCouple l e →
+    (NeedsEnergyForStructure l → EntropyNonDec e)
+
 -- ========== 环境事实公理 E1–E7 ==========
 
 /-- E1 资源生成：环境可自主生成可利用底物与自由能，速率受环境结构约束。 -/
