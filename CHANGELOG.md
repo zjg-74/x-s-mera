@@ -2,6 +2,39 @@
 
 本仓库采用语义化版本。理论条款编号（A1–A12、C1/C2、F1/F2、I1）与《X-S-MERA 修订登记》保持同步。
 
+## v1.6.40 — 2026-10-29
+
+### 认知架构内核落地（src/kernel.py）
+
+> 填补仓库登记缺口：README「src/kernel.py ⏳ 计划中」/「认知架构仿真 ❌ 尚不在本仓库」。
+> 设计依据：`workbuddy/2026-10-28-09-09-48/认知架构内核-设计草案.md`（v0.1）与
+> `kernel_proposal/kernel.py`（提案稿）。实现设计草案 §6「第一步只做这些」第 1–4 条。
+
+#### feat: `src/kernel.py`（NEW）
+- **内核骨架**：状态 `(E, U)` + 规范固定参数 `GaugeFixedParams(s, rho_exp, rho, kappa_E)`
+  + 仿射积分器 `step`（v3.2 主定理 dU = rho_exp·dE + κ_E·rho_exp·(1−ρ)·dt）+ A_D⁺ 的
+  `g(U)` 结构约束（g_saturated/g_linear，B-B43 处置：不实现形式拟合）。
+- **内核级自证伪**：`t_affine`（纯 A_D 共线性残差 ≤2e-15，R30 基准）、
+  `t_gauge`（G_λ 规范不变性，定理 6.12）。
+- **D-SCALE 判别接口迁入**：`fit_beta_with_se` + `dscale_verdict`（三值：
+  mid_drill / mid_hollow / vertex_band，R34 禁区 {|β̂|≤z·SE}，z=1.96 约定性）+ `dscale_classify`。
+- **R23 输出适配器**：`to_r23_json`（内核轨迹→analyze_trajectories.py 格式；
+  权重透传、不虚构）+ `rho_res_verdict`（复刻 R23 的 ρ_res>ρ_exp 走向分类）。
+- 诚实边界（写死进模块 docstring）：数值原型非经验验证；A_D 未证（B-B22）+ 单一驱动
+  附款（S2，调用方契约）；快思维本体不可测（R47/Q0）；g(U) 形式是约定（R45）；读数
+  条件于 A_D 与声明的尺度。
+
+#### tests
+- `tests/test_kernel.py`（NEW，14 项）：参数校验、step 推进与记录、T-affine 纯 A_D 共线
+  残差≈0、T-gauge 一致/偏差、D-SCALE 三值判读 + 禁区随 z 变宽、楔形方向（非共线观测
+  E=k²）、R23 适配器格式与权重透传、ρ_res 走向分类与无震荡不可判。仅标准库、调底层
+  函数、零文件写入。
+
+#### docs
+- `README.md`：顶部版本 v1.6.39 → **v1.6.40**；Repository state 把「认知架构仿真 ❌ 尚不在
+  本仓库」更新为已落地，增补 kernel.py 行（含诚实边界）。
+- 未改任何登记件/冻结文档（内核所用记号 E/U/ρ_exp/ρ/κ_E/s/g 均已登记）；三道 CI 门本地全绿。
+
 ## v1.6.39 — 2026-10-29
 
 ### 补录 R46 / R47 运行记录（证据补录，无代码/结论变更）

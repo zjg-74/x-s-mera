@@ -5,7 +5,7 @@ Manifold Projection and Asymmetric Potential Well: Cognitive Dynamics Framework
 > This repository contains the reference simulation code for the X‑S‑MERA theoretical framework.
 > Author: [zjg]
 >
-> Current version: **v1.6.39**（2026-10-29） · Tests: **393 passed** · License: **MIT**
+> Current version: **v1.6.40**（2026-10-29） · Tests: **393 passed** · License: **MIT**
 >
 > 测试数为**含 numpy 环境**（CI 的 `requirements.txt`）下的全套计数；本机若缺
 > numpy，11 个历史模块（LE 内核 / relay / R2–R4 / A0 / A9 / A10 / T1-d / ΔT）
@@ -28,7 +28,8 @@ external engineering defects. The LE (Life–Environment) prototype extends the 
 | 中继链 / R2 / R6 / R5 审计模块 | ✅ 已实现（v1.1.0–v1.4.0） |
 | 五项遗留动态事项（T1-d / 方案甲 / R3-v2 / R4-LE / ΔT 操作化） | ✅ 已实现（v1.6.0） |
 | R3-v2 案例库定量升级（S3 流感 / S5 鳕鱼，公开数据集 + 七条预注册判据） | ✅ 已实现（v1.6.1），14 项测试；**全套回归 134 项通过** |
-| 认知架构仿真（流形投影 + 非对称势阱，T1–T6 自证伪测试） | ❌ **尚不在本仓库**（README 此前声称的 reference code 指它，落地待补） |
+| 认知架构仿真（流形投影 + 非对称势阱，T1–T6 自证伪测试） | ✅ **已落地（v1.6.40）**：`src/kernel.py`（见下行）；内核级自证伪 T-affine/T-gauge 已实现，T1–T6 实验臂登记下一迭代 |
+| **认知架构内核 `src/kernel.py`** | ✅ 已实现（v1.6.40）。状态(E,U)+规范固定参数+仿射积分器+A_D⁺的g(U)结构约束；T-affine/T-gauge 内核级自证伪；D-SCALE 三值判别接口（R34 禁区 {|β̂|≤z·SE}）；R23 输出适配器（to_r23_json + ρ_res>ρ_exp 走向）。14 项测试（`tests/test_kernel.py`）。诚实边界：数值原型非经验验证；A_D 未证（B-B22）+单一驱动附款（S2，调用方契约）；快思维本体不可测（Q0）；g(U)形式是约定（R45）；读数条件于 A_D 与声明的尺度 |
 | LE 公理体系 Lean4 形式化工程 `formal/` | ✅ 已通过 Lean 4.14.0 内核类型检查（wasm 运行时；native lake 见 formal/README.md） |
 | LICENSE | ✅ MIT（见 `LICENSE`）；release 待发布 |
 | CITATION | ✅ `CITATION.cff` 已补 |
