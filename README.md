@@ -54,6 +54,8 @@ external engineering defects. The LE (Life–Environment) prototype extends the 
 | **B-B32 震荡判据一致性** `experiments/b32_shape_prob_consistency/` | ✅ 已实现（v1.6.38）。S2 合成检验推论 6.11 形状判据 vs 主文 U 概率判据，**一致率 0.75、双向均有反例，一致性不成立**：反复重开震荡中 U 被重开抬高不满足"U 仍在下降"（概率判据漏判）；从未到 m=1 的未决振荡中无局部收敛可重开（形状判据漏判）⟹ **二者互补而非冗余，需合并覆盖**（08 supp7 缺口表 B-B32 → 已检验）。诚实边界：判据操作化为建模选择 |
 | **礁石 R-043（τ\* 落点）** `docs/xs-framework/reef_shturl.json` | ✅ **已解决（v1.6.23，`experiments/r43_tau_star/`）**。原疑：τ\* 落在 (τ_fine,τ_coarse) 内的 η 区间在该网格上几乎为空。**加密 η 网格（200 点）后三类场景在窗口 (8,128) 内均有非空落带区间**（A[0.031,0.046]／B[0.031,0.071]／C[0.061,0.086]）——此前"几乎为空"是**网格假象**。η 取值**场景相关**（三区间交集为空），不由单一全局值给出 |
 | **R-044 η 取值原则锚定** `experiments/r44_eta_principle/` | ✅ 已实现（v1.6.32）。落带区间内 Bootstrap 压出**可靠子区间**（落带率≥90%：A[0.031,0.046]／B[0.032,0.071]／C[0.061,0.086]）；**取值原则 P1–P5 定稿**（`33-v3.4-eta-scaling-principle.md`）⟹ **B-B44 闭合**。诚实边界：可靠子区间为**原型内**结果，REL_TH=0.90 为约定水平；η 场景相关，**不存在全局单值**（须按场景显式声明） |
+| **R1 加载度σ↔边界重合度d同构对偶** `experiments/r1_loading_duality/` | ✅ 已实现（v1.6.43）。宏-槽-事实离散原型验证推论 R1：同一批事实 F 填充相关宏的核心槽 ⟹ 宏间 d=**1.000**、随机配对宏 d=**0.000**（均在 F 下计算），separation=**1.000** ⟹ **HOLDS**。诚实边界：离散原型非现实证据；d=1 是"完全填充"结构极限，随机对照证明非恒真 |
+| **R2 F1↔发散/F2↔伪收敛条件分离** `experiments/r2_failure_separation/` | ✅ 已实现（v1.6.43）。宏-槽-事实离散原型验证推论 R2：真收敛（C1∧C2）、F1 发散（¬C1→A_k=∅）、F2 伪收敛（C1∧¬C2→收敛到错对象）三态**可分离**，conditions_separated=true ⟹ **HOLDS**。诚实边界：离散原型非现实证据；C2 需预设 ground truth |
 ## Repository structure
 
 ```
@@ -110,13 +112,15 @@ python -m venv .venv
 # source .venv/bin/activate && pip install -r requirements.txt   # Linux/macOS
 
 python experiments/sim_le_coupling.py     # 出图 + 分段统计摘要
-python -m pytest tests/ -v                # 393 tests（R29 单跑 ~35 s，全套 ~70 s）
+python -m pytest tests/ -v                # 403 tests（R29 单跑 ~35 s，全套 ~70 s）
 python experiments/r18_dual_constraint/r18_dual_constraint.py   # R18 主实验（仅标准库）
 python experiments/r19_bridge/r19_bridge.py                     # R19（仅标准库）
 python experiments/r21_constraint_specificity/r21_constraint_specificity.py  # R21（仅标准库）
 python experiments/r27_biphasic/r27_biphasic.py                              # R27（仅标准库）
 python experiments/r28_micro_reversal/r28_micro_reversal.py                    # R28（仅标准库）
 python experiments/r29_peak_distance_calibration/r29_peak_distance_calibration.py  # R29（仅标准库）
+python experiments/r1_loading_duality/r1_loading_duality.py   # R1 加载度↔d 对偶（仅标准库）
+python experiments/r2_failure_separation/r2_failure_separation.py  # R2 失效分离（仅标准库）
 ```
 
 复现须知：

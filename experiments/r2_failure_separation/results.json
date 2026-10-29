@@ -1,0 +1,46 @@
+{
+  "scenes": {
+    "true_convergence": {
+      "A_k": [
+        "M_correct"
+      ],
+      "loaded": [
+        "M_correct"
+      ],
+      "winner": "M_correct",
+      "state": "true_convergence",
+      "separability": {
+        "A_k_empty": false,
+        "converged_wrong": false
+      }
+    },
+    "F1_divergence": {
+      "A_k": [],
+      "loaded": [],
+      "winner": null,
+      "state": "F1_divergence",
+      "separability": {
+        "A_k_empty": true,
+        "converged_wrong": false
+      }
+    },
+    "F2_pseudoconvergence": {
+      "A_k": [
+        "M_correct",
+        "M_wrong"
+      ],
+      "loaded": [
+        "M_wrong"
+      ],
+      "winner": "M_wrong",
+      "state": "F2_pseudoconvergence",
+      "separability": {
+        "A_k_empty": false,
+        "converged_wrong": true
+      }
+    }
+  },
+  "conditions_separated": true,
+  "verdict": "HOLDS (F1↔发散/¬C1、F2↔伪收敛/C1∧¬C2 条件分离)",
+  "evidence": "原型确认（结构分离，非现实证据）"
+}

@@ -2,6 +2,39 @@
 
 本仓库采用语义化版本。理论条款编号（A1–A12、C1/C2、F1/F2、I1）与《X-S-MERA 修订登记》保持同步。
 
+## v1.6.43 — 2026-10-29
+
+### 推论 R1 / R2 落地（宏-槽-事实离散原型）
+
+> 主文 `01-v3.1-main-dichotomy-macro-loading-trichotomy.md` §9 登记的两条工程可验推论
+> 首次实现并验证（X2 经核验**不能纯内部推进**，须 P4 加硬=外部数据，未触发）。
+
+#### feat: `experiments/r1_loading_duality/`（NEW）
+- **推论 R1**（§4.4 + §9）：加载度 σ(M,F_k) 与工程边界重合度 d 的同构对偶。宏-槽-事实
+  离散原型：同一批事实 F 填充相关宏的核心槽 ⟹ 宏间 d=**1.000**、随机配对宏 d=**0.000**
+  （均在 F 下计算），separation=**1.000** ⟹ **HOLDS**。
+- 诚实边界：离散原型非现实证据；d=1 是"完全填充"结构极限，随机对照证明非恒真。
+
+#### feat: `experiments/r2_failure_separation/`（NEW）
+- **推论 R2**（§7.2 + §9）：F1↔发散（¬C1）/ F2↔伪收敛（C1∧¬C2）条件分离。真收敛
+  （C1∧C2）、F1 发散（A_k=∅）、F2 伪收敛（收敛到错对象）三态**可分离**，
+  conditions_separated=true ⟹ **HOLDS**。
+- 诚实边界：离散原型非现实证据；C2 需预设 ground truth。
+
+#### tests
+- `tests/test_r1_loading_duality.py`（4 项）+ `tests/test_r2_failure_separation.py`（6 项），
+  **10 项**全过（本机 `python -m pytest`）。基线 393 → **403**。
+
+#### docs
+- `README.md`：代码对应表新增 R1/R2 两行、运行命令加两条、测试计数 393 → 403。
+- `experiments/{r1_loading_duality,r2_failure_separation}/README.md`：各含目的诚实声明、
+  模型定义、结果表、诚实边界、运行方式。
+
+#### X2 立项状态（重要更正）
+- `formal/X2-cognitive-bridge-charter.md` §7：步骤 2（CognitiveBridge.lean）**未触发**；
+  正式立项仍需 **P4 加硬**（多模型、真人 think-aloud/编辑历史、反刍对照）⟹ X2 **依赖
+  外部数据**，从"可纯内部推进"清单移出（上一轮误判已更正）。低风险 R5（sign(0)=0）待列。
+
 ## v1.6.42 — 2026-10-29
 
 ### 认知系统的动力学结构（理论重构 v4.0 单篇）入库
