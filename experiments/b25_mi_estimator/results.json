@@ -1,0 +1,43 @@
+{
+  "experiment": "B-B25 mutual-information estimator I(M;Omega|phi)",
+  "version": "v1.6.46",
+  "method": "conditional mutual information = H(M|phi) - H(M|phi,Omega);Miller-Madow corrected empirical entropy",
+  "scenarios": {
+    "A_biased_by_Omega": {
+      "n": 4000,
+      "estimate": {
+        "H_M": 1.982794112314882,
+        "H_M_phi": 1.982794112314882,
+        "H_M_phi_Omega": 1.6218268598397048,
+        "I_M_Omega_phi": 0.36096725247517725,
+        "bias_note": "P̂ 不可跨群体比较，除非报告 I(M;Ω|φ)（15-v3.2 §4.3）"
+      }
+    },
+    "B_Omega_independent": {
+      "n": 4000,
+      "estimate": {
+        "H_M": 1.9737175769349402,
+        "H_M_phi": 1.9737175769349402,
+        "H_M_phi_Omega": 1.9730778283139885,
+        "I_M_Omega_phi": 0.00063974862095173,
+        "bias_note": "P̂ 不可跨群体比较，除非报告 I(M;Ω|φ)（15-v3.2 §4.3）"
+      }
+    },
+    "C_phi_effect_Omega_irrelevant": {
+      "n": 6000,
+      "estimate": {
+        "H_M": 1.932770312514402,
+        "H_M_phi": 1.6279741153746152,
+        "H_M_phi_Omega": 1.6280956408352407,
+        "I_M_Omega_phi": -0.00012152546062549341,
+        "bias_note": "P̂ 不可跨群体比较，除非报告 I(M;Ω|φ)（15-v3.2 §4.3）"
+      }
+    }
+  },
+  "expected": {
+    "A_biased_by_Omega": "I > 0 (cross-understander bias detectable)",
+    "B_Omega_independent": "I ~ 0 (comparable across groups)",
+    "C_phi_effect_Omega_irrelevant": "I ~ 0 (bias removed once phi conditioned)"
+  },
+  "verdict": "prototype"
+}
