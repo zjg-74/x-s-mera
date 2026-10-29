@@ -2,6 +2,38 @@
 
 本仓库采用语义化版本。理论条款编号（A1–A12、C1/C2、F1/F2、I1）与《X-S-MERA 修订登记》保持同步。
 
+## v1.6.45 — 2026-10-29
+
+### B3 四类终态相图测绘（L2 仿真层）
+
+> GAPS.md B3（归档推论 6：吸引子分类）：体系自发抵达四类终态
+> （稳态 / 周期振荡 / 生态锁定 / 全局灭绝）。终态分类是动力学稳定性陈述，
+> FOL 谓词层结构性不可达 → 交 L2 仿真层核验。本轮双轨测绘落地。
+
+#### feat: `experiments/b3_attractor_phase/`（新建）
+- **Part A · 当前 LE 内核吸引子测绘**：`le_coupling_kernel` v3.4-le.1 耦合网格
+  （coupling_gain × d_threshold_c1）36 点扫描 → **全部收敛唯一非零稳态**。
+  **关键工程发现（诚实登记）**：LE 内核是**单调稳定系统**（逻辑斯谛增长 +
+  Michaelis-Menten 摄食 + 线性资源供给-消耗），**不呈现振荡/灭绝/锁定**——
+  B3 的四类终态在当前内核**不可达**，须内核动力学扩展 → 登记为 **B3-ext 待办**。
+- **Part B · 扩展生态动力学原型相图**（b3 实验内独立模型，诚实标注"原型"）：
+  资源-消费者 LV（logistic 资源自再生）+ 密度约束 + Allee 效应双稳；
+  网格（资源再生率 s × 捕食率 a）**四类终态全覆盖**：
+  extinction 29 / steady_state 41 / ecological_lock 33 / periodic_oscillation 37。
+  相图分区清晰：低 s→灭绝、中等 s→稳态、高 a→振荡（Hopf 极限环）、临界→锁定。
+- 产出 `results.json`（`part_A_LE_kernel` + `part_B_eco_prototype` + 分类器默认）。
+
+#### feat: `tests/test_b3_attractor_phase.py`（新增 8 项）
+- 分类器四类判别单元测试（steady/extinction/oscillation/lock）。
+- 双轨 smoke：Part A LE 单调稳定（全网格稳态）+ Part B 四类全覆盖 + eco 模型有界。
+
+#### 验证与诚实边界
+- `python -m pytest tests/test_b3_attractor_phase.py` **8 passed**。
+- 诚实声明：Part B 是**操作化原型模型**，非当前 LE 内核；四类标签是对数值轨迹的
+  操作化分类，非现实生态学断言；Part A"单调稳定"是对数值网格的观测，未覆盖全参数空间。
+- 正式四类终态测绘须在 LE 内核引入振荡/灭绝/锁定机制（**B3-ext**），本实验为其
+  可达性提供原型证据。
+
 ## v1.6.44 — 2026-10-29
 
 ### C4-full 耗散结构完整版形式化（Lean L1）

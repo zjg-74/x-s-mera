@@ -46,6 +46,7 @@ external engineering defects. The LE (Life–Environment) prototype extends the 
 | **A7 核心最小化** `experiments/a7_core_min/` | ✅ 已实现（v1.6.16）。47 记号→11 核心（根 10+约定输入 1），36 导出全部可达，压缩率 76.6%；依赖结构层面，非概念独立性 |
 | **R18 的 Lean 命题规格** `formal/Formal/DualConstraint.lean` | ✅ 已接入（v1.6.18）。认知双约束/R18 Horn skeleton 编码，lake build 编译通过、无 sorry；见 `formal/GAPS.md` 条目 C1 |
 | **C4-full 耗散结构完整版（Lean）** `formal/Formal/{Basic,Axioms,Corollaries}.lean` | ✅ 已实现（v1.6.44）。新增二元合系统孤立性 `IsolatedCouple` + 正 Horn 桥接公理 `C4_isolated_entropy_cost` → 导出 `dissipative_structure_full` 定理；`lake build` 通过、无 sorry；AttackSurface 第 1 条保持有效。操作化声明：熵"增/不减"数值核算属 L2 仿真层（熵账本） |
+| **B3 四类终态相图测绘** `experiments/b3_attractor_phase/` | ✅ 已测绘（v1.6.45）。Part A：LE 内核单调稳定（36 全稳态，四类不可达 → B3-ext）；Part B：扩展生态原型四类全覆盖（ext 29/steady 41/lock 33/osc 37）。诚实边界：Part B 为操作化原型模型 |
 | **A13 第一例对应探索** experiments/a13_first_case/ | ✅ 已实现（v1.6.17）。换工作决策：D-DRILL 钻研/空洞相位 + D-CONV 收敛/发散方向 + D-IDENT 分级，对照无框架程度描述；演示性映射，非现实测量 |
 | **B 组方法准备**（B3/B1/B2，外部数据前可执行部分） | ✅ B3 残差反演 g（v1.6.19，4 种 g corr=1.0）；B1 四臂闭合（v1.6.20，自洽 1e-14）；B2 R31 守卫（v1.6.21，正常 0.000 / A_D⁺ 违反 1.000）。**非经验验证**；R43′（独立 Ψ）、真人测量、跨人群仍属 B 组待外部数据 |
 | **v1.6.14–1.6.21 新增实验的 pytest 覆盖** `tests/test_{a5,a7,a13,b1,b2,b3,r42}_*.py` | ✅ 已补齐（本地未提交）。7 套共 **67 项**结构性测试（锁结构预言、不锁数字，仅标准库，1.2 s 跑完）；**CI 强制门 `xs-gates.yml` 的 pytest 步骤自动覆盖**，无需改 workflow |
