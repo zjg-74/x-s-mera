@@ -1,0 +1,84 @@
+{
+  "method": "program P-hat (supp4 3.2) + oscillation (Psi≈0) + U trend => rho_res>rho_exp (R23)",
+  "results": {
+    "T-ROPE1-1031": {
+      "us": [
+        1.0446,
+        1.5524,
+        0.7702
+      ],
+      "rs": [
+        2,
+        3,
+        2
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2
+      ],
+      "osc_net_change": -0.2744,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T-ROPE2-1031": {
+      "us": [
+        1.0883,
+        1.5849,
+        0.7702
+      ],
+      "rs": [
+        2,
+        3,
+        2
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2
+      ],
+      "osc_net_change": -0.318,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T-PRICE-1031": {
+      "us": [
+        1.0446,
+        0.7702,
+        0.0
+      ],
+      "rs": [
+        2,
+        2,
+        1
+      ],
+      "longest_seg": [
+        0,
+        1
+      ],
+      "osc_net_change": -0.2744,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T-CREATE-1031": {
+      "us": [
+        1.0385,
+        0.7702
+      ],
+      "rs": [
+        2,
+        2
+      ],
+      "longest_seg": [
+        0,
+        1
+      ],
+      "osc_net_change": -0.2683,
+      "verdict": "rho_res > rho_exp"
+    }
+  },
+  "verdict_counts": {
+    "rho_res > rho_exp": 4
+  },
+  "majority": [
+    "rho_res > rho_exp",
+    4
+  ]
+}
