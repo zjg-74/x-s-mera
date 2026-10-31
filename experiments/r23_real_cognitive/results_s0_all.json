@@ -1,0 +1,356 @@
+{
+  "method": "S0 真人全样本统一判别(analyze_trajectories) + 解出/未解出混淆检验",
+  "n_tasks": 29,
+  "per_task": {
+    "H6q-1": {
+      "batch": "10-26",
+      "type": "thinking",
+      "solved": null,
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "osc_net_change": -0.425,
+      "verdict": "rho_res > rho_exp"
+    },
+    "H6q-2": {
+      "batch": "10-26",
+      "type": "thinking",
+      "solved": null,
+      "longest_seg": [
+        0,
+        1,
+        2
+      ],
+      "osc_net_change": -0.049,
+      "verdict": "rho_res > rho_exp"
+    },
+    "H6q-3": {
+      "batch": "10-26",
+      "type": "thinking",
+      "solved": null,
+      "longest_seg": [
+        0,
+        1,
+        2
+      ],
+      "osc_net_change": 0.0555,
+      "verdict": "rho_res < rho_exp"
+    },
+    "H6q-4": {
+      "batch": "10-26",
+      "type": "thinking",
+      "solved": null,
+      "longest_seg": null,
+      "osc_net_change": null,
+      "verdict": null
+    },
+    "H6q-5": {
+      "batch": "10-26",
+      "type": "thinking",
+      "solved": null,
+      "longest_seg": null,
+      "osc_net_change": null,
+      "verdict": null
+    },
+    "H6q-6": {
+      "batch": "10-26",
+      "type": "thinking",
+      "solved": null,
+      "longest_seg": null,
+      "osc_net_change": null,
+      "verdict": null
+    },
+    "T-1027-1": {
+      "batch": "10-27",
+      "type": "math",
+      "solved": true,
+      "longest_seg": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "osc_net_change": 0.6144,
+      "verdict": "rho_res < rho_exp"
+    },
+    "T-M1": {
+      "batch": "10-27M",
+      "type": "math",
+      "solved": false,
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "osc_net_change": 0.8456,
+      "verdict": "rho_res < rho_exp"
+    },
+    "T-M2": {
+      "batch": "10-27M",
+      "type": "math",
+      "solved": false,
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "osc_net_change": 0.5433,
+      "verdict": "rho_res < rho_exp"
+    },
+    "T-M3": {
+      "batch": "10-27M",
+      "type": "math",
+      "solved": true,
+      "longest_seg": [
+        0,
+        1,
+        2
+      ],
+      "osc_net_change": -0.1387,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T-M4": {
+      "batch": "10-27M",
+      "type": "math",
+      "solved": false,
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "osc_net_change": 0.4621,
+      "verdict": "rho_res < rho_exp"
+    },
+    "T-M5": {
+      "batch": "10-27M",
+      "type": "math",
+      "solved": true,
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "osc_net_change": -1.1212,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T-M7": {
+      "batch": "10-27M",
+      "type": "math",
+      "solved": true,
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "osc_net_change": 0.0,
+      "verdict": "rho_res = rho_exp"
+    },
+    "T-NORM-1031": {
+      "batch": "10-31a",
+      "type": "math",
+      "solved": true,
+      "longest_seg": null,
+      "osc_net_change": null,
+      "verdict": null
+    },
+    "T-RATE-1031": {
+      "batch": "10-31a",
+      "type": "math",
+      "solved": true,
+      "longest_seg": [
+        0,
+        1,
+        2
+      ],
+      "osc_net_change": -0.2117,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T-BUS-1031": {
+      "batch": "10-31a",
+      "type": "math",
+      "solved": true,
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "osc_net_change": -0.301,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T-CUBE1-1031A": {
+      "batch": "10-31a",
+      "type": "math",
+      "solved": true,
+      "longest_seg": null,
+      "osc_net_change": null,
+      "verdict": null
+    },
+    "T-CUBE2-1031A": {
+      "batch": "10-31a",
+      "type": "math",
+      "solved": true,
+      "longest_seg": [
+        0,
+        1
+      ],
+      "osc_net_change": -0.1788,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T-CORNER-1031A": {
+      "batch": "10-31a",
+      "type": "math",
+      "solved": true,
+      "longest_seg": [
+        0,
+        1
+      ],
+      "osc_net_change": -0.2117,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T-SHAPES-1031A": {
+      "batch": "10-31a",
+      "type": "math",
+      "solved": true,
+      "longest_seg": [
+        0,
+        1,
+        2
+      ],
+      "osc_net_change": -0.5433,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T-FISHTANK-1031": {
+      "batch": "10-31a",
+      "type": "math",
+      "solved": true,
+      "longest_seg": null,
+      "osc_net_change": null,
+      "verdict": null
+    },
+    "T-ROPE1-1031": {
+      "batch": "10-31b",
+      "type": "math",
+      "solved": true,
+      "longest_seg": [
+        0,
+        1,
+        2
+      ],
+      "osc_net_change": -0.2744,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T-ROPE2-1031": {
+      "batch": "10-31b",
+      "type": "math",
+      "solved": true,
+      "longest_seg": [
+        0,
+        1,
+        2
+      ],
+      "osc_net_change": -0.318,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T-PRICE-1031": {
+      "batch": "10-31b",
+      "type": "math",
+      "solved": true,
+      "longest_seg": [
+        0,
+        1
+      ],
+      "osc_net_change": -0.2744,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T-CREATE-1031": {
+      "batch": "10-31b",
+      "type": "math",
+      "solved": true,
+      "longest_seg": [
+        0,
+        1
+      ],
+      "osc_net_change": -0.2683,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T-CUBE1-1031B": {
+      "batch": "10-31b",
+      "type": "math",
+      "solved": true,
+      "longest_seg": null,
+      "osc_net_change": null,
+      "verdict": null
+    },
+    "T-CUBE2-1031B": {
+      "batch": "10-31b",
+      "type": "math",
+      "solved": true,
+      "longest_seg": null,
+      "osc_net_change": null,
+      "verdict": null
+    },
+    "T-CORNER-1031B": {
+      "batch": "10-31b",
+      "type": "math",
+      "solved": true,
+      "longest_seg": null,
+      "osc_net_change": null,
+      "verdict": null
+    },
+    "T-SHAPES-1031B": {
+      "batch": "10-31b",
+      "type": "math",
+      "solved": false,
+      "longest_seg": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "osc_net_change": 0.7266,
+      "verdict": "rho_res < rho_exp"
+    }
+  },
+  "all_judgeable_counts": {
+    "rho_res > rho_exp": 13,
+    "rho_res < rho_exp": 6,
+    "rho_res = rho_exp": 1
+  },
+  "all_majority": [
+    "rho_res > rho_exp",
+    13
+  ],
+  "confusion_math_solved": {
+    "rho_res < rho_exp": 1,
+    "rho_res > rho_exp": 11,
+    "rho_res = rho_exp": 1
+  },
+  "confusion_math_unsolved": {
+    "rho_res < rho_exp": 4
+  },
+  "thinking_verdicts": {
+    "rho_res > rho_exp": 2,
+    "rho_res < rho_exp": 1
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "method": "S0 真人全样本 Bootstrap 稳健性(seeded B=200) + 重跑判别",
+  "tasks": 29,
+  "B": 200,
+  "seed": 0,
+  "base_verdict_counts": {
+    "rho_res > rho_exp": 13,
+    "rho_res < rho_exp": 6,
+    "rho_res = rho_exp": 1
+  },
+  "base_majority": [
+    "rho_res > rho_exp",
+    13
+  ],
+  "task_verdict_distribution": {
+    "H6q-1": {
+      "rho_res > rho_exp": 157,
+      "rho_res < rho_exp": 30
+    },
+    "H6q-2": {
+      "rho_res < rho_exp": 92,
+      "rho_res > rho_exp": 92
+    },
+    "H6q-3": {
+      "rho_res < rho_exp": 125,
+      "rho_res > rho_exp": 75
+    },
+    "H6q-4": {},
+    "H6q-5": {},
+    "H6q-6": {},
+    "T-1027-1": {
+      "rho_res < rho_exp": 134,
+      "rho_res > rho_exp": 66
+    },
+    "T-M1": {
+      "rho_res > rho_exp": 39,
+      "rho_res < rho_exp": 160,
+      "rho_res = rho_exp": 1
+    },
+    "T-M2": {
+      "rho_res < rho_exp": 148,
+      "rho_res > rho_exp": 52
+    },
+    "T-M3": {
+      "rho_res = rho_exp": 19,
+      "rho_res > rho_exp": 120,
+      "rho_res < rho_exp": 61
+    },
+    "T-M4": {
+      "rho_res > rho_exp": 59,
+      "rho_res < rho_exp": 130,
+      "rho_res = rho_exp": 11
+    },
+    "T-M5": {
+      "rho_res > rho_exp": 193,
+      "rho_res < rho_exp": 7
+    },
+    "T-M7": {
+      "rho_res > rho_exp": 99,
+      "rho_res < rho_exp": 92,
+      "rho_res = rho_exp": 8
+    },
+    "T-NORM-1031": {},
+    "T-RATE-1031": {
+      "rho_res > rho_exp": 144,
+      "rho_res < rho_exp": 56
+    },
+    "T-BUS-1031": {
+      "rho_res < rho_exp": 99,
+      "rho_res > rho_exp": 101
+    },
+    "T-CUBE1-1031A": {},
+    "T-CUBE2-1031A": {
+      "rho_res > rho_exp": 121,
+      "rho_res = rho_exp": 22,
+      "rho_res < rho_exp": 57
+    },
+    "T-CORNER-1031A": {
+      "rho_res > rho_exp": 141,
+      "rho_res < rho_exp": 57
+    },
+    "T-SHAPES-1031A": {
+      "rho_res < rho_exp": 55,
+      "rho_res > rho_exp": 145
+    },
+    "T-FISHTANK-1031": {},
+    "T-ROPE1-1031": {
+      "rho_res > rho_exp": 114,
+      "rho_res < rho_exp": 86
+    },
+    "T-ROPE2-1031": {
+      "rho_res > rho_exp": 100,
+      "rho_res < rho_exp": 86,
+      "rho_res = rho_exp": 11
+    },
+    "T-PRICE-1031": {
+      "rho_res < rho_exp": 47,
+      "rho_res > rho_exp": 76
+    },
+    "T-CREATE-1031": {
+      "rho_res > rho_exp": 53,
+      "rho_res = rho_exp": 45,
+      "rho_res < rho_exp": 23
+    },
+    "T-CUBE1-1031B": {},
+    "T-CUBE2-1031B": {},
+    "T-CORNER-1031B": {},
+    "T-SHAPES-1031B": {
+      "rho_res < rho_exp": 189,
+      "rho_res > rho_exp": 11
+    }
+  },
+  "per_task_majority_stability": {
+    "H6q-1": {
+      "majority": "rho_res > rho_exp",
+      "share": 0.785,
+      "n_votes": 187
+    },
+    "H6q-2": {
+      "majority": "rho_res < rho_exp",
+      "share": 0.46,
+      "n_votes": 184
+    },
+    "H6q-3": {
+      "majority": "rho_res < rho_exp",
+      "share": 0.625,
+      "n_votes": 200
+    },
+    "T-1027-1": {
+      "majority": "rho_res < rho_exp",
+      "share": 0.67,
+      "n_votes": 200
+    },
+    "T-M1": {
+      "majority": "rho_res < rho_exp",
+      "share": 0.8,
+      "n_votes": 200
+    },
+    "T-M2": {
+      "majority": "rho_res < rho_exp",
+      "share": 0.74,
+      "n_votes": 200
+    },
+    "T-M3": {
+      "majority": "rho_res > rho_exp",
+      "share": 0.6,
+      "n_votes": 200
+    },
+    "T-M4": {
+      "majority": "rho_res < rho_exp",
+      "share": 0.65,
+      "n_votes": 200
+    },
+    "T-M5": {
+      "majority": "rho_res > rho_exp",
+      "share": 0.965,
+      "n_votes": 200
+    },
+    "T-M7": {
+      "majority": "rho_res > rho_exp",
+      "share": 0.495,
+      "n_votes": 199
+    },
+    "T-RATE-1031": {
+      "majority": "rho_res > rho_exp",
+      "share": 0.72,
+      "n_votes": 200
+    },
+    "T-BUS-1031": {
+      "majority": "rho_res > rho_exp",
+      "share": 0.505,
+      "n_votes": 200
+    },
+    "T-CUBE2-1031A": {
+      "majority": "rho_res > rho_exp",
+      "share": 0.605,
+      "n_votes": 200
+    },
+    "T-CORNER-1031A": {
+      "majority": "rho_res > rho_exp",
+      "share": 0.705,
+      "n_votes": 198
+    },
+    "T-SHAPES-1031A": {
+      "majority": "rho_res > rho_exp",
+      "share": 0.725,
+      "n_votes": 200
+    },
+    "T-ROPE1-1031": {
+      "majority": "rho_res > rho_exp",
+      "share": 0.57,
+      "n_votes": 200
+    },
+    "T-ROPE2-1031": {
+      "majority": "rho_res > rho_exp",
+      "share": 0.5,
+      "n_votes": 197
+    },
+    "T-PRICE-1031": {
+      "majority": "rho_res > rho_exp",
+      "share": 0.38,
+      "n_votes": 123
+    },
+    "T-CREATE-1031": {
+      "majority": "rho_res > rho_exp",
+      "share": 0.265,
+      "n_votes": 121
+    },
+    "T-SHAPES-1031B": {
+      "majority": "rho_res < rho_exp",
+      "share": 0.945,
+      "n_votes": 200
+    }
+  },
+  "global_majority_share": {
+    "rho_res > rho_exp": 0.655,
+    "rho_res < rho_exp": 0.345
+  }
+}
