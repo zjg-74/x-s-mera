@@ -1,0 +1,85 @@
+{
+  "method": "program P-hat (supp4 3.2) + oscillation (Psi≈0) + U trend => rho_res>rho_exp (R23)",
+  "results": {
+    "T-CUBE1-1031": {
+      "us": [
+        1.7038
+      ],
+      "rs": [
+        3
+      ],
+      "longest_seg": null,
+      "osc_net_change": null,
+      "verdict": null
+    },
+    "T-CUBE2-1031": {
+      "us": [
+        1.6908,
+        1.5119
+      ],
+      "rs": [
+        3,
+        3
+      ],
+      "longest_seg": [
+        0,
+        1
+      ],
+      "osc_net_change": -0.1788,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T-CORNER-1031": {
+      "us": [
+        1.6908,
+        1.4791
+      ],
+      "rs": [
+        3,
+        3
+      ],
+      "longest_seg": [
+        0,
+        1
+      ],
+      "osc_net_change": -0.2117,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T-SHAPES-1031": {
+      "us": [
+        1.8982,
+        1.9645,
+        1.3549
+      ],
+      "rs": [
+        4,
+        4,
+        3
+      ],
+      "longest_seg": [
+        0,
+        1,
+        2
+      ],
+      "osc_net_change": -0.5433,
+      "verdict": "rho_res > rho_exp"
+    },
+    "T-FISHTANK-1031": {
+      "us": [
+        1.5119
+      ],
+      "rs": [
+        3
+      ],
+      "longest_seg": null,
+      "osc_net_change": null,
+      "verdict": null
+    }
+  },
+  "verdict_counts": {
+    "rho_res > rho_exp": 3
+  },
+  "majority": [
+    "rho_res > rho_exp",
+    3
+  ]
+}
