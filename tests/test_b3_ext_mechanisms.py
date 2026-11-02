@@ -14,9 +14,12 @@ sys.path.insert(0, SRC)
 
 from le_coupling_kernel import LECouplingKernel  # noqa: E402
 
-T = 2000
+# T 是耗时旋钮不是被锁对象（"锁结构预言不锁数字"）：原 T=2000 单文件 411 s 成全套瓶颈；
+# 探针实测 T=500 时 9 项分类判定与 T=2000 逐位一致（确定性内核、固定种子 20261029），
+# 结构预言（四类终态 + 三处分岔两侧）不变，文件耗时 411 s → ~18 s。
+T = 500
 DT = 0.1
-WARM = 600
+WARM = 250
 OSC = {"oscillation_gain": 1.0, "half_override": 0.05,
        "uptake_override": 2.5, "env_r": 2.5,
        "consumer_mortality": 0.5, "conversion": 0.8}

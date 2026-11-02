@@ -5,7 +5,7 @@ Manifold Projection and Asymmetric Potential Well: Cognitive Dynamics Framework
 > This repository contains the reference simulation code for the X‑S‑MERA theoretical framework.
 > Author: [zjg]
 >
-> Current version: **v1.6.40**（2026-10-29） · Tests: **393 passed** · License: **MIT**
+> Current version: **v1.6.52**（2026-11-02） · Tests: **473 passed** · License: **MIT**
 >
 > 测试数为**含 numpy 环境**（CI 的 `requirements.txt`）下的全套计数；本机若缺
 > numpy，11 个历史模块（LE 内核 / relay / R2–R4 / A0 / A9 / A10 / T1-d / ΔT）
@@ -54,6 +54,8 @@ external engineering defects. The LE (Life–Environment) prototype extends the 
 | **B 组方法准备**（B3/B1/B2，外部数据前可执行部分） | ✅ B3 残差反演 g（v1.6.19，4 种 g corr=1.0）；B1 四臂闭合（v1.6.20，自洽 1e-14）；B2 R31 守卫（v1.6.21，正常 0.000 / A_D⁺ 违反 1.000）。**非经验验证**；R43′（独立 Ψ）、真人测量、跨人群仍属 B 组待外部数据 |
 | **v1.6.14–1.6.21 新增实验的 pytest 覆盖** `tests/test_{a5,a7,a13,b1,b2,b3,r42}_*.py` | ✅ 已补齐（本地未提交）。7 套共 **67 项**结构性测试（锁结构预言、不锁数字，仅标准库，1.2 s 跑完）；**CI 强制门 `xs-gates.yml` 的 pytest 步骤自动覆盖**，无需改 workflow |
 | **R8 / R11 / R44 的 pytest 覆盖** `tests/test_{r8_period_doubling,r11_pseudo_drift,r44_eta_principle}.py` | ✅ 已补齐（v1.6.34）。3 套共 **15 项**（R8 8 项锁 M1 周期倍增 V1–V4；R11 5 项锁推论 4.1 的 legal/violate 双臂区分；R44 2 项锁 τ\* 对 η 单调 + 可靠子区间非空）。均**调底层函数复现结构预言、不调 `main()`**，零文件写入副作用；仅标准库 |
+| **R8-B9 / R-043 / R46 / R47 / B-B32 的 pytest 覆盖** `tests/test_{r8b_uniqueness,r43_tau_star,r46_language_serialization,r47_delta_temporalization,b32_consistency}.py` | ✅ 已补齐（v1.6.52）。5 套共 **21 项**（R8-B9 5 项锁唯一性消融 U1–U4；R-043 4 项锁 τ\* 单调 + 默认窗口落带区间非空 + 窗口扫描兜底；R46 4 项锁原始判别全对 + 全格翻转率 0 + 现实窗口保持率 + 质量守恒；R47 4 项锁 Q0 δ 不可测 + Q1 不造方向 + Q2 结构恢复 + 质量守恒；B-B32 3 项锁一致率<0.9 双向反例 + 两判据各有牙齿）。零文件写入副作用（R8-B9 脚本式实验经临时目录隔离导入） |
+| **B3-ext 测试提速** `tests/test_b3_ext_mechanisms.py` | ✅ 已优化（v1.6.52）。T 2000→500（T 是耗时旋钮非被锁对象；确定性内核固定种子下探针实测 9 项分类判定逐位不变），单文件 **411 s → ~28 s**，全套 **8m46s → ~3.3 min** |
 | **R8-B9 唯一性归约** `experiments/r8_gain_stepchain/r8b_uniqueness.py` | ✅ 已实现（v1.6.37）。机制消融四判据 U1–U4 全真 ⟹ **框架内唯一性成立**：A11-R 下唯一能改变混沌拓扑的势机制是 M1；M2 合法形式归约 M1（增益不对称=多候选有效步长调制）、非法形式（状态偏向）被排除；M3 强制归宿只压缩混沌寿命（300000→51）、不移动 g_chaos（恒 3.57）⟹ **B-B9 推到位移**（框架内唯一性已证；跨框架全局唯一性转外部开放）。诚实边界：S2 最小离散原型，非全局唯一性主张 |
 | **边界地图机检** `src/xs_boundary_map_check.py` | ✅ 已实现（v1.6.38）。A10 残留落地：`boundary_map.json` 从"仅登记"推进到"被机器看住"——逐版本结构/枚举/解决指向校验，已接入 CI 门第四步；`boundary_map.json` 升级 v0.6；11 项结构测试（`tests/test_xs_boundary_map_check.py`） |
 | **B-B32 震荡判据一致性** `experiments/b32_shape_prob_consistency/` | ✅ 已实现（v1.6.38）。S2 合成检验推论 6.11 形状判据 vs 主文 U 概率判据，**一致率 0.75、双向均有反例，一致性不成立**：反复重开震荡中 U 被重开抬高不满足"U 仍在下降"（概率判据漏判）；从未到 m=1 的未决振荡中无局部收敛可重开（形状判据漏判）⟹ **二者互补而非冗余，需合并覆盖**（08 supp7 缺口表 B-B32 → 已检验）。诚实边界：判据操作化为建模选择 |
@@ -90,7 +92,7 @@ x-s-mera/
 │   ├── r33_clevel_closure/       # R33：C 级闭合实测（1 脚本 + 结果 json）
 │   ├── r34_vertex_band/          # R34：ρ=1 顶点容差带（1 脚本 + 结果 json）
 │   └── r42_dscale_eta/           # R-042：D-SCALE 对 η 参数敏感性扫描（1 脚本 + 结果 json + 运行留档）
-├── tests/                        # 301 项单元测试，全过（23 个测试文件，v1.6.14 实测）
+├── tests/                        # 473 项单元测试，全过（v1.6.52 实测）
 ├── docs/
 │   ├── experiment_manual.md      # 实验手册（§5 LE 耦合实验、§6 中继链实验）
 │   ├── xs-framework/             # XS 框架理论文档集（16 篇，含 v3.1 认知框架主线）
@@ -117,7 +119,7 @@ python -m venv .venv
 # source .venv/bin/activate && pip install -r requirements.txt   # Linux/macOS
 
 python experiments/sim_le_coupling.py     # 出图 + 分段统计摘要
-python -m pytest tests/ -v                # 403 tests（R29 单跑 ~35 s，全套 ~70 s）
+python -m pytest tests/ -v                # 473 tests（R29 单跑 ~80 s；除 R29 全套 ~2 min）
 python experiments/r18_dual_constraint/r18_dual_constraint.py   # R18 主实验（仅标准库）
 python experiments/r19_bridge/r19_bridge.py                     # R19（仅标准库）
 python experiments/r21_constraint_specificity/r21_constraint_specificity.py  # R21（仅标准库）
@@ -133,7 +135,8 @@ python experiments/r2_failure_separation/r2_failure_separation.py  # R2 失效�
 - 需要 Python ≥ 3.10（依赖 `numpy>=2.0`）。
 - `tests/test_r3_case_upgrade.py` 含数据完整性校验（防回写漂移），耗时明显高于其余文件；
   只做快速自检可先跑 `python -m pytest tests/ -v -x --ignore=tests/test_r3_case_upgrade.py`。
-- 全套 **301 项**（v1.6.14 实测 `pytest tests/` → 301 passed；含 v1.6.6 之后新增的 r30_gauge_fixing、r33_clevel_closure、r34_vertex_band 及校验器测试）。原 141 项分发（v1.6.6）：
+- 全套 **473 项**（v1.6.52 实测：除 R29 全套 458 passed ~2 min + R29 单跑 15 passed ~80 s；
+  历史口径：v1.6.14 为 301 项、v1.6.40 为 393 项）。原 141 项分发（v1.6.6）：
   le_kernel 19 / a10 16 / a9 13 / r3_case_upgrade 14 / r4 12 /
   t1d 12 / r3_sufficiency 11 / relay_chain 10 / tp 10 / a0_bootstrap 9 / d_form_audit 8 /
   r18_dual_constraint 7 / r19_bridge 7 / r21_constraint_specificity 7 /
